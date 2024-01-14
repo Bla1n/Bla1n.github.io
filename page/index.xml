@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on B1ain&#39;s Blog</title>
-        <link>https://Bla1n.github.io/page/</link>
+        <link>https://www.blain.top/page/</link>
         <description>Recent content in Pages on B1ain&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain</copyright>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://Bla1n.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>https://Bla1n.github.io/archives/</link>
+        <link>https://www.blain.top/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://Bla1n.github.io/archives/</guid>
+        <guid>https://www.blain.top/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>https://Bla1n.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://www.blain.top/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Bla1n.github.io/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://www.blain.top/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;h1 id=&#34;123123123&#34;&gt;123123123&lt;/h1&gt;
 &lt;h3 id=&#34;32132131&#34;&gt;32132131&lt;/h3&gt;
 </description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://Bla1n.github.io/search/</link>
+        <link>https://www.blain.top/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Bla1n.github.io/search/</guid>
+        <guid>https://www.blain.top/search/</guid>
         <description></description>
         </item>
         <item>
         <title>友链</title>
-        <link>https://Bla1n.github.io/%E5%8F%8B%E9%93%BE/</link>
+        <link>https://www.blain.top/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Bla1n.github.io/%E5%8F%8B%E9%93%BE/</guid>
+        <guid>https://www.blain.top/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
