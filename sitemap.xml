@@ -8,7 +8,16 @@
     <loc>https://www.blain.top/categories/</loc>
     <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.blain.top/tags/hello/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.blain.top/post/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.blain.top/tags/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.blain.top/tags/test/</loc>
     <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.blain.top/categories/test/</loc>
@@ -25,8 +34,6 @@
   </url><url>
     <loc>https://www.blain.top/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.blain.top/tags/</loc>
   </url><url>
     <loc>https://www.blain.top/about/</loc>
   </url><url>

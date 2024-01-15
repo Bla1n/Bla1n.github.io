@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Test on B1ain&#39;s Blog</title>
-        <link>https://www.blain.top/categories/test/</link>
-        <description>Recent content in Test on B1ain&#39;s Blog</description>
+        <title>hello on B1ain&#39;s Blog</title>
+        <link>https://www.blain.top/tags/hello/</link>
+        <description>Recent content in hello on B1ain&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/test/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/hello/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Test</title>
         <link>https://www.blain.top/p/test-chinese123/</link>
         <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>

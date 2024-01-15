@@ -6,6 +6,23 @@
         <description>Recent content in Tags on B1ain&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>B1ain</copyright><atom:link href="https://www.blain.top/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>B1ain | 行者</copyright>
+        <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hello</title>
+        <link>https://www.blain.top/tags/hello/</link>
+        <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/tags/hello/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>test</title>
+        <link>https://www.blain.top/tags/test/</link>
+        <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/tags/test/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

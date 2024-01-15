@@ -2,16 +2,16 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='123123123 32132131'>
-<title>关于</title>
+<title>关于 | about</title>
 
 <link rel='canonical' href='https://www.blain.top/about/'>
 
-<link rel="stylesheet" href="/scss/style.min.099992adc2f8ce40fbc85425994b1c6d1b769b8eb8319a71ecf9331061223705.css"><meta property='og:title' content='关于'>
+<link rel="stylesheet" href="/scss/style.min.0d123e50c9fe16cc91a1a112791900851d0a59db3e070d77e5e2591f62ddd9c4.css"><meta property='og:title' content='关于 | about'>
 <meta property='og:description' content='123123123 32132131'>
 <meta property='og:url' content='https://www.blain.top/about/'>
 <meta property='og:site_name' content='B1ain&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Page' />
-<meta name="twitter:title" content="关于">
+<meta name="twitter:title" content="关于 | about">
 <meta name="twitter:description" content="123123123 32132131">
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
@@ -104,7 +104,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/about/">关于</a>
+            <a href="/about/">关于 | about</a>
         </h2>
     
         
@@ -202,12 +202,37 @@
     <section class="copyright">
         &copy; 
         
-        2024 B1ain
+        2024 B1ain | 行者
+    </section>
+
+    
+    <section class="running-time">
+        本博客已稳定运行
+        <span id="runningdays" class="running-days"></span>
     </section>
     
+
+    
+    <section class="totalcount">
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        发表了1篇文章 · 
+        总计0.14k字
+    </section>
+
     <section class="powerby">
         
-            京ICP备2024006543 <br/>
+            森ICP备2024001234 <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
@@ -309,6 +334,20 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+
+<script>
+    let s1 = '2024-1-14'; 
+    s1 = new Date(s1.replace(/-/g, "/"));
+    let s2 = new Date();
+    let timeDifference = s2.getTime() - s1.getTime();
+
+    let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+    let result = days + "天" + hours + "小时" + minutes + "分钟";
+    document.getElementById('runningdays').innerHTML = result;
 </script>
 
     </body>
