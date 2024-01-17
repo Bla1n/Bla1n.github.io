@@ -15,22 +15,6 @@
         <guid>https://www.blain.top/tags/python/</guid>
         <description></description>
         </item>
-        <item>
-        <title>hello</title>
-        <link>https://www.blain.top/tags/hello/</link>
-        <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.blain.top/tags/hello/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>test</title>
-        <link>https://www.blain.top/tags/test/</link>
-        <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.blain.top/tags/test/</guid>
-        <description></description>
-        </item>
         
     </channel>
 </rss>

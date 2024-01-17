@@ -238,7 +238,46 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#0x00-起因">0x00 起因</a></li>
+    <li><a href="#0x01-第一种微博获取文章id">0x01 第一种：微博获取文章id</a></li>
+    <li><a href="#0x02-第二种b站直接坐享其成">0x02 第二种：B站直接坐享其成</a></li>
+    <li><a href="#0x03-抖音监控app端">0x03 抖音监控（APP端）</a></li>
+    <li><a href="#0x04-推送程序">0x04 推送程序</a></li>
+    <li><a href="#0x05-启动程序">0x05 启动程序</a></li>
+    <li><a href="#0x06-定时任务">0x06 定时任务</a></li>
+    <li><a href="#0x07-使用效果">0x07 使用效果</a></li>
+    <li><a href="#0x08-填坑">0x08 填坑</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -260,7 +299,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E6%8A%80%E6%9C%AF/" >
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" style="background-color: ; color: #fff;">
                 技术
             </a>
         
@@ -325,21 +364,7 @@
     <section class="article-content">
     
     
-    <p><img src="/p/wbdmonitor/1.jpeg"
-	width="2048"
-	height="1152"
-	
-	loading="lazy"
-	
-		alt="1"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="426px"
-	
-></p>
-<p>本文代码已上传github，自取</p>
+    <p>本文代码已上传github，自取</p>
 <p><a class="link" href="https://github.com/Bla1n/WBDmonitor"  target="_blank" rel="noopener"
     >https://github.com/Bla1n/WBDmonitor
     
@@ -351,9 +376,9 @@
     </svg></span>
     
 </a></p>
-<p><strong>0x00</strong> <strong>起因</strong></p>
+<h2 id="0x00-起因">0x00 起因</h2>
 <p>对于我这样一个假粉，想及时地收到喜欢明星的动态真的是太难了，靠APP的特别关注提醒也基本无济于事，除非我每天都打开微博，B站，抖音。但作为一名“热爱学习”的当代青年，以上这些APP能少看还是少看的好。这就是矛盾所在，也就产生了本文。（本文提供两种监控思路）</p>
-<p><strong>0x01</strong> <strong>第一种：微博获取文章id</strong></p>
+<h2 id="0x01-第一种微博获取文章id">0x01 第一种：微博获取文章id</h2>
 <p>这里感谢奶权师傅的<a class="link" href="https://www.jianshu.com/p/9e7ba0a0a610"  target="_blank" rel="noopener"
     >文章
     
@@ -371,8 +396,6 @@
 	height="574"
 	
 	loading="lazy"
-	
-		alt="2"
 	
 	
 		class="gallery-image" 
@@ -410,8 +433,6 @@
 	
 	loading="lazy"
 	
-		alt="3"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="183"
@@ -424,8 +445,6 @@
 	height="927"
 	
 	loading="lazy"
-	
-		alt="4"
 	
 	
 		class="gallery-image" 
@@ -449,7 +468,7 @@
     </svg></span>
     
 </a></p>
-<p><strong>0x02</strong> <strong>第二种：B站直接坐享其成</strong></p>
+<h2 id="0x02-第二种b站直接坐享其成">0x02 第二种：B站直接坐享其成</h2>
 <p>原本打算B站直接延续上文思路，但在分析网页内容的时候我发现了一处有意思的地方</p>
 <p><a class="link" href="https://space.bilibili.com/3345720/video"  target="_blank" rel="noopener"
     >https://space.bilibili.com/3345720/video
@@ -467,8 +486,6 @@
 	height="614"
 	
 	loading="lazy"
-	
-		alt="5"
 	
 	
 		class="gallery-image" 
@@ -495,8 +512,6 @@
 	
 	loading="lazy"
 	
-		alt="6"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="321"
@@ -518,7 +533,7 @@
     </svg></span>
     
 </a></p>
-<p><strong>0x03</strong> <strong>抖音监控（APP端）</strong></p>
+<h2 id="0x03-抖音监控app端">0x03 抖音监控（APP端）</h2>
 <p>抖音与前两者不同，抖音只有APP端才能访问，这就要配合手机或者模拟器来分析（本文用的模拟器）</p>
 <p>查阅资料得知线索，打开抖音用户界面点击分享，里面的链接分享可供我们使用</p>
 <p><a class="link" href="https://v.douyin.com/e1o7d17/"  target="_blank" rel="noopener"
@@ -537,8 +552,6 @@
 	height="806"
 	
 	loading="lazy"
-	
-		alt="7"
 	
 	
 		class="gallery-image" 
@@ -564,8 +577,6 @@
 	
 	loading="lazy"
 	
-		alt="8"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="201"
@@ -585,7 +596,7 @@
     </svg></span>
     
 </a></p>
-<p><strong>0x04</strong> <strong>推送程序</strong></p>
+<h2 id="0x04-推送程序">0x04 推送程序</h2>
 <p>各平台监控问题解决了，没有一个好的推送也是不行的。日常用的最多的是微信，并且微信来消息的话，提醒也会很明显。</p>
 <p>这里用到https://sre24.com/</p>
 <p>使用也很简单，微信扫描登陆获取token，根据文档的介绍写一个notify函数就可以用了</p>
@@ -595,15 +606,13 @@
 	
 	loading="lazy"
 	
-		alt="9"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="288"
 		data-flex-basis="693px"
 	
 ></p>
-<p><strong>0x05</strong> <strong>启动程序</strong></p>
+<h2 id="0x05-启动程序">0x05 启动程序</h2>
 <p>不多赘述，看代码</p>
 <p><a class="link" href="https://github.com/Bla1n/WBDmonitor/blob/main/start.py"  target="_blank" rel="noopener"
     >https://github.com/Bla1n/WBDmonitor/blob/main/start.py
@@ -616,7 +625,7 @@
     </svg></span>
     
 </a></p>
-<p><strong>0x06</strong> <strong>定时任务</strong></p>
+<h2 id="0x06-定时任务">0x06 定时任务</h2>
 <p>奶权师傅文章里采用心跳包的方式，我这种不愿意挂后台的人就用的定时任务，</p>
 <p>如果服务器搭了宝塔可在后台直接设定，没有的用crontab设效果也是一样的</p>
 <p><img src="/p/wbdmonitor/10.png"
@@ -625,22 +634,18 @@
 	
 	loading="lazy"
 	
-		alt="10"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="183"
 		data-flex-basis="440px"
 	
 ></p>
-<p><strong>0x07</strong> <strong>使用效果</strong></p>
+<h2 id="0x07-使用效果">0x07 使用效果</h2>
 <p><img src="/p/wbdmonitor/11.png"
 	width="1010"
 	height="925"
 	
 	loading="lazy"
-	
-		alt="11"
 	
 	
 		class="gallery-image" 
@@ -660,7 +665,7 @@
     </svg></span>
     
 </a></p>
-<p><strong>0x08</strong> <strong>填坑</strong></p>
+<h2 id="0x08-填坑">0x08 填坑</h2>
 <p>1.定时任务请将脚本内文件路径改为绝对路径</p>
 <p>2.推送没采用邮件最主要的原因是，我在Windows上测试没有问题，Linux发不出去（端口开启着没被占用，stmp服务似乎是正常的，未解决）</p>
 <p>3.抖音没有直接添加用户ID的选项，因为没有直接获取用户ID的方法，抓包需自己去抓。然后修改url里的sec_user_id参数也是一样的</p>
@@ -766,10 +771,8 @@
         
             
         
-            
-        
-        发表了2篇文章 · 
-        总计2.38k字
+        发表了1篇文章 · 
+        总计2.29k字
     </section>
 
     <section class="powerby">
