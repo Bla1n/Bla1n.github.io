@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>小妙招 on B1ain&#39;s Blog</title>
+        <link>https://www.blain.top/categories/%E5%B0%8F%E5%A6%99%E6%8B%9B/</link>
+        <description>Recent content in 小妙招 on B1ain&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>B1ain | 行者</copyright>
+        <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/%E5%B0%8F%E5%A6%99%E6%8B%9B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MAC顽固图标删除技巧</title>
+        <link>https://www.blain.top/p/macs-icon/</link>
+        <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/macs-icon/</guid>
+        <description>&lt;img src="https://www.blain.top/p/macs-icon/title.jpeg" alt="Featured image of post MAC顽固图标删除技巧" /&gt;&lt;h2 id=&#34;起因&#34;&gt;起因&lt;/h2&gt;
+&lt;p&gt;电脑有时安装的第三方软件在删除后，启动台里的图标始终不消失，重启也不行（如下图所示）。但由于我是强迫症，不删除难受。之前安装网络上的重置启动台的方式确实能删除，但是原先的启动台布局及分类也都消失了，属实难受，故有此文章。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/trash.jpg&#34;
+	width=&#34;324&#34;
+	height=&#34;246&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;trash&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;316px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
+&lt;h3 id=&#34;第一步-前往&#34;&gt;第一步 前往&lt;/h3&gt;
+&lt;p&gt;打开访达，点击最顶部菜单栏的“前往”→“前往文件夹”；或者在访达图标右击，选择“前往文件夹”。接着输入&lt;code&gt;/private/var/folders&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/forward.png&#34;
+	width=&#34;1006&#34;
+	height=&#34;432&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;前往&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;232&#34;
+		data-flex-basis=&#34;558px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第二步-搜索&#34;&gt;第二步 搜索&lt;/h3&gt;
+&lt;p&gt;使用搜索功能在&lt;code&gt;folders&lt;/code&gt;文件夹下搜索&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/find.png&#34;
+	width=&#34;1870&#34;
+	height=&#34;568&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;搜索&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;329&#34;
+		data-flex-basis=&#34;790px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;接着进入&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;文件夹里，可以看到&lt;code&gt;db&lt;/code&gt;文件夹，双击进入db目录。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/db.png&#34;
+	width=&#34;754&#34;
+	height=&#34;338&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;db&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;223&#34;
+		data-flex-basis=&#34;535px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第三步-终端命令&#34;&gt;第三步 终端命令&lt;/h3&gt;
+&lt;p&gt;右击进入终端，输入如下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sqlite3 db &lt;span class=&#34;s2&#34;&gt;&amp;#34;delete from apps where title=&amp;#39;appName&amp;#39;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;killall Dock
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;appName自行替换为启动台显示的图标名称，回车即可删除&lt;/p&gt;
+&lt;h2 id=&#34;非常好用&#34;&gt;非常好用&lt;/h2&gt;
+&lt;p&gt;强迫症得到了治愈&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
