@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>笔记 on B1ain&#39;s Blog</title>
+        <link>https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/</link>
+        <description>Recent content in 笔记 on B1ain&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>B1ain | 行者</copyright>
+        <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第01节：安全与风险管理（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote01/</link>
+        <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote01/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote01/title.png" alt="Featured image of post 第01节：安全与风险管理（上）" /&gt;&lt;h1 id=&#34;章节介绍&#34;&gt;章节介绍&lt;/h1&gt;
+&lt;p&gt;风险管理是重点&lt;/p&gt;
+&lt;p&gt;前四节是传统安全管理部分&lt;/p&gt;
+&lt;p&gt;法律不用太深入研究，很难考到&lt;/p&gt;
+&lt;p&gt;BCP业务持续计划：防止业务中断&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301144744693.png&#34; alt=&#34;image-20240301144744693&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;h1 id=&#34;信息安全概述&#34;&gt;信息安全概述&lt;/h1&gt;
+&lt;h2 id=&#34;什么是信息&#34;&gt;什么是信息？&lt;/h2&gt;
+&lt;p&gt;信息的重要特征：&lt;strong&gt;有意义的&lt;/strong&gt;、有价值的、&lt;strong&gt;本质是无形的&lt;/strong&gt;、需要靠介质来存储的&lt;/p&gt;
+&lt;p&gt;价值评判依据：假如这个信息没保护好，给我们带来损失大小作为评判依据&lt;/p&gt;
+&lt;img src=&#34;./assets/截屏 2024-03-01 下午3.05.41.jpeg&#34; alt=&#34;截屏 2024-03-01 下午3.05.41&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;信息安全保护最重要的原则全流程原则&#34;&gt;信息安全保护最重要的原则：全流程原则&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301150924908.png&#34; alt=&#34;image-20240301150924908&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;信息安全的基本目标&#34;&gt;信息安全的基本目标&lt;/h2&gt;
+&lt;p&gt;信息安全的基本目标：&lt;strong&gt;保密性、完整性、可用性（CIA）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;与之相反的事DAD三元组：&lt;strong&gt;泄露D、篡改A、破坏D&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301151929611.png&#34; alt=&#34;image-20240301151929611&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;完整性的信息内部和外部的一致性解释：&lt;/p&gt;
+&lt;p&gt;分为内部（IT环境的内部）一致性和外部（IT环境的外部）一致性&lt;/p&gt;
+&lt;p&gt;举例：在公司打印机管理系统中，各部门的打印机数量之和与系统记录的总数不一样，这是内部一致性的问题。如果有个部门私自买了一台打印机，没有录入系统，这就是外部一致性问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完整性的延伸：来源真实性、抗抵赖性&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;信息安全的本质&#34;&gt;信息安全的本质&lt;/h2&gt;
+&lt;p&gt;不仅仅是保护好CIA，同时还要兼顾效率，学习各方面的基础知识，尽量达成各方面之间的平衡&lt;/p&gt;
+&lt;p&gt;本质是一个管理问题&lt;/p&gt;
+&lt;h2 id=&#34;什么是信息安全管理&#34;&gt;什么是信息安全管理？&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301153357286.png&#34; alt=&#34;image-20240301153357286&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;三分技术、七分管理，需要深入地去理解&lt;/p&gt;
+&lt;h2 id=&#34;信息安全管理模型&#34;&gt;信息安全管理模型&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301153639274.png&#34; alt=&#34;image-20240301153639274&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;PDCA（戴明环）&lt;/p&gt;
+&lt;p&gt;信息安全工作只有开始没有结束&lt;/p&gt;
+&lt;h1 id=&#34;信息安全治理&#34;&gt;信息安全治理&lt;/h1&gt;
+&lt;h2 id=&#34;什么是安全策略&#34;&gt;什么是安全策略？&lt;/h2&gt;
+&lt;h3 id=&#34;安全策略具有层次性top-down&#34;&gt;安全策略具有层次性（Top-Down）&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;方针、标准、指南、基线、程序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;标准：强制标准与推荐标准&lt;/p&gt;
+&lt;p&gt;程序又叫流程&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301163951075.png&#34; alt=&#34;image-20240301163951075&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;安全策略的层次模型&#34;&gt;安全策略的层次模型&lt;/h3&gt;
+&lt;img src=&#34;./assets/image-20240301164137775.png&#34; alt=&#34;image-20240301164137775&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;应该制定哪些策略&#34;&gt;应该制定哪些策略&lt;/h3&gt;
+&lt;p&gt;AUP：可接受的使用策略（如：公司邮件不允许传输个人信息等）&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301164441285.png&#34; alt=&#34;image-20240301164441285&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;针对合规性的审计框架&#34;&gt;针对合规性的审计框架&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301164757449.png&#34; alt=&#34;image-20240301164757449&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;coso财务内控框架&#34;&gt;COSO（财务内控框架）&lt;/h3&gt;
+&lt;p&gt;举例：上个世纪，美国有一些上市公司的经营者和所有者不一定是一个人（职业经理人），如果经理人的控制措施失效了，把企业搞垮了，这些经营者可以什么责任都不负，让国家和股民承担责任，这个逻辑就很不合理。所以用COSO来防止这种情况出现。&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301165523129.png&#34; alt=&#34;image-20240301165523129&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;itilit服务质量提升标准&#34;&gt;ITIL（IT服务质量提升标准）&lt;/h3&gt;
+&lt;p&gt;质量和安全之间的关系：安全和质量有时可以画约等号&lt;/p&gt;
+&lt;p&gt;ITIL和安全很相关&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301170049497.png&#34; alt=&#34;image-20240301170049497&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;cobitit治理的一个框架&#34;&gt;COBIT（IT治理的一个框架）&lt;/h3&gt;
+&lt;p&gt;现在的IT标准有一种不断被拔高的趋势，越来越抽象，越来越难落地&lt;/p&gt;
+&lt;p&gt;COBIT能让IT治理更好地为业务服务：&lt;/p&gt;
+&lt;h3 id=&#34;企业架构ea&#34;&gt;企业架构（EA）&lt;/h3&gt;
+&lt;p&gt;IT需求的管理工具，发现总结IT需求&lt;/p&gt;
+&lt;p&gt;两种常见的企业架构如下&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302095048539.png&#34; alt=&#34;image-20240302095048539&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;img src=&#34;./assets/image-20240302095617231.png&#34; alt=&#34;image-20240302095617231&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;iso27000系列国际安全标准&#34;&gt;ISO27000系列国际安全标准&lt;/h2&gt;
+&lt;p&gt;ISO27001标准：实施过程、审计要求的标准，是信息安全管理系统 (ISMS) 的规范或认证&lt;/p&gt;
+&lt;p&gt;ISO27002标准：是27001的补充，更精确和详细，由ISO17799改名而来，&lt;/p&gt;
+&lt;h1 id=&#34;风险管理&#34;&gt;风险管理★&lt;/h1&gt;
+&lt;h2 id=&#34;风险管理相关要素&#34;&gt;风险管理相关要素&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302105233708.png&#34; alt=&#34;image-20240302105233708&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;风险三要素：资产、威胁、弱点&lt;/p&gt;
+&lt;p&gt;计算风险大小还要通过“可能性”、“影响”两个判断★&lt;/p&gt;
+&lt;p&gt;如果风险要分为四要素，则需加上“安全措施”&lt;/p&gt;
+&lt;p&gt;不考虑安全措施时的风险叫做“固有风险”（全面风险），考虑之后的风险叫做“残留风险”&lt;/p&gt;
+&lt;h2 id=&#34;风险管理的目标&#34;&gt;风险管理的目标&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;目标：通过安全工作，影响风险三要素，从而降低风险大小&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.减少弱点是主要的安全工作（修补漏洞）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.如何理解减少资产来降低风险？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;经营资产保持增值主要是从&lt;strong&gt;贡献&lt;/strong&gt;的角度来考虑的，而降低资产价值是从安全角度来提的（不要把鸡蛋放在一个篮子里）&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;举例：在线教育系统里面有十年前的历史记录，几乎没人来查询。如果一直存在系统中，一旦系统被攻破，则造成的损失是巨大的。但如果我们将其从系统中剥离，即时系统被攻破，损失也会小得多。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.减少威胁如何理解？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;起因：有人认为黑客、地震等影响都是客观存在的，无法减少&lt;/p&gt;
+&lt;p&gt;减少资产暴露其实就是减少威胁的方法&lt;/p&gt;
+&lt;p&gt;举例1：互联网上有许多黑客，如果一个系统不接入互联网对其影响不大，则将其放置在内网，就是减少威胁的手段&lt;/p&gt;
+&lt;p&gt;举例2：建站选址时，考虑地震发生率，也算是减少地震威胁的手段&lt;/p&gt;
+&lt;h2 id=&#34;安全没有绝对可言&#34;&gt;安全没有绝对可言&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302111553652.png&#34; alt=&#34;image-20240302111553652&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;风险管理最重要的原则成本效益原则&#34;&gt;风险管理最重要的原则：成本效益原则&lt;/h2&gt;
+&lt;p&gt;做好安全和效益的平衡&lt;/p&gt;
+&lt;p&gt;风险评估很重要&lt;/p&gt;
+&lt;h2 id=&#34;风险评估&#34;&gt;风险评估★&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302143452165.png&#34; alt=&#34;image-20240302143452165&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;风险评估包括风险分析和风险评价两部分&lt;/p&gt;
+&lt;p&gt;风险分析是将风险的大小确定下来&lt;/p&gt;
+&lt;p&gt;风险评价是提出解决风险的建议&lt;/p&gt;
+&lt;p&gt;（没有统一的说法，做题有时要靠上下文分析）&lt;/p&gt;
+&lt;h2 id=&#34;定量评估和定性评估&#34;&gt;定量评估和定性评估&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302145409200.png&#34; alt=&#34;image-20240302145409200&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;定量分析需要具体的&lt;strong&gt;金额以及单位&lt;/strong&gt;，除此是定性分析(高中低)&lt;/p&gt;
+&lt;p&gt;定量分析不经常使用（除了诸如保险公司这类的企业）&lt;/p&gt;
+&lt;p&gt;定性分析含有很大的主观色彩，属于社会科学，任何的定性测量分析都有不确定性&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302151651494.png&#34; alt=&#34;image-20240302151651494&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;单一损失期望计算公式&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302151906544.png&#34; alt=&#34;image-20240302151906544&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;年度损失期望计算公式&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302151931828.png&#34; alt=&#34;image-20240302151931828&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;img src=&#34;./assets/image-20240302152145675.png&#34; alt=&#34;image-20240302152145675&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;Delphi是背对背小组讨论方式，防止个别权威人士发言影响大家充分发挥自己的意见&lt;/p&gt;
+&lt;p&gt;（既能防止领导一言堂，也能防止某些人事后诸葛亮）&lt;/p&gt;
+&lt;h2 id=&#34;识别信息资产&#34;&gt;识别信息资产&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153045751.png&#34; alt=&#34;image-20240302153045751&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;资产价值要由拥有者来判断，由业务主管的意见为准&lt;/p&gt;
+&lt;h2 id=&#34;评价信息资产&#34;&gt;评价信息资产&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153358024.png&#34; alt=&#34;image-20240302153358024&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;识别并评估威胁&#34;&gt;识别并评估威胁&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153611065.png&#34; alt=&#34;image-20240302153611065&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;识别并评估弱点&#34;&gt;识别并评估弱点&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153715983.png&#34; alt=&#34;image-20240302153715983&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;风险评价前需要确定两个指标&#34;&gt;风险评价前需要确定两个指标&lt;/h2&gt;
+&lt;p&gt;风险影响和风险可能性&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302154205742.png&#34; alt=&#34;image-20240302154205742&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;风险评估矩阵&#34;&gt;风险评估矩阵&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;定性风险评估&lt;/strong&gt;的工具&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302154430597.png&#34; alt=&#34;image-20240302154430597&#34; style=&#34;zoom:50%;&#34; /&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

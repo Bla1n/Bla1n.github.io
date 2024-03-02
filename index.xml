@@ -7,15 +7,143 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第01节：安全与风险管理（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote01/</link>
+        <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote01/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote01/title.png" alt="Featured image of post 第01节：安全与风险管理（上）" /&gt;&lt;h1 id=&#34;章节介绍&#34;&gt;章节介绍&lt;/h1&gt;
+&lt;p&gt;风险管理是重点&lt;/p&gt;
+&lt;p&gt;前四节是传统安全管理部分&lt;/p&gt;
+&lt;p&gt;法律不用太深入研究，很难考到&lt;/p&gt;
+&lt;p&gt;BCP业务持续计划：防止业务中断&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301144744693.png&#34; alt=&#34;image-20240301144744693&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;h1 id=&#34;信息安全概述&#34;&gt;信息安全概述&lt;/h1&gt;
+&lt;h2 id=&#34;什么是信息&#34;&gt;什么是信息？&lt;/h2&gt;
+&lt;p&gt;信息的重要特征：&lt;strong&gt;有意义的&lt;/strong&gt;、有价值的、&lt;strong&gt;本质是无形的&lt;/strong&gt;、需要靠介质来存储的&lt;/p&gt;
+&lt;p&gt;价值评判依据：假如这个信息没保护好，给我们带来损失大小作为评判依据&lt;/p&gt;
+&lt;img src=&#34;./assets/截屏 2024-03-01 下午3.05.41.jpeg&#34; alt=&#34;截屏 2024-03-01 下午3.05.41&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;信息安全保护最重要的原则全流程原则&#34;&gt;信息安全保护最重要的原则：全流程原则&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301150924908.png&#34; alt=&#34;image-20240301150924908&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;信息安全的基本目标&#34;&gt;信息安全的基本目标&lt;/h2&gt;
+&lt;p&gt;信息安全的基本目标：&lt;strong&gt;保密性、完整性、可用性（CIA）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;与之相反的事DAD三元组：&lt;strong&gt;泄露D、篡改A、破坏D&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301151929611.png&#34; alt=&#34;image-20240301151929611&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;完整性的信息内部和外部的一致性解释：&lt;/p&gt;
+&lt;p&gt;分为内部（IT环境的内部）一致性和外部（IT环境的外部）一致性&lt;/p&gt;
+&lt;p&gt;举例：在公司打印机管理系统中，各部门的打印机数量之和与系统记录的总数不一样，这是内部一致性的问题。如果有个部门私自买了一台打印机，没有录入系统，这就是外部一致性问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完整性的延伸：来源真实性、抗抵赖性&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;信息安全的本质&#34;&gt;信息安全的本质&lt;/h2&gt;
+&lt;p&gt;不仅仅是保护好CIA，同时还要兼顾效率，学习各方面的基础知识，尽量达成各方面之间的平衡&lt;/p&gt;
+&lt;p&gt;本质是一个管理问题&lt;/p&gt;
+&lt;h2 id=&#34;什么是信息安全管理&#34;&gt;什么是信息安全管理？&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301153357286.png&#34; alt=&#34;image-20240301153357286&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;三分技术、七分管理，需要深入地去理解&lt;/p&gt;
+&lt;h2 id=&#34;信息安全管理模型&#34;&gt;信息安全管理模型&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301153639274.png&#34; alt=&#34;image-20240301153639274&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;PDCA（戴明环）&lt;/p&gt;
+&lt;p&gt;信息安全工作只有开始没有结束&lt;/p&gt;
+&lt;h1 id=&#34;信息安全治理&#34;&gt;信息安全治理&lt;/h1&gt;
+&lt;h2 id=&#34;什么是安全策略&#34;&gt;什么是安全策略？&lt;/h2&gt;
+&lt;h3 id=&#34;安全策略具有层次性top-down&#34;&gt;安全策略具有层次性（Top-Down）&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;方针、标准、指南、基线、程序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;标准：强制标准与推荐标准&lt;/p&gt;
+&lt;p&gt;程序又叫流程&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301163951075.png&#34; alt=&#34;image-20240301163951075&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;安全策略的层次模型&#34;&gt;安全策略的层次模型&lt;/h3&gt;
+&lt;img src=&#34;./assets/image-20240301164137775.png&#34; alt=&#34;image-20240301164137775&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;应该制定哪些策略&#34;&gt;应该制定哪些策略&lt;/h3&gt;
+&lt;p&gt;AUP：可接受的使用策略（如：公司邮件不允许传输个人信息等）&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301164441285.png&#34; alt=&#34;image-20240301164441285&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;针对合规性的审计框架&#34;&gt;针对合规性的审计框架&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240301164757449.png&#34; alt=&#34;image-20240301164757449&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;coso财务内控框架&#34;&gt;COSO（财务内控框架）&lt;/h3&gt;
+&lt;p&gt;举例：上个世纪，美国有一些上市公司的经营者和所有者不一定是一个人（职业经理人），如果经理人的控制措施失效了，把企业搞垮了，这些经营者可以什么责任都不负，让国家和股民承担责任，这个逻辑就很不合理。所以用COSO来防止这种情况出现。&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301165523129.png&#34; alt=&#34;image-20240301165523129&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;itilit服务质量提升标准&#34;&gt;ITIL（IT服务质量提升标准）&lt;/h3&gt;
+&lt;p&gt;质量和安全之间的关系：安全和质量有时可以画约等号&lt;/p&gt;
+&lt;p&gt;ITIL和安全很相关&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240301170049497.png&#34; alt=&#34;image-20240301170049497&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;cobitit治理的一个框架&#34;&gt;COBIT（IT治理的一个框架）&lt;/h3&gt;
+&lt;p&gt;现在的IT标准有一种不断被拔高的趋势，越来越抽象，越来越难落地&lt;/p&gt;
+&lt;p&gt;COBIT能让IT治理更好地为业务服务：&lt;/p&gt;
+&lt;h3 id=&#34;企业架构ea&#34;&gt;企业架构（EA）&lt;/h3&gt;
+&lt;p&gt;IT需求的管理工具，发现总结IT需求&lt;/p&gt;
+&lt;p&gt;两种常见的企业架构如下&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302095048539.png&#34; alt=&#34;image-20240302095048539&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;img src=&#34;./assets/image-20240302095617231.png&#34; alt=&#34;image-20240302095617231&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;iso27000系列国际安全标准&#34;&gt;ISO27000系列国际安全标准&lt;/h2&gt;
+&lt;p&gt;ISO27001标准：实施过程、审计要求的标准，是信息安全管理系统 (ISMS) 的规范或认证&lt;/p&gt;
+&lt;p&gt;ISO27002标准：是27001的补充，更精确和详细，由ISO17799改名而来，&lt;/p&gt;
+&lt;h1 id=&#34;风险管理&#34;&gt;风险管理★&lt;/h1&gt;
+&lt;h2 id=&#34;风险管理相关要素&#34;&gt;风险管理相关要素&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302105233708.png&#34; alt=&#34;image-20240302105233708&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;风险三要素：资产、威胁、弱点&lt;/p&gt;
+&lt;p&gt;计算风险大小还要通过“可能性”、“影响”两个判断★&lt;/p&gt;
+&lt;p&gt;如果风险要分为四要素，则需加上“安全措施”&lt;/p&gt;
+&lt;p&gt;不考虑安全措施时的风险叫做“固有风险”（全面风险），考虑之后的风险叫做“残留风险”&lt;/p&gt;
+&lt;h2 id=&#34;风险管理的目标&#34;&gt;风险管理的目标&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;目标：通过安全工作，影响风险三要素，从而降低风险大小&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.减少弱点是主要的安全工作（修补漏洞）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.如何理解减少资产来降低风险？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;经营资产保持增值主要是从&lt;strong&gt;贡献&lt;/strong&gt;的角度来考虑的，而降低资产价值是从安全角度来提的（不要把鸡蛋放在一个篮子里）&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;举例：在线教育系统里面有十年前的历史记录，几乎没人来查询。如果一直存在系统中，一旦系统被攻破，则造成的损失是巨大的。但如果我们将其从系统中剥离，即时系统被攻破，损失也会小得多。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.减少威胁如何理解？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;起因：有人认为黑客、地震等影响都是客观存在的，无法减少&lt;/p&gt;
+&lt;p&gt;减少资产暴露其实就是减少威胁的方法&lt;/p&gt;
+&lt;p&gt;举例1：互联网上有许多黑客，如果一个系统不接入互联网对其影响不大，则将其放置在内网，就是减少威胁的手段&lt;/p&gt;
+&lt;p&gt;举例2：建站选址时，考虑地震发生率，也算是减少地震威胁的手段&lt;/p&gt;
+&lt;h2 id=&#34;安全没有绝对可言&#34;&gt;安全没有绝对可言&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302111553652.png&#34; alt=&#34;image-20240302111553652&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;风险管理最重要的原则成本效益原则&#34;&gt;风险管理最重要的原则：成本效益原则&lt;/h2&gt;
+&lt;p&gt;做好安全和效益的平衡&lt;/p&gt;
+&lt;p&gt;风险评估很重要&lt;/p&gt;
+&lt;h2 id=&#34;风险评估&#34;&gt;风险评估★&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302143452165.png&#34; alt=&#34;image-20240302143452165&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;风险评估包括风险分析和风险评价两部分&lt;/p&gt;
+&lt;p&gt;风险分析是将风险的大小确定下来&lt;/p&gt;
+&lt;p&gt;风险评价是提出解决风险的建议&lt;/p&gt;
+&lt;p&gt;（没有统一的说法，做题有时要靠上下文分析）&lt;/p&gt;
+&lt;h2 id=&#34;定量评估和定性评估&#34;&gt;定量评估和定性评估&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302145409200.png&#34; alt=&#34;image-20240302145409200&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;定量分析需要具体的&lt;strong&gt;金额以及单位&lt;/strong&gt;，除此是定性分析(高中低)&lt;/p&gt;
+&lt;p&gt;定量分析不经常使用（除了诸如保险公司这类的企业）&lt;/p&gt;
+&lt;p&gt;定性分析含有很大的主观色彩，属于社会科学，任何的定性测量分析都有不确定性&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302151651494.png&#34; alt=&#34;image-20240302151651494&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;单一损失期望计算公式&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302151906544.png&#34; alt=&#34;image-20240302151906544&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;年度损失期望计算公式&lt;/strong&gt;&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302151931828.png&#34; alt=&#34;image-20240302151931828&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;img src=&#34;./assets/image-20240302152145675.png&#34; alt=&#34;image-20240302152145675&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;Delphi是背对背小组讨论方式，防止个别权威人士发言影响大家充分发挥自己的意见&lt;/p&gt;
+&lt;p&gt;（既能防止领导一言堂，也能防止某些人事后诸葛亮）&lt;/p&gt;
+&lt;h2 id=&#34;识别信息资产&#34;&gt;识别信息资产&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153045751.png&#34; alt=&#34;image-20240302153045751&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;资产价值要由拥有者来判断，由业务主管的意见为准&lt;/p&gt;
+&lt;h2 id=&#34;评价信息资产&#34;&gt;评价信息资产&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153358024.png&#34; alt=&#34;image-20240302153358024&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;识别并评估威胁&#34;&gt;识别并评估威胁&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153611065.png&#34; alt=&#34;image-20240302153611065&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;识别并评估弱点&#34;&gt;识别并评估弱点&lt;/h2&gt;
+&lt;img src=&#34;./assets/image-20240302153715983.png&#34; alt=&#34;image-20240302153715983&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;风险评价前需要确定两个指标&#34;&gt;风险评价前需要确定两个指标&lt;/h2&gt;
+&lt;p&gt;风险影响和风险可能性&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302154205742.png&#34; alt=&#34;image-20240302154205742&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;风险评估矩阵&#34;&gt;风险评估矩阵&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;定性风险评估&lt;/strong&gt;的工具&lt;/p&gt;
+&lt;img src=&#34;./assets/image-20240302154430597.png&#34; alt=&#34;image-20240302154430597&#34; style=&#34;zoom:50%;&#34; /&gt;
+</description>
+        </item>
+        <item>
         <title>MAC顽固图标删除技巧</title>
         <link>https://www.blain.top/p/macs-icon/</link>
         <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://www.blain.top/p/macs-icon/</guid>
-        <description>&lt;img src="https://www.blain.top/p/macs-icon/title.jpeg" alt="Featured image of post MAC顽固图标删除技巧" /&gt;&lt;h2 id=&#34;起因&#34;&gt;起因&lt;/h2&gt;
+        <description>&lt;img src="https://www.blain.top/p/macs-icon/title.jpeg" alt="Featured image of post MAC顽固图标删除技巧" /&gt;&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
 &lt;p&gt;电脑有时安装的第三方软件在删除后，启动台里的图标始终不消失，重启也不行（如下图所示）。但由于我是强迫症，不删除难受。之前安装网络上的重置启动台的方式确实能删除，但是原先的启动台布局及分类也都消失了，属实难受，故有此文章。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/trash.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;./p/macs-icon/trash.jpg&#34;
 	width=&#34;324&#34;
 	height=&#34;246&#34;
 	
@@ -29,10 +157,10 @@
 		data-flex-basis=&#34;316px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
-&lt;h3 id=&#34;第一步-前往&#34;&gt;第一步 前往&lt;/h3&gt;
+&lt;h1 id=&#34;解决办法&#34;&gt;解决办法&lt;/h1&gt;
+&lt;h2 id=&#34;第一步-前往&#34;&gt;第一步 前往&lt;/h2&gt;
 &lt;p&gt;打开访达，点击最顶部菜单栏的“前往”→“前往文件夹”；或者在访达图标右击，选择“前往文件夹”。接着输入&lt;code&gt;/private/var/folders&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/forward.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/macs-icon/forward.png&#34;
 	width=&#34;1006&#34;
 	height=&#34;432&#34;
 	
@@ -46,9 +174,9 @@
 		data-flex-basis=&#34;558px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;第二步-搜索&#34;&gt;第二步 搜索&lt;/h3&gt;
+&lt;h2 id=&#34;第二步-搜索&#34;&gt;第二步 搜索&lt;/h2&gt;
 &lt;p&gt;使用搜索功能在&lt;code&gt;folders&lt;/code&gt;文件夹下搜索&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/find.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/macs-icon/find.png&#34;
 	width=&#34;1870&#34;
 	height=&#34;568&#34;
 	
@@ -63,7 +191,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着进入&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;文件夹里，可以看到&lt;code&gt;db&lt;/code&gt;文件夹，双击进入db目录。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/macs-icon/db.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/macs-icon/db.png&#34;
 	width=&#34;754&#34;
 	height=&#34;338&#34;
 	
@@ -77,11 +205,11 @@
 		data-flex-basis=&#34;535px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;第三步-终端命令&#34;&gt;第三步 终端命令&lt;/h3&gt;
+&lt;h2 id=&#34;第三步-终端命令&#34;&gt;第三步 终端命令&lt;/h2&gt;
 &lt;p&gt;右击进入终端，输入如下命令：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sqlite3 db &lt;span class=&#34;s2&#34;&gt;&amp;#34;delete from apps where title=&amp;#39;appName&amp;#39;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;killall Dock
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;appName自行替换为启动台显示的图标名称，回车即可删除&lt;/p&gt;
-&lt;h2 id=&#34;非常好用&#34;&gt;非常好用&lt;/h2&gt;
+&lt;h1 id=&#34;非常好用&#34;&gt;非常好用&lt;/h1&gt;
 &lt;p&gt;强迫症得到了治愈&lt;/p&gt;
 </description>
         </item>
@@ -91,14 +219,14 @@
         <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://www.blain.top/p/renovation/</guid>
-        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（1）" /&gt;&lt;h2 id=&#34;本次装修的环境&#34;&gt;本次装修的环境&lt;/h2&gt;
+        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（1）" /&gt;&lt;h1 id=&#34;本次装修的环境&#34;&gt;本次装修的环境&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;操作系统:	MacOS Sonoma 14.0&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Markdown编辑器:	Typora&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;博客配置编辑器:	VS Code&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;命令行工具:	Git、Terminal&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Hugo版本:	hugo_extended_0.121.2_darwin-universal&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Hugo主题:	hugo-theme-stack&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hugo博客的结构&#34;&gt;hugo博客的结构&lt;/h2&gt;
+&lt;h1 id=&#34;hugo博客的结构&#34;&gt;hugo博客的结构&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;因为不会写前端，也是第一次搭建hugo博客，在此写下我浅显的理解，如有错误，欢迎批评指正&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;本文通过 git submodule 方式安装的stack主题，不难发现，初始化后的主题目录结构为&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.
@@ -132,7 +260,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── netlify.toml
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── theme.toml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;二者有很多相似之处（比如都有assets、layouts等目录），通过前端定位等测试发现，主目录下如果和hugo-theme-stack目录有相同的配置文件，则&lt;strong&gt;优先生效&lt;/strong&gt;主目录下的文件（但似乎也有特殊情况，不过通常是这样的）。所以这里建议在assets创建一个名为scss的文件夹,然后在scss文件夹里创建一个名为custom.scss的文件，用于存放魔改代码。引用下面是页面概览：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/example.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation/example.png&#34;
 	width=&#34;3022&#34;
 	height=&#34;1714&#34;
 	
@@ -146,7 +274,7 @@
 		data-flex-basis=&#34;423px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;整体自定义样式表文件&#34;&gt;整体自定义样式表文件&lt;/h3&gt;
+&lt;h2 id=&#34;整体自定义样式表文件&#34;&gt;整体自定义样式表文件&lt;/h2&gt;
 &lt;p&gt;这里贴出我的整体样式表文件，需要可自取：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//  ~\blog\assets\scss\custom.scss
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
@@ -966,10 +1094,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rotate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;315&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;deg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;蜘蛛网纹理&#34;&gt;蜘蛛网纹理&lt;/h2&gt;
-&lt;p&gt;在 /layouts/_default/baseof.html中间插入以下代码&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;动态纹理蛛网花瓣&#34;&gt;动态纹理：蛛网、花瓣&lt;/h1&gt;
+&lt;p&gt;蛛网特效在 /layouts/_default/baseof.html中间插入以下代码&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://demo.hellozwh.com/source/canvas-nest.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/%E8%9B%9B%E7%BD%91.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation/%E8%9B%9B%E7%BD%91.png&#34;
 	width=&#34;2208&#34;
 	height=&#34;624&#34;
 	
@@ -983,8 +1111,9 @@
 		data-flex-basis=&#34;849px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;修改主页侧边栏样式&#34;&gt;修改主页侧边栏样式&lt;/h2&gt;
-&lt;h3 id=&#34;修改头像及简介&#34;&gt;修改头像及简介&lt;/h3&gt;
+&lt;p&gt;花瓣特效只需要将src的地址换为&lt;code&gt;https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js&lt;/code&gt;即可&lt;/p&gt;
+&lt;h1 id=&#34;修改主页侧边栏样式&#34;&gt;修改主页侧边栏样式&lt;/h1&gt;
+&lt;h2 id=&#34;修改头像及简介&#34;&gt;修改头像及简介&lt;/h2&gt;
 &lt;p&gt;将自己的头像存放在&lt;code&gt;/assets/img/&lt;/code&gt;目录下，之后打开主目录下的config.yaml文件，搜索sidebar，&lt;/p&gt;
 &lt;p&gt;subtitle代表简介&lt;/p&gt;
 &lt;p&gt;avatar的src路径为头像路径&lt;/p&gt;
@@ -998,7 +1127,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;enabled&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/img/avatar.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;修改社交栏&#34;&gt;修改社交栏&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改社交栏&#34;&gt;修改社交栏&lt;/h2&gt;
 &lt;p&gt;依然是在主目录下的config.yaml文件进行修改，搜索social，需要添加一个社交按钮则仿照原来的添加如下代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;github&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -1007,10 +1136,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;newTab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;brand-github&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;icon图标存储目录为&lt;code&gt;~/blog/themes/hugo-theme-stack/assets/icons&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;修改栏目&#34;&gt;修改栏目&lt;/h3&gt;
+&lt;h2 id=&#34;修改栏目&#34;&gt;修改栏目&lt;/h2&gt;
 &lt;p&gt;icon存储目录同上，但要修改栏目名称则需要前往&lt;code&gt;/content/page&lt;/code&gt;目录&lt;/p&gt;
 &lt;p&gt;打开对应栏目文件夹，修改index.md文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation/%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE.png&#34;
 	width=&#34;2040&#34;
 	height=&#34;588&#34;
 	
@@ -1024,7 +1153,7 @@
 		data-flex-basis=&#34;832px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;头像旋转&#34;&gt;头像旋转😵‍💫&lt;/h2&gt;
+&lt;h1 id=&#34;头像旋转&#34;&gt;头像旋转😵‍💫&lt;/h1&gt;
 &lt;p&gt;在assets\scss\custom.scss路径下添加如下代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/* 头像旋转 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;.home&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;.home-profile&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;.home-avatar&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -1053,7 +1182,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rotateZ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;360&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;deg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;文章添加音乐&#34;&gt;文章添加音乐&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;文章添加音乐&#34;&gt;文章添加音乐&lt;/h1&gt;
 &lt;p&gt;单首音乐效果如下&lt;/p&gt;
 
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
@@ -1073,8 +1202,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;music&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;netease&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;song&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1372188635&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;autoplay&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;列表：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;music&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://music.163.com/playlist?id=6843891038&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改底栏&#34;&gt;修改底栏&lt;/h2&gt;
-&lt;h3 id=&#34;博客运行时长&#34;&gt;博客运行时长&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;修改底栏&#34;&gt;修改底栏&lt;/h1&gt;
+&lt;h2 id=&#34;博客运行时长&#34;&gt;博客运行时长&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;layouts/partials/footer/custom.html&lt;/code&gt;里添加以下JS代码，其中&lt;code&gt;s1&lt;/code&gt;是网站创建日期。代码参考自&lt;a class=&#34;link&#34; href=&#34;https://rwtx.cc/04/2260/uncategorized/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里 
     
@@ -1124,7 +1253,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;data-scheme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;dark&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;--emphasize-text-color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#d5cfc4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Add emphasize font color for dark scheme
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;文字统计&#34;&gt;文字统计&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;文字统计&#34;&gt;文字统计&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;layouts/partials/footer/footer.html&lt;/code&gt;里增加以下代码，其中文章篇数统计参考了&lt;a class=&#34;link&#34; href=&#34;https://immmmm.com/hugo-total-count/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这篇 
     
@@ -1161,7 +1290,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ni&#34;&gt;normal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;margin-bottom&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;返回顶部按钮&#34;&gt;返回顶部按钮&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;返回顶部按钮&#34;&gt;返回顶部按钮&lt;/h1&gt;
 &lt;p&gt;在阅读长文章时，如果想返回顶部没有快捷按钮则是很不方便的，所以添加此按钮&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;/layouts/partials/footer/custom.html&lt;/code&gt;里面添加如下代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!--返回顶部按钮 --&amp;gt;&lt;/span&gt;
@@ -1276,7 +1405,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  #back-to-top:hover:before {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    border-color: var(--accent-color);
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;去除归档页初始滤镜&#34;&gt;去除归档页初始滤镜&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;去除归档页初始滤镜&#34;&gt;去除归档页初始滤镜&lt;/h1&gt;
 &lt;p&gt;具体可看此&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack/issues/364&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;issue
     
@@ -1322,7 +1451,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及&lt;code&gt;themes/hugo-theme-stack/layouts/partials/footer/components/script.html&lt;/code&gt;中的&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- partial &amp;#34;helper/external&amp;#34; (dict &amp;#34;Context&amp;#34; . &amp;#34;Namespace&amp;#34; &amp;#34;Vibrant&amp;#34;) -}} 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;添加相册功能&#34;&gt;添加相册功能&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;添加相册功能&#34;&gt;添加相册功能&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;日常更新把图片（需按格式：日期 + 空格 + 图片名）丢到&lt;code&gt;/static/photos/&lt;/code&gt;中即可。&lt;/p&gt;
@@ -1480,9 +1609,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这段代码同时添加了分类功能，只需在图片文件名中含有相应关键字即可分类&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;添加右下角联系小气泡按钮&#34;&gt;添加右下角联系小气泡按钮&lt;/h2&gt;
+&lt;h1 id=&#34;添加右下角联系小气泡按钮&#34;&gt;添加右下角联系小气泡按钮&lt;/h1&gt;
 &lt;p&gt;效果图为：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/%E6%B0%94%E6%B3%A1.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation/%E6%B0%94%E6%B3%A1.png&#34;
 	width=&#34;908&#34;
 	height=&#34;1576&#34;
 	
@@ -1518,7 +1647,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考文章&#34;&gt;参考文章&lt;/h2&gt;
+&lt;h1 id=&#34;参考文章&#34;&gt;参考文章&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.linsnow.cn/p/modify-hugo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack主题的自定义
     
@@ -1627,9 +1756,9 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x00-起因&#34;&gt;0x00 起因&lt;/h2&gt;
+&lt;h1 id=&#34;0x00-起因&#34;&gt;0x00 起因&lt;/h1&gt;
 &lt;p&gt;对于我这样一个假粉，想及时地收到喜欢明星的动态真的是太难了，靠APP的特别关注提醒也基本无济于事，除非我每天都打开微博，B站，抖音。但作为一名“热爱学习”的当代青年，以上这些APP能少看还是少看的好。这就是矛盾所在，也就产生了本文。（本文提供两种监控思路）&lt;/p&gt;
-&lt;h2 id=&#34;0x01-第一种微博获取文章id&#34;&gt;0x01 第一种：微博获取文章id&lt;/h2&gt;
+&lt;h1 id=&#34;0x01-第一种微博获取文章id&#34;&gt;0x01 第一种：微博获取文章id&lt;/h1&gt;
 &lt;p&gt;这里感谢奶权师傅的&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/9e7ba0a0a610&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;文章
     
@@ -1642,7 +1771,7 @@
     
 &lt;/a&gt;提供的接口：https://m.weibo.cn/。经测试，现在访问已经不需要登陆，省去模拟登陆步骤。&lt;/p&gt;
 &lt;p&gt;来看访问用户主页的请求&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/2.png&#34;
 	width=&#34;1825&#34;
 	height=&#34;574&#34;
 	
@@ -1678,7 +1807,7 @@
     
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;经测试，请求一中&lt;strong&gt;uid&lt;/strong&gt;参数为各用户专有且固定不变，&lt;strong&gt;containerid&lt;/strong&gt;参数可不加，返回结果包含的&lt;strong&gt;containerid&lt;/strong&gt;参数提供给请求二，其余参数可舍。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/3.png&#34;
 	width=&#34;1830&#34;
 	height=&#34;998&#34;
 	
@@ -1691,7 +1820,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;请求二带上&lt;strong&gt;containerid&lt;/strong&gt;参数即可返回微博内容，微博信息都在mblog数组内&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/4.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/4.png&#34;
 	width=&#34;1766&#34;
 	height=&#34;927&#34;
 	
@@ -1719,7 +1848,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x02-第二种b站直接坐享其成&#34;&gt;0x02 第二种：B站直接坐享其成&lt;/h2&gt;
+&lt;h1 id=&#34;0x02-第二种b站直接坐享其成&#34;&gt;0x02 第二种：B站直接坐享其成&lt;/h1&gt;
 &lt;p&gt;原本打算B站直接延续上文思路，但在分析网页内容的时候我发现了一处有意思的地方&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/3345720/video&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://space.bilibili.com/3345720/video
@@ -1732,7 +1861,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/5.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/5.png&#34;
 	width=&#34;1069&#34;
 	height=&#34;614&#34;
 	
@@ -1757,7 +1886,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/6.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/6.png&#34;
 	width=&#34;1834&#34;
 	height=&#34;571&#34;
 	
@@ -1784,7 +1913,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x03-抖音监控app端&#34;&gt;0x03 抖音监控（APP端）&lt;/h2&gt;
+&lt;h1 id=&#34;0x03-抖音监控app端&#34;&gt;0x03 抖音监控（APP端）&lt;/h1&gt;
 &lt;p&gt;抖音与前两者不同，抖音只有APP端才能访问，这就要配合手机或者模拟器来分析（本文用的模拟器）&lt;/p&gt;
 &lt;p&gt;查阅资料得知线索，打开抖音用户界面点击分享，里面的链接分享可供我们使用&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://v.douyin.com/e1o7d17/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1798,7 +1927,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/7.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/7.jpeg&#34;
 	width=&#34;768&#34;
 	height=&#34;806&#34;
 	
@@ -1822,7 +1951,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/8.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/8.png&#34;
 	width=&#34;1806&#34;
 	height=&#34;896&#34;
 	
@@ -1847,11 +1976,11 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x04-推送程序&#34;&gt;0x04 推送程序&lt;/h2&gt;
+&lt;h1 id=&#34;0x04-推送程序&#34;&gt;0x04 推送程序&lt;/h1&gt;
 &lt;p&gt;各平台监控问题解决了，没有一个好的推送也是不行的。日常用的最多的是微信，并且微信来消息的话，提醒也会很明显。&lt;/p&gt;
 &lt;p&gt;这里用到https://sre24.com/&lt;/p&gt;
 &lt;p&gt;使用也很简单，微信扫描登陆获取token，根据文档的介绍写一个notify函数就可以用了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/9.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/9.png&#34;
 	width=&#34;1066&#34;
 	height=&#34;369&#34;
 	
@@ -1863,7 +1992,7 @@
 		data-flex-basis=&#34;693px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x05-启动程序&#34;&gt;0x05 启动程序&lt;/h2&gt;
+&lt;h1 id=&#34;0x05-启动程序&#34;&gt;0x05 启动程序&lt;/h1&gt;
 &lt;p&gt;不多赘述，看代码&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bla1n/WBDmonitor/blob/main/start.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/Bla1n/WBDmonitor/blob/main/start.py
@@ -1876,10 +2005,10 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x06-定时任务&#34;&gt;0x06 定时任务&lt;/h2&gt;
+&lt;h1 id=&#34;0x06-定时任务&#34;&gt;0x06 定时任务&lt;/h1&gt;
 &lt;p&gt;奶权师傅文章里采用心跳包的方式，我这种不愿意挂后台的人就用的定时任务，&lt;/p&gt;
 &lt;p&gt;如果服务器搭了宝塔可在后台直接设定，没有的用crontab设效果也是一样的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/10.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/10.png&#34;
 	width=&#34;1106&#34;
 	height=&#34;603&#34;
 	
@@ -1891,8 +2020,8 @@
 		data-flex-basis=&#34;440px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x07-使用效果&#34;&gt;0x07 使用效果&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/wbdmonitor/11.png&#34;
+&lt;h1 id=&#34;0x07-使用效果&#34;&gt;0x07 使用效果&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;./p/wbdmonitor/11.png&#34;
 	width=&#34;1010&#34;
 	height=&#34;925&#34;
 	
@@ -1916,7 +2045,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;0x08-填坑&#34;&gt;0x08 填坑&lt;/h2&gt;
+&lt;h1 id=&#34;0x08-填坑&#34;&gt;0x08 填坑&lt;/h1&gt;
 &lt;p&gt;1.定时任务请将脚本内文件路径改为绝对路径&lt;/p&gt;
 &lt;p&gt;2.推送没采用邮件最主要的原因是，我在Windows上测试没有问题，Linux发不出去（端口开启着没被占用，stmp服务似乎是正常的，未解决）&lt;/p&gt;
 &lt;p&gt;3.抖音没有直接添加用户ID的选项，因为没有直接获取用户ID的方法，抓包需自己去抓。然后修改url里的sec_user_id参数也是一样的&lt;/p&gt;
@@ -1954,10 +2083,10 @@
         
         <guid>https://www.blain.top/p/hugo-problems/</guid>
         <description>&lt;img src="https://www.blain.top/p/hugo-problems/title.png" alt="Featured image of post hugo搭建遇到问题解决方案" /&gt;&lt;p&gt;本文用于记录将hugo博客部署至github托管过程中遇到的问题及解决办法，希望能帮助和我一样的萌新避坑&lt;/p&gt;
-&lt;h2 id=&#34;托管过程github-action教程&#34;&gt;托管过程（github action教程）&lt;/h2&gt;
-&lt;h3 id=&#34;创建仓库&#34;&gt;创建仓库&lt;/h3&gt;
+&lt;h1 id=&#34;托管过程github-action教程&#34;&gt;托管过程（github action教程）&lt;/h1&gt;
+&lt;h2 id=&#34;创建仓库&#34;&gt;创建仓库&lt;/h2&gt;
 &lt;p&gt;首先在github创建两个仓库，一个用于存储博客源文件，文件名随意，这里用&lt;code&gt;blog-file&lt;/code&gt;，这个设置为private私密；另一个仓库用github官方托管域名&lt;code&gt;username.github.io&lt;/code&gt;来命名，设置为公开，如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/%E4%BB%93%E5%BA%93.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/%E4%BB%93%E5%BA%93.png&#34;
 	width=&#34;1000&#34;
 	height=&#34;430&#34;
 	
@@ -1971,16 +2100,16 @@
 		data-flex-basis=&#34;558px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;本地获取ssh密钥&#34;&gt;本地获取ssh密钥&lt;/h3&gt;
+&lt;h2 id=&#34;本地获取ssh密钥&#34;&gt;本地获取ssh密钥&lt;/h2&gt;
 &lt;p&gt;终端输入命令：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;you@example.com&amp;#34;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#you@example.com替换为你的邮箱并回车&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;#Your Name替换为你的名字并回车&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;生成ssh key,在git bash中输入以下命令:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;mac生成的密钥将存储在&lt;code&gt;~/.ssh&lt;/code&gt;路径下&lt;/p&gt;
-&lt;h3 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h3&gt;
+&lt;h2 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h2&gt;
 &lt;p&gt;在 GitHub 账户下 &lt;code&gt;Setting - Developer setting - Personal access tokens(classic)&lt;/code&gt; 下创建一个不过期(no expiration)的 Token，权限需要开启 &lt;code&gt;repo&lt;/code&gt; 与 &lt;code&gt;workflow&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/token1.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/token1.png&#34;
 	width=&#34;1962&#34;
 	height=&#34;1048&#34;
 	
@@ -1995,7 +2124,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（注意：token只会显示一次，请及时保存）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/token.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/token.png&#34;
 	width=&#34;2242&#34;
 	height=&#34;366&#34;
 	
@@ -2009,9 +2138,9 @@
 		data-flex-basis=&#34;1470px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;私密源仓库设置token&#34;&gt;私密源仓库设置token&lt;/h3&gt;
+&lt;h2 id=&#34;私密源仓库设置token&#34;&gt;私密源仓库设置token&lt;/h2&gt;
 &lt;p&gt;在博客源仓库（blog-file）的 &lt;code&gt;Settings - Secrets - Actions&lt;/code&gt; 中添加 &lt;code&gt;PERSONAL_TOKEN&lt;/code&gt; 环境变量为刚才的 Token，这样 GitHub Action 就可以获取到 Token 了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/personal-token.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/personal-token.png&#34;
 	width=&#34;2534&#34;
 	height=&#34;904&#34;
 	
@@ -2025,7 +2154,7 @@
 		data-flex-basis=&#34;672px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;创建workflows发布文件&#34;&gt;创建workflows发布文件&lt;/h3&gt;
+&lt;h2 id=&#34;创建workflows发布文件&#34;&gt;创建workflows发布文件&lt;/h2&gt;
 &lt;p&gt;在本地博客主目录下创建 &lt;code&gt;.github/workflows&lt;/code&gt;目录，然后创建&lt;code&gt;deploy.yml&lt;/code&gt;文件。我的 GitHub Action 配置为，自动发布示例配置如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
@@ -2063,7 +2192,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;commit_message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ github.event.head_commit.message }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;external_repository&lt;/code&gt;替换为自己的公开博客git&lt;/p&gt;
-&lt;h3 id=&#34;本地快捷push文件&#34;&gt;本地快捷push文件&lt;/h3&gt;
+&lt;h2 id=&#34;本地快捷push文件&#34;&gt;本地快捷push文件&lt;/h2&gt;
 &lt;p&gt;在本地博客根目录文件夹下新建一个名为&lt;code&gt;deploy.sh&lt;/code&gt;的文件用于一键部署博客,在&lt;code&gt;deploy.sh&lt;/code&gt;中填入如下内容,其中最后一行代码里的&lt;code&gt;git@github.com:Bla1n/blog-file.git&lt;/code&gt;需要更改为你自己仓库的地址：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo &lt;span class=&#34;c1&#34;&gt;#构造你的blog&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -2074,12 +2203,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;deploy&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -f git@github.com:Bla1n/blog-file.git main &lt;span class=&#34;c1&#34;&gt;#向存储库推送&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;初次使用&#34;&gt;初次使用&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;初次使用&#34;&gt;初次使用&lt;/h2&gt;
 &lt;p&gt;之后再本地调试完博客后，即可在终端运行如下命令则可以一键部署到github&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash deploy.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置自己的域名&#34;&gt;配置自己的域名&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置自己的域名&#34;&gt;配置自己的域名&lt;/h2&gt;
 &lt;p&gt;等待&lt;code&gt;Github Action&lt;/code&gt;完成后,我们需要开启&lt;code&gt;GitHub page&lt;/code&gt;，首先进入公开博客仓库，然后打开设置，在如图示位置进行设置（不会的可以自行搜索）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/domain.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/domain.png&#34;
 	width=&#34;2400&#34;
 	height=&#34;1000&#34;
 	
@@ -2093,8 +2222,8 @@
 		data-flex-basis=&#34;576px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;生效结果&#34;&gt;生效结果&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/action.png&#34;
+&lt;h2 id=&#34;生效结果&#34;&gt;生效结果&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/action.png&#34;
 	width=&#34;2870&#34;
 	height=&#34;940&#34;
 	
@@ -2108,10 +2237,10 @@
 		data-flex-basis=&#34;732px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;push仓库会重置域名问题&#34;&gt;push仓库会重置域名问题&lt;/h2&gt;
+&lt;h1 id=&#34;push仓库会重置域名问题&#34;&gt;push仓库会重置域名问题&lt;/h1&gt;
 &lt;p&gt;每次push后会发现公开博客仓库设置的自己的域名会被重置为默认域名&lt;/p&gt;
 &lt;p&gt;解决方法：在content目录下创建一个名为CNAME的文件，内容填入自己的域名即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/cname.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/hugo-problems/cname.png&#34;
 	width=&#34;918&#34;
 	height=&#34;240&#34;
 	
@@ -2125,7 +2254,7 @@
 		data-flex-basis=&#34;918px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;本地push失败彻底解决办法&#34;&gt;本地push失败彻底解决办法&lt;/h2&gt;
+&lt;h1 id=&#34;本地push失败彻底解决办法&#34;&gt;本地push失败彻底解决办法&lt;/h1&gt;
 &lt;p&gt;在本地push几次后，突然有一天push不成功了，报错类似如下（忘记截图了）&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh: connect to host github.com port 22: Connection timed out fatal: Could not &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; from remote repo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;解决办法：在&lt;code&gt;~/.ssh&lt;/code&gt;路径下，创建一个名为config的文件，内容如下：&lt;/p&gt;
@@ -2136,6 +2265,93 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;IdentityFile ~/.ssh/id_rsa
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Port &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样默认push使用https协议，即可成功。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>2023年度总结</title>
+        <link>https://www.blain.top/p/2023summary/</link>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/2023summary/</guid>
+        <description>&lt;img src="https://www.blain.top/p/2023summary/title.png" alt="Featured image of post 2023年度总结" /&gt;&lt;p&gt;23年亦如22年那般，嗖的一下就过去了。没有过得那么的有意义却很让我难以忘怀，可能，能让我刻骨铭心的，只有感情这种事情吧。很不喜欢自己这个样子，希望从24年开始，我能做出改变。&lt;/p&gt;
+&lt;h1 id=&#34;简述&#34;&gt;简述：&lt;/h1&gt;
+&lt;p&gt;上半年：充实、开心、运气好&lt;/p&gt;
+&lt;p&gt;下半年：摆烂、内耗、情绪波动&lt;/p&gt;
+&lt;p&gt;总：定力不够，动力不足，懒人一个&lt;/p&gt;
+&lt;h1 id=&#34;流水账&#34;&gt;流水账：&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;还记得开年在家里搞装修，很累，但动起来真的会让自己快乐，归根到底是没有时间去给自己胡思乱想了。这里要吐槽一下爸妈， 也不知道是不是在一起待久了，鸡毛蒜皮的小事就爱吵架，虽然能理解，但真的很烦这种情况，每次都会把我的情绪带动的很差。&lt;/li&gt;
+&lt;li&gt;和许久未见的老姐约饭看电影，老姐还是那个很温柔、真诚的人，从小到大没怎么体会过有亲姐姐关心照顾的感受，真的非常珍惜这段关系。老姐于我来说可以算是一个港湾，很多话不喜欢与父母讲（不是刻意不想与他们沟通，而是感觉有比较大的代沟，很多时候他们不理解会让他们更加焦虑），我就会去找老姐倾诉。&lt;/li&gt;
+&lt;li&gt;换了新电脑，实现了大学时用MAC的梦想&lt;/li&gt;
+&lt;li&gt;时间来到三月份，研究生生活终于要开启了，涉足了从未到过的东北地区。飞机落地后，感谢叔叔和婶婶对我的热情接待，很大程度上减缓了一个人的不安与恐惧。&lt;/li&gt;
+&lt;li&gt;之后在长大开启研究生生活，和舍友一起办了健身卡，原来，健身这么快乐。&lt;/li&gt;
+&lt;li&gt;一直到五月底之前，生活都还不错，与其他人的关系没有什么大问题，也进行了长春citywalk。平平淡淡、无忧无虑算是。&lt;/li&gt;
+&lt;li&gt;五月底开始钻研yanshee机器人，生活一下子充实起来了，期间掺杂着第二次六级考试，约等于裸考。&lt;/li&gt;
+&lt;li&gt;六月一日，一次无关紧要的会议上，认识了一个人。&lt;/li&gt;
+&lt;li&gt;六月的生活可谓是相当充实，研三学长学姐的毕业答辩，与可能是这辈子最牛逼的老师握手合影；参加了可能是最后一届运动会，同学们给我的加油呐喊声依然不绝于耳，也认识了俄罗斯友人；参加了目前为止最重大的一次会议：团代会；经过半个月多的准备，机器人省赛如期进行，只可惜，发挥不尽人意，不过还好进了国赛；端午节一天徒步环绕了净月潭一圈，还是蛮有成就感的。&lt;/li&gt;
+&lt;li&gt;时间来到七月，暑假开始，期间学校里最大的两件事情就是继续准备机器人国赛以及写论文了。然后参加了姑姑家姐姐的婚礼，解锁了伴郎新体验。&lt;/li&gt;
+&lt;li&gt;八月，奔赴西安，从出发到最后的结束，都是很棒的一次体验，不但拿到了人生中第一个国家一等奖，还和sj一起进行了一场西安citywalk。相当完美、快乐的一个月。&lt;/li&gt;
+&lt;li&gt;九月份开学，组织迎新活动，带师弟还是蛮有意思的。不久后就参与了祥云杯总决赛，人生中第一次线下CTF，虽然技术远达不到要求，但侥幸获得了二等奖。中旬短暂的回青，参加了舅家表姐的婚礼，这次只有送亲的角色，不过还是非常开心，见到了多年未见的st，和gh一起度过了几天快乐的时光。&lt;/li&gt;
+&lt;li&gt;时间来到十月份，中秋和国庆又回去看望叔叔婶婶了，他们带我见了好多从未见过的远方表亲，度过了非常快乐的十一假期。之后便开启了小闹机器人比赛的准备了，不过这次时间太短，没把它放在心上（懒）。在十月最后一天见到了考研男神汤家凤，真的是很激动，有种梦想照进现实的感觉。&lt;/li&gt;
+&lt;li&gt;十月的记录还没完，在国庆结束后的没几天，我和那个人又见面了，我承认有很大一部分原因，是因为她长得好看而疯狂的心动了，并且在努力地和她接触了几天后，真的很喜欢和她沟通的感觉，&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;记事：&lt;/p&gt;
+&lt;p&gt;健身、研究生生活、感情、学生工作、解锁新地点&lt;/p&gt;
+&lt;p&gt;flag：&lt;/p&gt;
+&lt;p&gt;在路上、每年认真写总结、去认识新的人&lt;/p&gt;
+&lt;p&gt;感情：&lt;/p&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;style type=&#34;text/css&#34;&gt;.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#212121&#39;, endColorstr=&#39;#00212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#00212121&#39;, endColorstr=&#39;#cc212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}&lt;/style&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;2019573476&#34; theme=&#34;#2980b9&#34; autoplay=&#34;false&#34;&gt;&lt;/meting-js&gt;
+&lt;h2 id=&#34;正文测试&#34;&gt;正文测试&lt;/h2&gt;
+&lt;p&gt;这是正文内容&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;思念是最暖的忧伤像一双翅膀&lt;br&gt;
+让我停不了飞不远在过往游荡&lt;br&gt;
+不告而别的你 就算为了我着想&lt;br&gt;
+这么沉痛的呵护 我怎么能翱翔&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=3aypp_YlBzI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;最暖的憂傷 - 田馥甄
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;图片&#34;&gt;图片&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;24px
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;code test
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;音乐列表&#34;&gt;音乐列表&lt;/h2&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;style type=&#34;text/css&#34;&gt;.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#212121&#39;, endColorstr=&#39;#00212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#00212121&#39;, endColorstr=&#39;#cc212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}&lt;/style&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;meting-js auto=&#34;https://music.163.com/playlist?id=6843891038&#34; theme=&#34;#2980b9&#34;&gt;&lt;/meting-js&gt;
+&lt;p&gt;相册语法来自 &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Typlog
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>

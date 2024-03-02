@@ -13,14 +13,14 @@
         <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://www.blain.top/p/renovation/</guid>
-        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（1）" /&gt;&lt;h2 id=&#34;本次装修的环境&#34;&gt;本次装修的环境&lt;/h2&gt;
+        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（1）" /&gt;&lt;h1 id=&#34;本次装修的环境&#34;&gt;本次装修的环境&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;操作系统:	MacOS Sonoma 14.0&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Markdown编辑器:	Typora&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;博客配置编辑器:	VS Code&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;命令行工具:	Git、Terminal&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Hugo版本:	hugo_extended_0.121.2_darwin-universal&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Hugo主题:	hugo-theme-stack&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;hugo博客的结构&#34;&gt;hugo博客的结构&lt;/h2&gt;
+&lt;h1 id=&#34;hugo博客的结构&#34;&gt;hugo博客的结构&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;因为不会写前端，也是第一次搭建hugo博客，在此写下我浅显的理解，如有错误，欢迎批评指正&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;本文通过 git submodule 方式安装的stack主题，不难发现，初始化后的主题目录结构为&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.
@@ -54,7 +54,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── netlify.toml
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── theme.toml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;二者有很多相似之处（比如都有assets、layouts等目录），通过前端定位等测试发现，主目录下如果和hugo-theme-stack目录有相同的配置文件，则&lt;strong&gt;优先生效&lt;/strong&gt;主目录下的文件（但似乎也有特殊情况，不过通常是这样的）。所以这里建议在assets创建一个名为scss的文件夹,然后在scss文件夹里创建一个名为custom.scss的文件，用于存放魔改代码。引用下面是页面概览：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/example.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/renovation/example.png&#34;
 	width=&#34;3022&#34;
 	height=&#34;1714&#34;
 	
@@ -68,7 +68,7 @@
 		data-flex-basis=&#34;423px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;整体自定义样式表文件&#34;&gt;整体自定义样式表文件&lt;/h3&gt;
+&lt;h2 id=&#34;整体自定义样式表文件&#34;&gt;整体自定义样式表文件&lt;/h2&gt;
 &lt;p&gt;这里贴出我的整体样式表文件，需要可自取：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//  ~\blog\assets\scss\custom.scss
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
@@ -888,10 +888,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rotate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;315&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;deg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;蜘蛛网纹理&#34;&gt;蜘蛛网纹理&lt;/h2&gt;
-&lt;p&gt;在 /layouts/_default/baseof.html中间插入以下代码&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;动态纹理蛛网花瓣&#34;&gt;动态纹理：蛛网、花瓣&lt;/h1&gt;
+&lt;p&gt;蛛网特效在 /layouts/_default/baseof.html中间插入以下代码&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://demo.hellozwh.com/source/canvas-nest.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/%E8%9B%9B%E7%BD%91.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/renovation/%E8%9B%9B%E7%BD%91.png&#34;
 	width=&#34;2208&#34;
 	height=&#34;624&#34;
 	
@@ -905,8 +905,9 @@
 		data-flex-basis=&#34;849px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;修改主页侧边栏样式&#34;&gt;修改主页侧边栏样式&lt;/h2&gt;
-&lt;h3 id=&#34;修改头像及简介&#34;&gt;修改头像及简介&lt;/h3&gt;
+&lt;p&gt;花瓣特效只需要将src的地址换为&lt;code&gt;https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js&lt;/code&gt;即可&lt;/p&gt;
+&lt;h1 id=&#34;修改主页侧边栏样式&#34;&gt;修改主页侧边栏样式&lt;/h1&gt;
+&lt;h2 id=&#34;修改头像及简介&#34;&gt;修改头像及简介&lt;/h2&gt;
 &lt;p&gt;将自己的头像存放在&lt;code&gt;/assets/img/&lt;/code&gt;目录下，之后打开主目录下的config.yaml文件，搜索sidebar，&lt;/p&gt;
 &lt;p&gt;subtitle代表简介&lt;/p&gt;
 &lt;p&gt;avatar的src路径为头像路径&lt;/p&gt;
@@ -920,7 +921,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;enabled&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;/img/avatar.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;修改社交栏&#34;&gt;修改社交栏&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改社交栏&#34;&gt;修改社交栏&lt;/h2&gt;
 &lt;p&gt;依然是在主目录下的config.yaml文件进行修改，搜索social，需要添加一个社交按钮则仿照原来的添加如下代码：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- &lt;span class=&#34;nt&#34;&gt;identifier&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;github&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -929,10 +930,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;newTab&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;brand-github&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;icon图标存储目录为&lt;code&gt;~/blog/themes/hugo-theme-stack/assets/icons&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;修改栏目&#34;&gt;修改栏目&lt;/h3&gt;
+&lt;h2 id=&#34;修改栏目&#34;&gt;修改栏目&lt;/h2&gt;
 &lt;p&gt;icon存储目录同上，但要修改栏目名称则需要前往&lt;code&gt;/content/page&lt;/code&gt;目录&lt;/p&gt;
 &lt;p&gt;打开对应栏目文件夹，修改index.md文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/renovation/%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE.png&#34;
 	width=&#34;2040&#34;
 	height=&#34;588&#34;
 	
@@ -946,7 +947,7 @@
 		data-flex-basis=&#34;832px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;头像旋转&#34;&gt;头像旋转😵‍💫&lt;/h2&gt;
+&lt;h1 id=&#34;头像旋转&#34;&gt;头像旋转😵‍💫&lt;/h1&gt;
 &lt;p&gt;在assets\scss\custom.scss路径下添加如下代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/* 头像旋转 */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nc&#34;&gt;.home&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;.home-profile&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;.home-avatar&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -975,7 +976,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;na&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rotateZ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;360&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;deg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;文章添加音乐&#34;&gt;文章添加音乐&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;文章添加音乐&#34;&gt;文章添加音乐&lt;/h1&gt;
 &lt;p&gt;单首音乐效果如下&lt;/p&gt;
 
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
@@ -995,8 +996,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;music&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;netease&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;song&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1372188635&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;autoplay&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;列表：
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;music&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://music.163.com/playlist?id=6843891038&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改底栏&#34;&gt;修改底栏&lt;/h2&gt;
-&lt;h3 id=&#34;博客运行时长&#34;&gt;博客运行时长&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;修改底栏&#34;&gt;修改底栏&lt;/h1&gt;
+&lt;h2 id=&#34;博客运行时长&#34;&gt;博客运行时长&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;layouts/partials/footer/custom.html&lt;/code&gt;里添加以下JS代码，其中&lt;code&gt;s1&lt;/code&gt;是网站创建日期。代码参考自&lt;a class=&#34;link&#34; href=&#34;https://rwtx.cc/04/2260/uncategorized/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这里 
     
@@ -1046,7 +1047,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;data-scheme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;dark&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;na&#34;&gt;--emphasize-text-color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#d5cfc4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Add emphasize font color for dark scheme
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;文字统计&#34;&gt;文字统计&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;文字统计&#34;&gt;文字统计&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;layouts/partials/footer/footer.html&lt;/code&gt;里增加以下代码，其中文章篇数统计参考了&lt;a class=&#34;link&#34; href=&#34;https://immmmm.com/hugo-total-count/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;这篇 
     
@@ -1083,7 +1084,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ni&#34;&gt;normal&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;na&#34;&gt;margin-bottom&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;返回顶部按钮&#34;&gt;返回顶部按钮&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;返回顶部按钮&#34;&gt;返回顶部按钮&lt;/h1&gt;
 &lt;p&gt;在阅读长文章时，如果想返回顶部没有快捷按钮则是很不方便的，所以添加此按钮&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;/layouts/partials/footer/custom.html&lt;/code&gt;里面添加如下代码&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!--返回顶部按钮 --&amp;gt;&lt;/span&gt;
@@ -1198,7 +1199,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  #back-to-top:hover:before {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    border-color: var(--accent-color);
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  }
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;去除归档页初始滤镜&#34;&gt;去除归档页初始滤镜&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;去除归档页初始滤镜&#34;&gt;去除归档页初始滤镜&lt;/h1&gt;
 &lt;p&gt;具体可看此&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack/issues/364&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;issue
     
@@ -1244,7 +1245,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; 
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以及&lt;code&gt;themes/hugo-theme-stack/layouts/partials/footer/components/script.html&lt;/code&gt;中的&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- partial &amp;#34;helper/external&amp;#34; (dict &amp;#34;Context&amp;#34; . &amp;#34;Namespace&amp;#34; &amp;#34;Vibrant&amp;#34;) -}} 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;添加相册功能&#34;&gt;添加相册功能&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;添加相册功能&#34;&gt;添加相册功能&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;日常更新把图片（需按格式：日期 + 空格 + 图片名）丢到&lt;code&gt;/static/photos/&lt;/code&gt;中即可。&lt;/p&gt;
@@ -1402,9 +1403,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这段代码同时添加了分类功能，只需在图片文件名中含有相应关键字即可分类&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;添加右下角联系小气泡按钮&#34;&gt;添加右下角联系小气泡按钮&lt;/h2&gt;
+&lt;h1 id=&#34;添加右下角联系小气泡按钮&#34;&gt;添加右下角联系小气泡按钮&lt;/h1&gt;
 &lt;p&gt;效果图为：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/renovation/%E6%B0%94%E6%B3%A1.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/renovation/%E6%B0%94%E6%B3%A1.png&#34;
 	width=&#34;908&#34;
 	height=&#34;1576&#34;
 	
@@ -1440,7 +1441,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;参考文章&#34;&gt;参考文章&lt;/h2&gt;
+&lt;h1 id=&#34;参考文章&#34;&gt;参考文章&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.linsnow.cn/p/modify-hugo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack主题的自定义
     
@@ -1538,10 +1539,10 @@
         
         <guid>https://www.blain.top/p/hugo-problems/</guid>
         <description>&lt;img src="https://www.blain.top/p/hugo-problems/title.png" alt="Featured image of post hugo搭建遇到问题解决方案" /&gt;&lt;p&gt;本文用于记录将hugo博客部署至github托管过程中遇到的问题及解决办法，希望能帮助和我一样的萌新避坑&lt;/p&gt;
-&lt;h2 id=&#34;托管过程github-action教程&#34;&gt;托管过程（github action教程）&lt;/h2&gt;
-&lt;h3 id=&#34;创建仓库&#34;&gt;创建仓库&lt;/h3&gt;
+&lt;h1 id=&#34;托管过程github-action教程&#34;&gt;托管过程（github action教程）&lt;/h1&gt;
+&lt;h2 id=&#34;创建仓库&#34;&gt;创建仓库&lt;/h2&gt;
 &lt;p&gt;首先在github创建两个仓库，一个用于存储博客源文件，文件名随意，这里用&lt;code&gt;blog-file&lt;/code&gt;，这个设置为private私密；另一个仓库用github官方托管域名&lt;code&gt;username.github.io&lt;/code&gt;来命名，设置为公开，如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/%E4%BB%93%E5%BA%93.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/%E4%BB%93%E5%BA%93.png&#34;
 	width=&#34;1000&#34;
 	height=&#34;430&#34;
 	
@@ -1555,16 +1556,16 @@
 		data-flex-basis=&#34;558px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;本地获取ssh密钥&#34;&gt;本地获取ssh密钥&lt;/h3&gt;
+&lt;h2 id=&#34;本地获取ssh密钥&#34;&gt;本地获取ssh密钥&lt;/h2&gt;
 &lt;p&gt;终端输入命令：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;you@example.com&amp;#34;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#you@example.com替换为你的邮箱并回车&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt;          &lt;span class=&#34;c1&#34;&gt;#Your Name替换为你的名字并回车&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;生成ssh key,在git bash中输入以下命令:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;mac生成的密钥将存储在&lt;code&gt;~/.ssh&lt;/code&gt;路径下&lt;/p&gt;
-&lt;h3 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h3&gt;
+&lt;h2 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h2&gt;
 &lt;p&gt;在 GitHub 账户下 &lt;code&gt;Setting - Developer setting - Personal access tokens(classic)&lt;/code&gt; 下创建一个不过期(no expiration)的 Token，权限需要开启 &lt;code&gt;repo&lt;/code&gt; 与 &lt;code&gt;workflow&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/token1.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/token1.png&#34;
 	width=&#34;1962&#34;
 	height=&#34;1048&#34;
 	
@@ -1579,7 +1580,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（注意：token只会显示一次，请及时保存）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/token.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/token.png&#34;
 	width=&#34;2242&#34;
 	height=&#34;366&#34;
 	
@@ -1593,9 +1594,9 @@
 		data-flex-basis=&#34;1470px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;私密源仓库设置token&#34;&gt;私密源仓库设置token&lt;/h3&gt;
+&lt;h2 id=&#34;私密源仓库设置token&#34;&gt;私密源仓库设置token&lt;/h2&gt;
 &lt;p&gt;在博客源仓库（blog-file）的 &lt;code&gt;Settings - Secrets - Actions&lt;/code&gt; 中添加 &lt;code&gt;PERSONAL_TOKEN&lt;/code&gt; 环境变量为刚才的 Token，这样 GitHub Action 就可以获取到 Token 了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/personal-token.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/personal-token.png&#34;
 	width=&#34;2534&#34;
 	height=&#34;904&#34;
 	
@@ -1609,7 +1610,7 @@
 		data-flex-basis=&#34;672px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;创建workflows发布文件&#34;&gt;创建workflows发布文件&lt;/h3&gt;
+&lt;h2 id=&#34;创建workflows发布文件&#34;&gt;创建workflows发布文件&lt;/h2&gt;
 &lt;p&gt;在本地博客主目录下创建 &lt;code&gt;.github/workflows&lt;/code&gt;目录，然后创建&lt;code&gt;deploy.yml&lt;/code&gt;文件。我的 GitHub Action 配置为，自动发布示例配置如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
@@ -1647,7 +1648,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;commit_message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ github.event.head_commit.message }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;external_repository&lt;/code&gt;替换为自己的公开博客git&lt;/p&gt;
-&lt;h3 id=&#34;本地快捷push文件&#34;&gt;本地快捷push文件&lt;/h3&gt;
+&lt;h2 id=&#34;本地快捷push文件&#34;&gt;本地快捷push文件&lt;/h2&gt;
 &lt;p&gt;在本地博客根目录文件夹下新建一个名为&lt;code&gt;deploy.sh&lt;/code&gt;的文件用于一键部署博客,在&lt;code&gt;deploy.sh&lt;/code&gt;中填入如下内容,其中最后一行代码里的&lt;code&gt;git@github.com:Bla1n/blog-file.git&lt;/code&gt;需要更改为你自己仓库的地址：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo &lt;span class=&#34;c1&#34;&gt;#构造你的blog&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -1658,12 +1659,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;deploy&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -f git@github.com:Bla1n/blog-file.git main &lt;span class=&#34;c1&#34;&gt;#向存储库推送&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;初次使用&#34;&gt;初次使用&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;初次使用&#34;&gt;初次使用&lt;/h2&gt;
 &lt;p&gt;之后再本地调试完博客后，即可在终端运行如下命令则可以一键部署到github&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash deploy.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;配置自己的域名&#34;&gt;配置自己的域名&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置自己的域名&#34;&gt;配置自己的域名&lt;/h2&gt;
 &lt;p&gt;等待&lt;code&gt;Github Action&lt;/code&gt;完成后,我们需要开启&lt;code&gt;GitHub page&lt;/code&gt;，首先进入公开博客仓库，然后打开设置，在如图示位置进行设置（不会的可以自行搜索）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/domain.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/domain.png&#34;
 	width=&#34;2400&#34;
 	height=&#34;1000&#34;
 	
@@ -1677,8 +1678,8 @@
 		data-flex-basis=&#34;576px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;生效结果&#34;&gt;生效结果&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/action.png&#34;
+&lt;h2 id=&#34;生效结果&#34;&gt;生效结果&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/action.png&#34;
 	width=&#34;2870&#34;
 	height=&#34;940&#34;
 	
@@ -1692,10 +1693,10 @@
 		data-flex-basis=&#34;732px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;push仓库会重置域名问题&#34;&gt;push仓库会重置域名问题&lt;/h2&gt;
+&lt;h1 id=&#34;push仓库会重置域名问题&#34;&gt;push仓库会重置域名问题&lt;/h1&gt;
 &lt;p&gt;每次push后会发现公开博客仓库设置的自己的域名会被重置为默认域名&lt;/p&gt;
 &lt;p&gt;解决方法：在content目录下创建一个名为CNAME的文件，内容填入自己的域名即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.blain.top/p/hugo-problems/cname.png&#34;
+&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/cname.png&#34;
 	width=&#34;918&#34;
 	height=&#34;240&#34;
 	
@@ -1709,7 +1710,7 @@
 		data-flex-basis=&#34;918px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;本地push失败彻底解决办法&#34;&gt;本地push失败彻底解决办法&lt;/h2&gt;
+&lt;h1 id=&#34;本地push失败彻底解决办法&#34;&gt;本地push失败彻底解决办法&lt;/h1&gt;
 &lt;p&gt;在本地push几次后，突然有一天push不成功了，报错类似如下（忘记截图了）&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh: connect to host github.com port 22: Connection timed out fatal: Could not &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; from remote repo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;解决办法：在&lt;code&gt;~/.ssh&lt;/code&gt;路径下，创建一个名为config的文件，内容如下：&lt;/p&gt;
