@@ -7,7 +7,697 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 04 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第02节：安全与风险管理（下）</title>
+        <link>https://www.blain.top/p/cissp-classnote02/</link>
+        <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote02/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote02/title.png" alt="Featured image of post 第02节：安全与风险管理（下）" /&gt;&lt;p&gt;最近疯狂单曲循环Everywhere We Go&lt;/p&gt;
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;&gt;
+&lt;style type=&#34;text/css&#34;&gt;.dark-theme .aplayer{background:#212121}.dark-theme .aplayer.aplayer-withlist .aplayer-info{border-bottom-color:#5c5c5c}.dark-theme .aplayer.aplayer-fixed .aplayer-list{border-color:#5c5c5c}.dark-theme .aplayer .aplayer-body{background-color:#212121}.dark-theme .aplayer .aplayer-info{border-top-color:#212121}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-title{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-music .aplayer-author{color:#fff}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time{color:#eee}.dark-theme .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path{fill:#eee}.dark-theme .aplayer .aplayer-list{background-color:#212121}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb{background-color:#999}.dark-theme .aplayer .aplayer-list::-webkit-scrollbar-thumb:hover{background-color:#bbb}.dark-theme .aplayer .aplayer-list li{color:#fff;border-top-color:#666}.dark-theme .aplayer .aplayer-list li:hover{background:#4e4e4e}.dark-theme .aplayer .aplayer-list li.aplayer-list-light{background:#6c6c6c}.dark-theme .aplayer .aplayer-list li .aplayer-list-index{color:#ddd}.dark-theme .aplayer .aplayer-list li .aplayer-list-author{color:#ddd}.dark-theme .aplayer .aplayer-lrc{text-shadow:-1px -1px 0 #666}.dark-theme .aplayer .aplayer-lrc:before{background:-moz-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:-webkit-linear-gradient(top, #212121 0%, rgba(33,33,33,0) 100%);background:linear-gradient(to bottom, #212121 0%, rgba(33,33,33,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#212121&#39;, endColorstr=&#39;#00212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc:after{background:-moz-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:-webkit-linear-gradient(top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);background:linear-gradient(to bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.8) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#00212121&#39;, endColorstr=&#39;#cc212121&#39;,GradientType=0 )}.dark-theme .aplayer .aplayer-lrc p{color:#fff}.dark-theme .aplayer .aplayer-miniswitcher{background:#484848}.dark-theme .aplayer .aplayer-miniswitcher .aplayer-icon path{fill:#eee}&lt;/style&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&#34;&gt;&lt;/script&gt;&lt;meting-js server=&#34;netease&#34; type=&#34;song&#34; id=&#34;65739&#34; theme=&#34;#2980b9&#34; autoplay=&#34;false&#34;&gt;&lt;/meting-js&gt;
+&lt;p&gt;分享一个知乎博主写的CISSP学习心得&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/374507778&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;自学通过CISSP，其实没那么难
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以及他的学习笔记&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/376344249&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CISSP知识点梳理
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;风险管理&#34;&gt;风险管理★&lt;/h1&gt;
+&lt;h2 id=&#34;确定风险消减策略&#34;&gt;确定风险消减策略&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303140245244.png&#34;
+	width=&#34;1464&#34;
+	height=&#34;780&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303140245244&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;降低风险是主要的工作内容，转嫁风险可以理解为买保险&lt;/p&gt;
+&lt;h2 id=&#34;评价残留风险&#34;&gt;评价残留风险&lt;/h2&gt;
+&lt;p&gt;评价就是指什么样的风险是可以接受的&lt;/p&gt;
+&lt;p&gt;1、风险偏好：喜不喜欢冒比较高的风险&lt;/p&gt;
+&lt;p&gt;2、风险承受能力：风险容忍度&lt;/p&gt;
+&lt;p&gt;3、很多企业内部都有一个风险标杆，一旦评价超过这个风险阈值就绝不开展这个业务。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303141111193.png&#34;
+	width=&#34;1488&#34;
+	height=&#34;686&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303141111193&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;组织的信息安全实践人&#34;&gt;组织的信息安全实践（人）&lt;/h1&gt;
+&lt;p&gt;信息安全必须人尽其事&lt;/p&gt;
+&lt;h2 id=&#34;信息安全管理中的道德&#34;&gt;信息安全管理中的道德&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303141826135.png&#34;
+	width=&#34;1154&#34;
+	height=&#34;386&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303141826135&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;298&#34;
+		data-flex-basis=&#34;717px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303142303728.png&#34;
+	width=&#34;1108&#34;
+	height=&#34;356&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303142303728&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;311&#34;
+		data-flex-basis=&#34;746px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、需要明确数据收集者和数据主体之间的关系&lt;/p&gt;
+&lt;p&gt;2、数据保管者和拥有者可以不是一个人&lt;/p&gt;
+&lt;p&gt;3、&lt;strong&gt;数据用户&lt;/strong&gt;一般指日常工作中的&lt;strong&gt;一般工作人员&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4、系统用户指的是具有系统管理员权限的用户&lt;/p&gt;
+&lt;p&gt;5、系统拥有者一般指系统用户的领导，对系统的配置等能提出管理要求，拥有最高的权限。&lt;/p&gt;
+&lt;p&gt;6、系统管理者指IT部门主管一类&lt;/p&gt;
+&lt;h2 id=&#34;信息系统用户的误区&#34;&gt;信息系统用户的误区&lt;/h2&gt;
+&lt;p&gt;不正当行为辩护常见的借口&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303144851873.png&#34;
+	width=&#34;1066&#34;
+	height=&#34;458&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303144851873&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;232&#34;
+		data-flex-basis=&#34;558px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303145037457.png&#34;
+	width=&#34;966&#34;
+	height=&#34;370&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303145037457&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;261&#34;
+		data-flex-basis=&#34;626px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;轻而易举谬论：在网上其实轻而易举就能犯大错误&lt;/p&gt;
+&lt;h2 id=&#34;isc2的道德规范&#34;&gt;ISC2的道德规范&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303145406799.png&#34;
+	width=&#34;1204&#34;
+	height=&#34;528&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303145406799&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;547px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303145533048.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;426&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303145533048&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;608px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、在ISC2规范中，社会利益＞雇主利益&lt;/p&gt;
+&lt;h2 id=&#34;设计合理的信息安全组织架构&#34;&gt;设计合理的信息安全组织架构&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303150038637.png&#34;
+	width=&#34;1298&#34;
+	height=&#34;576&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303150038637&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;225&#34;
+		data-flex-basis=&#34;540px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、第一道防线：IT部门、业务部门&lt;/p&gt;
+&lt;p&gt;2、第二道防线：建立一个脱离IT部门和业务部门之外的专门的信息安全部门，防止出现利益冲突（安全管理委员会设立日常风险管理办公室）&lt;/p&gt;
+&lt;p&gt;3、第三道防线：审计部门&lt;/p&gt;
+&lt;h2 id=&#34;重要的角色和责任&#34;&gt;重要的角色和责任&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303150407367.png&#34;
+	width=&#34;1248&#34;
+	height=&#34;520&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303150407367&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;576px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、最终负责人在不同场景中可能指的人不一样，例如对于企业来说最终负责人是一把手，但对于某些数据来说，可能是数据管理部门的负责人。要注意考题中是否涉及到具体的事务性话题&lt;/p&gt;
+&lt;p&gt;2、安全管理员有多种定义，有些是管防火墙这种的，有的是管账号的，还有的是非IT部门中作为“安全接口”（负责上传下达）的人员&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303151241583.png&#34;
+	width=&#34;1462&#34;
+	height=&#34;568&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303151241583&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;257&#34;
+		data-flex-basis=&#34;617px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安全建设应按计划行事top-down&#34;&gt;安全建设应按计划行事（top-down）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303151423922.png&#34;
+	width=&#34;1496&#34;
+	height=&#34;754&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303151423922&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;476px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;高度重视人员安全问题&#34;&gt;高度重视人员安全问题&lt;/h2&gt;
+&lt;h3 id=&#34;第一阶段入职&#34;&gt;第一阶段：入职&lt;/h3&gt;
+&lt;p&gt;1、背景调查&lt;/p&gt;
+&lt;p&gt;2、保密协议&lt;/p&gt;
+&lt;p&gt;保密协议往往仅限于心理的影响而不是实际的影响&lt;/p&gt;
+&lt;h3 id=&#34;第二阶段在职后续再讲&#34;&gt;第二阶段：在职（后续再讲）&lt;/h3&gt;
+&lt;h3 id=&#34;第三阶段离职&#34;&gt;第三阶段：离职&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303152546514.png&#34;
+	width=&#34;1140&#34;
+	height=&#34;590&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303152546514&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;463px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;信息安全培训&#34;&gt;信息安全培训&lt;/h3&gt;
+&lt;p&gt;安全意识培训：对于全员进行培训（最难做的工作）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303153532790.png&#34;
+	width=&#34;1494&#34;
+	height=&#34;640&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303153532790&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;560px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;安全技能培训：安全相关技能培训（如何使用相关安全设备）&lt;/p&gt;
+&lt;p&gt;安全教育培训：专业的技术培训，往往需要了解底层逻辑等。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303153758443.png&#34;
+	width=&#34;1498&#34;
+	height=&#34;580&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303153758443&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;619px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;计算机犯罪&#34;&gt;计算机犯罪&lt;/h1&gt;
+&lt;h2 id=&#34;计算机犯罪定义&#34;&gt;计算机犯罪定义&lt;/h2&gt;
+&lt;p&gt;1、计算机辅助的犯罪：电信诈骗、通过网络传播淫秽色情图片等&lt;/p&gt;
+&lt;p&gt;2、计算机特有的犯罪：DOS攻击，SQL注入攻击&lt;/p&gt;
+&lt;p&gt;3、计算机附带因素犯罪：犯罪嫌疑人电脑中的顾客列表&lt;/p&gt;
+&lt;h2 id=&#34;计算机犯罪特点&#34;&gt;计算机犯罪特点&lt;/h2&gt;
+&lt;p&gt;1、调查取证困难，证据容易破坏&lt;/p&gt;
+&lt;p&gt;2、相关法律还不完善&lt;/p&gt;
+&lt;p&gt;3、具有跨地域特征&lt;/p&gt;
+&lt;p&gt;4、从统计数据上来看，由内部人员实施的犯罪比率最高（从损失来讲）&lt;/p&gt;
+&lt;p&gt;5、受害机构有时不报案，担心损害用户对机构的信心（被勒索）&lt;/p&gt;
+&lt;h2 id=&#34;计算机犯罪类型&#34;&gt;计算机犯罪类型&lt;/h2&gt;
+&lt;p&gt;包含不常见类型&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303160756786.png&#34;
+	width=&#34;1038&#34;
+	height=&#34;566&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303160756786&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;440px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、萨米拉香肠：积少成多的犯罪&lt;/p&gt;
+&lt;p&gt;2、数据篡改：会计欺诈做假账，使得股票升值&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303161159856.png&#34;
+	width=&#34;990&#34;
+	height=&#34;504&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303161159856&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3、电磁泄露捕获：不是wifi等信号窃取，而是电磁辐射泄露导致的（例如窃取别人显示器画面）&lt;/p&gt;
+&lt;p&gt;注：通过白噪声、法拉第笼等来减轻电磁泄露风险（tempest）&lt;/p&gt;
+&lt;h2 id=&#34;计算机犯罪三要素mom&#34;&gt;计算机犯罪三要素MOM&lt;/h2&gt;
+&lt;p&gt;动机：内因（寻求刺激、报复），挑战，外因（经济、政治，如：APT）&lt;/p&gt;
+&lt;p&gt;机会：缺陷、弱点&lt;/p&gt;
+&lt;p&gt;方式：了解系统运行机制，使用何种攻击方法等&lt;/p&gt;
+&lt;h1 id=&#34;计算机犯罪相关法律&#34;&gt;计算机犯罪相关法律&lt;/h1&gt;
+&lt;h2 id=&#34;法律体系&#34;&gt;法律体系&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303162722406.png&#34;
+	width=&#34;1234&#34;
+	height=&#34;478&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303162722406&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;619px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;法律类型&#34;&gt;法律类型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303163051933.png&#34;
+	width=&#34;1066&#34;
+	height=&#34;536&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303163051933&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;477px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;知识产权相关法律&#34;&gt;知识产权相关法律&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303163254272.png&#34;
+	width=&#34;1044&#34;
+	height=&#34;448&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303163254272&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、著作权只保护创意的表现形式（打击盗版书籍）而不保护作品的创意（书籍的内容被人看了）&lt;/p&gt;
+&lt;p&gt;2、商标保护的重要前提是注册，但有时也不用注册&lt;/p&gt;
+&lt;p&gt;3、专利必须注册才能被保护，并且还有有效期&lt;/p&gt;
+&lt;p&gt;知识产权的保护应当适度，不然容易造成富人更富、穷人更穷的情况&lt;/p&gt;
+&lt;h2 id=&#34;个人隐私的定义&#34;&gt;个人隐私的定义&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240303170803367.png&#34;
+	width=&#34;1182&#34;
+	height=&#34;552&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240303170803367&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;513px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;合理的隐私期待，不能过度使用监视权&lt;/p&gt;
+&lt;h1 id=&#34;bcp概述业务持续计划&#34;&gt;BCP概述（业务持续计划）&lt;/h1&gt;
+&lt;h2 id=&#34;灾难的定义&#34;&gt;灾难的定义&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304084150261.png&#34;
+	width=&#34;1376&#34;
+	height=&#34;610&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304084150261&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;225&#34;
+		data-flex-basis=&#34;541px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304084604354.png&#34;
+	width=&#34;1190&#34;
+	height=&#34;578&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304084604354&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;205&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;灾备的定义可能不像平常想象中那么“浅显”，它是一种特殊手段，举例：工商银行全业务中断2.5h都没有启动灾备预案。灾备所面临的事件往往更大，需要BIA来确定哪些是关键业务、多长算长时间。&lt;/p&gt;
+&lt;h2 id=&#34;bcp相关计划之间的关系&#34;&gt;BCP相关计划之间的关系&lt;/h2&gt;
+&lt;p&gt;考试需要明确BCP与BRP的区别&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304085406390.png&#34;
+	width=&#34;1416&#34;
+	height=&#34;690&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304085406390&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;205&#34;
+		data-flex-basis=&#34;492px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、历史发展：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;备份→异地备份→DRP（重建一个备用站点、备用系统、灾备机房（花费太大））→BCP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2、BCP的二八原则，将80%的财力用到20%的关键业务当中，BCP的最核心工作就是业务影响分析&lt;/p&gt;
+&lt;p&gt;3、BCP是DRP的延伸&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304095910265.png&#34;
+	width=&#34;1022&#34;
+	height=&#34;586&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304095910265&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;418px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304100156754.png&#34;
+	width=&#34;1112&#34;
+	height=&#34;524&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304100156754&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;212&#34;
+		data-flex-basis=&#34;509px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;communications通常指的是公共关系（记者提问），需要专业人员去发言&lt;/p&gt;
+&lt;p&gt;应急响应在运维部分讨论&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304100347982.png&#34;
+	width=&#34;1090&#34;
+	height=&#34;482&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304100347982&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;226&#34;
+		data-flex-basis=&#34;542px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bcp项目规划&#34;&gt;BCP项目规划&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304100820146.png&#34;
+	width=&#34;1004&#34;
+	height=&#34;630&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304100820146&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;382px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、任何安全工作的需求分析都是风险分析来实现的&lt;/p&gt;
+&lt;p&gt;2、BCP投资非常大，在项目前期需要沟通好&lt;/p&gt;
+&lt;h2 id=&#34;bcp项目负责人&#34;&gt;BCP项目负责人&lt;/h2&gt;
+&lt;p&gt;一定是个高管，至少是CIO（首席信息官）、或者CEO的副手&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304101028958.png&#34;
+	width=&#34;990&#34;
+	height=&#34;506&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304101028958&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;469px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bcp策略条款&#34;&gt;BCP策略条款&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304101430957.png&#34;
+	width=&#34;944&#34;
+	height=&#34;598&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304101430957&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;业务连续性话题已经远远超出IT范畴，是一种特殊的安全手段，投入非常大，需要IT部门配合&lt;/p&gt;
+&lt;h1 id=&#34;业务影响分析bia&#34;&gt;业务影响分析（BIA）&lt;/h1&gt;
+&lt;h2 id=&#34;bia的目的&#34;&gt;BIA的目的&lt;/h2&gt;
+&lt;p&gt;1、针对重大可用性风险的专项评估&lt;/p&gt;
+&lt;p&gt;2、特殊性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304102129699.png&#34;
+	width=&#34;1128&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304102129699&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;497px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;什么是功能支持方面的不足？&lt;/p&gt;
+&lt;p&gt;对于业务的影响非常大的单点系统（如果一个路由器坏了，整个业务就中断了，这台路由器就是单点）&lt;/p&gt;
+&lt;h2 id=&#34;bia的过程&#34;&gt;BIA的过程&lt;/h2&gt;
+&lt;p&gt;与定性风险评估的流程基本一样&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304102219892.png&#34;
+	width=&#34;1118&#34;
+	height=&#34;564&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304102219892&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、时间关键：中断后立刻就会产生影响的业务&lt;/p&gt;
+&lt;p&gt;2、&lt;strong&gt;最大允许中断时间MTD越短的业务越关键&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3、MTD判断标准是造成&lt;strong&gt;难以挽回的损失的大小&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;支持资源的种类&#34;&gt;支持资源的种类&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304102626058.png&#34;
+	width=&#34;1086&#34;
+	height=&#34;578&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304102626058&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、人力资源最难恢复&lt;/p&gt;
+&lt;p&gt;2、外部服务恢复也很难&lt;/p&gt;
+&lt;p&gt;3、最花钱的是物理基础设施资源&lt;/p&gt;
+&lt;h2 id=&#34;预期潜在紧急情况&#34;&gt;预期潜在紧急情况&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304102759806.png&#34;
+	width=&#34;1194&#34;
+	height=&#34;508&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304102759806&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;564px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bcp策略选择&#34;&gt;BCP策略选择&lt;/h1&gt;
+&lt;h2 id=&#34;确定防御性控制&#34;&gt;确定防御性控制&lt;/h2&gt;
+&lt;p&gt;发现单点问题，设计改造方案&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304103249881.png&#34;
+	width=&#34;1102&#34;
+	height=&#34;500&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304103249881&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;220&#34;
+		data-flex-basis=&#34;528px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;不同阶段的应急计划策略&#34;&gt;不同阶段的应急计划策略&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304103330536.png&#34;
+	width=&#34;934&#34;
+	height=&#34;378&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304103330536&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;247&#34;
+		data-flex-basis=&#34;593px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、迁移关键业务是恢复阶段&lt;/p&gt;
+&lt;p&gt;2、保护人员安全属于紧急响应阶段&lt;/p&gt;
+&lt;p&gt;3、恢复业务正常秩序，由灾备方案切换回正常方案是复原阶段&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304103513119.png&#34;
+	width=&#34;1178&#34;
+	height=&#34;700&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304103513119&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;403px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bcp策略关键技术指标考点&#34;&gt;BCP策略关键技术指标（考点）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote02/assets/image-20240304103607879.png&#34;
+	width=&#34;1004&#34;
+	height=&#34;302&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240304103607879&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;332&#34;
+		data-flex-basis=&#34;797px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、恢复时间目标是恢复的快慢&lt;/p&gt;
+&lt;p&gt;2、恢复点目标是最大能容忍多长时间的数据损失&lt;/p&gt;
+&lt;p&gt;3、单位都是时间&lt;/p&gt;
+&lt;p&gt;4、和最大允许中断时间（MTD）之间的关系&lt;/p&gt;
+&lt;p&gt;MTD是一个底线，RTO和RPO是所选策略的技术指标，只要RTO＜MTD就算符合基本要求，当然还是在符合成本效益之内越快越好&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第01节：安全与风险管理（上）</title>
         <link>https://www.blain.top/p/cissp-classnote01/</link>
         <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
