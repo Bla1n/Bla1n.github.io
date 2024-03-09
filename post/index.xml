@@ -7,7 +7,824 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Mon, 04 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第03节：安全工程实施（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote03/</link>
+        <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote03/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote03/title.jpg" alt="Featured image of post 第03节：安全工程实施（上）" /&gt;&lt;h1 id=&#34;本章大纲&#34;&gt;本章大纲&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240305110530675.png&#34;
+	width=&#34;1236&#34;
+	height=&#34;740&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240305110530675&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;计算机体系结构&#34;&gt;计算机体系结构&lt;/h1&gt;
+&lt;p&gt;1、体系结构研究的东西是什么？&lt;/p&gt;
+&lt;p&gt;答：一个复杂的系统，我们将其拆解为若干个子系统，然后再将子系统划分为若干个组件，研究这些组件、子系统在这个系统中的作用以及其中的关系，从而对复杂系统的特点有更深入的理解。所以体系架构是指的一种研究方法，而不是结果。&lt;/p&gt;
+&lt;p&gt;2、不存在什么都能解决的系统架构&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240305113033092.png&#34;
+	width=&#34;1366&#34;
+	height=&#34;820&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240305113033092&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;399px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;计算机硬件的组成对信息安全有什么影响&#34;&gt;计算机硬件的组成对信息安全有什么影响&lt;/h1&gt;
+&lt;h2 id=&#34;cpu&#34;&gt;CPU&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306085535263.png&#34;
+	width=&#34;1190&#34;
+	height=&#34;554&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306085535263&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;515px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cpu的安全问题&#34;&gt;CPU的安全问题&lt;/h3&gt;
+&lt;p&gt;1、超线程（HT）：在一个CPU里封装两个逻辑控制单元，同时运行两个线程&lt;/p&gt;
+&lt;p&gt;2、超线程导致的安全问题：&lt;strong&gt;隐蔽信道（CovertChannel）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一种特殊的通讯方法导致的泄密，是对保密性的一种破坏&lt;/p&gt;
+&lt;p&gt;如：在BLP模型中，内外部保密级别不一样，外部消息可以写入内部，但内部消息无法写入外部。但内外部如果勾结以后，外部写入内部时，内部切断信道代表信息“0”、传入成功代表信息“1”。外部观察这个变化进而获取内部信息。这就是隐蔽信道的一种方式。不是传统意义上的信号泄露。&lt;/p&gt;
+&lt;p&gt;注：&lt;strong&gt;BLP模型&lt;/strong&gt;
+BLP模型是一种模拟军事安全策略的计算机访问控制模型，它是最早也是最常用的一种&lt;strong&gt;多级访问模型&lt;/strong&gt;，该模型用于保护系统信息的&lt;strong&gt;机密性&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这种0/1存储导致的泄密是&lt;strong&gt;存储型隐蔽信道&lt;/strong&gt;，这种信道隐蔽性不是很强&lt;/p&gt;
+&lt;p&gt;3、另一种隐蔽信道：&lt;strong&gt;时间调制隐蔽信道（Timing CovertChannel）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;内部使用一种程序来控制内存资源的消耗，外部在写入信息时会时快时慢，快代表“1”，慢代表“0”，这就是一种基于时间调制的隐蔽信道&lt;/p&gt;
+&lt;h3 id=&#34;cpu的运行状态&#34;&gt;CPU的运行状态&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306091726069.png&#34;
+	width=&#34;1190&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306091726069&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;525px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;解题状态和管理程序状态是运行状态的两种子状态，解题就是正常情况下的非特权状态，管理程序状态可以理解为超级管理员状态。通过内核中的控制单元来确定系统处于什么状态。&lt;/p&gt;
+&lt;h3 id=&#34;cpu指令执行类型&#34;&gt;CPU指令执行类型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306092103708.png&#34;
+	width=&#34;1138&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306092103708&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;502px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;存在的安全问题：&lt;/p&gt;
+&lt;p&gt;1、进程的隔离，不允许不同应用进程之间随意通讯&lt;/p&gt;
+&lt;p&gt;2、虚拟化可能导致恶意代码的问题更难发现（黑客通过污染虚拟化程序，导致运行在虚拟化之上的重装系统的防病毒软件无法察觉）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306092815011.png&#34;
+	width=&#34;1128&#34;
+	height=&#34;552&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306092815011&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;490px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总线与数据传输&#34;&gt;总线与数据传输&lt;/h2&gt;
+&lt;p&gt;以前信息要从内存储设备转向外存储设备需要通过CPU的控制才可以执行，但如果输出流量比较大的时候，CPU负载就会非常高影响其他程序的运行。&lt;/p&gt;
+&lt;p&gt;DMA（直接存储器访问）：绕过CPU，直接连接内存储器和外存储器。&lt;/p&gt;
+&lt;p&gt;安全问题：这就相当于绕开了CPU的&lt;strong&gt;访问控制&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;存储系统的层次结构&#34;&gt;存储系统的层次结构&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094351207.png&#34;
+	width=&#34;1156&#34;
+	height=&#34;552&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306094351207&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;502px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cache缓存&#34;&gt;Cache（缓存）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094521838.png&#34;
+	width=&#34;1164&#34;
+	height=&#34;502&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306094521838&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;556px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ram内存易失存储器&#34;&gt;RAM（内存）（易失存储器）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094553831.png&#34;
+	width=&#34;1030&#34;
+	height=&#34;438&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306094553831&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;564px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;静态随机存储SRAM 比 动态随机存储DRAM 要快&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rom只读存储器非易失存储器&#34;&gt;ROM（只读存储器）（非易失存储器）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094842880.png&#34;
+	width=&#34;1018&#34;
+	height=&#34;528&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240306094842880&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;TPM：可信平台模块，很难被篡改，含有CPU的ROM，用于保护密钥的保密性和完整性&lt;/p&gt;
+&lt;p&gt;注：ROM不是硬盘&lt;/p&gt;
+&lt;h3 id=&#34;物理存储器和虚拟存储器虚拟内存&#34;&gt;物理存储器和虚拟存储器（虚拟内存）&lt;/h3&gt;
+&lt;p&gt;虚拟内存的坏处就是，如果突然断电，计算机来不及删除ROM上的信息，就有可能导致黑客分析磁盘页文件从而产生信息泄露&lt;/p&gt;
+&lt;h2 id=&#34;输入输出&#34;&gt;输入/输出&lt;/h2&gt;
+&lt;p&gt;keylogger：一种USB的物理键盘监听器&lt;/p&gt;
+&lt;h2 id=&#34;io技术&#34;&gt;I/O技术&lt;/h2&gt;
+&lt;p&gt;内部操作系统管理输入输出的技术&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309092657147.png&#34;
+	width=&#34;1030&#34;
+	height=&#34;608&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309092657147&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、编程I/O：外部硬件对内存、磁盘的使用就属于编程I/O，优先级很低&lt;/p&gt;
+&lt;p&gt;2、中断处理：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309093051355.png&#34;
+	width=&#34;1170&#34;
+	height=&#34;588&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309093051355&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;477px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3、中断向量表：用于存储不同应用程序中断的入口地址，是需要操作系统严格保护的一个资源，黑客可以通过篡改中断向量表来实现提权。&lt;/p&gt;
+&lt;h2 id=&#34;固件firmware&#34;&gt;固件，Firmware&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309093648211.png&#34;
+	width=&#34;1168&#34;
+	height=&#34;536&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309093648211&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;217&#34;
+		data-flex-basis=&#34;522px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;保护机制&#34;&gt;保护机制&lt;/h1&gt;
+&lt;h2 id=&#34;保护机制的基本概念&#34;&gt;保护机制的基本概念&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309094928040.png&#34;
+	width=&#34;1036&#34;
+	height=&#34;522&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309094928040&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;476px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、主体和客体之间的交互就是访问，安全工作最主要的形式就是进行&lt;strong&gt;访问控制&lt;/strong&gt;来实现一系列的安全策略（系统级）&lt;/p&gt;
+&lt;p&gt;2、多级安全策略是最复杂的、解决涉及国家安全问题的安全策略，不是最安全的意思&lt;/p&gt;
+&lt;h2 id=&#34;保护机制1tcb可信计算基&#34;&gt;保护机制1：TCB（可信计算基）&lt;/h2&gt;
+&lt;p&gt;TCB（可信计算基）是桔皮书里的一个概念&lt;/p&gt;
+&lt;p&gt;注：桔皮书的标准已经过时了，现在使用“共同准则”来评估系统安全性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309095844535.png&#34;
+	width=&#34;1020&#34;
+	height=&#34;534&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309095844535&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;458px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;保护机制2reference-monitor参照监视&#34;&gt;保护机制2：Reference Monitor（参照监视）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309100833687.png&#34;
+	width=&#34;1212&#34;
+	height=&#34;490&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309100833687&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;247&#34;
+		data-flex-basis=&#34;593px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、最核心的机制是访问控制，&lt;strong&gt;参照监视可以理解为访问控制的另一种说法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2、要求：必须能监视所有主体和客体的访问，不能有任何的例外&lt;/p&gt;
+&lt;h2 id=&#34;保护机制3security-kernel安全内核&#34;&gt;保护机制3：Security Kernel（安全内核）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309101144583.png&#34;
+	width=&#34;1112&#34;
+	height=&#34;582&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309101144583&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;458px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、安全内核是TCB里面实现RM的一个实体&lt;/p&gt;
+&lt;p&gt;2、设计操作系统时，内核必须满足三个内核&lt;/p&gt;
+&lt;p&gt;3、可验证性：安全内核要尽量的&lt;strong&gt;简单&lt;/strong&gt;，方便验证&lt;/p&gt;
+&lt;h2 id=&#34;保护机制4protection-ring保护环&#34;&gt;保护机制4：Protection Ring（保护环）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309101957732.png&#34;
+	width=&#34;1264&#34;
+	height=&#34;534&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309101957732&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;236&#34;
+		data-flex-basis=&#34;568px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、一般从0环开始标注&lt;/p&gt;
+&lt;p&gt;2、保护环能实现“隔离”的安全要求，能减少被突破后的损失&lt;/p&gt;
+&lt;p&gt;3、保护环是深度防御安全控制原则的具体实现&lt;/p&gt;
+&lt;h2 id=&#34;保护机制5security-labels安全标记&#34;&gt;保护机制5：Security Labels（安全标记）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309103405369.png&#34;
+	width=&#34;978&#34;
+	height=&#34;292&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309103405369&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;334&#34;
+		data-flex-basis=&#34;803px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、BLP出现之前用自主访问控制（由某个人的自主意志来决定），BLP出现以后用&lt;strong&gt;强制访问控制&lt;/strong&gt;（由&lt;strong&gt;标签&lt;/strong&gt;的比对来决定）&lt;/p&gt;
+&lt;p&gt;2、出现安全标记就要想到强制访问控制&lt;/p&gt;
+&lt;h2 id=&#34;保护机制6security-domain安全域&#34;&gt;保护机制6：Security Domain（安全域）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309104754653.png&#34;
+	width=&#34;1062&#34;
+	height=&#34;314&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309104754653&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;338&#34;
+		data-flex-basis=&#34;811px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、将安全需求类似的资源放到一起（这就是安全域）对其进行统一保护。&lt;/p&gt;
+&lt;p&gt;2、安全域是简化安全工作的常用方法&lt;/p&gt;
+&lt;h2 id=&#34;保护机制7进程隔离硬件分离最小特权&#34;&gt;保护机制7：进程隔离，硬件分离，最小特权&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309111238134.png&#34;
+	width=&#34;1126&#34;
+	height=&#34;488&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309111238134&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;553px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;保护机制8hardening加固&#34;&gt;保护机制8：Hardening（加固）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309111343434.png&#34;
+	width=&#34;1106&#34;
+	height=&#34;468&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309111343434&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;236&#34;
+		data-flex-basis=&#34;567px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、一般的加固：禁用不用的端口、禁用某些服务等。更高的加固：剥离某些服务的代码&lt;/p&gt;
+&lt;h1 id=&#34;安全模型&#34;&gt;安全模型&lt;/h1&gt;
+&lt;h2 id=&#34;系统运行的安全模式&#34;&gt;系统运行的安全模式&lt;/h2&gt;
+&lt;p&gt;1、专用模式&lt;/p&gt;
+&lt;p&gt;2、系统高模式&lt;/p&gt;
+&lt;p&gt;3、分隔模式&lt;/p&gt;
+&lt;p&gt;4、多级安全模式&lt;/p&gt;
+&lt;p&gt;多级安全的两个特例：&lt;/p&gt;
+&lt;p&gt;​	5、受控模式：在多级系统中，各用户都是能溯源的，若有用户发生泄密，我们能对其进行控制&lt;/p&gt;
+&lt;p&gt;​	6、受限模式：后果有限&lt;/p&gt;
+&lt;h2 id=&#34;安全模型的基本概念&#34;&gt;安全模型的基本概念&lt;/h2&gt;
+&lt;p&gt;1、定义：安全模型是高度抽象的、形式化的数学模型&lt;/p&gt;
+&lt;p&gt;2、目的：为设计和实现安全机制提供了一种理论框架&lt;/p&gt;
+&lt;h2 id=&#34;信息安全模型分类&#34;&gt;信息安全模型分类&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309114103719.png&#34;
+	width=&#34;710&#34;
+	height=&#34;486&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309114103719&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;350px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;安全模型分为访问控制模型（保密型模型）和完整性模型&lt;/p&gt;
+&lt;h2 id=&#34;1状态机模型&#34;&gt;1、状态机模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309142625609.png&#34;
+	width=&#34;1166&#34;
+	height=&#34;508&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309142625609&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;229&#34;
+		data-flex-basis=&#34;550px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、状态机模型是研究自动化系统的数学工具&lt;/p&gt;
+&lt;p&gt;2、安全的状态机模型：是指两个假设和一个推论&lt;/p&gt;
+&lt;p&gt;假设系统一共有n+1个状态，并且都是安全的；假设一共有n个状态转换过程，并且也都是安全的。则这个系统就是安全的&lt;/p&gt;
+&lt;h2 id=&#34;2信息流模型&#34;&gt;2、信息流模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309142935587.png&#34;
+	width=&#34;1110&#34;
+	height=&#34;474&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309142935587&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;234&#34;
+		data-flex-basis=&#34;562px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、信息流模型是基于状态机模型的&lt;/p&gt;
+&lt;p&gt;2、信息流模型认为，系统运行过程中状态的变化是因为信息的流动导致的。&lt;/p&gt;
+&lt;p&gt;3、基于状态机模型的假设，如果信息流动是安全的，则这个系统是安全的&lt;/p&gt;
+&lt;h2 id=&#34;3blp模型bell-lapadula模型&#34;&gt;3、*BLP模型（Bell-LaPadula模型）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309143311366.png&#34;
+	width=&#34;1156&#34;
+	height=&#34;584&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309143311366&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;BLP模型是一个为了解决保密型问题的模型，在涉密领域用的广泛&lt;/p&gt;
+&lt;h3 id=&#34;blp模型的安全规则&#34;&gt;BLP模型的安全规则&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309144027177.png&#34;
+	width=&#34;936&#34;
+	height=&#34;430&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309144027177&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;217&#34;
+		data-flex-basis=&#34;522px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、低不能读高，高不能写低。总之信息不能从高流向低&lt;/p&gt;
+&lt;p&gt;2、BLP模型中既有强制访问控制又有自助访问控制，属于&lt;strong&gt;格子模型&lt;/strong&gt;。而格子模型属于信息流模型的扩充，所以BLP也属于信息流模型。而信息流模型又是状态机模型的扩充，而BLP也属于状态机模型。&lt;/p&gt;
+&lt;h3 id=&#34;blp模型的缺陷&#34;&gt;BLP模型的缺陷&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309144610126.png&#34;
+	width=&#34;952&#34;
+	height=&#34;356&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309144610126&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;267&#34;
+		data-flex-basis=&#34;641px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、BLP模型不能解决所有问题，因为假设不一定成立&lt;/p&gt;
+&lt;h2 id=&#34;4biba模型&#34;&gt;4、Biba模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309145009194.png&#34;
+	width=&#34;952&#34;
+	height=&#34;574&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309145009194&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;398px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、Biba模型是一个为了解决完整性问题的模型&lt;/p&gt;
+&lt;p&gt;2、是格子模型、是信息流模型、是状态机模型&lt;/p&gt;
+&lt;h3 id=&#34;完整性公理&#34;&gt;完整性公理&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309145150009.png&#34;
+	width=&#34;964&#34;
+	height=&#34;418&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309145150009&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;553px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、Biba模型高不能读低，低不能写高，如何理解？&lt;/p&gt;
+&lt;p&gt;从信息完整性的角度来看，官方媒体（高）不能从自媒体（低）的稿子里随便读取一个信息来发表，自媒体给官方媒体投的稿被直接扔掉。&lt;/p&gt;
+&lt;p&gt;2、Biba模型在非涉密领域应用非常广泛&lt;/p&gt;
+&lt;p&gt;电力系统使用Biba模型，其二次系统和三次系统之间通过网闸隔离&lt;/p&gt;
+&lt;h2 id=&#34;5lattice模型&#34;&gt;5、Lattice模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309151700329.png&#34;
+	width=&#34;1132&#34;
+	height=&#34;508&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309151700329&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;222&#34;
+		data-flex-basis=&#34;534px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、基于BLP模型的扩充&lt;/p&gt;
+&lt;p&gt;2、不仅有层次的隔离，还有类别的隔离&lt;/p&gt;
+&lt;p&gt;3、补充：强制访问控制当中，安全标签不仅要有级别的标注，还要有类别的标注&lt;/p&gt;
+&lt;h2 id=&#34;6clark-wilson模型&#34;&gt;6、Clark-Wilson模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309152825702.png&#34;
+	width=&#34;1116&#34;
+	height=&#34;520&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309152825702&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;515px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309155501647.png&#34;
+	width=&#34;1118&#34;
+	height=&#34;556&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309155501647&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;482px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、基于流程的模型，为了实现完整性&lt;/p&gt;
+&lt;p&gt;2、工作原理：
+①把数据分为两类：自由数据（完整性不确定）、受限数据（约束数据，完整性已经确定，可以使用）&lt;/p&gt;
+&lt;p&gt;②模型的作用在于如何把自由数据转化为受限数据。&lt;/p&gt;
+&lt;p&gt;③这个转化要通过两个流程来实现，&lt;/p&gt;
+&lt;p&gt;转换程序：信息必须通过业务程序录入到系统空间，不能由技术人员直接录入到后台。区别与信息流动的二元组（主体流向客体），模型的信息流动是由三元组实现，即在主客体之间多了&lt;strong&gt;转换程序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;完整性检查程序：检查转换程序是否正确。（职务分离）&lt;/p&gt;
+&lt;p&gt;3、模型的另一个名字：受限界面模型（restricted interface model）&lt;/p&gt;
+&lt;h2 id=&#34;7中国墙模型&#34;&gt;7、中国墙模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309161404104.png&#34;
+	width=&#34;1166&#34;
+	height=&#34;640&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309161404104&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、中国墙另一个常用名字：Brew and Nash模型&lt;/p&gt;
+&lt;p&gt;2、安全目标：解决利益冲突&lt;/p&gt;
+&lt;p&gt;如何理解利益冲突？&lt;/p&gt;
+&lt;p&gt;举例：一个顾问在A银行做评估时听取了A银行的一些管理方式，当在B银行（与A银行存在激烈的竞争关系）进行评估时，或许会将A银行的这些管理方式有意无意地泄露出去，导致A银行的利益受损。&lt;/p&gt;
+&lt;p&gt;3、冲突域&lt;/p&gt;
+&lt;p&gt;将存在利益冲突的单位放在一个冲突域里面，一个“咨询顾问”只能访问一个冲突域里面的一个客户信息&lt;/p&gt;
+&lt;h2 id=&#34;8非干涉模型&#34;&gt;8、非干涉模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309162420073.png&#34;
+	width=&#34;1120&#34;
+	height=&#34;516&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309162420073&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;217&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、该模型为了解决隐蔽信道问题&lt;/p&gt;
+&lt;p&gt;2、工作流程举例：&lt;/p&gt;
+&lt;p&gt;在前面隐蔽信道例子中，相当于加了个中间C，当内部的A无论怎么插拔网线。外界的B都无法观察到其变化。这就阻止了隐蔽信道的问题&lt;/p&gt;
+&lt;h2 id=&#34;9取-予模型take-grant&#34;&gt;9、取-予模型（Take-Grant）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309162701264.png&#34;
+	width=&#34;964&#34;
+	height=&#34;388&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309162701264&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;596px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、该模型为了解决授权问题&lt;/p&gt;
+&lt;p&gt;2、为什么要有这个模型？
+举例：&lt;/p&gt;
+&lt;p&gt;①A将权限授予（G）了B	A→B&lt;/p&gt;
+&lt;p&gt;②C是B的上级，获取（T）了B的权限	B→C&lt;/p&gt;
+&lt;p&gt;③D将权限授予了C，C就相当于同时拥有了A与D的权限	D→C&lt;/p&gt;
+&lt;p&gt;④若A和D的权限是需要职责分离的，则C这种情况就不应该发生	C=A+D&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309163459353.png&#34;
+	width=&#34;620&#34;
+	height=&#34;650&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;指向图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;228px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;结论：&lt;/p&gt;
+&lt;p&gt;该模型就是利用这种指向图的方式来研究授权过程中的风险，从而提出授权过程的禁止性要求&lt;/p&gt;
+&lt;h2 id=&#34;10访问矩阵模型最常用最直接&#34;&gt;10、访问矩阵模型（最常用、最直接）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309163650970.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;572&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309163650970&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;211&#34;
+		data-flex-basis=&#34;506px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、被称为最直接的模型的原因&lt;/p&gt;
+&lt;p&gt;因为模型是用来研究安全策略的分析工具，不是用来实现安全策略的方法。而访问控制矩阵既是一个模型又是一个方法，所以被称为最直接的模型&lt;/p&gt;
+&lt;p&gt;2、存在的问题&lt;/p&gt;
+&lt;p&gt;访问矩阵是一个二维表，当用户和目标过多时，矩阵会存在很多的空值（稀疏矩阵），存储和读取效率比较低。&lt;/p&gt;
+&lt;p&gt;3、解决方法1：访问控制列表（主附客）&lt;/p&gt;
+&lt;p&gt;相当于只取矩阵的每一列，将附着在客体上的主体单独取出来构成列表。&lt;/p&gt;
+&lt;p&gt;4、解决方法2：能力列表（客附主）&lt;/p&gt;
+&lt;p&gt;相当于只取矩阵的每一行，将附着在主体上的客体单独取出来构成列表。&lt;/p&gt;
+&lt;h1 id=&#34;系统评测&#34;&gt;系统评测&lt;/h1&gt;
+&lt;p&gt;目的：让别人相信我们的系统能实现什么安全目标&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165054657.png&#34;
+	width=&#34;1104&#34;
+	height=&#34;320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309165054657&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;345&#34;
+		data-flex-basis=&#34;828px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;信息系统评估标准&#34;&gt;信息系统评估标准&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165356023.png&#34;
+	width=&#34;1144&#34;
+	height=&#34;590&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309165356023&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、桔皮书TCSEC是最早的信息安全标准，但仅限于操作系统&lt;/p&gt;
+&lt;p&gt;2、ITSEC提出两个要求：&lt;strong&gt;安全功能的要求、安全保障的要求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3、&lt;strong&gt;CC国际通用准则后续发展为ISO 15408&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tcsec桔皮书不重要&#34;&gt;TCSEC，桔皮书（不重要）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165920640.png&#34;
+	width=&#34;1088&#34;
+	height=&#34;318&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309165920640&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;342&#34;
+		data-flex-basis=&#34;821px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165949669.png&#34;
+	width=&#34;848&#34;
+	height=&#34;458&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309165949669&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;444px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;校验保护：内核设计需要被证明为是正确的，除了足够简单以外，还要采取形式化设计（需求和设计过程要用数学语言来表达），通过数学证明来证明能实现改目标&lt;/p&gt;
+&lt;h2 id=&#34;itsec&#34;&gt;ITSEC&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309170442819.png&#34;
+	width=&#34;1016&#34;
+	height=&#34;402&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309170442819&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;252&#34;
+		data-flex-basis=&#34;606px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cc共同准则&#34;&gt;CC（共同准则）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309170618351.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;578&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309170618351&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;208&#34;
+		data-flex-basis=&#34;501px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;关键概念&#34;&gt;关键概念&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309170804975.png&#34;
+	width=&#34;834&#34;
+	height=&#34;432&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309170804975&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;463px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;保护轮廓pp&#34;&gt;*保护轮廓PP&lt;/h3&gt;
+&lt;p&gt;从用户的角度分层来提出各种安全要求的一种系统化的方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309171240661.png&#34;
+	width=&#34;1154&#34;
+	height=&#34;588&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240309171240661&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;基本原理部分其实就是一个证明部分，证明所提出的安全要求足以实现安全目标&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第02节：安全与风险管理（下）</title>
         <link>https://www.blain.top/p/cissp-classnote02/</link>
         <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
