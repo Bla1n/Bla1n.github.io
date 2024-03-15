@@ -116,6 +116,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;生成ssh key,在git bash中输入以下命令:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;mac生成的密钥将存储在&lt;code&gt;~/.ssh&lt;/code&gt;路径下&lt;/p&gt;
+&lt;p&gt;打开公钥文件 &lt;code&gt;id_rsa.pub/id_rsa_work.pub&lt;/code&gt;，
+复制所有内容，在GitHub上打开&lt;code&gt;Setting -&amp;gt; SSH and GPG keys -&amp;gt; add SSH key&lt;/code&gt;，将复制的内容粘贴在里边，保存。&lt;/p&gt;
 &lt;h2 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h2&gt;
 &lt;p&gt;在 GitHub 账户下 &lt;code&gt;Setting - Developer setting - Personal access tokens(classic)&lt;/code&gt; 下创建一个不过期(no expiration)的 Token，权限需要开启 &lt;code&gt;repo&lt;/code&gt; 与 &lt;code&gt;workflow&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/token1.png&#34;
