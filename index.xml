@@ -7,7 +7,443 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Sat, 09 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 09 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第04节：安全工程实施（下）</title>
+        <link>https://www.blain.top/p/cissp-classnote04/</link>
+        <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote04/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote04/title.png" alt="Featured image of post 第04节：安全工程实施（下）" /&gt;&lt;h1 id=&#34;系统评测&#34;&gt;系统评测&lt;/h1&gt;
+&lt;h2 id=&#34;评估标准间的比较&#34;&gt;评估标准间的比较&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408152820733.png&#34;
+	width=&#34;1304&#34;
+	height=&#34;594&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408152820733&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;不需要记各个标准间的对应关系&lt;/p&gt;
+&lt;h3 id=&#34;共同准则cc的各项标准&#34;&gt;共同准则（CC）的各项标准&lt;/h3&gt;
+&lt;p&gt;注：级别越高的标准会涵盖之前级别的测试内容&lt;/p&gt;
+&lt;p&gt;1、功能测试：按照功能手册都试一遍&lt;/p&gt;
+&lt;p&gt;2、结构测试：功能的实现原理&lt;/p&gt;
+&lt;p&gt;3、方法测试和检验：厂商的测试是否全面、有效，用厂商的测试方法看看能不能得到类似的测试数据&lt;/p&gt;
+&lt;p&gt;4、方法设计，测试和评审：要提供设计的详细资料（源代码）&lt;/p&gt;
+&lt;p&gt;5、半正式设计和测试：用数学的方法去描述设计的目标和过程&lt;/p&gt;
+&lt;p&gt;6、半正式验证的设计和测试：使用数学方法证明过程能实现要求&lt;/p&gt;
+&lt;p&gt;7、正式验证的设计和测试：所有功能的实现都遵循形式化的验证和要求&lt;/p&gt;
+&lt;h2 id=&#34;认证和认可&#34;&gt;认证和认可&lt;/h2&gt;
+&lt;p&gt;1、前面所提到的各种标准的执行过程叫做认证&lt;/p&gt;
+&lt;p&gt;2、认证是一个详细的专业规范的符合性要求的检查过程（认证证书）（专业过程）&lt;/p&gt;
+&lt;p&gt;3、认可是参考认证的结果，行政单位或者权威单位对某个产品上线运行给予一个行政批准（行政过程）&lt;/p&gt;
+&lt;p&gt;4、认可是一个接受剩余风险的正式批准的过程&lt;/p&gt;
+&lt;h1 id=&#34;密码学概述&#34;&gt;密码学概述&lt;/h1&gt;
+&lt;h2 id=&#34;密码学概念&#34;&gt;密码学概念&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408155444679.png&#34;
+	width=&#34;880&#34;
+	height=&#34;416&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408155444679&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;211&#34;
+		data-flex-basis=&#34;507px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408155816561.png&#34;
+	width=&#34;976&#34;
+	height=&#34;412&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408155816561&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;236&#34;
+		data-flex-basis=&#34;568px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;密钥聚类：不同的key得到了相同的密文&lt;/p&gt;
+&lt;h2 id=&#34;密码术分类&#34;&gt;密码术分类&lt;/h2&gt;
+&lt;p&gt;古典密码&lt;/p&gt;
+&lt;p&gt;近代密码术&lt;/p&gt;
+&lt;p&gt;现代密码术&lt;/p&gt;
+&lt;h2 id=&#34;基本密码方法概述&#34;&gt;基本密码方法概述&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408160633994.png&#34;
+	width=&#34;960&#34;
+	height=&#34;504&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408160633994&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;457px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;一次一密乱码本被誉为无条件安全的密钥算法&lt;/p&gt;
+&lt;h1 id=&#34;对称密钥算法&#34;&gt;对称密钥算法&lt;/h1&gt;
+&lt;p&gt;加密和解密用一样的密钥&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408161721592.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;656&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408161721592&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、对称密码分为流密码和分组密码两种&lt;/p&gt;
+&lt;p&gt;流密码：每次加密一个比特或者字节的密码方法（RC4算法）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408162444444.png&#34;
+	width=&#34;1288&#34;
+	height=&#34;604&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408162444444&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;511px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;分组密码：每次加密固定大小的数据分组的密码方法（操作模式几乎不考）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408162616742.png&#34;
+	width=&#34;1058&#34;
+	height=&#34;454&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408162616742&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2、非对称密钥的优缺点正好反过来&lt;/p&gt;
+&lt;h2 id=&#34;数据加密标准des算法&#34;&gt;数据加密标准（DES）算法&lt;/h2&gt;
+&lt;p&gt;1、有效密钥长度为56位&lt;/p&gt;
+&lt;p&gt;2、因为密钥太短，已经被禁止使用了&lt;/p&gt;
+&lt;h3 id=&#34;三重des算法&#34;&gt;三重DES算法&lt;/h3&gt;
+&lt;p&gt;1、加密方式比较多，可以用三个不一样的密钥，也可以连个密钥交替使用（第一个密钥加密，第二个解密，再第一个加密）&lt;/p&gt;
+&lt;p&gt;2、基本也被淘汰了&lt;/p&gt;
+&lt;h2 id=&#34;高级加密标准aes算法&#34;&gt;高级加密标准（AES）算法&lt;/h2&gt;
+&lt;p&gt;1、最流行的对称算法，替代了DES标准算法&lt;/p&gt;
+&lt;p&gt;2、密钥可以是128、192、256位&lt;/p&gt;
+&lt;h1 id=&#34;非对称密钥算法&#34;&gt;非对称密钥算法&lt;/h1&gt;
+&lt;p&gt;1、也被称为公钥加密算法&lt;/p&gt;
+&lt;p&gt;2、基于非对称数学难题的密钥算法&lt;/p&gt;
+&lt;p&gt;3、一个小问题：使用非对称密钥给对方发信息，什么过程该用哪个密钥加密？&lt;/p&gt;
+&lt;p&gt;答：我们用对方的公钥加密内容，对方用对方的私钥解密内容；我们用自己的私钥签名，对方用我们的公钥验证签名。&lt;/p&gt;
+&lt;p&gt;4、在实际的使用过程中，通常采用对称加密和非对称加密的混合密码系统。&lt;/p&gt;
+&lt;p&gt;5、优缺点与对称密钥相反&lt;/p&gt;
+&lt;h2 id=&#34;diffie-hellman算法&#34;&gt;Diffie-Hellman算法&lt;/h2&gt;
+&lt;p&gt;1、不是平常日用于加解密的算法，而是一种&lt;strong&gt;密钥协商协议（密钥商定协议）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2、在某一个加密软件产品中（如：SSH），身份认证的非对称算法（SSH采用的事RSA）和协商协议的非对称算法可能不一样&lt;/p&gt;
+&lt;h2 id=&#34;rsa算法&#34;&gt;RSA算法&lt;/h2&gt;
+&lt;p&gt;1、基于大合数因式分解难题&lt;/p&gt;
+&lt;p&gt;2、目前安全的密钥长度为2048位&lt;/p&gt;
+&lt;h2 id=&#34;椭圆曲线密码ecc一类算法&#34;&gt;椭圆曲线密码（ECC）（一类算法）&lt;/h2&gt;
+&lt;p&gt;1、基于有限域中椭圆形曲线群的离散对数难题&lt;/p&gt;
+&lt;p&gt;2、160位ECC相当于1024位RSA和80位对称密钥算法强度&lt;/p&gt;
+&lt;p&gt;3、优点：速度快、密钥短、消耗资源少，适合智能卡等小型硬件中使用&lt;/p&gt;
+&lt;h2 id=&#34;el-gamal算法&#34;&gt;El Gamal算法&lt;/h2&gt;
+&lt;p&gt;1、基于离散对数难题的公钥密码算法，本质上与Diffie-Hellman密钥商定协议类似；（原理一样，目的不同）&lt;/p&gt;
+&lt;p&gt;2、与DSA（美国数字签名算法）不同的是，El Gamal算法既可以加解密也可以数字签名，而DSA只能签名&lt;/p&gt;
+&lt;p&gt;3、补充：DSA现在基于ECC算法诞生了一种新的签名算法：ECDSA&lt;/p&gt;
+&lt;h1 id=&#34;完整性验证技术hash&#34;&gt;完整性验证技术（Hash）&lt;/h1&gt;
+&lt;p&gt;1、特点：任意长度的数据产生固定长度的散列值，任何微小的变动都会产生截然不同的散列值&lt;/p&gt;
+&lt;p&gt;2、重要的应用领域：解决数字签名的效率问题&lt;/p&gt;
+&lt;h2 id=&#34;密码散列函数&#34;&gt;密码散列函数&lt;/h2&gt;
+&lt;p&gt;1、散列函数的特性：&lt;/p&gt;
+&lt;p&gt;散列应对整个消息计算&lt;/p&gt;
+&lt;p&gt;抗逆象：给定散列值难以推算出原数据&lt;/p&gt;
+&lt;p&gt;抗二次逆象：难以找出与原文具有相同散列值的不一样的数据&lt;/p&gt;
+&lt;p&gt;抗碰撞&lt;/p&gt;
+&lt;h2 id=&#34;md5散列算法&#34;&gt;MD5散列算法&lt;/h2&gt;
+&lt;p&gt;1、MD5产生128比特文摘&lt;/p&gt;
+&lt;h2 id=&#34;安全散列算法sha&#34;&gt;安全散列算法（SHA）&lt;/h2&gt;
+&lt;p&gt;1、SHA-1产生160比特文摘&lt;/p&gt;
+&lt;p&gt;2、目前主要采用SHA-2算法进行签名&lt;/p&gt;
+&lt;h2 id=&#34;生日攻击简单了解&#34;&gt;生日攻击（简单了解）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408175115129.png&#34;
+	width=&#34;916&#34;
+	height=&#34;210&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408175115129&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;436&#34;
+		data-flex-basis=&#34;1046px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;消息验证码mac&#34;&gt;消息验证码（MAC）&lt;/h2&gt;
+&lt;p&gt;基于前面所说的密码算法技术，并且都是用的对称加密&lt;/p&gt;
+&lt;h2 id=&#34;数字签名&#34;&gt;数字签名&lt;/h2&gt;
+&lt;p&gt;1、数字签名过程&lt;/p&gt;
+&lt;p&gt;发送方A，计算自己消息的HASH值，用A自己的密钥加密，得到前面挂接到消息上进行发送。&lt;/p&gt;
+&lt;p&gt;接受方B，先摘下签名，用A的公钥解密签名得到A的HASH，然后计算消息的HASH，对比两个HASH是否相同。&lt;/p&gt;
+&lt;p&gt;2、优点：防篡改、抗抵赖&lt;/p&gt;
+&lt;p&gt;3、使用非对称加密算法&lt;/p&gt;
+&lt;h1 id=&#34;公钥基础设施&#34;&gt;公钥基础设施&lt;/h1&gt;
+&lt;h2 id=&#34;pki的构成&#34;&gt;PKI的构成&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408182958175-2572199.png&#34;
+	width=&#34;966&#34;
+	height=&#34;578&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408182958175&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;401px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数字证书&#34;&gt;数字证书&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408183315598.png&#34;
+	width=&#34;974&#34;
+	height=&#34;506&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408183315598&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408183422498.png&#34;
+	width=&#34;1278&#34;
+	height=&#34;584&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408183422498&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;525px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;密钥管理&#34;&gt;密钥管理&lt;/h2&gt;
+&lt;p&gt;1、密钥生成：在生成时必须在整个密钥空间中进行随机选择&lt;/p&gt;
+&lt;p&gt;2、密钥控制：用于加密的密钥最好不要用于签名，反之亦然，不同目的不要混用&lt;/p&gt;
+&lt;p&gt;3、密钥更改：要根据业务使用频率定期更换密钥，根CA密钥不能换&lt;/p&gt;
+&lt;h1 id=&#34;密码技术的应用&#34;&gt;密码技术的应用&lt;/h1&gt;
+&lt;h2 id=&#34;链路加密&#34;&gt;链路加密&lt;/h2&gt;
+&lt;p&gt;1、加密在通讯的链路中间设备上进行（路由器，无线AP等）&lt;/p&gt;
+&lt;p&gt;2、特点&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408184455474.png&#34;
+	width=&#34;1118&#34;
+	height=&#34;258&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408184455474&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;433&#34;
+		data-flex-basis=&#34;1040px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;若运营商不可信，则会产生虚假的安全感&lt;/p&gt;
+&lt;h2 id=&#34;端到端加密&#34;&gt;端到端加密&lt;/h2&gt;
+&lt;p&gt;1、在通讯的两段进行加密、解密&lt;/p&gt;
+&lt;p&gt;网关到网关、终端到终端都算端到端加密&lt;/p&gt;
+&lt;p&gt;2、特点&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240408184614101.png&#34;
+	width=&#34;1082&#34;
+	height=&#34;150&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240408184614101&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;721&#34;
+		data-flex-basis=&#34;1731px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vpn&#34;&gt;VPN&lt;/h2&gt;
+&lt;h3 id=&#34;ipsec协议网络层安全协议&#34;&gt;IPSec协议（网络层安全协议）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409094033000.png&#34;
+	width=&#34;1084&#34;
+	height=&#34;300&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409094033000&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;361&#34;
+		data-flex-basis=&#34;867px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、鉴别抱头基本已经不用了&lt;/p&gt;
+&lt;p&gt;2、封装安全载荷不如消息验证码保护的健壮&lt;/p&gt;
+&lt;p&gt;2、比较复杂的不是两个协议，而是密钥交换方面的问题（IKE）&lt;/p&gt;
+&lt;h3 id=&#34;安全关联sa&#34;&gt;安全关联（SA）&lt;/h3&gt;
+&lt;p&gt;1、IPSec协议里面，两个主机要相互通讯的时候，使用什么算法，每个算法使用什么密钥，我们需要配置协商一下。协商的结果要存在一个位置（SADB）供我们以后使用，这些参数就叫安全关联。&lt;/p&gt;
+&lt;p&gt;2、SA的格式标准是用互联网安全关联密钥管理协议（ISKMP）来规范&lt;/p&gt;
+&lt;p&gt;注：ISKMP只是个格式标准，并不是一个密钥协商协议&lt;/p&gt;
+&lt;h2 id=&#34;ssltls协议传输层安全协议&#34;&gt;SSL/TLS协议（传输层安全协议）&lt;/h2&gt;
+&lt;p&gt;1、TLS是SSL演化而来，SSL存在很多安全问题&lt;/p&gt;
+&lt;p&gt;2、SSL/TSL握手&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409100844409.png&#34;
+	width=&#34;1274&#34;
+	height=&#34;508&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409100844409&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;250&#34;
+		data-flex-basis=&#34;601px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注1：TLS握手中认证身份默认是单向的，即客户端要求认证服务器的身份（也可配置双向认证），服务器要给客户端发送有效证书&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409101054222.png&#34;
+	width=&#34;1256&#34;
+	height=&#34;540&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409101054222&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;232&#34;
+		data-flex-basis=&#34;558px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注2：是客户端产生预备秘密，然后用服务器的公钥进行加密&lt;/p&gt;
+&lt;h2 id=&#34;密码分析学&#34;&gt;密码分析学&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409101710523.png&#34;
+	width=&#34;1072&#34;
+	height=&#34;320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409101710523&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;335&#34;
+		data-flex-basis=&#34;804px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、仅知密文攻击是最难的&lt;/p&gt;
+&lt;p&gt;2、可选明文-密文攻击不是最终目标，最终目标是找到密钥&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409102126438.png&#34;
+	width=&#34;1098&#34;
+	height=&#34;470&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409102126438&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;560px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;side channel旁路攻击（能量分析）&lt;/p&gt;
+&lt;h1 id=&#34;物理安全概述&#34;&gt;物理安全概述&lt;/h1&gt;
+&lt;h2 id=&#34;物理安全威胁和风险&#34;&gt;物理安全威胁和风险&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409102410774.png&#34;
+	width=&#34;1044&#34;
+	height=&#34;490&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409102410774&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;511px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;物理安全威胁会对人身安全造成威胁，信息安全在人身安全面前不值一提，所以保护人身安全是物理安全保护的第一目标&lt;/p&gt;
+&lt;h2 id=&#34;物理安全控制&#34;&gt;物理安全控制&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409102658068.png&#34;
+	width=&#34;892&#34;
+	height=&#34;326&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409102658068&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;656px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、技术控制（逻辑控制）：用计算机技术控制&lt;/p&gt;
+&lt;p&gt;2、物理控制：栅栏、机械锁、&lt;strong&gt;警卫&lt;/strong&gt;、警犬等&lt;/p&gt;
+&lt;p&gt;3、行政控制（管理控制）：对人的培训等&lt;/p&gt;
+&lt;h1 id=&#34;物理安全规划&#34;&gt;物理安全规划&lt;/h1&gt;
+&lt;h2 id=&#34;关键路径分析cpa&#34;&gt;关键路径分析（CPA）&lt;/h2&gt;
+&lt;p&gt;1、对数据流经的路径及其支撑系统所遭受的威胁进行分析&lt;/p&gt;
+&lt;h2 id=&#34;站点选址&#34;&gt;站点选址&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;./p/cissp-classnote04/assets/image-20240409103412475.png&#34;
+	width=&#34;686&#34;
+	height=&#34;286&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240409103412475&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;239&#34;
+		data-flex-basis=&#34;575px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、Fire rating：耐火性&lt;/p&gt;
+&lt;p&gt;2、空气正压：机房内的气压大于外面的，防止外部的烟尘等有害物质进入设施&lt;/p&gt;
+&lt;p&gt;3、正向流动：防止外部水流进机房&lt;/p&gt;
+&lt;p&gt;4、数据中心应该建在中间楼层或者中间楼层偏下的位置，减少火灾和水灾的影响&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第03节：安全工程实施（上）</title>
         <link>https://www.blain.top/p/cissp-classnote03/</link>
         <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
