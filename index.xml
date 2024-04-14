@@ -9,11 +9,11 @@
         <copyright>B1ain | 行者</copyright>
         <lastBuildDate>Sun, 14 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>小白hugo博客装修笔记（2）</title>
-        <link>https://www.blain.top/p/renovation/</link>
+        <link>https://www.blain.top/p/renovation2/</link>
         <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://www.blain.top/p/renovation/</guid>
-        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（2）" /&gt;&lt;p&gt;&lt;strong&gt;写在前面：&lt;/strong&gt;&lt;/p&gt;
+        <guid>https://www.blain.top/p/renovation2/</guid>
+        <description>&lt;img src="https://www.blain.top/p/renovation2/title.png" alt="Featured image of post 小白hugo博客装修笔记（2）" /&gt;&lt;p&gt;&lt;strong&gt;写在前面：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;本篇教程由于作者很懒，部分内容可能是从别处CV过来的，可能与作者实际配置的有细微差别，如果发现有错误的地方导致你无法实现该功能先深表歉意，并且欢迎通过右下角的channel联系我~ 在我看到消息后会第一时间给你我实际的配置内容。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;前一篇文章内容有点多了，显得臃肿，在此开个新栏&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;侧边栏添加新的模块&#34;&gt;侧边栏添加新的模块&lt;/h1&gt;
@@ -52,7 +52,7 @@
     
 &lt;/a&gt;内容）&lt;/p&gt;
 &lt;p&gt;2、输入一个 Vercel 项目名称并点击 &lt;code&gt;Create&lt;/code&gt; 继续:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/vercel-1-DoAtoGHg.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-1-DoAtoGHg.png&#34;
 	width=&#34;1320&#34;
 	height=&#34;890&#34;
 	
@@ -67,7 +67,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/vercel-3-Brb_j0cD.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-3-Brb_j0cD.png&#34;
 	width=&#34;2446&#34;
 	height=&#34;1946&#34;
 	
@@ -82,7 +82,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一两分钟后，满屏的烟花会庆祝你部署成功。此时点击 &lt;code&gt;Go to Dashboard&lt;/code&gt; 可以跳转到应用的控制台。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/vercel-4-CNMnhm70.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-4-CNMnhm70.png&#34;
 	width=&#34;1247&#34;
 	height=&#34;821&#34;
 	
@@ -97,7 +97,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;4、点击顶部的 &lt;code&gt;Settings&lt;/code&gt; - &lt;code&gt;Environment Variables&lt;/code&gt; 进入环境变量配置页，并配置三个环境变量 &lt;code&gt;LEAN_ID&lt;/code&gt;, &lt;code&gt;LEAN_KEY&lt;/code&gt; 和 &lt;code&gt;LEAN_MASTER_KEY&lt;/code&gt; 。它们的值分别对应上一步在 LeanCloud 中获得的 &lt;code&gt;APP ID&lt;/code&gt;, &lt;code&gt;APP KEY&lt;/code&gt;, &lt;code&gt;Master Key&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/vercel-5-CIj2EZQq.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-5-CIj2EZQq.png&#34;
 	width=&#34;1188&#34;
 	height=&#34;967&#34;
 	
@@ -112,7 +112,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;5、环境变量配置完成之后点击顶部的 &lt;code&gt;Deployments&lt;/code&gt; 点击顶部最新的一次部署右侧的 &lt;code&gt;Redeploy&lt;/code&gt; 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/vercel-6-CQnJ4Agt.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-6-CQnJ4Agt.png&#34;
 	width=&#34;1424&#34;
 	height=&#34;791&#34;
 	
@@ -127,7 +127,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;此时会跳转到 &lt;code&gt;Overview&lt;/code&gt; 界面开始部署，等待片刻后 &lt;code&gt;STATUS&lt;/code&gt; 会变成 &lt;code&gt;Ready&lt;/code&gt;。此时请点击 &lt;code&gt;Visit&lt;/code&gt; ，即可跳转到部署好的网站地址，此地址即为你的服务端地址。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/vercel-7-DbSum90d.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-7-DbSum90d.png&#34;
 	width=&#34;2446&#34;
 	height=&#34;2138&#34;
 	
@@ -142,7 +142,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;7、往后不再是官方文档内容，之后可以在Domains设置部分添加上自己的子域名&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/image-20240414134013161.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/image-20240414134013161.png&#34;
 	width=&#34;2548&#34;
 	height=&#34;1254&#34;
 	
@@ -177,7 +177,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;至此，评论区部署完成&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./p/renovation/assets/image-20240414134204736.png&#34;
+&lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/image-20240414134204736.png&#34;
 	width=&#34;1690&#34;
 	height=&#34;1104&#34;
 	
