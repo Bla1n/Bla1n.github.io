@@ -30,7 +30,21 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注：由于本人技术能力有限，moments主题无法和stack主题同时出现在一个站点下，所以本人采用的方式是在另一个站点部署moments&lt;/p&gt;
 &lt;h1 id=&#34;添加waline评论区&#34;&gt;添加waline评论区&lt;/h1&gt;
 &lt;p&gt;前段时间域名解析不小心手误被自己暂停了，今天发现评论区用不了了。之后又突然发现没写这一块的教程，补充一下。&lt;/p&gt;
-&lt;p&gt;1、Stack 模板支持Waline，所以配置很简单，在&lt;a class=&#34;link&#34; href=&#34;https://vercel.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;1、在 LeanCloud 上部署数据库&lt;/p&gt;
+&lt;p&gt;注册 LeanCloud 国际版并进入&lt;a class=&#34;link&#34; href=&#34;https://console.leancloud.app/apps&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;控制台
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;如果要使用 LeanCloud 国内版，需要给创建的应用额外绑定已备案的域名。&lt;/p&gt;
+&lt;p&gt;创建开发版新应用（随意命名）并复制设置 - 应用凭证中的前三项值，稍后会添加在 Vercel 中的环境变量里。&lt;/p&gt;
+&lt;p&gt;、Stack 模板支持Waline，所以配置很简单，在&lt;a class=&#34;link&#34; href=&#34;https://vercel.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;官网
     
     &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
@@ -51,7 +65,7 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;内容）&lt;/p&gt;
-&lt;p&gt;2、输入一个 Vercel 项目名称并点击 &lt;code&gt;Create&lt;/code&gt; 继续:&lt;/p&gt;
+&lt;p&gt;3、输入一个 Vercel 项目名称并点击 &lt;code&gt;Create&lt;/code&gt; 继续:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-1-DoAtoGHg.png&#34;
 	width=&#34;1320&#34;
 	height=&#34;890&#34;
@@ -66,7 +80,7 @@
 		data-flex-basis=&#34;355px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;3、此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。&lt;/p&gt;
+&lt;p&gt;、此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-3-Brb_j0cD.png&#34;
 	width=&#34;2446&#34;
 	height=&#34;1946&#34;
@@ -96,7 +110,7 @@
 		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;4、点击顶部的 &lt;code&gt;Settings&lt;/code&gt; - &lt;code&gt;Environment Variables&lt;/code&gt; 进入环境变量配置页，并配置三个环境变量 &lt;code&gt;LEAN_ID&lt;/code&gt;, &lt;code&gt;LEAN_KEY&lt;/code&gt; 和 &lt;code&gt;LEAN_MASTER_KEY&lt;/code&gt; 。它们的值分别对应上一步在 LeanCloud 中获得的 &lt;code&gt;APP ID&lt;/code&gt;, &lt;code&gt;APP KEY&lt;/code&gt;, &lt;code&gt;Master Key&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;5、点击顶部的 &lt;code&gt;Settings&lt;/code&gt; - &lt;code&gt;Environment Variables&lt;/code&gt; 进入环境变量配置页，并配置三个环境变量 &lt;code&gt;LEAN_ID&lt;/code&gt;, &lt;code&gt;LEAN_KEY&lt;/code&gt; 和 &lt;code&gt;LEAN_MASTER_KEY&lt;/code&gt; 。它们的值分别对应上一步在 LeanCloud 中获得的 &lt;code&gt;APP ID&lt;/code&gt;, &lt;code&gt;APP KEY&lt;/code&gt;, &lt;code&gt;Master Key&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-5-CIj2EZQq.png&#34;
 	width=&#34;1188&#34;
 	height=&#34;967&#34;
@@ -111,7 +125,7 @@
 		data-flex-basis=&#34;294px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;5、环境变量配置完成之后点击顶部的 &lt;code&gt;Deployments&lt;/code&gt; 点击顶部最新的一次部署右侧的 &lt;code&gt;Redeploy&lt;/code&gt; 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。&lt;/p&gt;
+&lt;p&gt;、环境变量配置完成之后点击顶部的 &lt;code&gt;Deployments&lt;/code&gt; 点击顶部最新的一次部署右侧的 &lt;code&gt;Redeploy&lt;/code&gt; 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;./p/renovation2/assets/vercel-6-CQnJ4Agt.png&#34;
 	width=&#34;1424&#34;
 	height=&#34;791&#34;
