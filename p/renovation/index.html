@@ -298,6 +298,7 @@
     <li><a href="#去除归档页初始滤镜">去除归档页初始滤镜</a></li>
     <li><a href="#添加相册功能">添加相册功能</a></li>
     <li><a href="#添加右下角联系小气泡按钮">添加右下角联系小气泡按钮</a></li>
+    <li><a href="#左侧菜单栏添加新的模块">左侧菜单栏添加新的模块</a></li>
     <li><a href="#参考文章">参考文章</a></li>
   </ol>
 </nav>
@@ -1822,7 +1823,17 @@
     </svg></span>
     
 </a></p>
-<h1 id="参考文章">参考文章</h1>
+<h1 id="左侧菜单栏添加新的模块">左侧菜单栏添加新的模块</h1>
+<p>在config.yaml文件的menu-main部分进行修改</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">menu</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">碎语 | moments</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">newTab</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">moments</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">https://moments.blain.top/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span>-<span class="m">50</span><span class="w">
+</span></span></span></code></pre></div><h1 id="参考文章">参考文章</h1>
 <p><a class="link" href="https://blog.linsnow.cn/p/modify-hugo/"  target="_blank" rel="noopener"
     >Stack主题的自定义
     
@@ -2038,7 +2049,7 @@
             
         
         发表了9篇文章 · 
-        总计22.00k字
+        总计22.06k字
     </section>
 
     <section class="powerby">
