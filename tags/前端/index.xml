@@ -13,7 +13,9 @@
         <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://www.blain.top/p/renovation/</guid>
-        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（1）" /&gt;&lt;h1 id=&#34;本次装修的环境&#34;&gt;本次装修的环境&lt;/h1&gt;
+        <description>&lt;img src="https://www.blain.top/p/renovation/title.jpg" alt="Featured image of post 小白hugo博客装修笔记（1）" /&gt;&lt;p&gt;&lt;strong&gt;写在前面：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本篇教程由于作者很懒，部分内容可能是从别处CV过来的，可能与作者实际配置的有细微差别，如果发现有错误的地方导致你无法实现该功能先深表歉意，并且欢迎通过右下角的channel联系我~ 在我看到消息后会第一时间给你我实际的配置内容。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;本次装修的环境&#34;&gt;本次装修的环境&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;操作系统:	MacOS Sonoma 14.0&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Markdown编辑器:	Typora&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;博客配置编辑器:	VS Code&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -1251,11 +1253,16 @@
 &lt;p&gt;日常更新把图片（需按格式：日期 + 空格 + 图片名）丢到&lt;code&gt;/static/photos/&lt;/code&gt;中即可。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/content/photos.md&lt;/code&gt;创建一个 md，好让 Hugo 生成页面&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;我的相册&amp;#34;
+&lt;p&gt;&lt;code&gt;/content/page/photos/index.md&lt;/code&gt;创建一个 md，好让 Hugo 生成页面&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: 相册 | photos
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;layout: &amp;#34;photos&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slug: &amp;#34;photos&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;menu:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    main: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        weight: -50
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        params:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            icon: photos
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;comments: false
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;创建&lt;code&gt;/layouts/_default/photos.html&lt;/code&gt;&lt;/p&gt;
@@ -1441,7 +1448,8 @@
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;左侧菜单栏添加新的模块&#34;&gt;左侧菜单栏添加新的模块&lt;/h1&gt;
+&lt;h1 id=&#34;侧边栏添加新的模块&#34;&gt;侧边栏添加新的模块&lt;/h1&gt;
+&lt;p&gt;侧边栏添加模块除了使用前面所说的添加相册功能外，还有一种方式&lt;/p&gt;
 &lt;p&gt;在config.yaml文件的menu-main部分进行修改&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
@@ -1451,7 +1459,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;moments&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://moments.blain.top/&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;-&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;参考文章&#34;&gt;参考文章&lt;/h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注：由于本人技术能力有限，moments主题无法和stack主题同时出现在一个站点下，所以本人采用的方式是在另一个站点部署moments&lt;/p&gt;
+&lt;h1 id=&#34;参考文章&#34;&gt;参考文章&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.linsnow.cn/p/modify-hugo/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Stack主题的自定义
     

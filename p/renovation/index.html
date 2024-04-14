@@ -298,7 +298,7 @@
     <li><a href="#去除归档页初始滤镜">去除归档页初始滤镜</a></li>
     <li><a href="#添加相册功能">添加相册功能</a></li>
     <li><a href="#添加右下角联系小气泡按钮">添加右下角联系小气泡按钮</a></li>
-    <li><a href="#左侧菜单栏添加新的模块">左侧菜单栏添加新的模块</a></li>
+    <li><a href="#侧边栏添加新的模块">侧边栏添加新的模块</a></li>
     <li><a href="#参考文章">参考文章</a></li>
   </ol>
 </nav>
@@ -380,7 +380,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 11 分钟
+                    阅读时长: 12 分钟
                 </time>
             </div>
         
@@ -395,7 +395,9 @@
     <section class="article-content">
     
     
-    <h1 id="本次装修的环境">本次装修的环境</h1>
+    <p><strong>写在前面：</strong></p>
+<p><strong>本篇教程由于作者很懒，部分内容可能是从别处CV过来的，可能与作者实际配置的有细微差别，如果发现有错误的地方导致你无法实现该功能先深表歉意，并且欢迎通过右下角的channel联系我~ 在我看到消息后会第一时间给你我实际的配置内容。</strong></p>
+<h1 id="本次装修的环境">本次装修的环境</h1>
 <p><em><strong>操作系统:	MacOS Sonoma 14.0</strong></em></p>
 <p><em><strong>Markdown编辑器:	Typora</strong></em></p>
 <p><em><strong>博客配置编辑器:	VS Code</strong></em></p>
@@ -1633,11 +1635,16 @@
 <p>日常更新把图片（需按格式：日期 + 空格 + 图片名）丢到<code>/static/photos/</code>中即可。</p>
 </li>
 <li>
-<p><code>/content/photos.md</code>创建一个 md，好让 Hugo 生成页面</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">title: &#34;我的相册&#34;
+<p><code>/content/page/photos/index.md</code>创建一个 md，好让 Hugo 生成页面</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">title: 相册 | photos
 </span></span><span class="line"><span class="cl">layout: &#34;photos&#34;
-</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">slug: &#34;photos&#34;
+</span></span><span class="line"><span class="cl">menu:
+</span></span><span class="line"><span class="cl">    main: 
+</span></span><span class="line"><span class="cl">        weight: -50
+</span></span><span class="line"><span class="cl">        params:
+</span></span><span class="line"><span class="cl">            icon: photos
+</span></span><span class="line"><span class="cl">comments: false
 </span></span></code></pre></div></li>
 <li>
 <p>创建<code>/layouts/_default/photos.html</code></p>
@@ -1823,7 +1830,8 @@
     </svg></span>
     
 </a></p>
-<h1 id="左侧菜单栏添加新的模块">左侧菜单栏添加新的模块</h1>
+<h1 id="侧边栏添加新的模块">侧边栏添加新的模块</h1>
+<p>侧边栏添加模块除了使用前面所说的添加相册功能外，还有一种方式</p>
 <p>在config.yaml文件的menu-main部分进行修改</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">menu</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">main</span><span class="p">:</span><span class="w"> 
@@ -1833,7 +1841,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">moments</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">https://moments.blain.top/</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span>-<span class="m">50</span><span class="w">
-</span></span></span></code></pre></div><h1 id="参考文章">参考文章</h1>
+</span></span></span></code></pre></div><p>注：由于本人技术能力有限，moments主题无法和stack主题同时出现在一个站点下，所以本人采用的方式是在另一个站点部署moments</p>
+<h1 id="参考文章">参考文章</h1>
 <p><a class="link" href="https://blog.linsnow.cn/p/modify-hugo/"  target="_blank" rel="noopener"
     >Stack主题的自定义
     
@@ -2049,7 +2058,7 @@
             
         
         发表了9篇文章 · 
-        总计22.06k字
+        总计22.28k字
     </section>
 
     <section class="powerby">
