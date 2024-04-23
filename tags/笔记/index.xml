@@ -7,7 +7,433 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Tue, 09 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第05节：通信和网络安全（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote05/</link>
+        <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote05/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote05/title.jpg" alt="Featured image of post 第05节：通信和网络安全（上）" /&gt;&lt;h1 id=&#34;目录&#34;&gt;目录&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421141454182.png&#34;
+	width=&#34;1014&#34;
+	height=&#34;528&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421141454182&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;460px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;网络安全概述&#34;&gt;网络安全概述&lt;/h1&gt;
+&lt;h2 id=&#34;网络安全目标&#34;&gt;网络安全目标&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421143450209.png&#34;
+	width=&#34;900&#34;
+	height=&#34;488&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421143450209&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;442px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、互操作性：不同的安全机制互相配合的方便性&lt;/p&gt;
+&lt;p&gt;2、对终端用户透明：减少对用户日常使用的干扰&lt;/p&gt;
+&lt;p&gt;3、防数据流非授权泄露与消息非授权泄露的区别：数据流的特征，比如流量大小、频率&lt;/p&gt;
+&lt;p&gt;4、如何防范数据流非授权泄露？&lt;/p&gt;
+&lt;p&gt;在没有业务的时候放上一些垃圾流量，干扰入侵者的判断&lt;/p&gt;
+&lt;h1 id=&#34;网络通信基础&#34;&gt;网络通信基础&lt;/h1&gt;
+&lt;h2 id=&#34;数据网络及其分类&#34;&gt;数据网络及其分类&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421143739916.png&#34;
+	width=&#34;902&#34;
+	height=&#34;436&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421143739916&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;496px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;增值网：在该网络上传播的信息比一般网络更有价值&lt;/p&gt;
+&lt;h2 id=&#34;数据网络构成&#34;&gt;数据网络构成&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421151214633.png&#34;
+	width=&#34;972&#34;
+	height=&#34;432&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421151214633&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;225&#34;
+		data-flex-basis=&#34;540px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;信道服务单元：监视数据转换的结果，两边电路的情况，保证转换过程可靠、正常的使用&lt;/p&gt;
+&lt;p&gt;数据服务单元：将局域网的信息数据帧转换成能在广域网上传输的格式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421152101459.png&#34;
+	width=&#34;924&#34;
+	height=&#34;368&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421152101459&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;251&#34;
+		data-flex-basis=&#34;602px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、一个设备越偏向于应用层，它的安全功能往往就越多，反之功能越少&lt;/p&gt;
+&lt;p&gt;2、考试中，网关的定义有可能是应用层的概念（连接不同协议）&lt;/p&gt;
+&lt;h2 id=&#34;数据网络技术&#34;&gt;数据网络技术&lt;/h2&gt;
+&lt;p&gt;1、&lt;strong&gt;同步通信&lt;/strong&gt;要求通信双方的时钟保持一致；&lt;strong&gt;异步通信&lt;/strong&gt;则不需要，但需要引入时钟开始标记，占用部分带宽资源。&lt;/p&gt;
+&lt;p&gt;2、&lt;strong&gt;宽带连接&lt;/strong&gt;：用以太网的技术将用户设备连接到局端的设备上&lt;/p&gt;
+&lt;p&gt;3、基带通信：信号仅用一个频率的载波承载，以太网属于典型的基带网络&lt;/p&gt;
+&lt;p&gt;4、&lt;strong&gt;宽带通信&lt;/strong&gt;：信号可以分布到不同载波的电缆中，即整个电缆被划分为不同信道。有线电视是典型的宽带网络&lt;/p&gt;
+&lt;h2 id=&#34;数据发送模式&#34;&gt;数据发送模式&lt;/h2&gt;
+&lt;p&gt;1、单播：一次只向&lt;strong&gt;一个地址&lt;/strong&gt;发生数据包&lt;/p&gt;
+&lt;p&gt;2、广播：每次向同一个子网或网络中的&lt;strong&gt;所有地址&lt;/strong&gt;发生数据包，广播滥用容易引发系统性能问题&lt;/p&gt;
+&lt;p&gt;3、多播（组播）：每次向&lt;strong&gt;多个地址&lt;/strong&gt;发送数据包（借助成员地址）&lt;/p&gt;
+&lt;p&gt;5、任播：IPv6带来的技术手段，向一个地址发送信息时，多个主机都能收到，都有类似的业务能力，任何一个主机实现了服务后，这个业务就结束了（类似DNS服务）&lt;/p&gt;
+&lt;h2 id=&#34;传输介质&#34;&gt;传输介质&lt;/h2&gt;
+&lt;p&gt;1、同轴电缆：成本高、抗电磁干扰能力强；分为粗缆和细缆，细缆传输距离近，粗缆远&lt;/p&gt;
+&lt;p&gt;安全规则：5-4-3规则，可借助4个中继器连接最多5个网段，但只有其中3个网段可以连接主机&lt;/p&gt;
+&lt;p&gt;2、双绞线：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421163137661.png&#34;
+	width=&#34;1166&#34;
+	height=&#34;286&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421163137661&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;407&#34;
+		data-flex-basis=&#34;978px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;①双绞线的分类不影响传输距离，但影响传输速率&lt;/p&gt;
+&lt;p&gt;②双绞线是最受距离限制的常规通信介质（除了无限通讯以外）&lt;/p&gt;
+&lt;p&gt;③距离越长受干扰的几率就越大&lt;/p&gt;
+&lt;p&gt;3、光纤&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421163644951.png&#34;
+	width=&#34;754&#34;
+	height=&#34;192&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421163644951&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;392&#34;
+		data-flex-basis=&#34;942px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注：光纤不抗窃听！！！！&lt;/p&gt;
+&lt;h1 id=&#34;局域网技术&#34;&gt;局域网技术&lt;/h1&gt;
+&lt;h2 id=&#34;网络拓扑结构&#34;&gt;网络拓扑结构&lt;/h2&gt;
+&lt;p&gt;总线型、环型、星型、树型、网型&lt;/p&gt;
+&lt;h3 id=&#34;总线拓扑&#34;&gt;总线拓扑&lt;/h3&gt;
+&lt;p&gt;总线如何保证安全性？&lt;/p&gt;
+&lt;p&gt;载波侦听、多路存取（存在征用问题），所以要有冲突检测&lt;/p&gt;
+&lt;p&gt;2、存在单点故障，即任何一处中断，&lt;strong&gt;整个总线&lt;/strong&gt;将丧失功能&lt;/p&gt;
+&lt;p&gt;3、总线拓扑也称为被动拓扑：只听不发（相对于其他设备而言）&lt;/p&gt;
+&lt;h3 id=&#34;环型拓扑&#34;&gt;环型拓扑&lt;/h3&gt;
+&lt;p&gt;1、环型拓扑也称为主动拓扑，即每个设备都帮其他设备转发信号&lt;/p&gt;
+&lt;p&gt;2、也存在单点故障，不但线断了会丧失功能，设备坏了也会丧失功能&lt;/p&gt;
+&lt;h3 id=&#34;星型拓扑&#34;&gt;星型拓扑&lt;/h3&gt;
+&lt;p&gt;1、集线器或者交换机为拓扑的核心&lt;/p&gt;
+&lt;p&gt;2、只要核心不坏就不会出现单点故障（解决了总线和环的单点问题）&lt;/p&gt;
+&lt;p&gt;3、用的线很多，在早期不适用，自从双绞线诞生后才普及&lt;/p&gt;
+&lt;h3 id=&#34;树型拓扑&#34;&gt;树型拓扑&lt;/h3&gt;
+&lt;p&gt;总线和星型拓扑的融合，结构中不存在闭环&lt;/p&gt;
+&lt;h3 id=&#34;网状拓扑&#34;&gt;网状拓扑&lt;/h3&gt;
+&lt;p&gt;1、每个节点与其他所有节点进行互联&lt;/p&gt;
+&lt;p&gt;2、互联网出现的原因&lt;/p&gt;
+&lt;h2 id=&#34;介质访问方法&#34;&gt;介质访问方法&lt;/h2&gt;
+&lt;p&gt;1、CSMA：载波监听，多路存取&lt;/p&gt;
+&lt;p&gt;CSMA/CD：带有&lt;strong&gt;冲突检测&lt;/strong&gt;的载波监听，多路存取（监听线路上的电平值）&lt;/p&gt;
+&lt;p&gt;3、CSMA/CA：带有&lt;strong&gt;冲突避免&lt;/strong&gt;的载波监听，多路存取（无线网络用的多），每个设备的使用时间都是错开的，但如果设备某时段不使用，则会浪费资源，通信效率比较低&lt;/p&gt;
+&lt;p&gt;4、轮询：一个主站点定期检查次站点是否有数据传输，次站点只有得到主站点许可后才能传输。&lt;/p&gt;
+&lt;p&gt;5、令牌传递：环型拓扑里防冲突的方式。&lt;/p&gt;
+&lt;h2 id=&#34;冲突域和广播域&#34;&gt;冲突域和广播域&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421171030431.png&#34;
+	width=&#34;884&#34;
+	height=&#34;512&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421171030431&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;由于现在大多使用交换机组网，很少使用集线器。而交换机上一个端口就是一个冲突域，所以冲突域的概念逐渐被淡化。&lt;/p&gt;
+&lt;p&gt;2、一个网段在发送广播数据帧的时候，该网段下的设备都能收到，这个网段就构成一个广播域。而广播容易带来性能问题，因此一个网段的机器数量不能太多。因此用路由器来分割广播域，降低广播带来的性能问题。&lt;/p&gt;
+&lt;h2 id=&#34;局域网设备&#34;&gt;局域网设备&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421171509126.png&#34;
+	width=&#34;1050&#34;
+	height=&#34;460&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421171509126&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;547px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;一个安全域出于划分广播域的要求，可以使用VLAN来隔离；不同的安全域不应该通过一个交换机的VLAN来隔离，而应该通过不同的物理交换机来隔离。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421172634361.png&#34;
+	width=&#34;1034&#34;
+	height=&#34;434&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421172634361&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;238&#34;
+		data-flex-basis=&#34;571px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;广域网技术&#34;&gt;广域网技术&lt;/h1&gt;
+&lt;h2 id=&#34;电路交换链接&#34;&gt;电路交换链接&lt;/h2&gt;
+&lt;p&gt;真正的电路交换是传统意义上通信双方独占一根线路进行通信&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421173111361.png&#34;
+	width=&#34;1064&#34;
+	height=&#34;298&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421173111361&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;357&#34;
+		data-flex-basis=&#34;856px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;分组交换链接&#34;&gt;分组交换链接&lt;/h2&gt;
+&lt;p&gt;帧中继是一种分组交换技术&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421173148050.png&#34;
+	width=&#34;1072&#34;
+	height=&#34;280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421173148050&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;382&#34;
+		data-flex-basis=&#34;918px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;X.25&lt;/strong&gt;会在每个节点检查信号的完整性。后来传输条件好了才有了&lt;strong&gt;帧中继&lt;/strong&gt;技术，即不需要每个节点进行检查。&lt;/p&gt;
+&lt;h2 id=&#34;信元交换链接&#34;&gt;信元交换链接&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421173631181.png&#34;
+	width=&#34;1082&#34;
+	height=&#34;330&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421173631181&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;327&#34;
+		data-flex-basis=&#34;786px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;广域网虚电路&#34;&gt;广域网虚电路★&lt;/h2&gt;
+&lt;p&gt;为了保证在某些资源有限设备上，用户通信的时候不会产生严重的质量问题（满负荷情况下，如何防止新的接入把原有的通信挤掉），而产生虚电路技术。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421174021803.png&#34;
+	width=&#34;936&#34;
+	height=&#34;328&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421174021803&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;285&#34;
+		data-flex-basis=&#34;684px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;虚电路其实就是一个检查链路上每个节点是否有满负荷的情况，若有满负荷的情况，则让通信等待一段时间。&lt;/p&gt;
+&lt;h2 id=&#34;广域网接入技术&#34;&gt;广域网接入技术&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421174600017.png&#34;
+	width=&#34;1032&#34;
+	height=&#34;438&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421174600017&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;565px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;War Dialer是一种类似于nmap的扫描技术，可以发现一些缺乏安全保护的老旧设备。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421174832528.png&#34;
+	width=&#34;1002&#34;
+	height=&#34;378&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421174832528&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;265&#34;
+		data-flex-basis=&#34;636px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;PBX是一种交换机，即公司内部使用的电话业务网络&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240421175126171.png&#34;
+	width=&#34;992&#34;
+	height=&#34;390&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240421175126171&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;254&#34;
+		data-flex-basis=&#34;610px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;网络协议常识&#34;&gt;网络协议常识&lt;/h1&gt;
+&lt;h2 id=&#34;osi参照模型&#34;&gt;OSI参照模型&lt;/h2&gt;
+&lt;p&gt;表示层的安全问题很复杂&lt;/p&gt;
+&lt;h2 id=&#34;tcpip协议组&#34;&gt;TCP/IP协议组&lt;/h2&gt;
+&lt;p&gt;重要，送分，略&lt;/p&gt;
+&lt;h2 id=&#34;ip协议&#34;&gt;IP协议&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240423204102663.png&#34;
+	width=&#34;976&#34;
+	height=&#34;576&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240423204102663&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;406px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;NAT端口映射可以缓解IPv4不足的情况&lt;/p&gt;
+&lt;p&gt;IPv6缩位表示法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240423204642661.png&#34;
+	width=&#34;1072&#34;
+	height=&#34;486&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240423204642661&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;220&#34;
+		data-flex-basis=&#34;529px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tcp协议&#34;&gt;TCP协议&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240423204759612.png&#34;
+	width=&#34;958&#34;
+	height=&#34;344&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240423204759612&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;278&#34;
+		data-flex-basis=&#34;668px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;stream流表示需要确保顺序的准确性，乱序就会失去价值&lt;/p&gt;
+&lt;p&gt;序列号、旗标位需要加深理解&lt;/p&gt;
+&lt;h2 id=&#34;udp协议&#34;&gt;UDP协议&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240423205117538.png&#34;
+	width=&#34;1056&#34;
+	height=&#34;160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240423205117538&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;660&#34;
+		data-flex-basis=&#34;1584px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;icmp协议故障诊断网络&#34;&gt;ICMP协议（故障诊断网络）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240423205232208.png&#34;
+	width=&#34;1088&#34;
+	height=&#34;332&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240423205232208&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;327&#34;
+		data-flex-basis=&#34;786px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;有针对ICMP协议的DOS攻击（死亡之ping）&lt;/p&gt;
+&lt;h2 id=&#34;dns协议域名解析协议&#34;&gt;DNS协议（域名解析协议）&lt;/h2&gt;
+&lt;p&gt;DNS污染攻击（UDP攻击）&lt;/p&gt;
+&lt;h2 id=&#34;arp协议地址解析协议&#34;&gt;ARP协议（地址解析协议）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote05/assets/image-20240423205722078.png&#34;
+	width=&#34;788&#34;
+	height=&#34;360&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240423205722078&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;525px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第04节：安全工程实施（下）</title>
         <link>https://www.blain.top/p/cissp-classnote04/</link>
         <pubDate>Tue, 09 Apr 2024 00:00:00 +0000</pubDate>
