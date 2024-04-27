@@ -7,7 +7,581 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Tue, 23 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 27 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第06节：通信和网络安全（下）&#43;身份和访问管理（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote06/</link>
+        <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote06/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote06/title.jpg" alt="Featured image of post 第06节：通信和网络安全（下）&#43;身份和访问管理（上）" /&gt;&lt;h1 id=&#34;网络安全威胁&#34;&gt;网络安全威胁&lt;/h1&gt;
+&lt;h2 id=&#34;网络侦查信息收集&#34;&gt;网络侦查（信息收集）&lt;/h2&gt;
+&lt;h2 id=&#34;嗅探器&#34;&gt;嗅探器&lt;/h2&gt;
+&lt;h2 id=&#34;会话劫持&#34;&gt;会话劫持&lt;/h2&gt;
+&lt;p&gt;光靠加密是防范不了会话劫持的&lt;/p&gt;
+&lt;p&gt;双向鉴别才能防止会话劫持的问题（伪基站）&lt;/p&gt;
+&lt;h2 id=&#34;拒绝服务攻击dos&#34;&gt;拒绝服务攻击DOS&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427141006342.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;516&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427141006342&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;595px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;反射器攻击&#34;&gt;反射器攻击&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427134424159.png&#34;
+	width=&#34;1508&#34;
+	height=&#34;746&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427134424159&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;端口7对应着传输层echo服务，该服务会原封不动的返回数据包。攻击者伪造成受害者IP向DNS服务器发送一个DNS请求，然后DNS服务器和受害者主机之间就会无休止的请求应答。&lt;/p&gt;
+&lt;h2 id=&#34;放大器攻击&#34;&gt;放大器攻击&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427135106274.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;746&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427135106274&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;469px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;NTP反射，1:85消耗目标资源&lt;/p&gt;
+&lt;h2 id=&#34;ddos&#34;&gt;DDOS&lt;/h2&gt;
+&lt;p&gt;如何防范：流量清洗&lt;/p&gt;
+&lt;p&gt;牵引流量的技术：BGP路由技术&lt;/p&gt;
+&lt;p&gt;牵引到哪个地址：sink hole沉淀池&lt;/p&gt;
+&lt;h2 id=&#34;syn泛滥&#34;&gt;SYN泛滥&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427140852265.png&#34;
+	width=&#34;1574&#34;
+	height=&#34;706&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427140852265&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;222&#34;
+		data-flex-basis=&#34;535px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;网络安全技术&#34;&gt;网络安全技术&lt;/h1&gt;
+&lt;h2 id=&#34;nat技术&#34;&gt;NAT技术&lt;/h2&gt;
+&lt;p&gt;可以节省IP地址&lt;/p&gt;
+&lt;p&gt;但有些协议会产生不兼容问题，如：IPSec&lt;/p&gt;
+&lt;p&gt;NAT可以有效地隐藏内部IP地址。&lt;/p&gt;
+&lt;h2 id=&#34;防火墙类型&#34;&gt;防火墙类型&lt;/h2&gt;
+&lt;h3 id=&#34;包过滤防火墙物理层安全性最差效率最高&#34;&gt;包过滤防火墙（物理层，安全性最差，效率最高）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427143007439.png&#34;
+	width=&#34;1330&#34;
+	height=&#34;534&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427143007439&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;249&#34;
+		data-flex-basis=&#34;597px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;很难准确设定过滤规则，如：内部主机访问外网，由于动态NAT技术的影响，很难固定哪个端口放行，所以会设置一个放行范围，违背最小授权原则。&lt;/p&gt;
+&lt;h3 id=&#34;应用代理防火墙应用层&#34;&gt;应用代理防火墙（应用层）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427143559592.png&#34;
+	width=&#34;1432&#34;
+	height=&#34;484&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427143559592&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;295&#34;
+		data-flex-basis=&#34;710px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;存在的问题：不同的协议需要不同的代理防火墙，设置麻烦&lt;/p&gt;
+&lt;h3 id=&#34;电路级网关防火墙会话层&#34;&gt;电路级网关防火墙（会话层）&lt;/h3&gt;
+&lt;p&gt;应用代理防火墙的进化，本质还是一个代理，降了一层可以适配各种高层会话&lt;/p&gt;
+&lt;h3 id=&#34;状态检测防火墙传输层会话层应用层&#34;&gt;状态检测防火墙（传输层、会话层、应用层）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427144322651.png&#34;
+	width=&#34;1506&#34;
+	height=&#34;540&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427144322651&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;278&#34;
+		data-flex-basis=&#34;669px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;防火墙部署&#34;&gt;防火墙部署&lt;/h2&gt;
+&lt;h3 id=&#34;包过滤路由器&#34;&gt;包过滤路由器&lt;/h3&gt;
+&lt;p&gt;在网络边界设置ACL列表，允许或禁止某些请求（安全性最差）&lt;/p&gt;
+&lt;h3 id=&#34;双穴主机防火墙&#34;&gt;双穴主机防火墙&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427160347620.png&#34;
+	width=&#34;1342&#34;
+	height=&#34;180&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427160347620&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;745&#34;
+		data-flex-basis=&#34;1789px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;屏蔽主机防火墙&#34;&gt;屏蔽主机防火墙&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427160433065.png&#34;
+	width=&#34;1370&#34;
+	height=&#34;234&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427160433065&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;585&#34;
+		data-flex-basis=&#34;1405px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;屏蔽子网防火墙&#34;&gt;屏蔽子网防火墙&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427160506962.png&#34;
+	width=&#34;1412&#34;
+	height=&#34;216&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427160506962&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;653&#34;
+		data-flex-basis=&#34;1568px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427160514694.png&#34;
+	width=&#34;1244&#34;
+	height=&#34;490&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427160514694&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;609px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;入侵检测系统ids&#34;&gt;入侵检测系统IDS&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427160923611.png&#34;
+	width=&#34;1268&#34;
+	height=&#34;342&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427160923611&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;370&#34;
+		data-flex-basis=&#34;889px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ids分类&#34;&gt;IDS分类&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427161009150.png&#34;
+	width=&#34;1258&#34;
+	height=&#34;510&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427161009150&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、基于规则：&lt;strong&gt;黑名单检测&lt;/strong&gt;，漏报多&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427161258858.png&#34;
+	width=&#34;1318&#34;
+	height=&#34;488&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427161258858&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;270&#34;
+		data-flex-basis=&#34;648px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;专家系统：与黑白名单不同，会通过多种特征进行判断&lt;/p&gt;
+&lt;p&gt;2、基于统计：&lt;strong&gt;白名单检测&lt;/strong&gt;，误报多&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427161628432.png&#34;
+	width=&#34;1326&#34;
+	height=&#34;554&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427161628432&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;239&#34;
+		data-flex-basis=&#34;574px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ids局限性&#34;&gt;IDS局限性&lt;/h3&gt;
+&lt;p&gt;1、误报、漏报&lt;/p&gt;
+&lt;p&gt;2、IDS很大程度上依赖于日志分析，但开启日志分析会消耗更多资源&lt;/p&gt;
+&lt;h2 id=&#34;入侵防御系统ips&#34;&gt;入侵防御系统IPS&lt;/h2&gt;
+&lt;p&gt;在IDS基础上具备的入侵响应功能&lt;/p&gt;
+&lt;p&gt;IPS的发展很大程度上取决于IDS的发展&lt;/p&gt;
+&lt;h2 id=&#34;网络服务质量&#34;&gt;网络服务质量&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427162051057.png&#34;
+	width=&#34;1282&#34;
+	height=&#34;416&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427162051057&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;308&#34;
+		data-flex-basis=&#34;739px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、尽力而为：顾名思义，表面意思&lt;/p&gt;
+&lt;p&gt;2、集成服务：提前预留一部分资源，以防不时之需&lt;/p&gt;
+&lt;p&gt;3、差别服务：对于不同的需求打上优先级的标签，在网络繁忙的时候会丢弃优先级低的需求&lt;/p&gt;
+&lt;h1 id=&#34;无线网络安全&#34;&gt;无线网络安全&lt;/h1&gt;
+&lt;h2 id=&#34;扩频技术&#34;&gt;扩频技术&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427162408254.png&#34;
+	width=&#34;990&#34;
+	height=&#34;468&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427162408254&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;211&#34;
+		data-flex-basis=&#34;507px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;跳频：将一段信息分割成许多份，每一份放在不同的频道上进行传输。应用：全球移动通信系统（GSM）&lt;/p&gt;
+&lt;p&gt;直接序列扩频技术：通过编码的技术将许多信息同时发送，根据提前订好的规律从中将信息筛选出来。应用：码分多址（CDMA）&lt;/p&gt;
+&lt;h2 id=&#34;80211安全机制&#34;&gt;802.11安全机制&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427173934778.png&#34;
+	width=&#34;852&#34;
+	height=&#34;488&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427173934778&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、WEP有线等效加密密钥：使用对称密码技术。加密过程使用24比特初始向量作为密钥一部分。加上一些IV实施中的其他因素，导致不够安全。&lt;/p&gt;
+&lt;p&gt;2、MAC地址检查：就是一个白名单、黑名单&lt;/p&gt;
+&lt;p&gt;3、动态WEP密钥：定期更换对称密钥&lt;/p&gt;
+&lt;p&gt;4、802.11i：无线安全标准&lt;/p&gt;
+&lt;p&gt;引入健壮安全网络协议的概念，使用AES算法加密，表现为现在流行使用的WPA2&lt;/p&gt;
+&lt;p&gt;注：WPA使用的RC4算法（不安全），为早期不支持AES的设备所设计的机制&lt;/p&gt;
+&lt;p&gt;注2：WPA3通过减慢HASH运算的方式，有效地阻止了密钥爆破攻击&lt;/p&gt;
+&lt;h2 id=&#34;无线网络威胁&#34;&gt;无线网络威胁&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427175512069.png&#34;
+	width=&#34;854&#34;
+	height=&#34;376&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427175512069&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;227&#34;
+		data-flex-basis=&#34;545px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;---------身份和访问管理---------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;身份和访问管理&amp;mdash;&amp;mdash;&amp;mdash;&lt;/h1&gt;
+&lt;h1 id=&#34;章节目录&#34;&gt;章节目录&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427180227786.png&#34;
+	width=&#34;360&#34;
+	height=&#34;244&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427180227786&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;重点在前三节，难点在访问控制方法&lt;/p&gt;
+&lt;h1 id=&#34;访问控制概述&#34;&gt;访问控制概述&lt;/h1&gt;
+&lt;p&gt;访问控制定义：略&lt;/p&gt;
+&lt;p&gt;访问控制的最终目的：最小授权原则&lt;/p&gt;
+&lt;h2 id=&#34;访问控制目标&#34;&gt;访问控制目标&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427180931026.png&#34;
+	width=&#34;688&#34;
+	height=&#34;424&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427180931026&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;389px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;可审核性：可问责性。与问责不同，只需要能记录就好，访问控制不需要实现问责功能，因此授权和问责没有关系&lt;/p&gt;
+&lt;h2 id=&#34;访问控制的要素&#34;&gt;访问控制的要素&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427181216528.png&#34;
+	width=&#34;698&#34;
+	height=&#34;388&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427181216528&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;431px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;访问控制的手段&#34;&gt;访问控制的手段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427181438475.png&#34;
+	width=&#34;858&#34;
+	height=&#34;360&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427181438475&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;238&#34;
+		data-flex-basis=&#34;572px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;身份管理是形式，访问控制是目标&lt;/p&gt;
+&lt;p&gt;企业身份管理是指企业可能有成千上万个权限需要控制，单靠人工的手段无法进行系统管理（如孤儿账号：没人使用的账号，被黑客利用则无法问责）&lt;/p&gt;
+&lt;h2 id=&#34;idaas身份云&#34;&gt;IDaas（身份云）&lt;/h2&gt;
+&lt;p&gt;将身份管理&lt;strong&gt;外包&lt;/strong&gt;给云服务厂商&lt;/p&gt;
+&lt;p&gt;补充：联合身份认证，第三方来管理（如：微信登录等）&lt;/p&gt;
+&lt;h1 id=&#34;标识和鉴别技术&#34;&gt;标识和鉴别技术&lt;/h1&gt;
+&lt;h2 id=&#34;身份标识&#34;&gt;身份标识&lt;/h2&gt;
+&lt;p&gt;实现主体身份的唯一性，支持可问责性。&lt;/p&gt;
+&lt;p&gt;其他要求：构建身份标识也应该用中性的编码，防止泄露一些不必要的信息&lt;/p&gt;
+&lt;h2 id=&#34;身份鉴别&#34;&gt;身份鉴别&lt;/h2&gt;
+&lt;p&gt;1、鉴别也称认证&lt;/p&gt;
+&lt;p&gt;2、三种主要鉴别要素的分类&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427183700877.png&#34;
+	width=&#34;1006&#34;
+	height=&#34;202&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427183700877&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;498&#34;
+		data-flex-basis=&#34;1195px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3、双因素、多因素认证，不是用两个口令、多个PIN这种，而是两类因素、多类因素。&lt;/p&gt;
+&lt;p&gt;4、还有次要鉴别要素：如位置、IP地址等，这些单独拎出来不能作为一个鉴别机制&lt;/p&gt;
+&lt;h2 id=&#34;口令及其种类&#34;&gt;口令及其种类&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427184301442.png&#34;
+	width=&#34;990&#34;
+	height=&#34;272&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427184301442&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;363&#34;
+		data-flex-basis=&#34;873px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;动态口令应该被归为第二类要素，不是传统的口令&lt;/p&gt;
+&lt;p&gt;问：银行的PIN码为什么安全？&lt;/p&gt;
+&lt;p&gt;因为加密方式使用的加密机，即使截获密码也无法破解&lt;/p&gt;
+&lt;h2 id=&#34;电子认证令牌分类&#34;&gt;电子认证令牌分类&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427222929968.png&#34;
+	width=&#34;1054&#34;
+	height=&#34;402&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427222929968&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;629px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;硬软令牌都是硬件，区别在于是否允许输出密钥。&lt;/p&gt;
+&lt;h2 id=&#34;常见令牌技术&#34;&gt;常见令牌技术&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427223120510.png&#34;
+	width=&#34;964&#34;
+	height=&#34;476&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427223120510&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;486px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;存储卡没有智能卡安全&lt;/p&gt;
+&lt;p&gt;2、时间同步令牌：令牌上有串号和时间（每分钟为一个单位），服务器会记录用户的串号。如果用户令牌通过串号和时间计算的PIN码与服务器计算的一样，或者与前后漂移一分钟的一致，则通过认证，服务器并记录时间漂移值。但有个问题，时间同步问题，即令牌长时间没用，漂移值大于一分钟了。&lt;/p&gt;
+&lt;p&gt;3、异步令牌：令牌带有键盘，使用时在令牌输入屏幕显示的PIN码会计算出response码，再输入会服务器。&lt;/p&gt;
+&lt;h2 id=&#34;生物识别技术的特点&#34;&gt;生物识别技术的特点&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427224031692.png&#34;
+	width=&#34;644&#34;
+	height=&#34;384&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427224031692&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;生物识别现在可以仿冒和复制&lt;/p&gt;
+&lt;h2 id=&#34;生物识别技术的工作原理&#34;&gt;生物识别技术的工作原理&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427224129757.png&#34;
+	width=&#34;1088&#34;
+	height=&#34;446&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427224129757&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;585px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、正匹配举例：先刷卡，告诉机器身份信息，然后刷指纹，机器匹配卡上的和实际的是否一致（一对一）。因此，正匹配应用更广泛。&lt;/p&gt;
+&lt;p&gt;2、负匹配举例：不刷卡，直接刷指纹，将指纹与数据库里的数据进行依次比对&lt;/p&gt;
+&lt;p&gt;3、生物识别对效率有一定的要求&lt;/p&gt;
+&lt;h2 id=&#34;生物学特征&#34;&gt;生物学特征&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427224934942.png&#34;
+	width=&#34;740&#34;
+	height=&#34;456&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427224934942&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;389px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、面容识别目前准确率还偏低&lt;/p&gt;
+&lt;p&gt;2、手型识别测量手型的几何特征，识别精度也比较低&lt;/p&gt;
+&lt;p&gt;3、DNA检测需要的时间很长&lt;/p&gt;
+&lt;p&gt;4、指纹特征有可能会磨损&lt;/p&gt;
+&lt;p&gt;5、虹膜识别精确率非常高，精度比指纹高一个数量级。但是对光线条件有一定要求（在室外使用需要遮光罩）&lt;/p&gt;
+&lt;p&gt;6、行为特征不是很稳定，使用率比较低&lt;/p&gt;
+&lt;h2 id=&#34;生物识别的错误率&#34;&gt;生物识别的错误率&lt;/h2&gt;
+&lt;p&gt;1、I型错误：合法用户被拒绝&lt;/p&gt;
+&lt;p&gt;2、II型错误：非法用户被接受&lt;/p&gt;
+&lt;p&gt;注：I和II错误往往与设置的参数有关（不能要求特征100%匹配）&lt;/p&gt;
+&lt;p&gt;3、交叉错误率：I型和II型错误率一致的那个点，叫交叉错误率&lt;/p&gt;
+&lt;h2 id=&#34;影响用户接受生物识别的因素&#34;&gt;影响用户接受生物识别的因素&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427225824248.png&#34;
+	width=&#34;1052&#34;
+	height=&#34;432&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427225824248&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;584px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;访问控制的日常审计&#34;&gt;访问控制的日常审计&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote06/assets/image-20240427230020826.png&#34;
+	width=&#34;842&#34;
+	height=&#34;434&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240427230020826&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;违例跟踪报告：一种很好的用于证明安全工作的证据&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第05节：通信和网络安全（上）</title>
         <link>https://www.blain.top/p/cissp-classnote05/</link>
         <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
