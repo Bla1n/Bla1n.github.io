@@ -7,7 +7,373 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Sat, 27 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/cissp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/cissp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第07节：身份和访问管理（下）&#43;软件安全开发（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote07/</link>
+        <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote07/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote07/title.jpg" alt="Featured image of post 第07节：身份和访问管理（下）&#43;软件安全开发（上）" /&gt;&lt;h1 id=&#34;访问控制方法&#34;&gt;访问控制方法&lt;/h1&gt;
+&lt;h2 id=&#34;访问控制管理&#34;&gt;访问控制管理&lt;/h2&gt;
+&lt;p&gt;分为集中式和非集中式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429141350235.png&#34;
+	width=&#34;1430&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429141350235&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;630px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;目前主流的还是集中式管理&lt;/p&gt;
+&lt;h2 id=&#34;集中式认证服务&#34;&gt;集中式认证服务&lt;/h2&gt;
+&lt;p&gt;AAA服务：认证（authentication）、授权（authorization）、记账（accounting）&lt;/p&gt;
+&lt;p&gt;1、特点：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429141932960.png&#34;
+	width=&#34;1074&#34;
+	height=&#34;270&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429141932960&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;397&#34;
+		data-flex-basis=&#34;954px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2、分布式安全架构：接入网络的设备（VPN、AP等）是分布式的，将他们的认证过程转发到3A服务器，集中实现各个设备的认证服务。&lt;/p&gt;
+&lt;p&gt;3、主流的3A服务器包括：radius（使用UDP）、TACACA+（使用TCP，思科私有协议）、DIAMETER（RADIUS的升级，4G/5G信令协议、漫游）&lt;/p&gt;
+&lt;h2 id=&#34;单次登录sso&#34;&gt;单次登录SSO&lt;/h2&gt;
+&lt;p&gt;1、初代单次登录（伪单次）：将所有密码写成一个脚本，执行一下就登录所有账号。缺点：会话劫持风险增加、消耗更多资源、攻击面增加（脚本）、改密码麻烦，依然要一个一个改&lt;/p&gt;
+&lt;h3 id=&#34;kerberos协议&#34;&gt;Kerberos协议&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429155608671.png&#34;
+	width=&#34;1436&#34;
+	height=&#34;526&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429155608671&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;655px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工作原理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）用户先向KDC请求获取票证授予票证TGT（游乐场门票）&lt;/p&gt;
+&lt;p&gt;（2）用户要使用某一具体服务时，再向KDC提交TGT获取服务票证ST（过山车票）&lt;/p&gt;
+&lt;p&gt;（3）用户通过ST访问具体服务器，使用相应的服务&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429160152921.png&#34;
+	width=&#34;1550&#34;
+	height=&#34;542&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429160152921&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;285&#34;
+		data-flex-basis=&#34;686px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3、SESAME：欧洲版本的Kerberos，比Kerberos更复杂，几乎没人用&lt;/p&gt;
+&lt;h2 id=&#34;访问控制部署原则&#34;&gt;访问控制部署原则&lt;/h2&gt;
+&lt;p&gt;1、访问的适当性主要遵循：&lt;/p&gt;
+&lt;p&gt;最小特权原则（least privilege）：从&lt;strong&gt;安全审查&lt;/strong&gt;工作角度来看&lt;/p&gt;
+&lt;p&gt;需知原则（need to know）：从&lt;strong&gt;日常工作&lt;/strong&gt;的角度来看&lt;/p&gt;
+&lt;p&gt;本质上两者都是一个东西，只是从不同的角度产生了两种不同的说法&lt;/p&gt;
+&lt;h2 id=&#34;访问控制类型&#34;&gt;访问控制类型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429161057674.png&#34;
+	width=&#34;1014&#34;
+	height=&#34;292&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429161057674&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;347&#34;
+		data-flex-basis=&#34;833px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自助访问控制&#34;&gt;自助访问控制&lt;/h3&gt;
+&lt;p&gt;由owner来决定&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429162423818.png&#34;
+	width=&#34;1474&#34;
+	height=&#34;518&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429162423818&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;284&#34;
+		data-flex-basis=&#34;682px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;强制访问控制&#34;&gt;强制访问控制&lt;/h3&gt;
+&lt;p&gt;设置安全标签&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429162505137.png&#34;
+	width=&#34;1478&#34;
+	height=&#34;522&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429162505137&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;679px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;非自主访问控制&#34;&gt;非自主访问控制&lt;/h3&gt;
+&lt;p&gt;1、基于角色的访问控制、基于属性的访问控制&lt;/p&gt;
+&lt;p&gt;2、产生的原因是为了解决人员流动频繁管理不便的问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429162800976.png&#34;
+	width=&#34;1448&#34;
+	height=&#34;566&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429162800976&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;255&#34;
+		data-flex-basis=&#34;613px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;基于上下文context的访问控制&#34;&gt;基于上下文（context）的访问控制&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429163129680.png&#34;
+	width=&#34;1286&#34;
+	height=&#34;312&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429163129680&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;412&#34;
+		data-flex-basis=&#34;989px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;例如：状态检测防火墙&lt;/p&gt;
+&lt;h3 id=&#34;基于内容content的访问控制&#34;&gt;基于内容（content）的访问控制&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429163258096.png&#34;
+	width=&#34;1220&#34;
+	height=&#34;384&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429163258096&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;317&#34;
+		data-flex-basis=&#34;762px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;系统开销比较大&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;基于视图的访问控制数据库的访问控制&#34;&gt;基于视图的访问控制（数据库的访问控制）&lt;/h3&gt;
+&lt;p&gt;view（数据库术语）：查询语言查询的结果保存在内存中的虚表，称之为视图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429163535853.png&#34;
+	width=&#34;1474&#34;
+	height=&#34;472&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429163535853&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;312&#34;
+		data-flex-basis=&#34;749px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;访问控制的威胁&#34;&gt;访问控制的威胁&lt;/h1&gt;
+&lt;p&gt;1、口令破解&lt;/p&gt;
+&lt;p&gt;口令是最弱的防护机制&lt;/p&gt;
+&lt;p&gt;哈希加盐对彩虹表的攻击有防范意义&lt;/p&gt;
+&lt;p&gt;2、数据截获&lt;/p&gt;
+&lt;p&gt;3、社会工程&lt;/p&gt;
+&lt;p&gt;4、哄骗（Spoofing）&lt;/p&gt;
+&lt;p&gt;ID Theft&lt;/p&gt;
+&lt;h1 id=&#34;-----------软件安全开发-----------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;软件安全开发&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/h1&gt;
+&lt;h1 id=&#34;本章目标&#34;&gt;本章目标&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429165705381.png&#34;
+	width=&#34;684&#34;
+	height=&#34;450&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429165705381&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;应用系统面临的威胁&#34;&gt;应用系统面临的威胁&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;1、缓冲区溢出&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DEP数据执行保护 ：将代码区和数据区分隔开，来自数据区的代码不会被CPU执行&lt;/p&gt;
+&lt;p&gt;ASLR地址空间随机化&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、大众程序员&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;非专业人员的编程，违反开发过程中的职责分离要求。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3、隐蔽信道&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4、恶意代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5、存储器重用/对象重用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;突破进程隔离限制，内存没覆盖、硬盘没清空&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6、可执行内容/移动代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过网络下载到本地执行的代码，如何对代码来源进行验证，以及如何约束此类代码运行的特权是应用安全关注的一个问题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7、检查时间/使用时间（TOC/TOU）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;静态条件攻击，利用时间差进行攻击&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8、后门/陷门&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9、钓鱼&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10、解释器注入&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;XSS、SQL、代码注入、模板注入&lt;/p&gt;
+&lt;h1 id=&#34;恶意代码&#34;&gt;恶意代码&lt;/h1&gt;
+&lt;h2 id=&#34;恶意代码分类&#34;&gt;恶意代码分类&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;1、病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;附着于其他可执行代码上&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（1）文件感染型病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（2）引导区病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（3）混合型病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（4）邮件病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（5）宏病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（6）脚本病毒&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2、蠕虫&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不依附于其他文件独立存在，通过自我复制并感染其他设备&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3、木马&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;多重攻击&#34;&gt;多重攻击&lt;/h2&gt;
+&lt;p&gt;蠕虫的一种攻击方式，同时使用多种方式进行恶意代码的传播&lt;/p&gt;
+&lt;h2 id=&#34;恶意代码控制&#34;&gt;恶意代码控制&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429175659145.png&#34;
+	width=&#34;1110&#34;
+	height=&#34;512&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429175659145&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;跨站脚本攻击xss&#34;&gt;跨站脚本攻击XSS&lt;/h2&gt;
+&lt;p&gt;破坏了同源策略&lt;/p&gt;
+&lt;h1 id=&#34;系统开发模型&#34;&gt;系统开发模型&lt;/h1&gt;
+&lt;h2 id=&#34;系统开发方法&#34;&gt;系统开发方法&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429180650651.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429180650651&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;337&#34;
+		data-flex-basis=&#34;810px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1、瀑布模型容易卡带&lt;/p&gt;
+&lt;p&gt;2、瀑布模型以前叫做系统开发生命周期模型&lt;/p&gt;
+&lt;p&gt;3、瀑布模型的一种开发方法：&lt;strong&gt;结构化编程开发&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4、高内敛：每个模块尽量实现简单的功能&lt;/p&gt;
+&lt;p&gt;5、低耦合：模块之间的关系尽量简化&lt;/p&gt;
+&lt;h2 id=&#34;v-model&#34;&gt;V-Model&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429181336425.png&#34;
+	width=&#34;1528&#34;
+	height=&#34;632&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429181336425&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;241&#34;
+		data-flex-basis=&#34;580px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;一个测试模型，将上述测试与生命周期一一对应，使得测试工作做得更全面更好&lt;/p&gt;
+&lt;h2 id=&#34;原型法&#34;&gt;原型法&lt;/h2&gt;
+&lt;p&gt;1、解决瀑布模型代办问题的模型，是迭代模型的一种&lt;/p&gt;
+&lt;p&gt;2、工作原理&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429181833722.png&#34;
+	width=&#34;1372&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429181833722&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;252&#34;
+		data-flex-basis=&#34;605px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;联合分析开发是一种人员交流的方法&lt;/p&gt;
+&lt;h2 id=&#34;探索和螺旋模型&#34;&gt;探索和螺旋模型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429182455586.png&#34;
+	width=&#34;1154&#34;
+	height=&#34;370&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429182455586&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;311&#34;
+		data-flex-basis=&#34;748px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;探索模型：摸清市场需求的模型&lt;/p&gt;
+&lt;p&gt;螺旋模型：解决项目可行性风险的模型&lt;/p&gt;
+&lt;h2 id=&#34;devops&#34;&gt;DevOps&lt;/h2&gt;
+&lt;p&gt;1、一种敏捷开发方式&lt;/p&gt;
+&lt;p&gt;2、流程自动化&lt;/p&gt;
+&lt;p&gt;3、提高流程效率&lt;/p&gt;
+&lt;h2 id=&#34;软件能力成熟度模型&#34;&gt;软件能力成熟度模型&lt;/h2&gt;
+&lt;p&gt;基本理念：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote07/assets/image-20240429183136232.png&#34;
+	width=&#34;1272&#34;
+	height=&#34;506&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240429183136232&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;251&#34;
+		data-flex-basis=&#34;603px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;CMMI：第二个阶段为“管理型”&lt;/p&gt;
+&lt;p&gt;量化管理：绩效管理&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第06节：通信和网络安全（下）&#43;身份和访问管理（上）</title>
         <link>https://www.blain.top/p/cissp-classnote06/</link>
         <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>

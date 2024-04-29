@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='hugo搭建与装饰记录'>
-<title>Category: hugo - B1ain&#39;s Blog</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='CISSP课程笔记'>
+<title>第07节：身份和访问管理（下）&#43;软件安全开发（上）</title>
 
-<link rel='canonical' href='https://www.blain.top/categories/hugo/'>
+<link rel='canonical' href='https://www.blain.top/p/cissp-classnote07/'>
 
-<link rel="stylesheet" href="../../scss/style.min.2fd9ebcedd4ca10cd84f38c910b67db37987d4246efb324cb5558fd54e7168e6.css"><meta property='og:title' content='Category: hugo - B1ain&#39;s Blog'>
-<meta property='og:description' content='hugo搭建与装饰记录'>
-<meta property='og:url' content='https://www.blain.top/categories/hugo/'>
+<link rel="stylesheet" href="../../scss/style.min.2fd9ebcedd4ca10cd84f38c910b67db37987d4246efb324cb5558fd54e7168e6.css"><meta property='og:title' content='第07节：身份和访问管理（下）&#43;软件安全开发（上）'>
+<meta property='og:description' content='CISSP课程笔记'>
+<meta property='og:url' content='https://www.blain.top/p/cissp-classnote07/'>
 <meta property='og:site_name' content='B1ain&#39;s Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-04-29T00:00:00&#43;00:00 '/><meta property='og:image' content='https://www.blain.top/categories/hugo/hugo.png' />
-<meta name="twitter:title" content="Category: hugo - B1ain&#39;s Blog">
-<meta name="twitter:description" content="hugo搭建与装饰记录"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://www.blain.top/categories/hugo/hugo.png' /><link rel="alternate" type="application/rss&#43;xml" href="https://www.blain.top/categories/hugo/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2024-04-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-04-29T00:00:00&#43;00:00'/><meta property='og:image' content='https://www.blain.top/p/cissp-classnote07/title.jpg' />
+<meta name="twitter:title" content="第07节：身份和访问管理（下）&#43;软件安全开发（上）">
+<meta name="twitter:description" content="CISSP课程笔记"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://www.blain.top/p/cissp-classnote07/title.jpg' />
     <link rel="shortcut icon" href="../../img/favicon.ico" />
 
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
 
     <script>
         (function() {
@@ -251,242 +253,699 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="../../search/" class="search-form widget" >
-        <p>
-            <label>搜索</label>
-            <input name="keyword" required placeholder="输入关键词..." />
-        
-            <button title="搜索">
-                <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1705338141627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="16470" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M555.690667 569.685333m-298.325334 0a298.325333 298.325333 0 1 0 596.650667 0 298.325333 298.325333 0 1 0-596.650667 0Z" fill="#A7E1F4" p-id="16471"></path><path d="M257.365333 607.232h409.6v29.354667h-409.6z" p-id="16472"></path><path d="M321.536 507.904h29.354667v123.221333h-29.354667zM404.48 416.768h29.354667v204.8h-29.354667zM495.274667 464.213333h29.354666v162.474667h-29.354666zM578.218667 344.405333h29.354666v269.653334h-29.354666zM651.226453 747.697493l20.753067-20.75648 54.306133 54.306134-20.753066 20.753066z" p-id="16473"></path><path d="M829.44 877.226667l-24.917333 24.917333c-12.970667 12.970667-33.792 12.970667-46.762667 0l-70.656-70.656c-12.970667-12.970667-12.970667-33.792 0-46.762667l24.917333-24.917333c12.970667-12.970667 33.792-12.970667 46.762667 0l70.656 70.656c12.970667 12.970667 12.970667 33.792 0 46.762667z m-121.173333-71.68c-1.365333 1.365333-1.365333 3.754667 0 5.12l70.656 70.656c1.365333 1.365333 3.754667 1.365333 5.12 0l24.917333-24.917334c1.365333-1.365333 1.365333-3.754667 0-5.12l-70.656-70.656c-1.365333-1.365333-3.754667-1.365333-5.12 0l-24.917333 24.917334zM468.309333 826.026667c-164.522667 0-298.325333-133.802667-298.325333-298.325334S303.786667 229.376 468.309333 229.376s298.325333 133.802667 298.325334 298.325333-133.802667 298.325333-298.325334 298.325334z m0-562.176c-145.408 0-263.850667 118.442667-263.850666 263.850666s118.442667 263.850667 263.850666 263.850667 263.850667-118.442667 263.850667-263.850667-118.442667-263.850667-263.850667-263.850666z" p-id="16474"></path></svg>
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
 </svg>
 
 
 
         </div>
-        <h2 class="widget-title section-title">归档</h2>
-
+        <h2 class="widget-title section-title">目录</h2>
         
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="../../archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">13</span>
-                        
-                    </a> 
-                </div>
-            
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#访问控制方法">访问控制方法</a>
+      <ol>
+        <li><a href="#访问控制管理">访问控制管理</a></li>
+        <li><a href="#集中式认证服务">集中式认证服务</a></li>
+        <li><a href="#单次登录sso">单次登录SSO</a>
+          <ol>
+            <li><a href="#kerberos协议">Kerberos协议</a></li>
+          </ol>
+        </li>
+        <li><a href="#访问控制部署原则">访问控制部署原则</a></li>
+        <li><a href="#访问控制类型">访问控制类型</a>
+          <ol>
+            <li><a href="#自助访问控制">自助访问控制</a></li>
+            <li><a href="#强制访问控制">强制访问控制</a></li>
+            <li><a href="#非自主访问控制">非自主访问控制</a></li>
+            <li><a href="#基于上下文context的访问控制">基于上下文（context）的访问控制</a></li>
+            <li><a href="#基于内容content的访问控制">基于内容（content）的访问控制</a></li>
+            <li><a href="#基于视图的访问控制数据库的访问控制">基于视图的访问控制（数据库的访问控制）</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#访问控制的威胁">访问控制的威胁</a></li>
+    <li><a href="#-----------软件安全开发-----------">&mdash;&mdash;&mdash;&ndash;软件安全开发&mdash;&mdash;&mdash;&ndash;</a></li>
+    <li><a href="#本章目标">本章目标</a></li>
+    <li><a href="#应用系统面临的威胁">应用系统面临的威胁</a></li>
+    <li><a href="#恶意代码">恶意代码</a>
+      <ol>
+        <li><a href="#恶意代码分类">恶意代码分类</a></li>
+        <li><a href="#多重攻击">多重攻击</a></li>
+        <li><a href="#恶意代码控制">恶意代码控制</a></li>
+        <li><a href="#跨站脚本攻击xss">跨站脚本攻击XSS</a></li>
+      </ol>
+    </li>
+    <li><a href="#系统开发模型">系统开发模型</a>
+      <ol>
+        <li><a href="#系统开发方法">系统开发方法</a></li>
+        <li><a href="#v-model">V-Model</a></li>
+        <li><a href="#原型法">原型法</a></li>
+        <li><a href="#探索和螺旋模型">探索和螺旋模型</a></li>
+        <li><a href="#devops">DevOps</a></li>
+        <li><a href="#软件能力成熟度模型">软件能力成熟度模型</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
         </div>
     </section>
-            
-        
-            
-                <section class="widget cateCloud">
-    <div class="widget-icon">
-        <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1705506571205" class="icon" viewBox="0 0 1028 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2805" xmlns:xlink="http://www.w3.org/1999/xlink" width="200.78125" height="200"><path d="M365.84748477 501.68124512H150.46001123c-48.77249239 0-88.46001123-40.68575684-88.46001123-90.63798486V190.40243398c0-49.95222803 39.67743604-90.59765185 88.44992842-90.59765185h215.39755635c48.77249239 0 88.44992842 40.64542383 88.44992754 90.59765185v220.64082628c0 49.95222803-39.67743604 90.63798487-88.44992754 90.63798485zM150.46001123 153.62896309c-19.79334317 0-35.89623193 16.50621622-35.89623193 36.77347089v220.64082628c0 20.26725469 16.13313808 36.76338809 35.89623193 36.76338808h215.38747354c19.79334317 0 35.89623193-16.4961334 35.89623105-36.76338808V190.40243398c0-20.26725469-16.13313808-36.77347089-35.89623105-36.77347089zM365.84748477 962H150.46001123C101.68751885 962 62.01008281 921.35457617 62.01008281 871.39226445V650.76152187c-0.01008281-49.96231084 39.67743604-90.59765185 88.44992842-90.59765185h215.38747354c48.77249239 0 88.44992842 40.64542383 88.44992754 90.60773467v220.62065976c0 49.96231084-39.67743604 90.60773555-88.44992754 90.60773555zM150.46001123 613.98805098c-19.79334317 0-35.89623193 16.4961334-35.89623193 36.7734709v220.63074257c0 20.2773375 16.13313808 36.77347089 35.89623193 36.7734709h215.38747354c19.79334317 0 35.89623193-16.4961334 35.89623105-36.7734709V650.76152187c0-20.2773375-16.13313808-36.77347089-35.89623105-36.77347089zM916.95547286 430.62485644l-192.40783507 99.15829806c-43.55947177 22.45531114-96.79882676 4.41644677-118.76006074-40.2118462l-96.79882676-197.08644463c-21.92090098-44.62829209-4.30553145-99.20871474 39.25394033-121.66402588L740.60010987 71.65245605c43.56955547-22.44522832 96.84924258-4.40636308 118.77014355 40.22192989l96.79882763 197.08644463c21.9713168 44.62829209 4.35594727 99.20871474-39.2136082 121.66402587z m-345.09790196-211.74743407c-17.68595273 9.07488984-24.83494893 31.25795449-15.93147304 49.40773417l96.79882675 197.09652833a35.54331943 35.54331943 0 0 0 48.20783291 16.31463573l192.40783418-99.15829804c17.67586904-9.07488984 24.82486612-31.25795449 15.93147392-49.40773506l-96.79882675-197.09652832a35.53323574 35.53323574 0 0 0-48.19774922-16.31463574zM840.29281807 962H624.90534541c-48.77249239 0-88.44992842-40.64542383-88.44992842-90.60773555V650.76152187c0-49.96231084 39.67743604-90.60773555 88.44992842-90.60773554h215.38747266c48.77249239 0 88.44992842 40.64542383 88.44992841 90.60773554v220.63074258c0 49.96231084-39.67743604 90.60773555-88.44992841 90.60773555zM624.90534541 613.98805098c-19.79334317 0-35.89623193 16.4961334-35.89623193 36.7734709v220.63074257c0 20.2773375 16.13313808 36.77347089 35.89623193 36.7734709h215.38747266c19.79334317 0 35.89623193-16.4961334 35.89623193-36.7734709V650.76152187c0-20.2773375-16.13313808-36.77347089-35.89623193-36.77347089z" p-id="2806"></path></svg>
-    </div>
-    <h2 class="widget-title section-title">分类</h2>
 
-    <div class="cateCloud-tags">
-        
-            <a href="../../categories/cissp/" class="font_size_7">
-                CISSP<span class="cate-spacing"></span>
-                <span class="category-count">7</span>
-            </a>
-        
-            <a href="../../categories/hugo/" class="font_size_3">
-                hugo<span class="cate-spacing"></span>
-                <span class="category-count">3</span>
-            </a>
-        
-            <a href="../../categories/%E5%B0%8F%E5%A6%99%E6%8B%9B/" class="font_size_1">
-                小妙招<span class="cate-spacing"></span>
-                <span class="category-count">1</span>
-            </a>
-        
-            <a href="../../categories/%E6%8A%80%E6%9C%AF/" class="font_size_1">
-                技术<span class="cate-spacing"></span>
-                <span class="category-count">1</span>
-            </a>
-        
-            <a href="../../categories/%E6%97%A5%E5%B8%B8/" class="font_size_1">
-                日常<span class="cate-spacing"></span>
-                <span class="category-count">1</span>
-            </a>
-        
-    </div>
-</section>
-
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
-  <circle cx="9" cy="9" r="2" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title">标签云</h2>
-
-    <div class="tagCloud-tags">
-        
-            <a href="../../tags/%E7%AC%94%E8%AE%B0/" class="font_size_7">
-                笔记
-            </a>
-        
-            <a href="../../tags/%E5%89%8D%E7%AB%AF/" class="font_size_2">
-                前端
-            </a>
-        
-            <a href="../../tags/%E6%8A%80%E5%B7%A7/" class="font_size_2">
-                技巧
-            </a>
-        
-            <a href="../../tags/python/" class="font_size_1">
-                python
-            </a>
-        
-            <a href="../../tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="font_size_1">
-                年终总结
-            </a>
-        
-            <a href="../../tags/%E5%BC%BA%E8%BF%AB%E7%97%87/" class="font_size_1">
-                强迫症
-            </a>
-        
-    </div>
-</section>
             
         
     </aside>
 
 
             <main class="main full-width">
-    <header>
-        <h3 class="section-title">
-            
-                Categories
-            
-        </h3>
-
-        <div class="section-card">
-            <div class="section-details">
-                <h3 class="section-count"></h3>
-                <h1 class="section-term">hugo</h1>
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="../../p/cissp-classnote07/">
+                <img src="../../p/cissp-classnote07/title.jpg"
+                        
+                        width="1920" 
+                        height="1200" 
+                        loading="lazy"
+                        alt="Featured image of post 第07节：身份和访问管理（下）&#43;软件安全开发（上）" />
                 
-                    <h2 class="section-description">hugo搭建与装饰记录</h2>
-                
-            </div>
-                <div class="section-image">
-                    <img src="../../categories/hugo/hugo.png" 
-                            width="568"
-                            height="342" 
-                            loading="lazy">
-                    
-                </div>
-            
+            </a>
         </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="../../categories/cissp/" style="background-color: #FF6868; color: #fff;">
+                CISSP
+            </a>
+        
     </header>
     
-    <section class="article-list--compact">
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="../../p/cissp-classnote07/">第07节：身份和访问管理（下）&#43;软件安全开发（上）</a>
+        </h2>
+    
         
-            <article>
-    <a href="../../p/renovation2/">
-        <div class="article-details">
-            <h2 class="article-title">小白hugo博客装修笔记（2）</h2>
-            
-            <div class="article-subtitle">
-                买不起房子就自己做一个互联网小屋了
-            </div>
-            
-            <footer class="article-time">
-                <time datetime='2024-04-14T00:00:00Z'>Apr 14, 2024</time>
-            </footer>
-        </div>
-            <div class="article-image">
-                <img src="../../p/renovation2/title.png" 
-                        width="1756"
-                        height="982" 
-                        alt="小白hugo博客装修笔记（2）"
-                        loading="lazy">
-                
-            </div>
+        <h3 class="article-subtitle">
+            CISSP课程笔记
+        </h3>
         
-    </a>
-</article>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
         
-            <article>
-    <a href="../../p/renovation/">
-        <div class="article-details">
-            <h2 class="article-title">小白hugo博客装修笔记（1）</h2>
-            
-            <div class="article-subtitle">
-                买不起房子就自己做一个互联网小屋了
-            </div>
-            
-            <footer class="article-time">
-                <time datetime='2024-01-18T00:00:00Z'>Jan 18, 2024</time>
-            </footer>
-        </div>
-            <div class="article-image">
-                <img src="../../p/renovation/title.jpg" 
-                        width="1920"
-                        height="1080" 
-                        alt="小白hugo博客装修笔记（1）"
-                        loading="lazy">
-                
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 29, 2024</time>
             </div>
         
-    </a>
-</article>
+
         
-            <article>
-    <a href="../../p/hugo-problems/">
-        <div class="article-details">
-            <h2 class="article-title">hugo搭建遇到问题解决方案</h2>
-            
-            <div class="article-subtitle">
-                hugo搭建过程中踩过的坑
-            </div>
-            
-            <footer class="article-time">
-                <time datetime='2024-01-14T00:00:00Z'>Jan 14, 2024</time>
-            </footer>
-        </div>
-            <div class="article-image">
-                <img src="../../p/hugo-problems/title.png" 
-                        width="1440"
-                        height="880" 
-                        alt="hugo搭建遇到问题解决方案"
-                        loading="lazy">
-                
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
             </div>
         
-    </a>
-</article>
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="访问控制方法">访问控制方法</h1>
+<h2 id="访问控制管理">访问控制管理</h2>
+<p>分为集中式和非集中式</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429141350235.png"
+	width="1430"
+	height="544"
+	
+	loading="lazy"
+	
+		alt="image-20240429141350235"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="262"
+		data-flex-basis="630px"
+	
+></p>
+<p>目前主流的还是集中式管理</p>
+<h2 id="集中式认证服务">集中式认证服务</h2>
+<p>AAA服务：认证（authentication）、授权（authorization）、记账（accounting）</p>
+<p>1、特点：</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429141932960.png"
+	width="1074"
+	height="270"
+	
+	loading="lazy"
+	
+		alt="image-20240429141932960"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="397"
+		data-flex-basis="954px"
+	
+></p>
+<p>2、分布式安全架构：接入网络的设备（VPN、AP等）是分布式的，将他们的认证过程转发到3A服务器，集中实现各个设备的认证服务。</p>
+<p>3、主流的3A服务器包括：radius（使用UDP）、TACACA+（使用TCP，思科私有协议）、DIAMETER（RADIUS的升级，4G/5G信令协议、漫游）</p>
+<h2 id="单次登录sso">单次登录SSO</h2>
+<p>1、初代单次登录（伪单次）：将所有密码写成一个脚本，执行一下就登录所有账号。缺点：会话劫持风险增加、消耗更多资源、攻击面增加（脚本）、改密码麻烦，依然要一个一个改</p>
+<h3 id="kerberos协议">Kerberos协议</h3>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429155608671.png"
+	width="1436"
+	height="526"
+	
+	loading="lazy"
+	
+		alt="image-20240429155608671"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="273"
+		data-flex-basis="655px"
+	
+></p>
+<p><strong>工作原理：</strong></p>
+<p>（1）用户先向KDC请求获取票证授予票证TGT（游乐场门票）</p>
+<p>（2）用户要使用某一具体服务时，再向KDC提交TGT获取服务票证ST（过山车票）</p>
+<p>（3）用户通过ST访问具体服务器，使用相应的服务</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429160152921.png"
+	width="1550"
+	height="542"
+	
+	loading="lazy"
+	
+		alt="image-20240429160152921"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="285"
+		data-flex-basis="686px"
+	
+></p>
+<p>3、SESAME：欧洲版本的Kerberos，比Kerberos更复杂，几乎没人用</p>
+<h2 id="访问控制部署原则">访问控制部署原则</h2>
+<p>1、访问的适当性主要遵循：</p>
+<p>最小特权原则（least privilege）：从<strong>安全审查</strong>工作角度来看</p>
+<p>需知原则（need to know）：从<strong>日常工作</strong>的角度来看</p>
+<p>本质上两者都是一个东西，只是从不同的角度产生了两种不同的说法</p>
+<h2 id="访问控制类型">访问控制类型</h2>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429161057674.png"
+	width="1014"
+	height="292"
+	
+	loading="lazy"
+	
+		alt="image-20240429161057674"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="347"
+		data-flex-basis="833px"
+	
+></p>
+<h3 id="自助访问控制">自助访问控制</h3>
+<p>由owner来决定</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429162423818.png"
+	width="1474"
+	height="518"
+	
+	loading="lazy"
+	
+		alt="image-20240429162423818"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="284"
+		data-flex-basis="682px"
+	
+></p>
+<h3 id="强制访问控制">强制访问控制</h3>
+<p>设置安全标签</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429162505137.png"
+	width="1478"
+	height="522"
+	
+	loading="lazy"
+	
+		alt="image-20240429162505137"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="283"
+		data-flex-basis="679px"
+	
+></p>
+<h3 id="非自主访问控制">非自主访问控制</h3>
+<p>1、基于角色的访问控制、基于属性的访问控制</p>
+<p>2、产生的原因是为了解决人员流动频繁管理不便的问题</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429162800976.png"
+	width="1448"
+	height="566"
+	
+	loading="lazy"
+	
+		alt="image-20240429162800976"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="255"
+		data-flex-basis="613px"
+	
+></p>
+<h3 id="基于上下文context的访问控制">基于上下文（context）的访问控制</h3>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429163129680.png"
+	width="1286"
+	height="312"
+	
+	loading="lazy"
+	
+		alt="image-20240429163129680"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="412"
+		data-flex-basis="989px"
+	
+></p>
+<p>例如：状态检测防火墙</p>
+<h3 id="基于内容content的访问控制">基于内容（content）的访问控制</h3>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429163258096.png"
+	width="1220"
+	height="384"
+	
+	loading="lazy"
+	
+		alt="image-20240429163258096"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="317"
+		data-flex-basis="762px"
+	
+></p>
+<p><strong>系统开销比较大</strong></p>
+<h3 id="基于视图的访问控制数据库的访问控制">基于视图的访问控制（数据库的访问控制）</h3>
+<p>view（数据库术语）：查询语言查询的结果保存在内存中的虚表，称之为视图</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429163535853.png"
+	width="1474"
+	height="472"
+	
+	loading="lazy"
+	
+		alt="image-20240429163535853"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="312"
+		data-flex-basis="749px"
+	
+></p>
+<h1 id="访问控制的威胁">访问控制的威胁</h1>
+<p>1、口令破解</p>
+<p>口令是最弱的防护机制</p>
+<p>哈希加盐对彩虹表的攻击有防范意义</p>
+<p>2、数据截获</p>
+<p>3、社会工程</p>
+<p>4、哄骗（Spoofing）</p>
+<p>ID Theft</p>
+<h1 id="-----------软件安全开发-----------">&mdash;&mdash;&mdash;&ndash;软件安全开发&mdash;&mdash;&mdash;&ndash;</h1>
+<h1 id="本章目标">本章目标</h1>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429165705381.png"
+	width="684"
+	height="450"
+	
+	loading="lazy"
+	
+		alt="image-20240429165705381"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="364px"
+	
+></p>
+<h1 id="应用系统面临的威胁">应用系统面临的威胁</h1>
+<p><strong>1、缓冲区溢出</strong></p>
+<p>DEP数据执行保护 ：将代码区和数据区分隔开，来自数据区的代码不会被CPU执行</p>
+<p>ASLR地址空间随机化</p>
+<p><strong>2、大众程序员</strong></p>
+<p>非专业人员的编程，违反开发过程中的职责分离要求。</p>
+<p><strong>3、隐蔽信道</strong></p>
+<p><strong>4、恶意代码</strong></p>
+<p><strong>5、存储器重用/对象重用</strong></p>
+<p>突破进程隔离限制，内存没覆盖、硬盘没清空</p>
+<p><strong>6、可执行内容/移动代码</strong></p>
+<p>通过网络下载到本地执行的代码，如何对代码来源进行验证，以及如何约束此类代码运行的特权是应用安全关注的一个问题</p>
+<p><strong>7、检查时间/使用时间（TOC/TOU）</strong></p>
+<p>静态条件攻击，利用时间差进行攻击</p>
+<p><strong>8、后门/陷门</strong></p>
+<p><strong>9、钓鱼</strong></p>
+<p><strong>10、解释器注入</strong></p>
+<p>XSS、SQL、代码注入、模板注入</p>
+<h1 id="恶意代码">恶意代码</h1>
+<h2 id="恶意代码分类">恶意代码分类</h2>
+<p><strong>1、病毒</strong></p>
+<p>附着于其他可执行代码上</p>
+<p><strong>（1）文件感染型病毒</strong></p>
+<p><strong>（2）引导区病毒</strong></p>
+<p><strong>（3）混合型病毒</strong></p>
+<p><strong>（4）邮件病毒</strong></p>
+<p><strong>（5）宏病毒</strong></p>
+<p><strong>（6）脚本病毒</strong></p>
+<p><strong>2、蠕虫</strong></p>
+<p>不依附于其他文件独立存在，通过自我复制并感染其他设备</p>
+<p><strong>3、木马</strong></p>
+<h2 id="多重攻击">多重攻击</h2>
+<p>蠕虫的一种攻击方式，同时使用多种方式进行恶意代码的传播</p>
+<h2 id="恶意代码控制">恶意代码控制</h2>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429175659145.png"
+	width="1110"
+	height="512"
+	
+	loading="lazy"
+	
+		alt="image-20240429175659145"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="216"
+		data-flex-basis="520px"
+	
+></p>
+<h2 id="跨站脚本攻击xss">跨站脚本攻击XSS</h2>
+<p>破坏了同源策略</p>
+<h1 id="系统开发模型">系统开发模型</h1>
+<h2 id="系统开发方法">系统开发方法</h2>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429180650651.png"
+	width="1080"
+	height="320"
+	
+	loading="lazy"
+	
+		alt="image-20240429180650651"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="337"
+		data-flex-basis="810px"
+	
+></p>
+<p>1、瀑布模型容易卡带</p>
+<p>2、瀑布模型以前叫做系统开发生命周期模型</p>
+<p>3、瀑布模型的一种开发方法：<strong>结构化编程开发</strong></p>
+<p>4、高内敛：每个模块尽量实现简单的功能</p>
+<p>5、低耦合：模块之间的关系尽量简化</p>
+<h2 id="v-model">V-Model</h2>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429181336425.png"
+	width="1528"
+	height="632"
+	
+	loading="lazy"
+	
+		alt="image-20240429181336425"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="241"
+		data-flex-basis="580px"
+	
+></p>
+<p>一个测试模型，将上述测试与生命周期一一对应，使得测试工作做得更全面更好</p>
+<h2 id="原型法">原型法</h2>
+<p>1、解决瀑布模型代办问题的模型，是迭代模型的一种</p>
+<p>2、工作原理</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429181833722.png"
+	width="1372"
+	height="544"
+	
+	loading="lazy"
+	
+		alt="image-20240429181833722"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="252"
+		data-flex-basis="605px"
+	
+></p>
+<p>联合分析开发是一种人员交流的方法</p>
+<h2 id="探索和螺旋模型">探索和螺旋模型</h2>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429182455586.png"
+	width="1154"
+	height="370"
+	
+	loading="lazy"
+	
+		alt="image-20240429182455586"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="311"
+		data-flex-basis="748px"
+	
+></p>
+<p>探索模型：摸清市场需求的模型</p>
+<p>螺旋模型：解决项目可行性风险的模型</p>
+<h2 id="devops">DevOps</h2>
+<p>1、一种敏捷开发方式</p>
+<p>2、流程自动化</p>
+<p>3、提高流程效率</p>
+<h2 id="软件能力成熟度模型">软件能力成熟度模型</h2>
+<p>基本理念：</p>
+<p><img src="../../p/cissp-classnote07/assets/image-20240429183136232.png"
+	width="1272"
+	height="506"
+	
+	loading="lazy"
+	
+		alt="image-20240429183136232"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="251"
+		data-flex-basis="603px"
+	
+></p>
+<p>CMMI：第二个阶段为“管理型”</p>
+<p>量化管理：绩效管理</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="../../tags/%E7%AC%94%E8%AE%B0/">笔记</a>
         
     </section>
-<footer class="site-footer">
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="../../p/cissp-classnote06/">
+        
+        
+            <div class="article-image">
+                <img src="../../p/cissp-classnote06/title.060db0a24bc8e80e556a38ed48cd194e.jpg" 
+                        width="1200" 
+                        height="849" 
+                        loading="lazy"
+                        alt="Featured image of post 第06节：通信和网络安全（下）&#43;身份和访问管理（上）"
+                        data-key="CISSP-classnote06" 
+                        data-hash="md5-Bg2wokvI6A5VajjtSM0ZTg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第06节：通信和网络安全（下）&#43;身份和访问管理（上）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="../../p/cissp-classnote05/">
+        
+        
+            <div class="article-image">
+                <img src="../../p/cissp-classnote05/title.9e09eeba08b08afddca4784c3bf02987.jpg" 
+                        width="720" 
+                        height="304" 
+                        loading="lazy"
+                        alt="Featured image of post 第05节：通信和网络安全（上）"
+                        data-key="CISSP-classnote05" 
+                        data-hash="md5-ngnuugiwiv3cpHhMO/Aphw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第05节：通信和网络安全（上）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="../../p/cissp-classnote04/">
+        
+        
+            <div class="article-image">
+                <img src="../../p/cissp-classnote04/title.ba8b73aae7c905adaabef6fc2a221c9e.png" 
+                        width="984" 
+                        height="552" 
+                        loading="lazy"
+                        alt="Featured image of post 第04节：安全工程实施（下）"
+                        data-key="CISSP-classnote04" 
+                        data-hash="md5-uotzqufJBa2qvvb8KiIcng==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第04节：安全工程实施（下）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="../../p/cissp-classnote03/">
+        
+        
+            <div class="article-image">
+                <img src="../../p/cissp-classnote03/title.44b8afdfa2e2f0f751a27bddec3e1006.jpg" 
+                        width="1024" 
+                        height="286" 
+                        loading="lazy"
+                        alt="Featured image of post 第03节：安全工程实施（上）"
+                        data-key="CISSP-classnote03" 
+                        data-hash="md5-RLiv36Li8PdRonvd7D4QBg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第03节：安全工程实施（上）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="../../p/cissp-classnote02/">
+        
+        
+            <div class="article-image">
+                <img src="../../p/cissp-classnote02/title.64a170a73338e51869322d8ed2715897.png" 
+                        width="1362" 
+                        height="1108" 
+                        loading="lazy"
+                        alt="Featured image of post 第02节：安全与风险管理（下）"
+                        data-key="CISSP-classnote02" 
+                        data-hash="md5-ZKFwpzM45RhpMi2O0nFYlw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第02节：安全与风险管理（下）</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
+    }
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["/source/Sticker-100/","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/weibo"],"locale":{"admin":"博主","placeholder":"🎉留下你的脚印."},"pageview":true,"requiredMeta":["name","email"],"serverURL":"https://waline.blain.top/"});
+</script>
+
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -552,6 +1011,84 @@
     </section>
 </footer>
 
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>
