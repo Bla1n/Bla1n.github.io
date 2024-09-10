@@ -7,7 +7,1402 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/cissp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 10 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/cissp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>第08节：软件安全开发（下）&#43;安全评估测试</title>
+        <link>https://www.blain.top/p/cissp-classnote08/</link>
+        <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote08/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote08/title.jpg" alt="Featured image of post 第08节：软件安全开发（下）&#43;安全评估测试" /&gt;&lt;h1 id=&#34;系统开发的安全考虑&#34;&gt;系统开发的安全考虑&lt;/h1&gt;
+&lt;h2 id=&#34;项目启动和规划阶段初始阶段&#34;&gt;项目启动和规划阶段（初始阶段）&lt;/h2&gt;
+&lt;p&gt;1、确定需求&lt;/p&gt;
+&lt;p&gt;2、评估备选方案：初始风险分析&lt;/p&gt;
+&lt;p&gt;3、方案的选择/批准：确定安全框架&lt;/p&gt;
+&lt;h2 id=&#34;功能需求定义&#34;&gt;功能需求定义&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240713154019619.png&#34;
+	width=&#34;2176&#34;
+	height=&#34;1072&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240713154019619&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;487px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;系统设计阶段&#34;&gt;系统设计阶段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240729095503913.png&#34;
+	width=&#34;1304&#34;
+	height=&#34;508&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240729095503913&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;256&#34;
+		data-flex-basis=&#34;616px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;系统创建阶段&#34;&gt;系统创建阶段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240729100101616.png&#34;
+	width=&#34;1330&#34;
+	height=&#34;572&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240729100101616&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;232&#34;
+		data-flex-basis=&#34;558px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;系统接受阶段&#34;&gt;系统接受阶段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240729100217687.png&#34;
+	width=&#34;1616&#34;
+	height=&#34;810&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240729100217687&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注：接受测试完后还要进行接受认可（风险是否能接受）才能上线，一般放到系统部署阶段&lt;/p&gt;
+&lt;h2 id=&#34;系统部署维护和更新阶段&#34;&gt;系统部署、维护和更新阶段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240729100344932.png&#34;
+	width=&#34;1180&#34;
+	height=&#34;526&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240729100344932&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;224&#34;
+		data-flex-basis=&#34;538px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;做这些工作的主要目的是为了证明自己的工作该干的都干了&lt;/p&gt;
+&lt;h1 id=&#34;编程工具的安全问题&#34;&gt;编程工具的安全问题&lt;/h1&gt;
+&lt;h2 id=&#34;开源与闭源&#34;&gt;开源与闭源&lt;/h2&gt;
+&lt;p&gt;隐匿获得安全：很多厂商觉得闭源会更安全&lt;/p&gt;
+&lt;p&gt;但其实开源和闭源都有虚假的安全感&lt;/p&gt;
+&lt;h2 id=&#34;编程语言&#34;&gt;编程语言&lt;/h2&gt;
+&lt;p&gt;发展：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806114245091.png&#34;
+	width=&#34;1334&#34;
+	height=&#34;576&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806114245091&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;555px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2.越高级的编程语言，编程过程越快，编出来的程序越安全&lt;/p&gt;
+&lt;p&gt;3.用别人的库来搭建我们的应用，是效率高又安全的开发方法&lt;/p&gt;
+&lt;h2 id=&#34;java&#34;&gt;Java&lt;/h2&gt;
+&lt;p&gt;1.通常认为Java语言比C语言更安全，因为Java是强类型语言。&lt;/p&gt;
+&lt;p&gt;.Java为混合型语言：既是编译型，也是解释型语言&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806115336864.png&#34;
+	width=&#34;1406&#34;
+	height=&#34;552&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806115336864&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;254&#34;
+		data-flex-basis=&#34;611px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;.Java能提供的安全机制有：沙箱、碎片回收、代码签名等&lt;/p&gt;
+&lt;p&gt;沙箱：一种虚拟机沙箱，给管理员提供一个安全策略管理接口（指令级安全策略，如：不允许写操作等）&lt;/p&gt;
+&lt;p&gt;碎片回收：可能不使用的变量，Java会自动进行回收，释放内存（减少缓冲区溢出风险）。&lt;/p&gt;
+&lt;p&gt;代码签名：保证代码来源的透明性、真实性。&lt;/p&gt;
+&lt;h2 id=&#34;soa基于服务的架构&#34;&gt;SOA（基于服务的架构）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806121042993.png&#34;
+	width=&#34;1840&#34;
+	height=&#34;770&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806121042993&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;238&#34;
+		data-flex-basis=&#34;573px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据检验的部署&#34;&gt;数据检验的部署&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806121246084.png&#34;
+	width=&#34;1336&#34;
+	height=&#34;556&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806121246084&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;576px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据检验策略&#34;&gt;数据检验策略&lt;/h2&gt;
+&lt;p&gt;白名单策略优先考虑，其次考虑黑名单（对于黑名单上的采取停止处理的方式），最后考虑数据净化（复杂性高）&lt;/p&gt;
+&lt;h1 id=&#34;数据库及其安全&#34;&gt;数据库及其安全&lt;/h1&gt;
+&lt;h2 id=&#34;数据库管理系统类型&#34;&gt;数据库管理系统类型&lt;/h2&gt;
+&lt;p&gt;1.层次数据库：要找到目标需要知道对应的路径，只能表达上下级别的关系&lt;/p&gt;
+&lt;p&gt;2.网状数据库：模拟自然&lt;/p&gt;
+&lt;p&gt;3.关系数据库：当前主流数据库模型，基于各种数学原理，抽象级别较高&lt;/p&gt;
+&lt;p&gt;4.面向对象数据库：对象是一堆乱七八糟复杂的数据集，目前还没有通用的面向对象数据库&lt;/p&gt;
+&lt;p&gt;5.终端用户数据库、电子表格：Dbase、Access等文件型数据库，没有精细的数据访问控制，不在考虑范围内&lt;/p&gt;
+&lt;h2 id=&#34;关系数据库的数据结构&#34;&gt;关系数据库的数据结构&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806135303297.png&#34;
+	width=&#34;1508&#34;
+	height=&#34;662&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806135303297&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;227&#34;
+		data-flex-basis=&#34;546px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;主键：唯一标识符&lt;/p&gt;
+&lt;p&gt;外键：在其他表中是主键，在本表中称为外键。&lt;/p&gt;
+&lt;p&gt;外键的参照完整性：在主表中不存在的值，在外键中不能记录&lt;/p&gt;
+&lt;h2 id=&#34;关系数据库的完整性规则&#34;&gt;关系数据库的完整性规则&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806135942170.png&#34;
+	width=&#34;1428&#34;
+	height=&#34;580&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806135942170&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;590px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;原子化：一个数据处理必须是完整的（要么处理完成，要么没进行处理），不能处于分割状态。&lt;/p&gt;
+&lt;h2 id=&#34;数据库接口语言&#34;&gt;数据库接口语言&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806140318650.png&#34;
+	width=&#34;1512&#34;
+	height=&#34;472&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806140318650&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;320&#34;
+		data-flex-basis=&#34;768px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;ODBC不太安全&lt;/p&gt;
+&lt;h2 id=&#34;数据仓库&#34;&gt;数据仓库&lt;/h2&gt;
+&lt;p&gt;数据仓库与数据库没有直接的关系&lt;/p&gt;
+&lt;p&gt;2.数据仓库为一种新的应用类型，如大数据等&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806140720066.png&#34;
+	width=&#34;1312&#34;
+	height=&#34;576&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806140720066&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;227&#34;
+		data-flex-basis=&#34;546px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.数据仓库为一种高风险应用。保护级别比交易系统还高。使用时应该与外网进行物理隔离。&lt;/p&gt;
+&lt;p&gt;4.规格化：设计关系数据库表时涉及的原则。如：原子化；非主键的值只能依赖于主键，不能依赖其他任何数据。&lt;/p&gt;
+&lt;h2 id=&#34;数据仓库的使用方法&#34;&gt;数据仓库的使用方法&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806141203133.png&#34;
+	width=&#34;1456&#34;
+	height=&#34;594&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806141203133&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;245&#34;
+		data-flex-basis=&#34;588px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;数据挖掘与在线分析处理的区别：&lt;/p&gt;
+&lt;p&gt;1.数据挖掘为自动化分析数据的算法，比较泛化；&lt;/p&gt;
+&lt;p&gt;2.在线分析处理（OLAP）为人查询原始数据，找到其中的对应关系。注意与OLTP区分（交易系统在线事故处理）&lt;/p&gt;
+&lt;p&gt;3.尽量使用数据挖掘，在线分析处理对于人的要求更高&lt;/p&gt;
+&lt;h2 id=&#34;数据库的主要威胁&#34;&gt;数据库的主要威胁&lt;/h2&gt;
+&lt;p&gt;聚合：鸡蛋放在一个篮子里&lt;/p&gt;
+&lt;p&gt;推论：例如，根据非涉密信息推断出涉密信息。采取多实例化的方法可以减轻这个问题（给出假的非涉密信息进行混淆）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806141922771.png&#34;
+	width=&#34;1466&#34;
+	height=&#34;552&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806141922771&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;265&#34;
+		data-flex-basis=&#34;637px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;查询攻击：SQL注入&lt;/p&gt;
+&lt;h1 id=&#34;基于知识的系统&#34;&gt;基于知识的系统&lt;/h1&gt;
+&lt;h2 id=&#34;知识管理&#34;&gt;知识管理&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806142624315.png&#34;
+	width=&#34;1492&#34;
+	height=&#34;612&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806142624315&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;585px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;专家系统&#34;&gt;专家系统&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806142744175.png&#34;
+	width=&#34;1322&#34;
+	height=&#34;464&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806142744175&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;284&#34;
+		data-flex-basis=&#34;683px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;------------安全评估测试------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;安全评估测试&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/h1&gt;
+&lt;h1 id=&#34;测试和评估te策略&#34;&gt;测试和评估（T&amp;amp;E）策略&lt;/h1&gt;
+&lt;p&gt;总目标：尽早发现系统的不足&lt;/p&gt;
+&lt;h2 id=&#34;软件的验证和确认&#34;&gt;软件的验证和确认&lt;/h2&gt;
+&lt;p&gt;验证：细节的比对&lt;/p&gt;
+&lt;p&gt;确认：对整体的判定&lt;/p&gt;
+&lt;p&gt;软件的内部逻辑比硬件复杂得多，增加了验证的复杂性&lt;/p&gt;
+&lt;h2 id=&#34;owasp十大常见漏洞&#34;&gt;OWASP十大常见漏洞&lt;/h2&gt;
+&lt;p&gt;略&lt;/p&gt;
+&lt;h1 id=&#34;安全控制措施的实施&#34;&gt;安全控制措施的实施&lt;/h1&gt;
+&lt;h2 id=&#34;开发过程的安全评估和测试&#34;&gt;开发过程的安全评估和测试&lt;/h2&gt;
+&lt;p&gt;略&lt;/p&gt;
+&lt;h2 id=&#34;企业信息安全架构&#34;&gt;企业信息安全架构&lt;/h2&gt;
+&lt;p&gt;一种企业安全需求分析工具SABSA，略&lt;/p&gt;
+&lt;h2 id=&#34;威胁建模&#34;&gt;威胁建模&lt;/h2&gt;
+&lt;p&gt;代码级的安全要求，一种完整的风险评估&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806150057506.png&#34;
+	width=&#34;1482&#34;
+	height=&#34;372&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806150057506&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;398&#34;
+		data-flex-basis=&#34;956px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1.微软的威胁建模方法&lt;/p&gt;
+&lt;img src=&#34;assets/image-20240806150133195.png&#34; alt=&#34;image-20240806150133195&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;p&gt;2.微软的威胁建模过程&lt;/p&gt;
+&lt;img src=&#34;assets/image-20240806150528058.png&#34; alt=&#34;image-20240806150528058&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h2 id=&#34;测试工作的一般原则&#34;&gt;测试工作的一般原则&lt;/h2&gt;
+&lt;p&gt;计划、用例尽早准备&lt;/p&gt;
+&lt;p&gt;很难穷尽所有输入和处理&lt;/p&gt;
+&lt;p&gt;发现错误的测试才是成功的测试&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;详尽的测试文档要妥善保存（应永久保存）&lt;/p&gt;
+&lt;h2 id=&#34;测试的分类&#34;&gt;测试的分类&lt;/h2&gt;
+&lt;p&gt;结构化测试（白盒）：通过源代码进行测试。&lt;/p&gt;
+&lt;p&gt;白盒要考虑&lt;strong&gt;覆盖率&lt;/strong&gt;的问题，是否把所有代码的情况尽可能地都测试到&lt;/p&gt;
+&lt;p&gt;2.功能测试（黑盒）&lt;/p&gt;
+&lt;p&gt;3.结构测试和功能测试都很难穷尽各种情况，难以测试系统的可靠性，基于统计的测试（如：Fuzzing）可以弥补这一不足&lt;/p&gt;
+&lt;p&gt;4.回归测试：软件进行变更后重新进行测试&lt;/p&gt;
+&lt;p&gt;回归分析——只对变更模块以及相关联的模块进行测试分析&lt;/p&gt;
+&lt;p&gt;5.不同阶段的测试&lt;/p&gt;
+&lt;p&gt;6.正向、负向测试：正向指对于功能是否正常使用的测试，负向指对于畸形输入或非预期行为的处理&lt;/p&gt;
+&lt;p&gt;7.接口测试：侧重系统与远程系统之间关系协调性的检查&lt;/p&gt;
+&lt;p&gt;8.&lt;strong&gt;渗透测试&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;必须经过批准，严格控制测试人员（数量、身份、是否可信），减少知情人员&lt;/p&gt;
+&lt;h1 id=&#34;安全数据安全日志的收集和分析&#34;&gt;安全数据（安全日志）的收集和分析&lt;/h1&gt;
+&lt;h2 id=&#34;安全日志的管理&#34;&gt;安全日志的管理&lt;/h2&gt;
+&lt;p&gt;难点在于对于人员的管理（日志复杂、数量众多）&lt;/p&gt;
+&lt;h2 id=&#34;网站检测措施&#34;&gt;网站检测措施&lt;/h2&gt;
+&lt;p&gt;1.真实用户检测：对于每位用户的事务进行被动捕获和分析，对网站的可用性、功能和响应性能进行监测&lt;/p&gt;
+&lt;p&gt;2.合成事务监测：使用脚本模拟用户行为生成日志&lt;/p&gt;
+&lt;h2 id=&#34;信息安全持续监控iscm&#34;&gt;信息安全持续监控ISCM&lt;/h2&gt;
+&lt;p&gt;一种全局风险管控机制（如：安全态势感知），提供了IT资产的安全可见性&lt;/p&gt;
+&lt;p&gt;2.SCAP安全内容自动化协议，如：CVE（漏洞）、CPE（资产）、CVSS（风险）&lt;/p&gt;
+&lt;h1 id=&#34;第三方安全审计&#34;&gt;第三方安全审计&lt;/h1&gt;
+&lt;h2 id=&#34;软件保障swa&#34;&gt;软件保障SwA&lt;/h2&gt;
+&lt;p&gt;美国政府提供一个供应商白名单，细节略&lt;/p&gt;
+&lt;h2 id=&#34;供应商安全审计&#34;&gt;供应商安全审计&lt;/h2&gt;
+&lt;p&gt;SOC，对于外包供应商的一个评级报告&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;报告分类：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806154627976.png&#34;
+	width=&#34;1218&#34;
+	height=&#34;460&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806154627976&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;635px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Type1为一个时间点的报告、Type2为一段时期&lt;/p&gt;
+&lt;p&gt;SOC的区别在于面向的人群，1-3越来越广，关注点在于SOC2/3&lt;/p&gt;
+&lt;h2 id=&#34;审计过程&#34;&gt;审计过程&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote08/assets/image-20240806155253641.png&#34;
+	width=&#34;1702&#34;
+	height=&#34;556&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240806155253641&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;306&#34;
+		data-flex-basis=&#34;734px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>第09节：安全运营（上）</title>
+        <link>https://www.blain.top/p/cissp-classnote09/</link>
+        <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote09/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote09/title.jpg" alt="Featured image of post 第09节：安全运营（上）" /&gt;&lt;h1 id=&#34;章节目录&#34;&gt;章节目录&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240826101627865.png&#34;
+	width=&#34;1430&#34;
+	height=&#34;686&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240826101627865&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;208&#34;
+		data-flex-basis=&#34;500px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;操作安全概述&#34;&gt;操作安全概述&lt;/h1&gt;
+&lt;p&gt;1.内涵：系统在运维阶段长期维持在符合要求的安全状态，在日常活动中使用PDC（防止、发现、更正问题）手段&lt;/p&gt;
+&lt;p&gt;2.安全原则：适度勤勉原则（证明自己完成了安全工作）&lt;/p&gt;
+&lt;p&gt;注：区分适度谨慎（Due care）和适度勤勉（Due diligence）&lt;/p&gt;
+&lt;p&gt;适度谨慎：一般性原则，干一些有安全风险的事时，应该有能力意识到这些风险（风险评估能力），并采取合理明智的防范措施去处理风险环节。&lt;/p&gt;
+&lt;p&gt;适度勤勉：遵循上面这种原则的具体方法要求。（法律要求等）&lt;/p&gt;
+&lt;h2 id=&#34;控制类型从作用上划分&#34;&gt;控制类型（从作用上划分）&lt;/h2&gt;
+&lt;h3 id=&#34;指导型控制&#34;&gt;指导型控制&lt;/h3&gt;
+&lt;p&gt;1.定义：对信息系统相关活动提出要求和建议&lt;/p&gt;
+&lt;p&gt;2.只有在得到认可并被严格执行的条件下才能起到作用&lt;/p&gt;
+&lt;h3 id=&#34;防御型控制&#34;&gt;防御型控制&lt;/h3&gt;
+&lt;p&gt;1.从技术上减少恶意事件发生的可能性&lt;/p&gt;
+&lt;p&gt;2.不容易控制好防御的度&lt;/p&gt;
+&lt;h3 id=&#34;检测型控制&#34;&gt;检测型控制&lt;/h3&gt;
+&lt;p&gt;态势感知等检测手段&lt;/p&gt;
+&lt;h3 id=&#34;矫正恢复型控制&#34;&gt;矫正/恢复型控制&lt;/h3&gt;
+&lt;p&gt;1.恢复：将事故现场还原到事故发生前&lt;/p&gt;
+&lt;p&gt;2.矫正：亡羊补牢，防止事故再次发生&lt;/p&gt;
+&lt;h3 id=&#34;其他控制类型&#34;&gt;其他控制类型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903103708038-5331029.png&#34;
+	width=&#34;758&#34;
+	height=&#34;470&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903103708038&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;387px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;操作人员管理&#34;&gt;操作人员管理&lt;/h1&gt;
+&lt;h2 id=&#34;最小特权&#34;&gt;最小特权&lt;/h2&gt;
+&lt;h2 id=&#34;职务分离&#34;&gt;职务分离&lt;/h2&gt;
+&lt;p&gt;1.将一个任务分成多个不同的部分，每个部分由不同的人执行&lt;/p&gt;
+&lt;p&gt;2.双人控制（two-man control）也是一种职务分离&lt;/p&gt;
+&lt;h2 id=&#34;工作轮滑&#34;&gt;工作轮滑&lt;/h2&gt;
+&lt;p&gt;1.一种防止共谋的防御型安全措施（也有说是检测措施的）&lt;/p&gt;
+&lt;p&gt;2.一个人担任某个职位的时间不能过长&lt;/p&gt;
+&lt;h2 id=&#34;强制假期&#34;&gt;强制假期&lt;/h2&gt;
+&lt;p&gt;1.一种检测型控制，具有强制性和突然性&lt;/p&gt;
+&lt;p&gt;2.强制假期期间对休假人的前期工作进行审计，以便发现问题&lt;/p&gt;
+&lt;h2 id=&#34;操作人员角色分离&#34;&gt;操作人员角色分离&lt;/h2&gt;
+&lt;p&gt;1.防止将所有安全相关功能委托给一个人&lt;/p&gt;
+&lt;p&gt;2.不同人物需要的安全技能不同&lt;/p&gt;
+&lt;p&gt;3.将管理员任务分成多个角色以赋予不同&lt;strong&gt;信任&lt;/strong&gt;级别&lt;/p&gt;
+&lt;h3 id=&#34;可信设施管理&#34;&gt;可信设施管理&lt;/h3&gt;
+&lt;p&gt;1、TCSEC的B2到A1中的一项重要保证需求&lt;/p&gt;
+&lt;p&gt;2.B2中要求管理员和操作员功能分离&lt;/p&gt;
+&lt;p&gt;3.B3中要求系统管理员的安全相关和非安全相关的功能分离&lt;/p&gt;
+&lt;p&gt;4.可不可行要看情况，有些企业业务经常变更，这种分离会显得自找麻烦。&lt;/p&gt;
+&lt;h3 id=&#34;控制台日志审计&#34;&gt;控制台日志审计&lt;/h3&gt;
+&lt;p&gt;1.要确保日志的完整性&lt;/p&gt;
+&lt;p&gt;①只读介质（很少用了）&lt;/p&gt;
+&lt;p&gt;②通过堡垒机间接登录主机&lt;/p&gt;
+&lt;p&gt;2.提高日志审查人员的能力&lt;/p&gt;
+&lt;p&gt;3.操作主管人员进行检查控制台日志的情况&lt;/p&gt;
+&lt;h1 id=&#34;安全保障措施&#34;&gt;安全保障措施&lt;/h1&gt;
+&lt;h2 id=&#34;运作保障&#34;&gt;运作保障&lt;/h2&gt;
+&lt;p&gt;1.访问控制&lt;/p&gt;
+&lt;p&gt;2.特权和用户程序代码分离&lt;/p&gt;
+&lt;p&gt;3.审计和监视能力&lt;/p&gt;
+&lt;p&gt;4.隐蔽信道分析：往往通过一个资源矩阵的方式，监视资源的异常使用情况，防止隐蔽信道的发生&lt;/p&gt;
+&lt;h3 id=&#34;5可信恢复&#34;&gt;5.可信恢复&lt;/h3&gt;
+&lt;p&gt;（1）发生故障（技术原因）和运行中断（操作原因）时恢复到系统状态是好的时期&lt;/p&gt;
+&lt;p&gt;（2）在什么时间点、用什么介质进行备份&lt;/p&gt;
+&lt;p&gt;（3）桔皮书将故障分为状态转换故障（网断了、内存不够了等）、TCB故障（系统崩了）、介质故障&lt;/p&gt;
+&lt;h2 id=&#34;系统恢复的方式&#34;&gt;系统恢复的方式&lt;/h2&gt;
+&lt;p&gt;1.人工恢复：也需要机遇自动备份来实现&lt;/p&gt;
+&lt;p&gt;2.自动恢复：无需人工介入&lt;/p&gt;
+&lt;p&gt;3.无损自动恢复：在自动恢复的基础上增加减少数据损失、符合成本效益的机制&lt;/p&gt;
+&lt;p&gt;4.功能恢复：过于理想，系统自动回复到正常状态&lt;/p&gt;
+&lt;h2 id=&#34;系统重启的类型&#34;&gt;系统重启的类型&lt;/h2&gt;
+&lt;p&gt;1.系统重引导：正常方式受控地关闭系统&lt;/p&gt;
+&lt;p&gt;2.紧急系统重启：系统崩了，以非受控方式关闭系统（比较严重的状态，不希望发生）&lt;/p&gt;
+&lt;p&gt;3.系统冷启动：不属于可信恢复的范围了。自动化程序无法解决系统问题，需要人工介入将系统从维护模式恢复到一致状态。（压力最大，工作中应尽量避免冷启动的情况发生）&lt;/p&gt;
+&lt;h2 id=&#34;生命周期保障&#34;&gt;生命周期保障&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903115645880.png&#34;
+	width=&#34;772&#34;
+	height=&#34;372&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903115645880&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;裁减水平配置：在日志管理当中，将不重要信息裁减掉，只留下关键信息&lt;/p&gt;
+&lt;p&gt;可信分发：在软件（靠签名来保障等）、硬件传输过程中，避免被篡改的情况发生。&lt;/p&gt;
+&lt;h2 id=&#34;配置管理的目的&#34;&gt;配置管理的目的&lt;/h2&gt;
+&lt;p&gt;围绕变更管理的一系列管理称为配置管理&lt;/p&gt;
+&lt;p&gt;1.所有的变更要在确定的、受控的环境中进行&lt;/p&gt;
+&lt;p&gt;2.有可靠的回馈机制减少变更产生故障带来的损失&lt;/p&gt;
+&lt;h2 id=&#34;配置管理的任务&#34;&gt;配置管理的任务&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903121204604.png&#34;
+	width=&#34;814&#34;
+	height=&#34;418&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903121204604&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;467px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;变更控制的方法&#34;&gt;变更控制的方法&lt;/h2&gt;
+&lt;p&gt;1.常规变更：以前做过的，不需要重新讨论变更可行性的，由变更控制负责人授权。&lt;/p&gt;
+&lt;p&gt;2.重大变更：要召集变更控制委员会进行讨论决定&lt;/p&gt;
+&lt;p&gt;3.紧急变更：属于重大变更，但是没时间进行讨论，由相关负责人授权，事后由变更控制委员会确认&lt;/p&gt;
+&lt;h2 id=&#34;基线&#34;&gt;基线&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903133741375.png&#34;
+	width=&#34;824&#34;
+	height=&#34;386&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903133741375&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在基线形成后，基于基线的变更都不能随意进行&lt;/p&gt;
+&lt;h2 id=&#34;配置控制委员会&#34;&gt;配置控制委员会&lt;/h2&gt;
+&lt;p&gt;具有广泛的代表性，所有相关部门都应该选出人员参与&lt;/p&gt;
+&lt;h1 id=&#34;安全事件处理&#34;&gt;安全事件处理&lt;/h1&gt;
+&lt;h2 id=&#34;安全事件的定义&#34;&gt;安全事件的定义&lt;/h2&gt;
+&lt;p&gt;三种安全事件&lt;/p&gt;
+&lt;p&gt;1.内部人员在使用IT系统过程中出现的问题（最常见）&lt;/p&gt;
+&lt;p&gt;2.客户使用产品中遇到的问题&lt;/p&gt;
+&lt;p&gt;3.总部服务于分部的安全人员的机制&lt;/p&gt;
+&lt;p&gt;安全事件的分类&lt;/p&gt;
+&lt;p&gt;1.拒绝服务&lt;/p&gt;
+&lt;p&gt;2.非法入侵&lt;/p&gt;
+&lt;p&gt;3.有害代码&lt;/p&gt;
+&lt;p&gt;等&lt;/p&gt;
+&lt;h2 id=&#34;事件处理机制的目标&#34;&gt;事件处理机制的目标&lt;/h2&gt;
+&lt;p&gt;1.首要：及时发现已经发生过的安全事件，减少给我们造成的损害&lt;/p&gt;
+&lt;p&gt;2.其次：预防未来可能发生的损害&lt;/p&gt;
+&lt;h2 id=&#34;事件处理的准备&#34;&gt;事件处理的准备&lt;/h2&gt;
+&lt;p&gt;1.建立正式、规范的事件响应和处理政策（应急预案），并落实&lt;/p&gt;
+&lt;p&gt;2.建立集中式的快捷、安全、方便、有效的报告和信息发布体系（类似119/110这种）&lt;/p&gt;
+&lt;p&gt;3.建立能力全面、责任明确、具有广泛代表性的事件响应团队。&lt;/p&gt;
+&lt;h2 id=&#34;事件处理的生命周期&#34;&gt;事件处理的生命周期&lt;/h2&gt;
+&lt;p&gt;0.总流程&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;甄别（发现）、调查、控制（遏制）、追踪清除、恢复、事后分析&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.&lt;strong&gt;事件处理的第一步：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;确定事件的&lt;strong&gt;甄别&lt;/strong&gt;（Triage）标准，包括分类定义（什么级别的时间）、排序方法（事件处理的优先级）等&lt;/p&gt;
+&lt;p&gt;2.最重要：事件处理过程，也被称为&lt;strong&gt;事件响应升级过程&lt;/strong&gt;（一开始对于事件的判别不全面，后续可能需要向更高级别领导报告）&lt;/p&gt;
+&lt;p&gt;出了事故隐瞒不报是最严重的违规行为&lt;/p&gt;
+&lt;h2 id=&#34;事件处理的检测和分析&#34;&gt;事件处理的检测和分析&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;事件处理的第二步：调查&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;事件处理的控制清除和恢复&#34;&gt;事件处理的控制、清除和恢复&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;事件处理的第三步：控制&lt;/strong&gt;（遏制）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;初步调查&lt;/strong&gt;是为“控制”提供信息，&lt;strong&gt;详细调查&lt;/strong&gt;是为“清除和恢复”提供信息&lt;/p&gt;
+&lt;h2 id=&#34;事件处理的善后工作&#34;&gt;事件处理的善后工作&lt;/h2&gt;
+&lt;p&gt;事后分析会议：定责、处分等&lt;/p&gt;
+&lt;h1 id=&#34;计算机取证&#34;&gt;计算机取证&lt;/h1&gt;
+&lt;p&gt;取证核心任务：防止证据灭失或者污染（要及时关机）&lt;/p&gt;
+&lt;p&gt;1.及时关机的方法从取证角度讲，拔电源是更好的方式（有条件在关机前进行内存转储更好）&lt;/p&gt;
+&lt;p&gt;2.关机之后，在案件终结之前，机器不准从原有介质启动。应该用取证工具制作的引导介质，引导系统用&lt;strong&gt;镜像&lt;/strong&gt;的方式把系统空间中的信息转储出来（不是拷贝）。而后封存原有设备&lt;/p&gt;
+&lt;p&gt;一种说法：在取证过程中要想办法使原有介质处于只读状态√&lt;/p&gt;
+&lt;h2 id=&#34;证据的形式&#34;&gt;证据的形式&lt;/h2&gt;
+&lt;p&gt;1.直接证据：证人证言等&lt;/p&gt;
+&lt;p&gt;2.实物证据&lt;/p&gt;
+&lt;p&gt;3.文书证据：信息（写在纸上、存在计算机里的都算）&lt;/p&gt;
+&lt;p&gt;4.展示证据：通过科学方式做出的证明（弹道分析等）&lt;/p&gt;
+&lt;h2 id=&#34;司法证据类型与美国法律有关&#34;&gt;司法证据类型（与美国法律有关）&lt;/h2&gt;
+&lt;p&gt;略&lt;/p&gt;
+&lt;h2 id=&#34;对证据的要求&#34;&gt;对证据的要求&lt;/h2&gt;
+&lt;p&gt;相关性、可靠性（不被篡改）、合法性（是否陷害、诱捕）、&lt;/p&gt;
+&lt;p&gt;诱捕中的一个常见系统：蜜罐。通常用来分析攻击者的攻击技术，而不用来取证。&lt;/p&gt;
+&lt;h2 id=&#34;证据保管链&#34;&gt;证据保管链&lt;/h2&gt;
+&lt;p&gt;证明证据可靠性的一系列的文档记录，在时间上环环相扣。&lt;/p&gt;
+&lt;p&gt;证据链显示：谁获得了证据、什么证据、什么地点时间获取到的、谁保护了证据、谁控制和使用了证据&lt;/p&gt;
+&lt;h1 id=&#34;冗余技术&#34;&gt;冗余技术&lt;/h1&gt;
+&lt;h2 id=&#34;廉价磁盘冗余阵列raid&#34;&gt;廉价磁盘冗余阵列RAID&lt;/h2&gt;
+&lt;p&gt;1.RAID是一种可以提高硬盘性能和可靠性的技术&lt;/p&gt;
+&lt;p&gt;①条带（striping）：例如1个字节有8比特，分别写到8块硬盘上，这样读写效率都得到了提升。是一种提高硬盘性能的技术&lt;/p&gt;
+&lt;p&gt;②校验（parity）：除了记录数据之外，还记录数据的校验值。是一种提高硬盘可靠性的技术&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.RAID1-6的考点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）RAID0只有条带，没有其他技术，因此只能提高性能&lt;/p&gt;
+&lt;p&gt;（2）RAID1使用了特殊的方法：镜像。提高硬盘可靠性的技术，缺点是成倍地消耗硬盘。&lt;/p&gt;
+&lt;p&gt;（条带是把一个数据分成多份存在不同硬盘上，镜像是把数据复制成完全一样的两份）&lt;/p&gt;
+&lt;p&gt;（3）RAID2-6都是使用条带和校验的综合技术&lt;/p&gt;
+&lt;p&gt;（4）RAID2-4，区别在于条带颗粒度粗细不一样，2使用的比特级条带、最细，3使用的字节级，4使用块级（若干字节）&lt;/p&gt;
+&lt;p&gt;颗粒度越细，使用的硬盘就越多&lt;/p&gt;
+&lt;p&gt;（5）RAID5也是用块级条带，但校验值是分布式的，2-4的校验值是存在专门的校验盘当中（存在瓶颈和单点的问题）。因此RAID5成本比较低、可靠性比较高，是最常用的RAID&lt;/p&gt;
+&lt;p&gt;（6）RAID6在5点基础上增加了第二种校验技术，进一步增加了可靠性&lt;/p&gt;
+&lt;p&gt;（7）RAID10就是RAID0+RAID1，条带提高性能，镜像提高可靠性&lt;/p&gt;
+&lt;p&gt;3.RAID新分类&lt;/p&gt;
+&lt;p&gt;防故障磁盘系统：发生故障后，数据不会丢&lt;/p&gt;
+&lt;p&gt;容错磁盘系统：数据不会丢，同时数据访问不会停&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;容灾磁盘系统&lt;/strong&gt;：把硬盘组件放在不同地理位置，用光纤组成局域网&lt;/p&gt;
+&lt;h2 id=&#34;电子跳跃电子链路&#34;&gt;电子跳跃（电子链路）&lt;/h2&gt;
+&lt;p&gt;解决异地备份问题的一种办法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903151636313.png&#34;
+	width=&#34;1072&#34;
+	height=&#34;244&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903151636313&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;439&#34;
+		data-flex-basis=&#34;1054px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;远程日记日志&#34;&gt;远程日记（日志）&lt;/h2&gt;
+&lt;p&gt;日志在一起是一种数据库备份的手段，记录每一笔明细。例如数据库一个月备份一次，在中间发生的交易以日志形式存储，这样在恢复的过程中可以先恢复上一次的备份，再填入本月发生的每一笔交易日志。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903152011778.png&#34;
+	width=&#34;784&#34;
+	height=&#34;494&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903152011778&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;380px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注：远程日记不一定是实时的记录&lt;/p&gt;
+&lt;h2 id=&#34;远程磁盘复制的两种工作方式&#34;&gt;远程磁盘复制的两种工作方式&lt;/h2&gt;
+&lt;p&gt;1.同步复制&lt;/p&gt;
+&lt;p&gt;镜像：实时的，在写操作时要同时向主服务器和备份服务器写，两边都写完才算完成。因此对链路的要求、技术实现要求较高，可靠性强&lt;/p&gt;
+&lt;p&gt;2.异步复制&lt;/p&gt;
+&lt;p&gt;投影：定期、批量的。对链路要求较低&lt;/p&gt;
+&lt;h2 id=&#34;负载均衡&#34;&gt;负载均衡&lt;/h2&gt;
+&lt;p&gt;本地负载均衡用于容错，全局负载均衡用于容灾&lt;/p&gt;
+&lt;h2 id=&#34;备用设施的类型&#34;&gt;备用设施的类型&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote09/assets/image-20240903154915261-5349756.png&#34;
+	width=&#34;676&#34;
+	height=&#34;486&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240903154915261&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;139&#34;
+		data-flex-basis=&#34;333px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;热站点：随时可以接替关键业务，成本很高&lt;/p&gt;
+&lt;p&gt;冷站点：只有一个空机房&lt;/p&gt;
+&lt;p&gt;温站点：目前主要类型，基于冷热之间的比较灵活的机房&lt;/p&gt;
+&lt;p&gt;移动站点：移动通信车&lt;/p&gt;
+&lt;p&gt;冗余站点：镜像站点&lt;/p&gt;
+&lt;p&gt;互惠协议：两个单位之间，一个出问题了搬到另一家去，是最不可靠的备份站点类型&lt;/p&gt;
+&lt;p&gt;多处理中心：将处理任务分布到一个机构的多个不同容灾数据处理中心，某个中心发生灾难时，其他中心可以接替该中心的处理工作。&lt;/p&gt;
+&lt;p&gt;服务中心：能不能去IDC中心去建立灾备&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>第10节：安全运营（下）</title>
+        <link>https://www.blain.top/p/cissp-classnote10/</link>
+        <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote10/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote10/title.jpg" alt="Featured image of post 第10节：安全运营（下）" /&gt;&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240909100105810.png&#34;
+	width=&#34;1184&#34;
+	height=&#34;620&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240909100105810&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;458px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bcp计划文档&#34;&gt;BCP计划文档&lt;/h1&gt;
+&lt;p&gt;（业务持续性计划）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240909173920347.png&#34;
+	width=&#34;802&#34;
+	height=&#34;424&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240909173920347&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;453px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一支持信息&#34;&gt;一、支持信息&lt;/h2&gt;
+&lt;h3 id=&#34;1介绍部分&#34;&gt;1.介绍部分&lt;/h3&gt;
+&lt;p&gt;目的、适用性、范围（&lt;strong&gt;设定启动计划的条件&lt;/strong&gt;）、参考、变化记录&lt;/p&gt;
+&lt;h3 id=&#34;2运行概要部分&#34;&gt;2.运行概要部分&lt;/h3&gt;
+&lt;p&gt;系统描述、继任序列（负责人缺席时，谁来接手）、职责（每一成员的角色和职责）&lt;/p&gt;
+&lt;h2 id=&#34;二通知启动阶段&#34;&gt;二、通知/启动阶段&lt;/h2&gt;
+&lt;h3 id=&#34;1通知部分&#34;&gt;1.通知部分&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910103322208.png&#34;
+	width=&#34;776&#34;
+	height=&#34;350&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910103322208&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;221&#34;
+		data-flex-basis=&#34;532px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;谁联络谁，如何通知谁&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2损害评估部分&#34;&gt;2.损害评估部分&lt;/h3&gt;
+&lt;p&gt;损害评估是一个关键性环节&lt;/p&gt;
+&lt;p&gt;对损害评估小组人员水平要求较高，并且需要随时可以联络上&lt;/p&gt;
+&lt;h3 id=&#34;3计划启动部分&#34;&gt;3.计划启动部分&lt;/h3&gt;
+&lt;p&gt;计划启动是一个重大决策，不能交由机器自动化决策，而应该由领导决定&lt;/p&gt;
+&lt;h2 id=&#34;三恢复阶段&#34;&gt;三、恢复阶段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910104135515.png&#34;
+	width=&#34;828&#34;
+	height=&#34;368&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910104135515&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;225&#34;
+		data-flex-basis=&#34;540px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;恢复顺序见前面笔记&lt;/p&gt;
+&lt;p&gt;恢复可以理解为迁移到灾备中心去让业务重新运行起来&lt;/p&gt;
+&lt;h2 id=&#34;四重建阶段&#34;&gt;四、重建阶段&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910104504593.png&#34;
+	width=&#34;896&#34;
+	height=&#34;526&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910104504593&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;408px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;重建的顺序和恢复的顺序完全相反&lt;/p&gt;
+&lt;p&gt;①恢复阶段越核心的部分越应该早迁入灾备中心去恢复&lt;/p&gt;
+&lt;p&gt;②重建阶段最核心的部分应该最后才迁回去&lt;/p&gt;
+&lt;h2 id=&#34;五计划的附录&#34;&gt;五、计划的附录&lt;/h2&gt;
+&lt;p&gt;其他详细信息应该放在附录里面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910104606528.png&#34;
+	width=&#34;1236&#34;
+	height=&#34;472&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910104606528&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;261&#34;
+		data-flex-basis=&#34;628px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bcp策略实施&#34;&gt;BCP策略实施&lt;/h1&gt;
+&lt;h2 id=&#34;bcp团队组成&#34;&gt;BCP团队组成&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910110409385.png&#34;
+	width=&#34;834&#34;
+	height=&#34;566&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910110409385&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;353px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910110646423.png&#34;
+	width=&#34;816&#34;
+	height=&#34;316&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910110646423&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;619px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bcp团队培训&#34;&gt;BCP团队培训&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910110747850.png&#34;
+	width=&#34;846&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910110747850&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;373px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bcp计划测试&#34;&gt;BCP计划测试&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910112240547.png&#34;
+	width=&#34;846&#34;
+	height=&#34;384&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910112240547&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;220&#34;
+		data-flex-basis=&#34;528px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910112726797.png&#34;
+	width=&#34;842&#34;
+	height=&#34;384&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910112726797&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;BCP测试很重要，测试风险也很大&lt;/p&gt;
+&lt;p&gt;遵循原则：循序渐进——结构化检查、检查列表、模拟&lt;/p&gt;
+&lt;h2 id=&#34;bcp计划更新&#34;&gt;BCP计划更新&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910112838598-5938919.png&#34;
+	width=&#34;856&#34;
+	height=&#34;406&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910112838598&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;506px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;业务重心的转移需要进行业务评估，可能三五年一次&lt;/p&gt;
+&lt;p&gt;技术的发展很快，可能一年就会进行一次技术审查&lt;/p&gt;
+&lt;h1 id=&#34;电力环境与消防&#34;&gt;电力、环境与消防&lt;/h1&gt;
+&lt;h2 id=&#34;电力环境&#34;&gt;电力、环境&lt;/h2&gt;
+&lt;p&gt;1.如果发电机作为备份供电方式，发电机要定期启动进行检测&lt;/p&gt;
+&lt;p&gt;2.电压波动&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910114418198.png&#34;
+	width=&#34;1000&#34;
+	height=&#34;482&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910114418198&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;497px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.室内空气正压可以防止外部空气进入室内&lt;/p&gt;
+&lt;h2 id=&#34;消防&#34;&gt;消防&lt;/h2&gt;
+&lt;p&gt;1.电器设备、配电线路老化发热是起火最常见的原因。&lt;/p&gt;
+&lt;h3 id=&#34;2火灾类型&#34;&gt;2.火灾类型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910143051277.png&#34;
+	width=&#34;944&#34;
+	height=&#34;398&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910143051277&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;237&#34;
+		data-flex-basis=&#34;569px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3灭火原理&#34;&gt;3.灭火原理&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910143237644.png&#34;
+	width=&#34;840&#34;
+	height=&#34;396&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910143237644&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;212&#34;
+		data-flex-basis=&#34;509px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;哈龙灭火：哈龙能使化学反应变慢，打断燃烧的反应链&lt;/p&gt;
+&lt;p&gt;但因为哈龙会消耗臭氧层，现在使用&lt;strong&gt;FM-200&lt;/strong&gt;来替代&lt;/p&gt;
+&lt;p&gt;也有用稀有气体来灭火的（氩气+CO2）&lt;/p&gt;
+&lt;h3 id=&#34;4喷淋系统分类逐渐进化&#34;&gt;4.喷淋系统分类（逐渐进化）&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910143612184.png&#34;
+	width=&#34;870&#34;
+	height=&#34;288&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910143612184&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;302&#34;
+		data-flex-basis=&#34;725px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在一般用预响应式的喷淋系统&lt;/p&gt;
+&lt;h1 id=&#34;物理访问控制&#34;&gt;物理访问控制&lt;/h1&gt;
+&lt;h2 id=&#34;设施访问控制&#34;&gt;设施访问控制&lt;/h2&gt;
+&lt;p&gt;1.物理访问控制可能影响人员疏散&lt;/p&gt;
+&lt;h2 id=&#34;锁具&#34;&gt;锁具&lt;/h2&gt;
+&lt;p&gt;1.密码锁应该有遮挡方式，以免别人看到密码&lt;/p&gt;
+&lt;p&gt;2.现在电子锁远比物理锁的安全强度高&lt;/p&gt;
+&lt;h2 id=&#34;证件系统&#34;&gt;证件系统&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910144515963.png&#34;
+	width=&#34;980&#34;
+	height=&#34;420&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910144515963&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;560px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;防止尾随的装置：mantrap（双门互锁）&lt;/p&gt;
+&lt;h3 id=&#34;无线近距离阅读器&#34;&gt;无线近距离阅读器&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910144646152.png&#34;
+	width=&#34;1044&#34;
+	height=&#34;472&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910144646152&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;221&#34;
+		data-flex-basis=&#34;530px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;一种不需要电源的收发器（被动装置）：RFID（通过反射技术）&lt;/p&gt;
+&lt;h2 id=&#34;栅栏&#34;&gt;栅栏&lt;/h2&gt;
+&lt;p&gt;双栅栏结构防护能力更强&lt;/p&gt;
+&lt;h2 id=&#34;门的可选特性&#34;&gt;门的可选特性&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910145203930.png&#34;
+	width=&#34;1032&#34;
+	height=&#34;400&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910145203930&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;619px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;safe更强调人的生命安全，secure强调财物安全&lt;/p&gt;
+&lt;h2 id=&#34;监视&#34;&gt;监视&lt;/h2&gt;
+&lt;p&gt;警卫、警犬、闭路电视&lt;/p&gt;
+&lt;p&gt;1.警卫和警犬具有判断能力&lt;/p&gt;
+&lt;p&gt;2.闭路电视最大的作用是可以提供证据&lt;/p&gt;
+&lt;h3 id=&#34;摄像头&#34;&gt;摄像头&lt;/h3&gt;
+&lt;p&gt;灵敏度：在光线暗的情况下也能拍出来清晰的画面&lt;/p&gt;
+&lt;p&gt;焦距越长，视角越窄，景深越短&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote10/assets/image-20240910145730728.png&#34;
+	width=&#34;886&#34;
+	height=&#34;366&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910145730728&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;242&#34;
+		data-flex-basis=&#34;580px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;摄像头部署的位置应该避免出现盲点&lt;/p&gt;
+&lt;h2 id=&#34;入侵检测器&#34;&gt;入侵检测器&lt;/h2&gt;
+&lt;p&gt;1.近距离检测系统：通过发射和接收电场，测量电容等电解质特性的变化来发现安全问题的&lt;/p&gt;
+&lt;p&gt;2.声波检测：通过接收声音的回波发现（移动检测机制）&lt;/p&gt;
+&lt;h2 id=&#34;物理访问控制审计&#34;&gt;物理访问控制审计&lt;/h2&gt;
+&lt;p&gt;物理访问控制也应该定期审计日志记录&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>第10节（续）：资产安全</title>
+        <link>https://www.blain.top/p/cissp-classnote11/</link>
+        <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/cissp-classnote11/</guid>
+        <description>&lt;img src="https://www.blain.top/p/cissp-classnote11/title.jpg" alt="Featured image of post 第10节（续）：资产安全" /&gt;&lt;h1 id=&#34;本章目录&#34;&gt;本章目录&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910150757529.png&#34;
+	width=&#34;454&#34;
+	height=&#34;208&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910150757529&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;523px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;数据生命周期管理&#34;&gt;数据生命周期管理&lt;/h1&gt;
+&lt;h2 id=&#34;数据策略&#34;&gt;数据策略&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910151010120.png&#34;
+	width=&#34;838&#34;
+	height=&#34;456&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910151010120&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;441px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1.免责条款&lt;/p&gt;
+&lt;p&gt;用于哪些目的出了问题不承担责任&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;注：责任有三种：responsibility（职责，干什么工作履行什么）、accountability（可问责性，做了事要对后果承担责任）、liability（提供的服务、产品，如果有问题应该承担的赔偿责任）&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据拥有者的职责&#34;&gt;数据拥有者的职责&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910151544791.png&#34;
+	width=&#34;770&#34;
+	height=&#34;426&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910151544791&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;433px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据主管的职责&#34;&gt;数据主管的职责&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910151605826.png&#34;
+	width=&#34;746&#34;
+	height=&#34;468&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910151605826&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;382px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据保管者的职责&#34;&gt;数据保管者的职责&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910152141939.png&#34;
+	width=&#34;778&#34;
+	height=&#34;348&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910152141939&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;223&#34;
+		data-flex-basis=&#34;536px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据的质量&#34;&gt;数据的质量&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910152313666.png&#34;
+	width=&#34;660&#34;
+	height=&#34;530&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910152313666&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;298px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;数据错误可以分为两种&lt;/p&gt;
+&lt;p&gt;1.提交的错误：比较容易防范，例如通过职责分离集合的比对即可发现输入数据的错误&lt;/p&gt;
+&lt;p&gt;2.遗漏的错误：不容易防范，发现需要专业人员对数据整体进行专业的检查才能发现&lt;/p&gt;
+&lt;h2 id=&#34;数据的文档化和元数据&#34;&gt;数据的文档化和元数据&lt;/h2&gt;
+&lt;h3 id=&#34;文档化&#34;&gt;文档化&lt;/h3&gt;
+&lt;p&gt;采集处理数据过程中，不能只记录业务数据，还要记录数据记录过程中的&lt;strong&gt;遵循的标准、设备和方法&lt;/strong&gt;，并将这些作为元数据（留下证据）&lt;/p&gt;
+&lt;h2 id=&#34;数据标准化的作用&#34;&gt;数据标准化的作用&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910152946744.png&#34;
+	width=&#34;680&#34;
+	height=&#34;358&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910152946744&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;455px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据的定义和建模&#34;&gt;数据的定义和建模&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910153043950.png&#34;
+	width=&#34;620&#34;
+	height=&#34;570&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910153043950&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;108&#34;
+		data-flex-basis=&#34;261px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;记录保存期&#34;&gt;记录保存期&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910153100826.png&#34;
+	width=&#34;850&#34;
+	height=&#34;290&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910153100826&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;293&#34;
+		data-flex-basis=&#34;703px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1.超过保存期的数据应该予以销毁，以免承担不必要的风险&lt;/p&gt;
+&lt;p&gt;2.当有案件发生时，可以适当延长保存期&lt;/p&gt;
+&lt;h1 id=&#34;数据安全和隐私保护&#34;&gt;数据安全和隐私保护&lt;/h1&gt;
+&lt;h2 id=&#34;信息的分级分类&#34;&gt;信息的分级分类&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;本质是风险管理的简化方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;目前的分级分类还是关注数据的保密性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910153418192.png&#34;
+	width=&#34;1216&#34;
+	height=&#34;474&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910153418192&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;256&#34;
+		data-flex-basis=&#34;615px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;信息分级分类的管理问题&#34;&gt;信息分级分类的管理问题&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910153623086.png&#34;
+	width=&#34;818&#34;
+	height=&#34;452&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910153623086&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;个人数据保护的发展状况&#34;&gt;个人数据保护的发展状况&lt;/h2&gt;
+&lt;p&gt;1.个人数据保护合规后会有什么影响？&lt;/p&gt;
+&lt;p&gt;答：一定会有“增加运营成本”这一条&lt;/p&gt;
+&lt;p&gt;2.个人数据主体的权利&lt;/p&gt;
+&lt;p&gt;查看所收集信息、更正错误、删除信息的权利&lt;/p&gt;
+&lt;h1 id=&#34;it资产生命周期管理&#34;&gt;IT资产生命周期管理&lt;/h1&gt;
+&lt;h2 id=&#34;it资产管理&#34;&gt;IT资产管理&lt;/h2&gt;
+&lt;p&gt;IT资产清单Inventory：是任何资产管理工作的前提&lt;/p&gt;
+&lt;h2 id=&#34;文档管理&#34;&gt;文档管理&lt;/h2&gt;
+&lt;p&gt;管理方法：最小授权原则&lt;/p&gt;
+&lt;h2 id=&#34;介质选择&#34;&gt;介质选择&lt;/h2&gt;
+&lt;p&gt;不同介质具有不同的安全特点，在选择使用时需要重点考虑&lt;/p&gt;
+&lt;h3 id=&#34;1纸介质&#34;&gt;1.纸介质&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910154636335.png&#34;
+	width=&#34;726&#34;
+	height=&#34;402&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910154636335&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;433px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具有法律效力，广泛认可&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2磁介质&#34;&gt;2.磁介质&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910154708350.png&#34;
+	width=&#34;666&#34;
+	height=&#34;396&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910154708350&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;403px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;证据效益最低，不适合长期存储&lt;/p&gt;
+&lt;h3 id=&#34;3微缩胶片&#34;&gt;3.微缩胶片&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910154819467.png&#34;
+	width=&#34;614&#34;
+	height=&#34;408&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910154819467&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;361px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具有一定法律效益&lt;/strong&gt;，国内使用较少&lt;/p&gt;
+&lt;h3 id=&#34;4光盘介质&#34;&gt;4.光盘介质&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910154921959.png&#34;
+	width=&#34;628&#34;
+	height=&#34;456&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910154921959&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;330px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5闪存usb设备&#34;&gt;5.闪存（USB设备）&lt;/h3&gt;
+&lt;p&gt;需要物理安全作为基础来进行保护&lt;/p&gt;
+&lt;h3 id=&#34;6固态硬盘ssd&#34;&gt;6.固态硬盘（SSD）&lt;/h3&gt;
+&lt;p&gt;1.固态硬盘往往后有一些访问不到的区域作为“磨损区域的替代”，如果数据写到这上面，对于我们数据的擦除或者恢复就带来了困难&lt;/p&gt;
+&lt;p&gt;2.现在常规的销毁手段就是物理销毁（消磁存在一定的风险）&lt;/p&gt;
+&lt;h3 id=&#34;7云存储&#34;&gt;7.云存储&lt;/h3&gt;
+&lt;p&gt;涉及到的存储问题，法律、安全问题非常多。因为自己没法控制物理介质上的数据存储问题&lt;/p&gt;
+&lt;h2 id=&#34;介质标注&#34;&gt;介质标注&lt;/h2&gt;
+&lt;p&gt;标注最重要的标准是一致性&lt;/p&gt;
+&lt;h2 id=&#34;介质的保护&#34;&gt;介质的保护&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910160024093.png&#34;
+	width=&#34;856&#34;
+	height=&#34;296&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910160024093&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;289&#34;
+		data-flex-basis=&#34;694px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;介质处置最终的处理&#34;&gt;介质处置（最终的处理）&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910155846372.png&#34;
+	width=&#34;912&#34;
+	height=&#34;364&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910155846372&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;250&#34;
+		data-flex-basis=&#34;601px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;有保密标签的数据不允许脱离保密安全管理&lt;/p&gt;
+&lt;h2 id=&#34;数据残留&#34;&gt;数据残留&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910155938113.png&#34;
+	width=&#34;894&#34;
+	height=&#34;310&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910155938113&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;692px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据清除与根除&#34;&gt;数据清除与根除&lt;/h2&gt;
+&lt;p&gt;1.数据清除可以防范键盘攻击，数据根除可以防止任何攻击手段&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/cissp-classnote11/assets/image-20240910160253122.png&#34;
+	width=&#34;922&#34;
+	height=&#34;328&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20240910160253122&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;281&#34;
+		data-flex-basis=&#34;674px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2.粉碎是比较常见的方式&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>第07节：身份和访问管理（下）&#43;软件安全开发（上）</title>
         <link>https://www.blain.top/p/cissp-classnote07/</link>
         <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
