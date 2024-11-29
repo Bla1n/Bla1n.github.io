@@ -61,7 +61,7 @@
                     
                     
                         
-                        <img src="../../img/avatar_hu760db721e59417b666a1f11761c25091_535066_300x0_resize_q75_box.jpg" width="300"
+                        <img src="../../img/avatar_huf071b889707acff1ad73854f6d6a37bd_271438_300x0_resize_q75_box.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -305,8 +305,8 @@
             <a href="../../p/hugo-problems/">
                 <img src="../../p/hugo-problems/title.png"
                         
-                        width="1440" 
-                        height="880" 
+                        width="1000" 
+                        height="611" 
                         loading="lazy"
                         alt="Featured image of post hugo搭建遇到问题解决方案" />
                 
@@ -413,8 +413,8 @@
 <h2 id="创建github-token">创建github token</h2>
 <p>在 GitHub 账户下 <code>Setting - Developer setting - Personal access tokens(classic)</code> 下创建一个不过期(no expiration)的 Token，权限需要开启 <code>repo</code> 与 <code>workflow</code>。</p>
 <p><img src="../../p/hugo-problems/token1.png"
-	width="1962"
-	height="1048"
+	width="999"
+	height="534"
 	
 	loading="lazy"
 	
@@ -423,13 +423,13 @@
 	
 		class="gallery-image" 
 		data-flex-grow="187"
-		data-flex-basis="449px"
+		data-flex-basis="448px"
 	
 ></p>
 <p>（注意：token只会显示一次，请及时保存）</p>
 <p><img src="../../p/hugo-problems/token.png"
-	width="2242"
-	height="366"
+	width="1000"
+	height="163"
 	
 	loading="lazy"
 	
@@ -437,15 +437,15 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="612"
-		data-flex-basis="1470px"
+		data-flex-grow="613"
+		data-flex-basis="1472px"
 	
 ></p>
 <h2 id="私密源仓库设置token">私密源仓库设置token</h2>
 <p>在博客源仓库（blog-file）的 <code>Settings - Secrets - Actions</code> 中添加 <code>PERSONAL_TOKEN</code> 环境变量为刚才的 Token，这样 GitHub Action 就可以获取到 Token 了。</p>
 <p><img src="../../p/hugo-problems/personal-token.png"
-	width="2534"
-	height="904"
+	width="999"
+	height="356"
 	
 	loading="lazy"
 	
@@ -454,7 +454,7 @@
 	
 		class="gallery-image" 
 		data-flex-grow="280"
-		data-flex-basis="672px"
+		data-flex-basis="673px"
 	
 ></p>
 <h2 id="创建workflows发布文件">创建workflows发布文件</h2>
@@ -516,8 +516,8 @@
 </span></span></code></pre></div><h2 id="配置自己的域名">配置自己的域名</h2>
 <p>等待<code>Github Action</code>完成后,我们需要开启<code>GitHub page</code>，首先进入公开博客仓库，然后打开设置，在如图示位置进行设置（不会的可以自行搜索）</p>
 <p><img src="../../p/hugo-problems/domain.png"
-	width="2400"
-	height="1000"
+	width="1000"
+	height="416"
 	
 	loading="lazy"
 	
@@ -531,8 +531,8 @@
 ></p>
 <h2 id="生效结果">生效结果</h2>
 <p><img src="../../p/hugo-problems/action.png"
-	width="2870"
-	height="940"
+	width="1000"
+	height="327"
 	
 	loading="lazy"
 	
@@ -541,15 +541,15 @@
 	
 		class="gallery-image" 
 		data-flex-grow="305"
-		data-flex-basis="732px"
+		data-flex-basis="733px"
 	
 ></p>
 <h1 id="push仓库会重置域名问题">push仓库会重置域名问题</h1>
 <p>每次push后会发现公开博客仓库设置的自己的域名会被重置为默认域名</p>
 <p>解决方法：在content目录下创建一个名为CNAME的文件，内容填入自己的域名即可</p>
 <p><img src="../../p/hugo-problems/cname.png"
-	width="918"
-	height="240"
+	width="1000"
+	height="261"
 	
 	loading="lazy"
 	
@@ -557,8 +557,8 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="382"
-		data-flex-basis="918px"
+		data-flex-grow="383"
+		data-flex-basis="919px"
 	
 ></p>
 <h1 id="本地push失败彻底解决办法">本地push失败彻底解决办法</h1>
@@ -579,8 +579,8 @@
 </span></span><span class="line"><span class="cl">Error: error building site: TOCSS: failed to transform <span class="s2">&#34;/scss/style.scss&#34;</span> <span class="o">(</span>text/x-scss<span class="o">)</span>. Check your Hugo installation<span class="p">;</span> you need the extended version to build SCSS/SASS with transpiler <span class="nb">set</span> to <span class="s1">&#39;libsass&#39;</span>.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn <span class="k">for</span> more information
 </span></span><span class="line"><span class="cl">Error: Process completed with <span class="nb">exit</span> code 1.
 </span></span></code></pre></div><p><img src="../../p/hugo-problems/error.png"
-	width="2108"
-	height="318"
+	width="1000"
+	height="150"
 	
 	loading="lazy"
 	
@@ -588,8 +588,8 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="662"
-		data-flex-basis="1590px"
+		data-flex-grow="666"
+		data-flex-basis="1600px"
 	
 ></p>
 <p>按照报错信息把网上的教程都试了一遍，都不行，然后仔细看了一眼报错，说我没使用扩展版本的hugo，但是我本地是用的扩展版本，于是检查配置文件。发现wordflows的配置文件关于hugo版本是这样写的：</p>
@@ -599,8 +599,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;lastest&#34;</span><span class="w">
 </span></span></span></code></pre></div><p>日志上的hugo版本果然不对：</p>
 <p><img src="../../p/hugo-problems/vision.png"
-	width="1776"
-	height="116"
+	width="1000"
+	height="65"
 	
 	loading="lazy"
 	
@@ -608,8 +608,8 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="1531"
-		data-flex-basis="3674px"
+		data-flex-grow="1538"
+		data-flex-basis="3692px"
 	
 ></p>
 <p>随即查看hugo action官方使用指南，正确写法应该如下：</p>
@@ -655,13 +655,13 @@
         
         
             <div class="article-image">
-                <img src="../../p/renovation2/title.6381f498a092c0bfa102dba16128a7ab.png" 
-                        width="1756" 
-                        height="982" 
+                <img src="../../p/renovation2/title.6500c4b51a1bc3a8e7502c8e5554daf2.png" 
+                        width="1000" 
+                        height="559" 
                         loading="lazy"
                         alt="Featured image of post 小白hugo博客装修笔记（2）"
                         data-key="renovation2" 
-                        data-hash="md5-Y4H0mKCSwL&#43;hAtuhYSinqw==">
+                        data-hash="md5-ZQDEtRobw6jnUCyOVVTa8g==">
                 
             </div>
         
@@ -679,13 +679,13 @@
         
         
             <div class="article-image">
-                <img src="../../p/renovation/title.4ce54998786ab364a11ca9f43781e855.jpg" 
-                        width="1920" 
-                        height="1080" 
+                <img src="../../p/renovation/title.3cf6ebebd2b60f17dacfe0cf3d07611b.jpg" 
+                        width="1000" 
+                        height="562" 
                         loading="lazy"
                         alt="Featured image of post 小白hugo博客装修笔记（1）"
                         data-key="renovation" 
-                        data-hash="md5-TOVJmHhqs2ShHKn0N4HoVQ==">
+                        data-hash="md5-PPbr69K2Dxfaz&#43;DPPQdhGw==">
                 
             </div>
         

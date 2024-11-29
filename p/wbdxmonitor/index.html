@@ -61,7 +61,7 @@
                     
                     
                         
-                        <img src="../../img/avatar_hu760db721e59417b666a1f11761c25091_535066_300x0_resize_q75_box.jpg" width="300"
+                        <img src="../../img/avatar_huf071b889707acff1ad73854f6d6a37bd_271438_300x0_resize_q75_box.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -299,8 +299,8 @@
             <a href="../../p/wbdxmonitor/">
                 <img src="../../p/wbdxmonitor/123.jpg"
                         
-                        width="690" 
-                        height="460" 
+                        width="1000" 
+                        height="666" 
                         loading="lazy"
                         alt="Featured image of post 微博、B站、抖音、小红书（新）实时关注脚本" />
                 
@@ -393,8 +393,8 @@
 <h1 id="问题">问题</h1>
 <p>1.bz接口直接访问结果如下</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129140743935.png"
-	width="1514"
-	height="334"
+	width="1000"
+	height="220"
 	
 	loading="lazy"
 	
@@ -402,8 +402,8 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="453"
-		data-flex-basis="1087px"
+		data-flex-grow="454"
+		data-flex-basis="1090px"
 	
 ></p>
 <p>2.dy接口虽然还能访问，但是显示的视频数量与实际并不相符（挺奇怪的，不知道现在这个接口的具体用途是什么），无法达到实时监控的目的。</p>
@@ -412,8 +412,8 @@
 <p>首先是dy，先是在网上搜集了一下现成的监控工具及脚本。大多数工具都是基于登录后的凭证来实现监控的，但是dy在陌生设备上登录认证流程又很繁琐（比如网页版，我选择密码登录要求使用常用设备进行扫码认证，那我为啥不直接扫码登录呢？😅），反爬机制也针对脚本做了很多阻碍，现有的脚本也多是采取Selenium来模拟浏览器达到绕过前端混淆的。</p>
 <p>就首次登录返回的<code>__ac_nonce</code>，进而前端混淆加密生成的<code>__ac_signature</code>，我就研究了一天。但由于两点原因我选择放弃去主动请求生成<code>\__ac_signature</code>。（关于逆象混淆函数的同学可以自行搜索“<code>__ac_signature</code>”关键字进行学习）</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129215230959.png"
-	width="1274"
-	height="272"
+	width="1000"
+	height="213"
 	
 	loading="lazy"
 	
@@ -421,8 +421,8 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="468"
-		data-flex-basis="1124px"
+		data-flex-grow="469"
+		data-flex-basis="1126px"
 	
 ></p>
 <p>第一，可能是因为脚本原因，不带任何cookie去访问dy主页，响应包的返回会非常慢，经常超时。</p>
@@ -442,8 +442,8 @@
 </a></p>
 <p>可以发现在不登录状态下，网页是返回了当前作者的作品数量的。虽然有验证码，不输入直接关掉会网页跳转，禁止访问。但是到这里其实就足够了。</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129220819557.png"
-	width="2316"
-	height="1334"
+	width="1000"
+	height="575"
 	
 	loading="lazy"
 	
@@ -452,7 +452,7 @@
 	
 		class="gallery-image" 
 		data-flex-grow="173"
-		data-flex-basis="416px"
+		data-flex-basis="417px"
 	
 ></p>
 <p>只要实时监控这个作品数量，就可以知道作者是否更新（前提是作者不删掉以往的视频造成数量的变化，但其实这种情况比较少见）。</p>
@@ -461,8 +461,8 @@
 </span></span></code></pre></div><h2 id="bz怎么了">bz怎么了？</h2>
 <p>以前的bz可以直接访问api接口获取视频数量的，如下图所示</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129221527296.png"
-	width="1596"
-	height="618"
+	width="1000"
+	height="387"
 	
 	loading="lazy"
 	
@@ -471,13 +471,13 @@
 	
 		class="gallery-image" 
 		data-flex-grow="258"
-		data-flex-basis="619px"
+		data-flex-basis="620px"
 	
 ></p>
 <p>但现在不行了，直接访问会被风控拦掉。并且我第一反应也是延续dy的思路进行爬取，但是bz现在引入了csp内容安全策略，如下。</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129221931728.png"
-	width="2392"
-	height="626"
+	width="1000"
+	height="261"
 	
 	loading="lazy"
 	
@@ -485,14 +485,14 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="382"
-		data-flex-basis="917px"
+		data-flex-grow="383"
+		data-flex-basis="919px"
 	
 ></p>
 <p>你会发现哪怕未登录状态下直接访问作者的用户空间也会经过一系列的复杂前端混淆才能获取到数据</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129222239331.png"
-	width="3022"
-	height="1066"
+	width="1000"
+	height="352"
 	
 	loading="lazy"
 	
@@ -500,14 +500,14 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="283"
-		data-flex-basis="680px"
+		data-flex-grow="284"
+		data-flex-basis="681px"
 	
 ></p>
 <p>鉴于最近比较忙，原本打算暂时放弃研究，日后再慢慢分析里面的参数。随后我又随便点点点，发现bz的搜索界面返回结果并没有做csp之类的策略。这不又有了嘛😁。（反正我要的只是一个提醒的目的，这对我来说已经足够了）</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129222516612.png"
-	width="2968"
-	height="1466"
+	width="1000"
+	height="493"
 	
 	loading="lazy"
 	
@@ -516,7 +516,7 @@
 	
 		class="gallery-image" 
 		data-flex-grow="202"
-		data-flex-basis="485px"
+		data-flex-basis="486px"
 	
 ></p>
 <p>正则匹配也很简单（脚本返回的数据包内容就是“稿件”而不是“视频”，我也挺奇怪）</p>
@@ -524,8 +524,8 @@
 </span></span></code></pre></div><h2 id="xhs顺手也研究一下">xhs顺手也研究一下</h2>
 <p>xhs相对来说比较简单了，未登录状态访问只返回最新的32条笔记，那我只需要把这32条笔记的特有标记记录下来（看了一下js代码，还是题目最好记），如果有新笔记加入就会改变返回的32条记录，这就是判断更新的依据了。</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129223128204.png"
-	width="1584"
-	height="446"
+	width="999"
+	height="281"
 	
 	loading="lazy"
 	
@@ -534,7 +534,7 @@
 	
 		class="gallery-image" 
 		data-flex-grow="355"
-		data-flex-basis="852px"
+		data-flex-basis="853px"
 	
 ></p>
 <h1 id="脚本如何使用">脚本如何使用</h1>
@@ -542,8 +542,8 @@
 <p>同级目录下有4个monitor结尾的py文件，分别把其中的uid或者url修改成自己想要关注的人对应的就好（自行去找，相信看到这的同学没有不会定位的）</p>
 <p>一切修改完毕后，在自己的服务器上部署个定时任务，每分钟提醒一次即可</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129134229907.png"
-	width="2180"
-	height="1362"
+	width="1000"
+	height="624"
 	
 	loading="lazy"
 	
@@ -556,8 +556,8 @@
 	
 ></p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129134259965.png"
-	width="1714"
-	height="1462"
+	width="1000"
+	height="852"
 	
 	loading="lazy"
 	
@@ -570,8 +570,8 @@
 	
 ></p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129134645936.png"
-	width="1706"
-	height="482"
+	width="1000"
+	height="282"
 	
 	loading="lazy"
 	
@@ -579,8 +579,8 @@
 	
 	
 		class="gallery-image" 
-		data-flex-grow="353"
-		data-flex-basis="849px"
+		data-flex-grow="354"
+		data-flex-basis="851px"
 	
 ></p>
 <p>脚本的其他内容也进行了细枝末节的”优化“，并不是标准化编程，其他部分（微信提示内容等）自行修改，我这人主打一个能用就行。</p>
@@ -619,13 +619,13 @@
         
         
             <div class="article-image">
-                <img src="../../p/wbdmonitor/12.a1e128c1ca741e5a2dec64749a4b8adf.jpeg" 
-                        width="1618" 
-                        height="1080" 
+                <img src="../../p/wbdmonitor/12.f28b8fac23a3f61721bb34cad4fd7517.jpeg" 
+                        width="1000" 
+                        height="667" 
                         loading="lazy"
                         alt="Featured image of post 微博、B站、抖音实时关注脚本"
                         data-key="WBDmonitor" 
-                        data-hash="md5-oeEowcp0Hlot7GR0mkuK3w==">
+                        data-hash="md5-8ouPrCOj9hchuzTK1P11Fw==">
                 
             </div>
         

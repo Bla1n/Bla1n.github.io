@@ -67,8 +67,8 @@
 &lt;/a&gt;内容）&lt;/p&gt;
 &lt;p&gt;3、输入一个 Vercel 项目名称并点击 &lt;code&gt;Create&lt;/code&gt; 继续:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/vercel-1-DoAtoGHg.png&#34;
-	width=&#34;1320&#34;
-	height=&#34;890&#34;
+	width=&#34;1000&#34;
+	height=&#34;674&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -77,13 +77,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;148&#34;
-		data-flex-basis=&#34;355px&#34;
+		data-flex-basis=&#34;356px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;、此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/vercel-3-Brb_j0cD.png&#34;
-	width=&#34;2446&#34;
-	height=&#34;1946&#34;
+	width=&#34;1000&#34;
+	height=&#34;795&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -97,8 +97,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;一两分钟后，满屏的烟花会庆祝你部署成功。此时点击 &lt;code&gt;Go to Dashboard&lt;/code&gt; 可以跳转到应用的控制台。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/vercel-4-CNMnhm70.png&#34;
-	width=&#34;1247&#34;
-	height=&#34;821&#34;
+	width=&#34;1000&#34;
+	height=&#34;658&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -112,8 +112,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;5、点击顶部的 &lt;code&gt;Settings&lt;/code&gt; - &lt;code&gt;Environment Variables&lt;/code&gt; 进入环境变量配置页，并配置三个环境变量 &lt;code&gt;LEAN_ID&lt;/code&gt;, &lt;code&gt;LEAN_KEY&lt;/code&gt; 和 &lt;code&gt;LEAN_MASTER_KEY&lt;/code&gt; 。它们的值分别对应上一步在 LeanCloud 中获得的 &lt;code&gt;APP ID&lt;/code&gt;, &lt;code&gt;APP KEY&lt;/code&gt;, &lt;code&gt;Master Key&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/vercel-5-CIj2EZQq.png&#34;
-	width=&#34;1188&#34;
-	height=&#34;967&#34;
+	width=&#34;1000&#34;
+	height=&#34;813&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -121,14 +121,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;122&#34;
-		data-flex-basis=&#34;294px&#34;
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;295px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;、环境变量配置完成之后点击顶部的 &lt;code&gt;Deployments&lt;/code&gt; 点击顶部最新的一次部署右侧的 &lt;code&gt;Redeploy&lt;/code&gt; 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/vercel-6-CQnJ4Agt.png&#34;
-	width=&#34;1424&#34;
-	height=&#34;791&#34;
+	width=&#34;1000&#34;
+	height=&#34;555&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -142,8 +142,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;此时会跳转到 &lt;code&gt;Overview&lt;/code&gt; 界面开始部署，等待片刻后 &lt;code&gt;STATUS&lt;/code&gt; 会变成 &lt;code&gt;Ready&lt;/code&gt;。此时请点击 &lt;code&gt;Visit&lt;/code&gt; ，即可跳转到部署好的网站地址，此地址即为你的服务端地址。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/vercel-7-DbSum90d.png&#34;
-	width=&#34;2446&#34;
-	height=&#34;2138&#34;
+	width=&#34;1000&#34;
+	height=&#34;874&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -157,8 +157,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;7、往后不再是官方文档内容，之后可以在Domains设置部分添加上自己的子域名&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/image-20240414134013161.png&#34;
-	width=&#34;2548&#34;
-	height=&#34;1254&#34;
+	width=&#34;1000&#34;
+	height=&#34;492&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -192,8 +192,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;至此，评论区部署完成&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation2/assets/image-20240414134204736.png&#34;
-	width=&#34;1690&#34;
-	height=&#34;1104&#34;
+	width=&#34;1000&#34;
+	height=&#34;653&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -269,8 +269,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── theme.toml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;二者有很多相似之处（比如都有assets、layouts等目录），通过前端定位等测试发现，主目录下如果和hugo-theme-stack目录有相同的配置文件，则&lt;strong&gt;优先生效&lt;/strong&gt;主目录下的文件（但似乎也有特殊情况，不过通常是这样的）。所以这里建议在assets创建一个名为scss的文件夹,然后在scss文件夹里创建一个名为custom.scss的文件，用于存放魔改代码。引用下面是页面概览：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation/example.png&#34;
-	width=&#34;3022&#34;
-	height=&#34;1714&#34;
+	width=&#34;1000&#34;
+	height=&#34;567&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1106,8 +1106,8 @@
 &lt;p&gt;蛛网特效在 /layouts/_default/baseof.html中间插入以下代码&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://demo.hellozwh.com/source/canvas-nest.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation/%E8%9B%9B%E7%BD%91.png&#34;
-	width=&#34;2208&#34;
-	height=&#34;624&#34;
+	width=&#34;1000&#34;
+	height=&#34;282&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1115,8 +1115,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;353&#34;
-		data-flex-basis=&#34;849px&#34;
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;851px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;花瓣特效只需要将src的地址换为&lt;code&gt;https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js&lt;/code&gt;即可&lt;/p&gt;
@@ -1148,8 +1148,8 @@
 &lt;p&gt;icon存储目录同上，但要修改栏目名称则需要前往&lt;code&gt;/content/page&lt;/code&gt;目录&lt;/p&gt;
 &lt;p&gt;打开对应栏目文件夹，修改index.md文件&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation/%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE.png&#34;
-	width=&#34;2040&#34;
-	height=&#34;588&#34;
+	width=&#34;1000&#34;
+	height=&#34;288&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1157,8 +1157,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;346&#34;
-		data-flex-basis=&#34;832px&#34;
+		data-flex-grow=&#34;347&#34;
+		data-flex-basis=&#34;833px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;头像旋转&#34;&gt;头像旋转😵‍💫&lt;/h1&gt;
@@ -1625,8 +1625,8 @@
 &lt;h1 id=&#34;添加右下角联系小气泡按钮&#34;&gt;添加右下角联系小气泡按钮&lt;/h1&gt;
 &lt;p&gt;效果图为：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/renovation/%E6%B0%94%E6%B3%A1.png&#34;
-	width=&#34;908&#34;
-	height=&#34;1576&#34;
+	width=&#34;576&#34;
+	height=&#34;1000&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1787,8 +1787,8 @@
 &lt;h2 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h2&gt;
 &lt;p&gt;在 GitHub 账户下 &lt;code&gt;Setting - Developer setting - Personal access tokens(classic)&lt;/code&gt; 下创建一个不过期(no expiration)的 Token，权限需要开启 &lt;code&gt;repo&lt;/code&gt; 与 &lt;code&gt;workflow&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/token1.png&#34;
-	width=&#34;1962&#34;
-	height=&#34;1048&#34;
+	width=&#34;999&#34;
+	height=&#34;534&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1797,13 +1797,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;187&#34;
-		data-flex-basis=&#34;449px&#34;
+		data-flex-basis=&#34;448px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（注意：token只会显示一次，请及时保存）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/token.png&#34;
-	width=&#34;2242&#34;
-	height=&#34;366&#34;
+	width=&#34;1000&#34;
+	height=&#34;163&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1811,15 +1811,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;612&#34;
-		data-flex-basis=&#34;1470px&#34;
+		data-flex-grow=&#34;613&#34;
+		data-flex-basis=&#34;1472px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;私密源仓库设置token&#34;&gt;私密源仓库设置token&lt;/h2&gt;
 &lt;p&gt;在博客源仓库（blog-file）的 &lt;code&gt;Settings - Secrets - Actions&lt;/code&gt; 中添加 &lt;code&gt;PERSONAL_TOKEN&lt;/code&gt; 环境变量为刚才的 Token，这样 GitHub Action 就可以获取到 Token 了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/personal-token.png&#34;
-	width=&#34;2534&#34;
-	height=&#34;904&#34;
+	width=&#34;999&#34;
+	height=&#34;356&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1828,7 +1828,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;280&#34;
-		data-flex-basis=&#34;672px&#34;
+		data-flex-basis=&#34;673px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;创建workflows发布文件&#34;&gt;创建workflows发布文件&lt;/h2&gt;
@@ -1890,8 +1890,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置自己的域名&#34;&gt;配置自己的域名&lt;/h2&gt;
 &lt;p&gt;等待&lt;code&gt;Github Action&lt;/code&gt;完成后,我们需要开启&lt;code&gt;GitHub page&lt;/code&gt;，首先进入公开博客仓库，然后打开设置，在如图示位置进行设置（不会的可以自行搜索）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/domain.png&#34;
-	width=&#34;2400&#34;
-	height=&#34;1000&#34;
+	width=&#34;1000&#34;
+	height=&#34;416&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1905,8 +1905,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;生效结果&#34;&gt;生效结果&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/action.png&#34;
-	width=&#34;2870&#34;
-	height=&#34;940&#34;
+	width=&#34;1000&#34;
+	height=&#34;327&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1915,15 +1915,15 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;305&#34;
-		data-flex-basis=&#34;732px&#34;
+		data-flex-basis=&#34;733px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;push仓库会重置域名问题&#34;&gt;push仓库会重置域名问题&lt;/h1&gt;
 &lt;p&gt;每次push后会发现公开博客仓库设置的自己的域名会被重置为默认域名&lt;/p&gt;
 &lt;p&gt;解决方法：在content目录下创建一个名为CNAME的文件，内容填入自己的域名即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/cname.png&#34;
-	width=&#34;918&#34;
-	height=&#34;240&#34;
+	width=&#34;1000&#34;
+	height=&#34;261&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1931,8 +1931,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;382&#34;
-		data-flex-basis=&#34;918px&#34;
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;919px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;本地push失败彻底解决办法&#34;&gt;本地push失败彻底解决办法&lt;/h1&gt;
@@ -1953,8 +1953,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: error building site: TOCSS: failed to transform &lt;span class=&#34;s2&#34;&gt;&amp;#34;/scss/style.scss&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;text/x-scss&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. Check your Hugo installation&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; you need the extended version to build SCSS/SASS with transpiler &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; to &lt;span class=&#34;s1&#34;&gt;&amp;#39;libsass&amp;#39;&lt;/span&gt;.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; more information
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: Process completed with &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; code 1.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/error.png&#34;
-	width=&#34;2108&#34;
-	height=&#34;318&#34;
+	width=&#34;1000&#34;
+	height=&#34;150&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1962,8 +1962,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;662&#34;
-		data-flex-basis=&#34;1590px&#34;
+		data-flex-grow=&#34;666&#34;
+		data-flex-basis=&#34;1600px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;按照报错信息把网上的教程都试了一遍，都不行，然后仔细看了一眼报错，说我没使用扩展版本的hugo，但是我本地是用的扩展版本，于是检查配置文件。发现wordflows的配置文件关于hugo版本是这样写的：&lt;/p&gt;
@@ -1973,8 +1973,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;lastest&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日志上的hugo版本果然不对：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/hugo-problems/vision.png&#34;
-	width=&#34;1776&#34;
-	height=&#34;116&#34;
+	width=&#34;1000&#34;
+	height=&#34;65&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1982,8 +1982,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1531&#34;
-		data-flex-basis=&#34;3674px&#34;
+		data-flex-grow=&#34;1538&#34;
+		data-flex-basis=&#34;3692px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;随即查看hugo action官方使用指南，正确写法应该如下：&lt;/p&gt;

@@ -16,8 +16,8 @@
         <description>&lt;img src="https://www.blain.top/p/macs-icon/title.jpeg" alt="Featured image of post MAC顽固图标删除技巧" /&gt;&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
 &lt;p&gt;电脑有时安装的第三方软件在删除后，启动台里的图标始终不消失，重启也不行（如下图所示）。但由于我是强迫症，不删除难受。之前安装网络上的重置启动台的方式确实能删除，但是原先的启动台布局及分类也都消失了，属实难受，故有此文章。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/macs-icon/trash.jpg&#34;
-	width=&#34;324&#34;
-	height=&#34;246&#34;
+	width=&#34;1000&#34;
+	height=&#34;759&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -33,8 +33,8 @@
 &lt;h2 id=&#34;第一步-前往&#34;&gt;第一步 前往&lt;/h2&gt;
 &lt;p&gt;打开访达，点击最顶部菜单栏的“前往”→“前往文件夹”；或者在访达图标右击，选择“前往文件夹”。接着输入&lt;code&gt;/private/var/folders&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/macs-icon/forward.png&#34;
-	width=&#34;1006&#34;
-	height=&#34;432&#34;
+	width=&#34;1000&#34;
+	height=&#34;429&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -42,15 +42,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;232&#34;
-		data-flex-basis=&#34;558px&#34;
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;第二步-搜索&#34;&gt;第二步 搜索&lt;/h2&gt;
 &lt;p&gt;使用搜索功能在&lt;code&gt;folders&lt;/code&gt;文件夹下搜索&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/macs-icon/find.png&#34;
-	width=&#34;1870&#34;
-	height=&#34;568&#34;
+	width=&#34;1000&#34;
+	height=&#34;303&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -58,14 +58,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;329&#34;
-		data-flex-basis=&#34;790px&#34;
+		data-flex-grow=&#34;330&#34;
+		data-flex-basis=&#34;792px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着进入&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;文件夹里，可以看到&lt;code&gt;db&lt;/code&gt;文件夹，双击进入db目录。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../../p/macs-icon/db.png&#34;
-	width=&#34;754&#34;
-	height=&#34;338&#34;
+	width=&#34;1000&#34;
+	height=&#34;448&#34;
 	
 	loading=&#34;lazy&#34;
 	

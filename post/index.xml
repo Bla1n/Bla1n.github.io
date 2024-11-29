@@ -29,8 +29,8 @@
 &lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
 &lt;p&gt;1.bz接口直接访问结果如下&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129140743935.png&#34;
-	width=&#34;1514&#34;
-	height=&#34;334&#34;
+	width=&#34;1000&#34;
+	height=&#34;220&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -38,8 +38,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;453&#34;
-		data-flex-basis=&#34;1087px&#34;
+		data-flex-grow=&#34;454&#34;
+		data-flex-basis=&#34;1090px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2.dy接口虽然还能访问，但是显示的视频数量与实际并不相符（挺奇怪的，不知道现在这个接口的具体用途是什么），无法达到实时监控的目的。&lt;/p&gt;
@@ -48,8 +48,8 @@
 &lt;p&gt;首先是dy，先是在网上搜集了一下现成的监控工具及脚本。大多数工具都是基于登录后的凭证来实现监控的，但是dy在陌生设备上登录认证流程又很繁琐（比如网页版，我选择密码登录要求使用常用设备进行扫码认证，那我为啥不直接扫码登录呢？😅），反爬机制也针对脚本做了很多阻碍，现有的脚本也多是采取Selenium来模拟浏览器达到绕过前端混淆的。&lt;/p&gt;
 &lt;p&gt;就首次登录返回的&lt;code&gt;__ac_nonce&lt;/code&gt;，进而前端混淆加密生成的&lt;code&gt;__ac_signature&lt;/code&gt;，我就研究了一天。但由于两点原因我选择放弃去主动请求生成&lt;code&gt;\__ac_signature&lt;/code&gt;。（关于逆象混淆函数的同学可以自行搜索“&lt;code&gt;__ac_signature&lt;/code&gt;”关键字进行学习）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129215230959.png&#34;
-	width=&#34;1274&#34;
-	height=&#34;272&#34;
+	width=&#34;1000&#34;
+	height=&#34;213&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -57,8 +57,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;468&#34;
-		data-flex-basis=&#34;1124px&#34;
+		data-flex-grow=&#34;469&#34;
+		data-flex-basis=&#34;1126px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;第一，可能是因为脚本原因，不带任何cookie去访问dy主页，响应包的返回会非常慢，经常超时。&lt;/p&gt;
@@ -78,8 +78,8 @@
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;可以发现在不登录状态下，网页是返回了当前作者的作品数量的。虽然有验证码，不输入直接关掉会网页跳转，禁止访问。但是到这里其实就足够了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129220819557.png&#34;
-	width=&#34;2316&#34;
-	height=&#34;1334&#34;
+	width=&#34;1000&#34;
+	height=&#34;575&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -88,7 +88,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;173&#34;
-		data-flex-basis=&#34;416px&#34;
+		data-flex-basis=&#34;417px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;只要实时监控这个作品数量，就可以知道作者是否更新（前提是作者不删掉以往的视频造成数量的变化，但其实这种情况比较少见）。&lt;/p&gt;
@@ -97,8 +97,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bz怎么了&#34;&gt;bz怎么了？&lt;/h2&gt;
 &lt;p&gt;以前的bz可以直接访问api接口获取视频数量的，如下图所示&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129221527296.png&#34;
-	width=&#34;1596&#34;
-	height=&#34;618&#34;
+	width=&#34;1000&#34;
+	height=&#34;387&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -107,13 +107,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;258&#34;
-		data-flex-basis=&#34;619px&#34;
+		data-flex-basis=&#34;620px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;但现在不行了，直接访问会被风控拦掉。并且我第一反应也是延续dy的思路进行爬取，但是bz现在引入了csp内容安全策略，如下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129221931728.png&#34;
-	width=&#34;2392&#34;
-	height=&#34;626&#34;
+	width=&#34;1000&#34;
+	height=&#34;261&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -121,14 +121,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;382&#34;
-		data-flex-basis=&#34;917px&#34;
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;919px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;你会发现哪怕未登录状态下直接访问作者的用户空间也会经过一系列的复杂前端混淆才能获取到数据&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129222239331.png&#34;
-	width=&#34;3022&#34;
-	height=&#34;1066&#34;
+	width=&#34;1000&#34;
+	height=&#34;352&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -136,14 +136,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;283&#34;
-		data-flex-basis=&#34;680px&#34;
+		data-flex-grow=&#34;284&#34;
+		data-flex-basis=&#34;681px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;鉴于最近比较忙，原本打算暂时放弃研究，日后再慢慢分析里面的参数。随后我又随便点点点，发现bz的搜索界面返回结果并没有做csp之类的策略。这不又有了嘛😁。（反正我要的只是一个提醒的目的，这对我来说已经足够了）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129222516612.png&#34;
-	width=&#34;2968&#34;
-	height=&#34;1466&#34;
+	width=&#34;1000&#34;
+	height=&#34;493&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -152,7 +152,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;202&#34;
-		data-flex-basis=&#34;485px&#34;
+		data-flex-basis=&#34;486px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;正则匹配也很简单（脚本返回的数据包内容就是“稿件”而不是“视频”，我也挺奇怪）&lt;/p&gt;
@@ -160,8 +160,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xhs顺手也研究一下&#34;&gt;xhs顺手也研究一下&lt;/h2&gt;
 &lt;p&gt;xhs相对来说比较简单了，未登录状态访问只返回最新的32条笔记，那我只需要把这32条笔记的特有标记记录下来（看了一下js代码，还是题目最好记），如果有新笔记加入就会改变返回的32条记录，这就是判断更新的依据了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129223128204.png&#34;
-	width=&#34;1584&#34;
-	height=&#34;446&#34;
+	width=&#34;999&#34;
+	height=&#34;281&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -170,7 +170,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;355&#34;
-		data-flex-basis=&#34;852px&#34;
+		data-flex-basis=&#34;853px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;脚本如何使用&#34;&gt;脚本如何使用&lt;/h1&gt;
@@ -178,8 +178,8 @@
 &lt;p&gt;同级目录下有4个monitor结尾的py文件，分别把其中的uid或者url修改成自己想要关注的人对应的就好（自行去找，相信看到这的同学没有不会定位的）&lt;/p&gt;
 &lt;p&gt;一切修改完毕后，在自己的服务器上部署个定时任务，每分钟提醒一次即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129134229907.png&#34;
-	width=&#34;2180&#34;
-	height=&#34;1362&#34;
+	width=&#34;1000&#34;
+	height=&#34;624&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -192,8 +192,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129134259965.png&#34;
-	width=&#34;1714&#34;
-	height=&#34;1462&#34;
+	width=&#34;1000&#34;
+	height=&#34;852&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -206,8 +206,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdxmonitor/assets/image-20241129134645936.png&#34;
-	width=&#34;1706&#34;
-	height=&#34;482&#34;
+	width=&#34;1000&#34;
+	height=&#34;282&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -215,8 +215,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;353&#34;
-		data-flex-basis=&#34;849px&#34;
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;851px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;脚本的其他内容也进行了细枝末节的”优化“，并不是标准化编程，其他部分（微信提示内容等）自行修改，我这人主打一个能用就行。&lt;/p&gt;
@@ -231,8 +231,8 @@
         <guid>https://www.blain.top/p/cissp-classnote11/</guid>
         <description>&lt;img src="https://www.blain.top/p/cissp-classnote11/title.jpg" alt="Featured image of post 第10节（续）：资产安全" /&gt;&lt;h1 id=&#34;本章目录&#34;&gt;本章目录&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910150757529.png&#34;
-	width=&#34;454&#34;
-	height=&#34;208&#34;
+	width=&#34;999&#34;
+	height=&#34;458&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -247,8 +247,8 @@
 &lt;h1 id=&#34;数据生命周期管理&#34;&gt;数据生命周期管理&lt;/h1&gt;
 &lt;h2 id=&#34;数据策略&#34;&gt;数据策略&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910151010120.png&#34;
-	width=&#34;838&#34;
-	height=&#34;456&#34;
+	width=&#34;999&#34;
+	height=&#34;544&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -257,7 +257,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;183&#34;
-		data-flex-basis=&#34;441px&#34;
+		data-flex-basis=&#34;440px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1.免责条款&lt;/p&gt;
@@ -265,8 +265,8 @@
 &lt;p&gt;&lt;em&gt;注：责任有三种：responsibility（职责，干什么工作履行什么）、accountability（可问责性，做了事要对后果承担责任）、liability（提供的服务、产品，如果有问题应该承担的赔偿责任）&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据拥有者的职责&#34;&gt;数据拥有者的职责&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910151544791.png&#34;
-	width=&#34;770&#34;
-	height=&#34;426&#34;
+	width=&#34;1000&#34;
+	height=&#34;553&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -280,8 +280,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据主管的职责&#34;&gt;数据主管的职责&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910151605826.png&#34;
-	width=&#34;746&#34;
-	height=&#34;468&#34;
+	width=&#34;1000&#34;
+	height=&#34;627&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -295,8 +295,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据保管者的职责&#34;&gt;数据保管者的职责&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910152141939.png&#34;
-	width=&#34;778&#34;
-	height=&#34;348&#34;
+	width=&#34;1000&#34;
+	height=&#34;447&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -310,8 +310,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据的质量&#34;&gt;数据的质量&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910152313666.png&#34;
-	width=&#34;660&#34;
-	height=&#34;530&#34;
+	width=&#34;1000&#34;
+	height=&#34;803&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -331,8 +331,8 @@
 &lt;p&gt;采集处理数据过程中，不能只记录业务数据，还要记录数据记录过程中的&lt;strong&gt;遵循的标准、设备和方法&lt;/strong&gt;，并将这些作为元数据（留下证据）&lt;/p&gt;
 &lt;h2 id=&#34;数据标准化的作用&#34;&gt;数据标准化的作用&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910152946744.png&#34;
-	width=&#34;680&#34;
-	height=&#34;358&#34;
+	width=&#34;1000&#34;
+	height=&#34;526&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -340,14 +340,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;189&#34;
-		data-flex-basis=&#34;455px&#34;
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;456px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据的定义和建模&#34;&gt;数据的定义和建模&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910153043950.png&#34;
-	width=&#34;620&#34;
-	height=&#34;570&#34;
+	width=&#34;999&#34;
+	height=&#34;919&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -356,13 +356,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;108&#34;
-		data-flex-basis=&#34;261px&#34;
+		data-flex-basis=&#34;260px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;记录保存期&#34;&gt;记录保存期&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910153100826.png&#34;
-	width=&#34;850&#34;
-	height=&#34;290&#34;
+	width=&#34;1000&#34;
+	height=&#34;341&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -381,8 +381,8 @@
 &lt;p&gt;&lt;strong&gt;本质是风险管理的简化方式&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;目前的分级分类还是关注数据的保密性&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910153418192.png&#34;
-	width=&#34;1216&#34;
-	height=&#34;474&#34;
+	width=&#34;999&#34;
+	height=&#34;389&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -391,13 +391,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;256&#34;
-		data-flex-basis=&#34;615px&#34;
+		data-flex-basis=&#34;616px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;信息分级分类的管理问题&#34;&gt;信息分级分类的管理问题&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910153623086.png&#34;
-	width=&#34;818&#34;
-	height=&#34;452&#34;
+	width=&#34;1000&#34;
+	height=&#34;552&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -405,7 +405,7 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;180&#34;
+		data-flex-grow=&#34;181&#34;
 		data-flex-basis=&#34;434px&#34;
 	
 &gt;&lt;/p&gt;
@@ -423,8 +423,8 @@
 &lt;p&gt;不同介质具有不同的安全特点，在选择使用时需要重点考虑&lt;/p&gt;
 &lt;h3 id=&#34;1纸介质&#34;&gt;1.纸介质&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910154636335.png&#34;
-	width=&#34;726&#34;
-	height=&#34;402&#34;
+	width=&#34;1000&#34;
+	height=&#34;553&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -439,8 +439,8 @@
 &lt;p&gt;&lt;strong&gt;具有法律效力，广泛认可&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;2磁介质&#34;&gt;2.磁介质&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910154708350.png&#34;
-	width=&#34;666&#34;
-	height=&#34;396&#34;
+	width=&#34;999&#34;
+	height=&#34;594&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -455,8 +455,8 @@
 &lt;p&gt;证据效益最低，不适合长期存储&lt;/p&gt;
 &lt;h3 id=&#34;3微缩胶片&#34;&gt;3.微缩胶片&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910154819467.png&#34;
-	width=&#34;614&#34;
-	height=&#34;408&#34;
+	width=&#34;1000&#34;
+	height=&#34;664&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -471,8 +471,8 @@
 &lt;p&gt;&lt;strong&gt;具有一定法律效益&lt;/strong&gt;，国内使用较少&lt;/p&gt;
 &lt;h3 id=&#34;4光盘介质&#34;&gt;4.光盘介质&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910154921959.png&#34;
-	width=&#34;628&#34;
-	height=&#34;456&#34;
+	width=&#34;1000&#34;
+	height=&#34;726&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -495,8 +495,8 @@
 &lt;p&gt;标注最重要的标准是一致性&lt;/p&gt;
 &lt;h2 id=&#34;介质的保护&#34;&gt;介质的保护&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910160024093.png&#34;
-	width=&#34;856&#34;
-	height=&#34;296&#34;
+	width=&#34;1000&#34;
+	height=&#34;345&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -505,13 +505,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;289&#34;
-		data-flex-basis=&#34;694px&#34;
+		data-flex-basis=&#34;695px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;介质处置最终的处理&#34;&gt;介质处置（最终的处理）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910155846372.png&#34;
-	width=&#34;912&#34;
-	height=&#34;364&#34;
+	width=&#34;1000&#34;
+	height=&#34;399&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -526,8 +526,8 @@
 &lt;p&gt;有保密标签的数据不允许脱离保密安全管理&lt;/p&gt;
 &lt;h2 id=&#34;数据残留&#34;&gt;数据残留&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910155938113.png&#34;
-	width=&#34;894&#34;
-	height=&#34;310&#34;
+	width=&#34;1000&#34;
+	height=&#34;346&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -535,15 +535,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;288&#34;
-		data-flex-basis=&#34;692px&#34;
+		data-flex-grow=&#34;289&#34;
+		data-flex-basis=&#34;693px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据清除与根除&#34;&gt;数据清除与根除&lt;/h2&gt;
 &lt;p&gt;1.数据清除可以防范键盘攻击，数据根除可以防止任何攻击手段&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote11/assets/image-20240910160253122.png&#34;
-	width=&#34;922&#34;
-	height=&#34;328&#34;
+	width=&#34;1000&#34;
+	height=&#34;355&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -552,7 +552,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;281&#34;
-		data-flex-basis=&#34;674px&#34;
+		data-flex-basis=&#34;676px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2.粉碎是比较常见的方式&lt;/p&gt;
@@ -565,8 +565,8 @@
         
         <guid>https://www.blain.top/p/cissp-classnote10/</guid>
         <description>&lt;img src="https://www.blain.top/p/cissp-classnote10/title.jpg" alt="Featured image of post 第10节：安全运营（下）" /&gt;&lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240909100105810.png&#34;
-	width=&#34;1184&#34;
-	height=&#34;620&#34;
+	width=&#34;1000&#34;
+	height=&#34;523&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -574,15 +574,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;190&#34;
+		data-flex-grow=&#34;191&#34;
 		data-flex-basis=&#34;458px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;bcp计划文档&#34;&gt;BCP计划文档&lt;/h1&gt;
 &lt;p&gt;（业务持续性计划）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240909173920347.png&#34;
-	width=&#34;802&#34;
-	height=&#34;424&#34;
+	width=&#34;1000&#34;
+	height=&#34;528&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -591,7 +591,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;189&#34;
-		data-flex-basis=&#34;453px&#34;
+		data-flex-basis=&#34;454px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;一支持信息&#34;&gt;一、支持信息&lt;/h2&gt;
@@ -602,8 +602,8 @@
 &lt;h2 id=&#34;二通知启动阶段&#34;&gt;二、通知/启动阶段&lt;/h2&gt;
 &lt;h3 id=&#34;1通知部分&#34;&gt;1.通知部分&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910103322208.png&#34;
-	width=&#34;776&#34;
-	height=&#34;350&#34;
+	width=&#34;1000&#34;
+	height=&#34;451&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -623,8 +623,8 @@
 &lt;p&gt;计划启动是一个重大决策，不能交由机器自动化决策，而应该由领导决定&lt;/p&gt;
 &lt;h2 id=&#34;三恢复阶段&#34;&gt;三、恢复阶段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910104135515.png&#34;
-	width=&#34;828&#34;
-	height=&#34;368&#34;
+	width=&#34;1000&#34;
+	height=&#34;444&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -640,8 +640,8 @@
 &lt;p&gt;恢复可以理解为迁移到灾备中心去让业务重新运行起来&lt;/p&gt;
 &lt;h2 id=&#34;四重建阶段&#34;&gt;四、重建阶段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910104504593.png&#34;
-	width=&#34;896&#34;
-	height=&#34;526&#34;
+	width=&#34;1000&#34;
+	height=&#34;587&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -659,8 +659,8 @@
 &lt;h2 id=&#34;五计划的附录&#34;&gt;五、计划的附录&lt;/h2&gt;
 &lt;p&gt;其他详细信息应该放在附录里面&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910104606528.png&#34;
-	width=&#34;1236&#34;
-	height=&#34;472&#34;
+	width=&#34;1000&#34;
+	height=&#34;381&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -668,15 +668,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;261&#34;
-		data-flex-basis=&#34;628px&#34;
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;629px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;bcp策略实施&#34;&gt;BCP策略实施&lt;/h1&gt;
 &lt;h2 id=&#34;bcp团队组成&#34;&gt;BCP团队组成&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910110409385.png&#34;
-	width=&#34;834&#34;
-	height=&#34;566&#34;
+	width=&#34;1000&#34;
+	height=&#34;678&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -689,8 +689,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910110646423.png&#34;
-	width=&#34;816&#34;
-	height=&#34;316&#34;
+	width=&#34;1000&#34;
+	height=&#34;387&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -699,13 +699,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;258&#34;
-		data-flex-basis=&#34;619px&#34;
+		data-flex-basis=&#34;620px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;bcp团队培训&#34;&gt;BCP团队培训&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910110747850.png&#34;
-	width=&#34;846&#34;
-	height=&#34;544&#34;
+	width=&#34;999&#34;
+	height=&#34;643&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -714,13 +714,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;155&#34;
-		data-flex-basis=&#34;373px&#34;
+		data-flex-basis=&#34;372px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;bcp计划测试&#34;&gt;BCP计划测试&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910112240547.png&#34;
-	width=&#34;846&#34;
-	height=&#34;384&#34;
+	width=&#34;999&#34;
+	height=&#34;453&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -729,12 +729,12 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;220&#34;
-		data-flex-basis=&#34;528px&#34;
+		data-flex-basis=&#34;529px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910112726797.png&#34;
-	width=&#34;842&#34;
-	height=&#34;384&#34;
+	width=&#34;1000&#34;
+	height=&#34;456&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -750,8 +750,8 @@
 &lt;p&gt;遵循原则：循序渐进——结构化检查、检查列表、模拟&lt;/p&gt;
 &lt;h2 id=&#34;bcp计划更新&#34;&gt;BCP计划更新&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910112838598-5938919.png&#34;
-	width=&#34;856&#34;
-	height=&#34;406&#34;
+	width=&#34;1000&#34;
+	height=&#34;474&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -788,8 +788,8 @@
 &lt;p&gt;1.电器设备、配电线路老化发热是起火最常见的原因。&lt;/p&gt;
 &lt;h3 id=&#34;2火灾类型&#34;&gt;2.火灾类型&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910143051277.png&#34;
-	width=&#34;944&#34;
-	height=&#34;398&#34;
+	width=&#34;1000&#34;
+	height=&#34;421&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -798,13 +798,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;237&#34;
-		data-flex-basis=&#34;569px&#34;
+		data-flex-basis=&#34;570px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;3灭火原理&#34;&gt;3.灭火原理&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910143237644.png&#34;
-	width=&#34;840&#34;
-	height=&#34;396&#34;
+	width=&#34;1000&#34;
+	height=&#34;471&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -821,8 +821,8 @@
 &lt;p&gt;也有用稀有气体来灭火的（氩气+CO2）&lt;/p&gt;
 &lt;h3 id=&#34;4喷淋系统分类逐渐进化&#34;&gt;4.喷淋系统分类（逐渐进化）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910143612184.png&#34;
-	width=&#34;870&#34;
-	height=&#34;288&#34;
+	width=&#34;999&#34;
+	height=&#34;331&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -830,8 +830,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;302&#34;
-		data-flex-basis=&#34;725px&#34;
+		data-flex-grow=&#34;301&#34;
+		data-flex-basis=&#34;724px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;现在一般用预响应式的喷淋系统&lt;/p&gt;
@@ -843,8 +843,8 @@
 &lt;p&gt;2.现在电子锁远比物理锁的安全强度高&lt;/p&gt;
 &lt;h2 id=&#34;证件系统&#34;&gt;证件系统&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910144515963.png&#34;
-	width=&#34;980&#34;
-	height=&#34;420&#34;
+	width=&#34;1000&#34;
+	height=&#34;428&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -859,8 +859,8 @@
 &lt;p&gt;防止尾随的装置：mantrap（双门互锁）&lt;/p&gt;
 &lt;h3 id=&#34;无线近距离阅读器&#34;&gt;无线近距离阅读器&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910144646152.png&#34;
-	width=&#34;1044&#34;
-	height=&#34;472&#34;
+	width=&#34;1000&#34;
+	height=&#34;452&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -877,8 +877,8 @@
 &lt;p&gt;双栅栏结构防护能力更强&lt;/p&gt;
 &lt;h2 id=&#34;门的可选特性&#34;&gt;门的可选特性&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910145203930.png&#34;
-	width=&#34;1032&#34;
-	height=&#34;400&#34;
+	width=&#34;1000&#34;
+	height=&#34;387&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -887,7 +887,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;258&#34;
-		data-flex-basis=&#34;619px&#34;
+		data-flex-basis=&#34;620px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;safe更强调人的生命安全，secure强调财物安全&lt;/p&gt;
@@ -899,8 +899,8 @@
 &lt;p&gt;灵敏度：在光线暗的情况下也能拍出来清晰的画面&lt;/p&gt;
 &lt;p&gt;焦距越长，视角越窄，景深越短&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote10/assets/image-20240910145730728.png&#34;
-	width=&#34;886&#34;
-	height=&#34;366&#34;
+	width=&#34;1000&#34;
+	height=&#34;413&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -909,7 +909,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;242&#34;
-		data-flex-basis=&#34;580px&#34;
+		data-flex-basis=&#34;581px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;摄像头部署的位置应该避免出现盲点&lt;/p&gt;
@@ -928,8 +928,8 @@
         <guid>https://www.blain.top/p/cissp-classnote09/</guid>
         <description>&lt;img src="https://www.blain.top/p/cissp-classnote09/title.jpg" alt="Featured image of post 第09节：安全运营（上）" /&gt;&lt;h1 id=&#34;章节目录&#34;&gt;章节目录&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240826101627865.png&#34;
-	width=&#34;1430&#34;
-	height=&#34;686&#34;
+	width=&#34;1000&#34;
+	height=&#34;479&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -938,7 +938,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;208&#34;
-		data-flex-basis=&#34;500px&#34;
+		data-flex-basis=&#34;501px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;操作安全概述&#34;&gt;操作安全概述&lt;/h1&gt;
@@ -961,8 +961,8 @@
 &lt;p&gt;2.矫正：亡羊补牢，防止事故再次发生&lt;/p&gt;
 &lt;h3 id=&#34;其他控制类型&#34;&gt;其他控制类型&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903103708038-5331029.png&#34;
-	width=&#34;758&#34;
-	height=&#34;470&#34;
+	width=&#34;1000&#34;
+	height=&#34;620&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1021,8 +1021,8 @@
 &lt;p&gt;3.系统冷启动：不属于可信恢复的范围了。自动化程序无法解决系统问题，需要人工介入将系统从维护模式恢复到一致状态。（压力最大，工作中应尽量避免冷启动的情况发生）&lt;/p&gt;
 &lt;h2 id=&#34;生命周期保障&#34;&gt;生命周期保障&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903115645880.png&#34;
-	width=&#34;772&#34;
-	height=&#34;372&#34;
+	width=&#34;1000&#34;
+	height=&#34;481&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1042,8 +1042,8 @@
 &lt;p&gt;2.有可靠的回馈机制减少变更产生故障带来的损失&lt;/p&gt;
 &lt;h2 id=&#34;配置管理的任务&#34;&gt;配置管理的任务&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903121204604.png&#34;
-	width=&#34;814&#34;
-	height=&#34;418&#34;
+	width=&#34;1000&#34;
+	height=&#34;513&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1061,8 +1061,8 @@
 &lt;p&gt;3.紧急变更：属于重大变更，但是没时间进行讨论，由相关负责人授权，事后由变更控制委员会确认&lt;/p&gt;
 &lt;h2 id=&#34;基线&#34;&gt;基线&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903133741375.png&#34;
-	width=&#34;824&#34;
-	height=&#34;386&#34;
+	width=&#34;999&#34;
+	height=&#34;468&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1149,8 +1149,8 @@
 &lt;h2 id=&#34;电子跳跃电子链路&#34;&gt;电子跳跃（电子链路）&lt;/h2&gt;
 &lt;p&gt;解决异地备份问题的一种办法&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903151636313.png&#34;
-	width=&#34;1072&#34;
-	height=&#34;244&#34;
+	width=&#34;1000&#34;
+	height=&#34;227&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1158,15 +1158,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;439&#34;
-		data-flex-basis=&#34;1054px&#34;
+		data-flex-grow=&#34;440&#34;
+		data-flex-basis=&#34;1057px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;远程日记日志&#34;&gt;远程日记（日志）&lt;/h2&gt;
 &lt;p&gt;日志在一起是一种数据库备份的手段，记录每一笔明细。例如数据库一个月备份一次，在中间发生的交易以日志形式存储，这样在恢复的过程中可以先恢复上一次的备份，再填入本月发生的每一笔交易日志。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903152011778.png&#34;
-	width=&#34;784&#34;
-	height=&#34;494&#34;
+	width=&#34;1000&#34;
+	height=&#34;630&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1188,8 +1188,8 @@
 &lt;p&gt;本地负载均衡用于容错，全局负载均衡用于容灾&lt;/p&gt;
 &lt;h2 id=&#34;备用设施的类型&#34;&gt;备用设施的类型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote09/assets/image-20240903154915261-5349756.png&#34;
-	width=&#34;676&#34;
-	height=&#34;486&#34;
+	width=&#34;1000&#34;
+	height=&#34;718&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1198,7 +1198,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;139&#34;
-		data-flex-basis=&#34;333px&#34;
+		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;热站点：随时可以接替关键业务，成本很高&lt;/p&gt;
@@ -1224,8 +1224,8 @@
 &lt;p&gt;3、方案的选择/批准：确定安全框架&lt;/p&gt;
 &lt;h2 id=&#34;功能需求定义&#34;&gt;功能需求定义&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240713154019619.png&#34;
-	width=&#34;2176&#34;
-	height=&#34;1072&#34;
+	width=&#34;1000&#34;
+	height=&#34;492&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1233,14 +1233,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;202&#34;
+		data-flex-grow=&#34;203&#34;
 		data-flex-basis=&#34;487px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;系统设计阶段&#34;&gt;系统设计阶段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240729095503913.png&#34;
-	width=&#34;1304&#34;
-	height=&#34;508&#34;
+	width=&#34;1000&#34;
+	height=&#34;389&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1248,14 +1248,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;256&#34;
+		data-flex-grow=&#34;257&#34;
 		data-flex-basis=&#34;616px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;系统创建阶段&#34;&gt;系统创建阶段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240729100101616.png&#34;
-	width=&#34;1330&#34;
-	height=&#34;572&#34;
+	width=&#34;1000&#34;
+	height=&#34;430&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1269,8 +1269,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;系统接受阶段&#34;&gt;系统接受阶段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240729100217687.png&#34;
-	width=&#34;1616&#34;
-	height=&#34;810&#34;
+	width=&#34;1000&#34;
+	height=&#34;501&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1279,14 +1279,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;199&#34;
-		data-flex-basis=&#34;478px&#34;
+		data-flex-basis=&#34;479px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注：接受测试完后还要进行接受认可（风险是否能接受）才能上线，一般放到系统部署阶段&lt;/p&gt;
 &lt;h2 id=&#34;系统部署维护和更新阶段&#34;&gt;系统部署、维护和更新阶段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240729100344932.png&#34;
-	width=&#34;1180&#34;
-	height=&#34;526&#34;
+	width=&#34;1000&#34;
+	height=&#34;445&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1295,7 +1295,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;224&#34;
-		data-flex-basis=&#34;538px&#34;
+		data-flex-basis=&#34;539px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;做这些工作的主要目的是为了证明自己的工作该干的都干了&lt;/p&gt;
@@ -1306,8 +1306,8 @@
 &lt;h2 id=&#34;编程语言&#34;&gt;编程语言&lt;/h2&gt;
 &lt;p&gt;发展：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806114245091.png&#34;
-	width=&#34;1334&#34;
-	height=&#34;576&#34;
+	width=&#34;999&#34;
+	height=&#34;431&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1316,7 +1316,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;231&#34;
-		data-flex-basis=&#34;555px&#34;
+		data-flex-basis=&#34;556px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2.越高级的编程语言，编程过程越快，编出来的程序越安全&lt;/p&gt;
@@ -1325,8 +1325,8 @@
 &lt;p&gt;1.通常认为Java语言比C语言更安全，因为Java是强类型语言。&lt;/p&gt;
 &lt;p&gt;.Java为混合型语言：既是编译型，也是解释型语言&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806115336864.png&#34;
-	width=&#34;1406&#34;
-	height=&#34;552&#34;
+	width=&#34;1000&#34;
+	height=&#34;392&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1334,8 +1334,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;254&#34;
-		data-flex-basis=&#34;611px&#34;
+		data-flex-grow=&#34;255&#34;
+		data-flex-basis=&#34;612px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;.Java能提供的安全机制有：沙箱、碎片回收、代码签名等&lt;/p&gt;
@@ -1344,8 +1344,8 @@
 &lt;p&gt;代码签名：保证代码来源的透明性、真实性。&lt;/p&gt;
 &lt;h2 id=&#34;soa基于服务的架构&#34;&gt;SOA（基于服务的架构）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806121042993.png&#34;
-	width=&#34;1840&#34;
-	height=&#34;770&#34;
+	width=&#34;1000&#34;
+	height=&#34;418&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1353,14 +1353,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;238&#34;
-		data-flex-basis=&#34;573px&#34;
+		data-flex-grow=&#34;239&#34;
+		data-flex-basis=&#34;574px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据检验的部署&#34;&gt;数据检验的部署&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806121246084.png&#34;
-	width=&#34;1336&#34;
-	height=&#34;556&#34;
+	width=&#34;1000&#34;
+	height=&#34;416&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1383,8 +1383,8 @@
 &lt;p&gt;5.终端用户数据库、电子表格：Dbase、Access等文件型数据库，没有精细的数据访问控制，不在考虑范围内&lt;/p&gt;
 &lt;h2 id=&#34;关系数据库的数据结构&#34;&gt;关系数据库的数据结构&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806135303297.png&#34;
-	width=&#34;1508&#34;
-	height=&#34;662&#34;
+	width=&#34;1000&#34;
+	height=&#34;438&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1392,8 +1392,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;227&#34;
-		data-flex-basis=&#34;546px&#34;
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;547px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;主键：唯一标识符&lt;/p&gt;
@@ -1401,8 +1401,8 @@
 &lt;p&gt;外键的参照完整性：在主表中不存在的值，在外键中不能记录&lt;/p&gt;
 &lt;h2 id=&#34;关系数据库的完整性规则&#34;&gt;关系数据库的完整性规则&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806135942170.png&#34;
-	width=&#34;1428&#34;
-	height=&#34;580&#34;
+	width=&#34;999&#34;
+	height=&#34;406&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1417,8 +1417,8 @@
 &lt;p&gt;原子化：一个数据处理必须是完整的（要么处理完成，要么没进行处理），不能处于分割状态。&lt;/p&gt;
 &lt;h2 id=&#34;数据库接口语言&#34;&gt;数据库接口语言&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806140318650.png&#34;
-	width=&#34;1512&#34;
-	height=&#34;472&#34;
+	width=&#34;1000&#34;
+	height=&#34;312&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1427,7 +1427,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;320&#34;
-		data-flex-basis=&#34;768px&#34;
+		data-flex-basis=&#34;769px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;ODBC不太安全&lt;/p&gt;
@@ -1435,8 +1435,8 @@
 &lt;p&gt;数据仓库与数据库没有直接的关系&lt;/p&gt;
 &lt;p&gt;2.数据仓库为一种新的应用类型，如大数据等&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806140720066.png&#34;
-	width=&#34;1312&#34;
-	height=&#34;576&#34;
+	width=&#34;1000&#34;
+	height=&#34;439&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1452,8 +1452,8 @@
 &lt;p&gt;4.规格化：设计关系数据库表时涉及的原则。如：原子化；非主键的值只能依赖于主键，不能依赖其他任何数据。&lt;/p&gt;
 &lt;h2 id=&#34;数据仓库的使用方法&#34;&gt;数据仓库的使用方法&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806141203133.png&#34;
-	width=&#34;1456&#34;
-	height=&#34;594&#34;
+	width=&#34;1000&#34;
+	height=&#34;407&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1462,7 +1462,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;245&#34;
-		data-flex-basis=&#34;588px&#34;
+		data-flex-basis=&#34;589px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;数据挖掘与在线分析处理的区别：&lt;/p&gt;
@@ -1473,8 +1473,8 @@
 &lt;p&gt;聚合：鸡蛋放在一个篮子里&lt;/p&gt;
 &lt;p&gt;推论：例如，根据非涉密信息推断出涉密信息。采取多实例化的方法可以减轻这个问题（给出假的非涉密信息进行混淆）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806141922771.png&#34;
-	width=&#34;1466&#34;
-	height=&#34;552&#34;
+	width=&#34;1000&#34;
+	height=&#34;376&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1483,15 +1483,15 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;265&#34;
-		data-flex-basis=&#34;637px&#34;
+		data-flex-basis=&#34;638px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;查询攻击：SQL注入&lt;/p&gt;
 &lt;h1 id=&#34;基于知识的系统&#34;&gt;基于知识的系统&lt;/h1&gt;
 &lt;h2 id=&#34;知识管理&#34;&gt;知识管理&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806142624315.png&#34;
-	width=&#34;1492&#34;
-	height=&#34;612&#34;
+	width=&#34;1000&#34;
+	height=&#34;410&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1505,8 +1505,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;专家系统&#34;&gt;专家系统&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806142744175.png&#34;
-	width=&#34;1322&#34;
-	height=&#34;464&#34;
+	width=&#34;999&#34;
+	height=&#34;350&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1514,8 +1514,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;284&#34;
-		data-flex-basis=&#34;683px&#34;
+		data-flex-grow=&#34;285&#34;
+		data-flex-basis=&#34;685px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;------------安全评估测试------------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;安全评估测试&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/h1&gt;
@@ -1535,8 +1535,8 @@
 &lt;h2 id=&#34;威胁建模&#34;&gt;威胁建模&lt;/h2&gt;
 &lt;p&gt;代码级的安全要求，一种完整的风险评估&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806150057506.png&#34;
-	width=&#34;1482&#34;
-	height=&#34;372&#34;
+	width=&#34;1000&#34;
+	height=&#34;251&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1586,8 +1586,8 @@
 &lt;p&gt;SOC，对于外包供应商的一个评级报告&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;报告分类：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806154627976.png&#34;
-	width=&#34;1218&#34;
-	height=&#34;460&#34;
+	width=&#34;1000&#34;
+	height=&#34;377&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1595,16 +1595,16 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;264&#34;
-		data-flex-basis=&#34;635px&#34;
+		data-flex-grow=&#34;265&#34;
+		data-flex-basis=&#34;636px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Type1为一个时间点的报告、Type2为一段时期&lt;/p&gt;
 &lt;p&gt;SOC的区别在于面向的人群，1-3越来越广，关注点在于SOC2/3&lt;/p&gt;
 &lt;h2 id=&#34;审计过程&#34;&gt;审计过程&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote08/assets/image-20240806155253641.png&#34;
-	width=&#34;1702&#34;
-	height=&#34;556&#34;
+	width=&#34;1000&#34;
+	height=&#34;326&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1613,7 +1613,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;306&#34;
-		data-flex-basis=&#34;734px&#34;
+		data-flex-basis=&#34;736px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -1628,8 +1628,8 @@
 &lt;h2 id=&#34;访问控制管理&#34;&gt;访问控制管理&lt;/h2&gt;
 &lt;p&gt;分为集中式和非集中式&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429141350235.png&#34;
-	width=&#34;1430&#34;
-	height=&#34;544&#34;
+	width=&#34;1000&#34;
+	height=&#34;380&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1637,8 +1637,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;262&#34;
-		data-flex-basis=&#34;630px&#34;
+		data-flex-grow=&#34;263&#34;
+		data-flex-basis=&#34;631px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;目前主流的还是集中式管理&lt;/p&gt;
@@ -1646,8 +1646,8 @@
 &lt;p&gt;AAA服务：认证（authentication）、授权（authorization）、记账（accounting）&lt;/p&gt;
 &lt;p&gt;1、特点：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429141932960.png&#34;
-	width=&#34;1074&#34;
-	height=&#34;270&#34;
+	width=&#34;1000&#34;
+	height=&#34;251&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1655,8 +1655,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;397&#34;
-		data-flex-basis=&#34;954px&#34;
+		data-flex-grow=&#34;398&#34;
+		data-flex-basis=&#34;956px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;2、分布式安全架构：接入网络的设备（VPN、AP等）是分布式的，将他们的认证过程转发到3A服务器，集中实现各个设备的认证服务。&lt;/p&gt;
@@ -1665,8 +1665,8 @@
 &lt;p&gt;1、初代单次登录（伪单次）：将所有密码写成一个脚本，执行一下就登录所有账号。缺点：会话劫持风险增加、消耗更多资源、攻击面增加（脚本）、改密码麻烦，依然要一个一个改&lt;/p&gt;
 &lt;h3 id=&#34;kerberos协议&#34;&gt;Kerberos协议&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429155608671.png&#34;
-	width=&#34;1436&#34;
-	height=&#34;526&#34;
+	width=&#34;1000&#34;
+	height=&#34;366&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1683,8 +1683,8 @@
 &lt;p&gt;（2）用户要使用某一具体服务时，再向KDC提交TGT获取服务票证ST（过山车票）&lt;/p&gt;
 &lt;p&gt;（3）用户通过ST访问具体服务器，使用相应的服务&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429160152921.png&#34;
-	width=&#34;1550&#34;
-	height=&#34;542&#34;
+	width=&#34;1000&#34;
+	height=&#34;349&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1692,8 +1692,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;285&#34;
-		data-flex-basis=&#34;686px&#34;
+		data-flex-grow=&#34;286&#34;
+		data-flex-basis=&#34;687px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、SESAME：欧洲版本的Kerberos，比Kerberos更复杂，几乎没人用&lt;/p&gt;
@@ -1704,8 +1704,8 @@
 &lt;p&gt;本质上两者都是一个东西，只是从不同的角度产生了两种不同的说法&lt;/p&gt;
 &lt;h2 id=&#34;访问控制类型&#34;&gt;访问控制类型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429161057674.png&#34;
-	width=&#34;1014&#34;
-	height=&#34;292&#34;
+	width=&#34;1000&#34;
+	height=&#34;287&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1713,15 +1713,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;347&#34;
-		data-flex-basis=&#34;833px&#34;
+		data-flex-grow=&#34;348&#34;
+		data-flex-basis=&#34;836px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;自助访问控制&#34;&gt;自助访问控制&lt;/h3&gt;
 &lt;p&gt;由owner来决定&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429162423818.png&#34;
-	width=&#34;1474&#34;
-	height=&#34;518&#34;
+	width=&#34;1000&#34;
+	height=&#34;351&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1730,14 +1730,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;284&#34;
-		data-flex-basis=&#34;682px&#34;
+		data-flex-basis=&#34;683px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;强制访问控制&#34;&gt;强制访问控制&lt;/h3&gt;
 &lt;p&gt;设置安全标签&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429162505137.png&#34;
-	width=&#34;1478&#34;
-	height=&#34;522&#34;
+	width=&#34;1000&#34;
+	height=&#34;353&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1753,8 +1753,8 @@
 &lt;p&gt;1、基于角色的访问控制、基于属性的访问控制&lt;/p&gt;
 &lt;p&gt;2、产生的原因是为了解决人员流动频繁管理不便的问题&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429162800976.png&#34;
-	width=&#34;1448&#34;
-	height=&#34;566&#34;
+	width=&#34;1000&#34;
+	height=&#34;390&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1762,14 +1762,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;255&#34;
-		data-flex-basis=&#34;613px&#34;
+		data-flex-grow=&#34;256&#34;
+		data-flex-basis=&#34;615px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;基于上下文context的访问控制&#34;&gt;基于上下文（context）的访问控制&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429163129680.png&#34;
-	width=&#34;1286&#34;
-	height=&#34;312&#34;
+	width=&#34;1000&#34;
+	height=&#34;242&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1777,15 +1777,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;412&#34;
-		data-flex-basis=&#34;989px&#34;
+		data-flex-grow=&#34;413&#34;
+		data-flex-basis=&#34;991px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;例如：状态检测防火墙&lt;/p&gt;
 &lt;h3 id=&#34;基于内容content的访问控制&#34;&gt;基于内容（content）的访问控制&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429163258096.png&#34;
-	width=&#34;1220&#34;
-	height=&#34;384&#34;
+	width=&#34;1000&#34;
+	height=&#34;314&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1793,16 +1793,16 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;317&#34;
-		data-flex-basis=&#34;762px&#34;
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;系统开销比较大&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;基于视图的访问控制数据库的访问控制&#34;&gt;基于视图的访问控制（数据库的访问控制）&lt;/h3&gt;
 &lt;p&gt;view（数据库术语）：查询语言查询的结果保存在内存中的虚表，称之为视图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429163535853.png&#34;
-	width=&#34;1474&#34;
-	height=&#34;472&#34;
+	width=&#34;1000&#34;
+	height=&#34;320&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1811,7 +1811,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;312&#34;
-		data-flex-basis=&#34;749px&#34;
+		data-flex-basis=&#34;750px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;访问控制的威胁&#34;&gt;访问控制的威胁&lt;/h1&gt;
@@ -1825,8 +1825,8 @@
 &lt;h1 id=&#34;-----------软件安全开发-----------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;软件安全开发&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/h1&gt;
 &lt;h1 id=&#34;本章目标&#34;&gt;本章目标&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429165705381.png&#34;
-	width=&#34;684&#34;
-	height=&#34;450&#34;
+	width=&#34;1000&#34;
+	height=&#34;657&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1835,7 +1835,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;152&#34;
-		data-flex-basis=&#34;364px&#34;
+		data-flex-basis=&#34;365px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;应用系统面临的威胁&#34;&gt;应用系统面临的威胁&lt;/h1&gt;
@@ -1873,8 +1873,8 @@
 &lt;p&gt;蠕虫的一种攻击方式，同时使用多种方式进行恶意代码的传播&lt;/p&gt;
 &lt;h2 id=&#34;恶意代码控制&#34;&gt;恶意代码控制&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429175659145.png&#34;
-	width=&#34;1110&#34;
-	height=&#34;512&#34;
+	width=&#34;1000&#34;
+	height=&#34;461&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1891,8 +1891,8 @@
 &lt;h1 id=&#34;系统开发模型&#34;&gt;系统开发模型&lt;/h1&gt;
 &lt;h2 id=&#34;系统开发方法&#34;&gt;系统开发方法&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429180650651.png&#34;
-	width=&#34;1080&#34;
-	height=&#34;320&#34;
+	width=&#34;1000&#34;
+	height=&#34;296&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1911,8 +1911,8 @@
 &lt;p&gt;5、低耦合：模块之间的关系尽量简化&lt;/p&gt;
 &lt;h2 id=&#34;v-model&#34;&gt;V-Model&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429181336425.png&#34;
-	width=&#34;1528&#34;
-	height=&#34;632&#34;
+	width=&#34;1000&#34;
+	height=&#34;413&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1920,8 +1920,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;241&#34;
-		data-flex-basis=&#34;580px&#34;
+		data-flex-grow=&#34;242&#34;
+		data-flex-basis=&#34;581px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一个测试模型，将上述测试与生命周期一一对应，使得测试工作做得更全面更好&lt;/p&gt;
@@ -1929,8 +1929,8 @@
 &lt;p&gt;1、解决瀑布模型代办问题的模型，是迭代模型的一种&lt;/p&gt;
 &lt;p&gt;2、工作原理&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429181833722.png&#34;
-	width=&#34;1372&#34;
-	height=&#34;544&#34;
+	width=&#34;999&#34;
+	height=&#34;396&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1945,8 +1945,8 @@
 &lt;p&gt;联合分析开发是一种人员交流的方法&lt;/p&gt;
 &lt;h2 id=&#34;探索和螺旋模型&#34;&gt;探索和螺旋模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429182455586.png&#34;
-	width=&#34;1154&#34;
-	height=&#34;370&#34;
+	width=&#34;1000&#34;
+	height=&#34;320&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1954,8 +1954,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;311&#34;
-		data-flex-basis=&#34;748px&#34;
+		data-flex-grow=&#34;312&#34;
+		data-flex-basis=&#34;750px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;探索模型：摸清市场需求的模型&lt;/p&gt;
@@ -1967,8 +1967,8 @@
 &lt;h2 id=&#34;软件能力成熟度模型&#34;&gt;软件能力成熟度模型&lt;/h2&gt;
 &lt;p&gt;基本理念：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote07/assets/image-20240429183136232.png&#34;
-	width=&#34;1272&#34;
-	height=&#34;506&#34;
+	width=&#34;1000&#34;
+	height=&#34;397&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -1977,7 +1977,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;251&#34;
-		data-flex-basis=&#34;603px&#34;
+		data-flex-basis=&#34;604px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;CMMI：第二个阶段为“管理型”&lt;/p&gt;
@@ -1998,8 +1998,8 @@
 &lt;p&gt;双向鉴别才能防止会话劫持的问题（伪基站）&lt;/p&gt;
 &lt;h2 id=&#34;拒绝服务攻击dos&#34;&gt;拒绝服务攻击DOS&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427141006342.png&#34;
-	width=&#34;1280&#34;
-	height=&#34;516&#34;
+	width=&#34;1000&#34;
+	height=&#34;403&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2013,8 +2013,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;反射器攻击&#34;&gt;反射器攻击&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427134424159.png&#34;
-	width=&#34;1508&#34;
-	height=&#34;746&#34;
+	width=&#34;1000&#34;
+	height=&#34;494&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2029,8 +2029,8 @@
 &lt;p&gt;端口7对应着传输层echo服务，该服务会原封不动的返回数据包。攻击者伪造成受害者IP向DNS服务器发送一个DNS请求，然后DNS服务器和受害者主机之间就会无休止的请求应答。&lt;/p&gt;
 &lt;h2 id=&#34;放大器攻击&#34;&gt;放大器攻击&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427135106274.png&#34;
-	width=&#34;1460&#34;
-	height=&#34;746&#34;
+	width=&#34;1000&#34;
+	height=&#34;510&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2038,8 +2038,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;195&#34;
-		data-flex-basis=&#34;469px&#34;
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;470px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;NTP反射，1:85消耗目标资源&lt;/p&gt;
@@ -2049,8 +2049,8 @@
 &lt;p&gt;牵引到哪个地址：sink hole沉淀池&lt;/p&gt;
 &lt;h2 id=&#34;syn泛滥&#34;&gt;SYN泛滥&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427140852265.png&#34;
-	width=&#34;1574&#34;
-	height=&#34;706&#34;
+	width=&#34;1000&#34;
+	height=&#34;448&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2058,7 +2058,7 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;222&#34;
+		data-flex-grow=&#34;223&#34;
 		data-flex-basis=&#34;535px&#34;
 	
 &gt;&lt;/p&gt;
@@ -2070,8 +2070,8 @@
 &lt;h2 id=&#34;防火墙类型&#34;&gt;防火墙类型&lt;/h2&gt;
 &lt;h3 id=&#34;包过滤防火墙物理层安全性最差效率最高&#34;&gt;包过滤防火墙（物理层，安全性最差，效率最高）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427143007439.png&#34;
-	width=&#34;1330&#34;
-	height=&#34;534&#34;
+	width=&#34;1000&#34;
+	height=&#34;401&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2080,14 +2080,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;249&#34;
-		data-flex-basis=&#34;597px&#34;
+		data-flex-basis=&#34;598px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;很难准确设定过滤规则，如：内部主机访问外网，由于动态NAT技术的影响，很难固定哪个端口放行，所以会设置一个放行范围，违背最小授权原则。&lt;/p&gt;
 &lt;h3 id=&#34;应用代理防火墙应用层&#34;&gt;应用代理防火墙（应用层）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427143559592.png&#34;
-	width=&#34;1432&#34;
-	height=&#34;484&#34;
+	width=&#34;1000&#34;
+	height=&#34;337&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2095,8 +2095,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;295&#34;
-		data-flex-basis=&#34;710px&#34;
+		data-flex-grow=&#34;296&#34;
+		data-flex-basis=&#34;712px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;存在的问题：不同的协议需要不同的代理防火墙，设置麻烦&lt;/p&gt;
@@ -2104,8 +2104,8 @@
 &lt;p&gt;应用代理防火墙的进化，本质还是一个代理，降了一层可以适配各种高层会话&lt;/p&gt;
 &lt;h3 id=&#34;状态检测防火墙传输层会话层应用层&#34;&gt;状态检测防火墙（传输层、会话层、应用层）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427144322651.png&#34;
-	width=&#34;1506&#34;
-	height=&#34;540&#34;
+	width=&#34;1000&#34;
+	height=&#34;358&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2113,8 +2113,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;278&#34;
-		data-flex-basis=&#34;669px&#34;
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;防火墙部署&#34;&gt;防火墙部署&lt;/h2&gt;
@@ -2122,8 +2122,8 @@
 &lt;p&gt;在网络边界设置ACL列表，允许或禁止某些请求（安全性最差）&lt;/p&gt;
 &lt;h3 id=&#34;双穴主机防火墙&#34;&gt;双穴主机防火墙&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427160347620.png&#34;
-	width=&#34;1342&#34;
-	height=&#34;180&#34;
+	width=&#34;1000&#34;
+	height=&#34;134&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2131,14 +2131,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;745&#34;
-		data-flex-basis=&#34;1789px&#34;
+		data-flex-grow=&#34;746&#34;
+		data-flex-basis=&#34;1791px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;屏蔽主机防火墙&#34;&gt;屏蔽主机防火墙&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427160433065.png&#34;
-	width=&#34;1370&#34;
-	height=&#34;234&#34;
+	width=&#34;1000&#34;
+	height=&#34;170&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2146,14 +2146,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;585&#34;
-		data-flex-basis=&#34;1405px&#34;
+		data-flex-grow=&#34;588&#34;
+		data-flex-basis=&#34;1411px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;屏蔽子网防火墙&#34;&gt;屏蔽子网防火墙&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427160506962.png&#34;
-	width=&#34;1412&#34;
-	height=&#34;216&#34;
+	width=&#34;999&#34;
+	height=&#34;152&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2161,13 +2161,13 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;653&#34;
-		data-flex-basis=&#34;1568px&#34;
+		data-flex-grow=&#34;657&#34;
+		data-flex-basis=&#34;1577px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427160514694.png&#34;
-	width=&#34;1244&#34;
-	height=&#34;490&#34;
+	width=&#34;1000&#34;
+	height=&#34;393&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2175,14 +2175,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;253&#34;
-		data-flex-basis=&#34;609px&#34;
+		data-flex-grow=&#34;254&#34;
+		data-flex-basis=&#34;610px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;入侵检测系统ids&#34;&gt;入侵检测系统IDS&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427160923611.png&#34;
-	width=&#34;1268&#34;
-	height=&#34;342&#34;
+	width=&#34;1000&#34;
+	height=&#34;269&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2190,14 +2190,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;370&#34;
-		data-flex-basis=&#34;889px&#34;
+		data-flex-grow=&#34;371&#34;
+		data-flex-basis=&#34;892px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;ids分类&#34;&gt;IDS分类&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427161009150.png&#34;
-	width=&#34;1258&#34;
-	height=&#34;510&#34;
+	width=&#34;1000&#34;
+	height=&#34;405&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2211,8 +2211,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;1、基于规则：&lt;strong&gt;黑名单检测&lt;/strong&gt;，漏报多&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427161258858.png&#34;
-	width=&#34;1318&#34;
-	height=&#34;488&#34;
+	width=&#34;1000&#34;
+	height=&#34;370&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2227,8 +2227,8 @@
 &lt;p&gt;专家系统：与黑白名单不同，会通过多种特征进行判断&lt;/p&gt;
 &lt;p&gt;2、基于统计：&lt;strong&gt;白名单检测&lt;/strong&gt;，误报多&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427161628432.png&#34;
-	width=&#34;1326&#34;
-	height=&#34;554&#34;
+	width=&#34;1000&#34;
+	height=&#34;417&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2237,7 +2237,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;239&#34;
-		data-flex-basis=&#34;574px&#34;
+		data-flex-basis=&#34;575px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;ids局限性&#34;&gt;IDS局限性&lt;/h3&gt;
@@ -2248,8 +2248,8 @@
 &lt;p&gt;IPS的发展很大程度上取决于IDS的发展&lt;/p&gt;
 &lt;h2 id=&#34;网络服务质量&#34;&gt;网络服务质量&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427162051057.png&#34;
-	width=&#34;1282&#34;
-	height=&#34;416&#34;
+	width=&#34;1000&#34;
+	height=&#34;324&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2258,7 +2258,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;308&#34;
-		data-flex-basis=&#34;739px&#34;
+		data-flex-basis=&#34;740px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、尽力而为：顾名思义，表面意思&lt;/p&gt;
@@ -2267,8 +2267,8 @@
 &lt;h1 id=&#34;无线网络安全&#34;&gt;无线网络安全&lt;/h1&gt;
 &lt;h2 id=&#34;扩频技术&#34;&gt;扩频技术&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427162408254.png&#34;
-	width=&#34;990&#34;
-	height=&#34;468&#34;
+	width=&#34;1000&#34;
+	height=&#34;472&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2277,15 +2277,15 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;211&#34;
-		data-flex-basis=&#34;507px&#34;
+		data-flex-basis=&#34;508px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;跳频：将一段信息分割成许多份，每一份放在不同的频道上进行传输。应用：全球移动通信系统（GSM）&lt;/p&gt;
 &lt;p&gt;直接序列扩频技术：通过编码的技术将许多信息同时发送，根据提前订好的规律从中将信息筛选出来。应用：码分多址（CDMA）&lt;/p&gt;
 &lt;h2 id=&#34;80211安全机制&#34;&gt;802.11安全机制&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427173934778.png&#34;
-	width=&#34;852&#34;
-	height=&#34;488&#34;
+	width=&#34;1000&#34;
+	height=&#34;572&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2306,8 +2306,8 @@
 &lt;p&gt;注2：WPA3通过减慢HASH运算的方式，有效地阻止了密钥爆破攻击&lt;/p&gt;
 &lt;h2 id=&#34;无线网络威胁&#34;&gt;无线网络威胁&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427175512069.png&#34;
-	width=&#34;854&#34;
-	height=&#34;376&#34;
+	width=&#34;1000&#34;
+	height=&#34;440&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2322,8 +2322,8 @@
 &lt;h1 id=&#34;---------身份和访问管理---------&#34;&gt;&amp;mdash;&amp;mdash;&amp;mdash;身份和访问管理&amp;mdash;&amp;mdash;&amp;mdash;&lt;/h1&gt;
 &lt;h1 id=&#34;章节目录&#34;&gt;章节目录&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427180227786.png&#34;
-	width=&#34;360&#34;
-	height=&#34;244&#34;
+	width=&#34;1000&#34;
+	height=&#34;677&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2341,8 +2341,8 @@
 &lt;p&gt;访问控制的最终目的：最小授权原则&lt;/p&gt;
 &lt;h2 id=&#34;访问控制目标&#34;&gt;访问控制目标&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427180931026.png&#34;
-	width=&#34;688&#34;
-	height=&#34;424&#34;
+	width=&#34;1000&#34;
+	height=&#34;616&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2357,8 +2357,8 @@
 &lt;p&gt;可审核性：可问责性。与问责不同，只需要能记录就好，访问控制不需要实现问责功能，因此授权和问责没有关系&lt;/p&gt;
 &lt;h2 id=&#34;访问控制的要素&#34;&gt;访问控制的要素&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427181216528.png&#34;
-	width=&#34;698&#34;
-	height=&#34;388&#34;
+	width=&#34;1000&#34;
+	height=&#34;555&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2366,14 +2366,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;179&#34;
-		data-flex-basis=&#34;431px&#34;
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;432px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;访问控制的手段&#34;&gt;访问控制的手段&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427181438475.png&#34;
-	width=&#34;858&#34;
-	height=&#34;360&#34;
+	width=&#34;1000&#34;
+	height=&#34;419&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2398,8 +2398,8 @@
 &lt;p&gt;1、鉴别也称认证&lt;/p&gt;
 &lt;p&gt;2、三种主要鉴别要素的分类&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427183700877.png&#34;
-	width=&#34;1006&#34;
-	height=&#34;202&#34;
+	width=&#34;1000&#34;
+	height=&#34;200&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2407,16 +2407,16 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;498&#34;
-		data-flex-basis=&#34;1195px&#34;
+		data-flex-grow=&#34;500&#34;
+		data-flex-basis=&#34;1200px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、双因素、多因素认证，不是用两个口令、多个PIN这种，而是两类因素、多类因素。&lt;/p&gt;
 &lt;p&gt;4、还有次要鉴别要素：如位置、IP地址等，这些单独拎出来不能作为一个鉴别机制&lt;/p&gt;
 &lt;h2 id=&#34;口令及其种类&#34;&gt;口令及其种类&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427184301442.png&#34;
-	width=&#34;990&#34;
-	height=&#34;272&#34;
+	width=&#34;1000&#34;
+	height=&#34;274&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2424,8 +2424,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;363&#34;
-		data-flex-basis=&#34;873px&#34;
+		data-flex-grow=&#34;364&#34;
+		data-flex-basis=&#34;875px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;动态口令应该被归为第二类要素，不是传统的口令&lt;/p&gt;
@@ -2433,8 +2433,8 @@
 &lt;p&gt;因为加密方式使用的加密机，即使截获密码也无法破解&lt;/p&gt;
 &lt;h2 id=&#34;电子认证令牌分类&#34;&gt;电子认证令牌分类&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427222929968.png&#34;
-	width=&#34;1054&#34;
-	height=&#34;402&#34;
+	width=&#34;1000&#34;
+	height=&#34;381&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2449,8 +2449,8 @@
 &lt;p&gt;硬软令牌都是硬件，区别在于是否允许输出密钥。&lt;/p&gt;
 &lt;h2 id=&#34;常见令牌技术&#34;&gt;常见令牌技术&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427223120510.png&#34;
-	width=&#34;964&#34;
-	height=&#34;476&#34;
+	width=&#34;1000&#34;
+	height=&#34;493&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2467,8 +2467,8 @@
 &lt;p&gt;3、异步令牌：令牌带有键盘，使用时在令牌输入屏幕显示的PIN码会计算出response码，再输入会服务器。&lt;/p&gt;
 &lt;h2 id=&#34;生物识别技术的特点&#34;&gt;生物识别技术的特点&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427224031692.png&#34;
-	width=&#34;644&#34;
-	height=&#34;384&#34;
+	width=&#34;1000&#34;
+	height=&#34;596&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2483,8 +2483,8 @@
 &lt;p&gt;生物识别现在可以仿冒和复制&lt;/p&gt;
 &lt;h2 id=&#34;生物识别技术的工作原理&#34;&gt;生物识别技术的工作原理&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427224129757.png&#34;
-	width=&#34;1088&#34;
-	height=&#34;446&#34;
+	width=&#34;1000&#34;
+	height=&#34;409&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2492,8 +2492,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;243&#34;
-		data-flex-basis=&#34;585px&#34;
+		data-flex-grow=&#34;244&#34;
+		data-flex-basis=&#34;586px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、正匹配举例：先刷卡，告诉机器身份信息，然后刷指纹，机器匹配卡上的和实际的是否一致（一对一）。因此，正匹配应用更广泛。&lt;/p&gt;
@@ -2501,8 +2501,8 @@
 &lt;p&gt;3、生物识别对效率有一定的要求&lt;/p&gt;
 &lt;h2 id=&#34;生物学特征&#34;&gt;生物学特征&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427224934942.png&#34;
-	width=&#34;740&#34;
-	height=&#34;456&#34;
+	width=&#34;1000&#34;
+	height=&#34;616&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2527,8 +2527,8 @@
 &lt;p&gt;3、交叉错误率：I型和II型错误率一致的那个点，叫交叉错误率&lt;/p&gt;
 &lt;h2 id=&#34;影响用户接受生物识别的因素&#34;&gt;影响用户接受生物识别的因素&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427225824248.png&#34;
-	width=&#34;1052&#34;
-	height=&#34;432&#34;
+	width=&#34;1000&#34;
+	height=&#34;410&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2537,13 +2537,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;243&#34;
-		data-flex-basis=&#34;584px&#34;
+		data-flex-basis=&#34;585px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;访问控制的日常审计&#34;&gt;访问控制的日常审计&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote06/assets/image-20240427230020826.png&#34;
-	width=&#34;842&#34;
-	height=&#34;434&#34;
+	width=&#34;1000&#34;
+	height=&#34;515&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2552,7 +2552,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;194&#34;
-		data-flex-basis=&#34;465px&#34;
+		data-flex-basis=&#34;466px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;违例跟踪报告：一种很好的用于证明安全工作的证据&lt;/p&gt;
@@ -2566,8 +2566,8 @@
         <guid>https://www.blain.top/p/cissp-classnote05/</guid>
         <description>&lt;img src="https://www.blain.top/p/cissp-classnote05/title.jpg" alt="Featured image of post 第05节：通信和网络安全（上）" /&gt;&lt;h1 id=&#34;目录&#34;&gt;目录&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421141454182.png&#34;
-	width=&#34;1014&#34;
-	height=&#34;528&#34;
+	width=&#34;1000&#34;
+	height=&#34;520&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2576,14 +2576,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;192&#34;
-		data-flex-basis=&#34;460px&#34;
+		data-flex-basis=&#34;461px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;网络安全概述&#34;&gt;网络安全概述&lt;/h1&gt;
 &lt;h2 id=&#34;网络安全目标&#34;&gt;网络安全目标&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421143450209.png&#34;
-	width=&#34;900&#34;
-	height=&#34;488&#34;
+	width=&#34;1000&#34;
+	height=&#34;542&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2603,8 +2603,8 @@
 &lt;h1 id=&#34;网络通信基础&#34;&gt;网络通信基础&lt;/h1&gt;
 &lt;h2 id=&#34;数据网络及其分类&#34;&gt;数据网络及其分类&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421143739916.png&#34;
-	width=&#34;902&#34;
-	height=&#34;436&#34;
+	width=&#34;1000&#34;
+	height=&#34;483&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2612,15 +2612,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;206&#34;
+		data-flex-grow=&#34;207&#34;
 		data-flex-basis=&#34;496px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;增值网：在该网络上传播的信息比一般网络更有价值&lt;/p&gt;
 &lt;h2 id=&#34;数据网络构成&#34;&gt;数据网络构成&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421151214633.png&#34;
-	width=&#34;972&#34;
-	height=&#34;432&#34;
+	width=&#34;1000&#34;
+	height=&#34;444&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2635,8 +2635,8 @@
 &lt;p&gt;信道服务单元：监视数据转换的结果，两边电路的情况，保证转换过程可靠、正常的使用&lt;/p&gt;
 &lt;p&gt;数据服务单元：将局域网的信息数据帧转换成能在广域网上传输的格式&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421152101459.png&#34;
-	width=&#34;924&#34;
-	height=&#34;368&#34;
+	width=&#34;1000&#34;
+	height=&#34;398&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2645,7 +2645,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;251&#34;
-		data-flex-basis=&#34;602px&#34;
+		data-flex-basis=&#34;603px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、一个设备越偏向于应用层，它的安全功能往往就越多，反之功能越少&lt;/p&gt;
@@ -2665,8 +2665,8 @@
 &lt;p&gt;安全规则：5-4-3规则，可借助4个中继器连接最多5个网段，但只有其中3个网段可以连接主机&lt;/p&gt;
 &lt;p&gt;2、双绞线：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421163137661.png&#34;
-	width=&#34;1166&#34;
-	height=&#34;286&#34;
+	width=&#34;1000&#34;
+	height=&#34;245&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2674,8 +2674,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;407&#34;
-		data-flex-basis=&#34;978px&#34;
+		data-flex-grow=&#34;408&#34;
+		data-flex-basis=&#34;979px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;①双绞线的分类不影响传输距离，但影响传输速率&lt;/p&gt;
@@ -2683,8 +2683,8 @@
 &lt;p&gt;③距离越长受干扰的几率就越大&lt;/p&gt;
 &lt;p&gt;3、光纤&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421163644951.png&#34;
-	width=&#34;754&#34;
-	height=&#34;192&#34;
+	width=&#34;1000&#34;
+	height=&#34;254&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2692,8 +2692,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;392&#34;
-		data-flex-basis=&#34;942px&#34;
+		data-flex-grow=&#34;393&#34;
+		data-flex-basis=&#34;944px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注：光纤不抗窃听！！！！&lt;/p&gt;
@@ -2725,8 +2725,8 @@
 &lt;p&gt;5、令牌传递：环型拓扑里防冲突的方式。&lt;/p&gt;
 &lt;h2 id=&#34;冲突域和广播域&#34;&gt;冲突域和广播域&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421171030431.png&#34;
-	width=&#34;884&#34;
-	height=&#34;512&#34;
+	width=&#34;1000&#34;
+	height=&#34;579&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2742,8 +2742,8 @@
 &lt;p&gt;2、一个网段在发送广播数据帧的时候，该网段下的设备都能收到，这个网段就构成一个广播域。而广播容易带来性能问题，因此一个网段的机器数量不能太多。因此用路由器来分割广播域，降低广播带来的性能问题。&lt;/p&gt;
 &lt;h2 id=&#34;局域网设备&#34;&gt;局域网设备&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421171509126.png&#34;
-	width=&#34;1050&#34;
-	height=&#34;460&#34;
+	width=&#34;1000&#34;
+	height=&#34;438&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2757,8 +2757,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;一个安全域出于划分广播域的要求，可以使用VLAN来隔离；不同的安全域不应该通过一个交换机的VLAN来隔离，而应该通过不同的物理交换机来隔离。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421172634361.png&#34;
-	width=&#34;1034&#34;
-	height=&#34;434&#34;
+	width=&#34;1000&#34;
+	height=&#34;419&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2767,15 +2767,15 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;238&#34;
-		data-flex-basis=&#34;571px&#34;
+		data-flex-basis=&#34;572px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;广域网技术&#34;&gt;广域网技术&lt;/h1&gt;
 &lt;h2 id=&#34;电路交换链接&#34;&gt;电路交换链接&lt;/h2&gt;
 &lt;p&gt;真正的电路交换是传统意义上通信双方独占一根线路进行通信&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421173111361.png&#34;
-	width=&#34;1064&#34;
-	height=&#34;298&#34;
+	width=&#34;1000&#34;
+	height=&#34;280&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2784,14 +2784,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;357&#34;
-		data-flex-basis=&#34;856px&#34;
+		data-flex-basis=&#34;857px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;分组交换链接&#34;&gt;分组交换链接&lt;/h2&gt;
 &lt;p&gt;帧中继是一种分组交换技术&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421173148050.png&#34;
-	width=&#34;1072&#34;
-	height=&#34;280&#34;
+	width=&#34;1000&#34;
+	height=&#34;261&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2799,15 +2799,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;382&#34;
-		data-flex-basis=&#34;918px&#34;
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;919px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;X.25&lt;/strong&gt;会在每个节点检查信号的完整性。后来传输条件好了才有了&lt;strong&gt;帧中继&lt;/strong&gt;技术，即不需要每个节点进行检查。&lt;/p&gt;
 &lt;h2 id=&#34;信元交换链接&#34;&gt;信元交换链接&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421173631181.png&#34;
-	width=&#34;1082&#34;
-	height=&#34;330&#34;
+	width=&#34;1000&#34;
+	height=&#34;304&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2815,15 +2815,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;327&#34;
-		data-flex-basis=&#34;786px&#34;
+		data-flex-grow=&#34;328&#34;
+		data-flex-basis=&#34;789px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;广域网虚电路&#34;&gt;广域网虚电路★&lt;/h2&gt;
 &lt;p&gt;为了保证在某些资源有限设备上，用户通信的时候不会产生严重的质量问题（满负荷情况下，如何防止新的接入把原有的通信挤掉），而产生虚电路技术。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421174021803.png&#34;
-	width=&#34;936&#34;
-	height=&#34;328&#34;
+	width=&#34;1000&#34;
+	height=&#34;350&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2832,14 +2832,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;285&#34;
-		data-flex-basis=&#34;684px&#34;
+		data-flex-basis=&#34;685px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;虚电路其实就是一个检查链路上每个节点是否有满负荷的情况，若有满负荷的情况，则让通信等待一段时间。&lt;/p&gt;
 &lt;h2 id=&#34;广域网接入技术&#34;&gt;广域网接入技术&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421174600017.png&#34;
-	width=&#34;1032&#34;
-	height=&#34;438&#34;
+	width=&#34;1000&#34;
+	height=&#34;424&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2848,13 +2848,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;235&#34;
-		data-flex-basis=&#34;565px&#34;
+		data-flex-basis=&#34;566px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;War Dialer是一种类似于nmap的扫描技术，可以发现一些缺乏安全保护的老旧设备。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421174832528.png&#34;
-	width=&#34;1002&#34;
-	height=&#34;378&#34;
+	width=&#34;1000&#34;
+	height=&#34;377&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2868,8 +2868,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;PBX是一种交换机，即公司内部使用的电话业务网络&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240421175126171.png&#34;
-	width=&#34;992&#34;
-	height=&#34;390&#34;
+	width=&#34;1000&#34;
+	height=&#34;393&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2888,8 +2888,8 @@
 &lt;p&gt;重要，送分，略&lt;/p&gt;
 &lt;h2 id=&#34;ip协议&#34;&gt;IP协议&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240423204102663.png&#34;
-	width=&#34;976&#34;
-	height=&#34;576&#34;
+	width=&#34;999&#34;
+	height=&#34;590&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2904,8 +2904,8 @@
 &lt;p&gt;NAT端口映射可以缓解IPv4不足的情况&lt;/p&gt;
 &lt;p&gt;IPv6缩位表示法&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240423204642661.png&#34;
-	width=&#34;1072&#34;
-	height=&#34;486&#34;
+	width=&#34;1000&#34;
+	height=&#34;453&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2919,8 +2919,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;tcp协议&#34;&gt;TCP协议&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240423204759612.png&#34;
-	width=&#34;958&#34;
-	height=&#34;344&#34;
+	width=&#34;1000&#34;
+	height=&#34;359&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2936,8 +2936,8 @@
 &lt;p&gt;序列号、旗标位需要加深理解&lt;/p&gt;
 &lt;h2 id=&#34;udp协议&#34;&gt;UDP协议&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240423205117538.png&#34;
-	width=&#34;1056&#34;
-	height=&#34;160&#34;
+	width=&#34;1000&#34;
+	height=&#34;151&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2945,14 +2945,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;660&#34;
-		data-flex-basis=&#34;1584px&#34;
+		data-flex-grow=&#34;662&#34;
+		data-flex-basis=&#34;1589px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;icmp协议故障诊断网络&#34;&gt;ICMP协议（故障诊断网络）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240423205232208.png&#34;
-	width=&#34;1088&#34;
-	height=&#34;332&#34;
+	width=&#34;1000&#34;
+	height=&#34;305&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2969,8 +2969,8 @@
 &lt;p&gt;DNS污染攻击（UDP攻击）&lt;/p&gt;
 &lt;h2 id=&#34;arp协议地址解析协议&#34;&gt;ARP协议（地址解析协议）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote05/assets/image-20240423205722078.png&#34;
-	width=&#34;788&#34;
-	height=&#34;360&#34;
+	width=&#34;1000&#34;
+	height=&#34;456&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -2978,8 +2978,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;218&#34;
-		data-flex-basis=&#34;525px&#34;
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -3044,8 +3044,8 @@
 &lt;/a&gt;内容）&lt;/p&gt;
 &lt;p&gt;3、输入一个 Vercel 项目名称并点击 &lt;code&gt;Create&lt;/code&gt; 继续:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/vercel-1-DoAtoGHg.png&#34;
-	width=&#34;1320&#34;
-	height=&#34;890&#34;
+	width=&#34;1000&#34;
+	height=&#34;674&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3054,13 +3054,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;148&#34;
-		data-flex-basis=&#34;355px&#34;
+		data-flex-basis=&#34;356px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;、此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/vercel-3-Brb_j0cD.png&#34;
-	width=&#34;2446&#34;
-	height=&#34;1946&#34;
+	width=&#34;1000&#34;
+	height=&#34;795&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3074,8 +3074,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;一两分钟后，满屏的烟花会庆祝你部署成功。此时点击 &lt;code&gt;Go to Dashboard&lt;/code&gt; 可以跳转到应用的控制台。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/vercel-4-CNMnhm70.png&#34;
-	width=&#34;1247&#34;
-	height=&#34;821&#34;
+	width=&#34;1000&#34;
+	height=&#34;658&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3089,8 +3089,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;5、点击顶部的 &lt;code&gt;Settings&lt;/code&gt; - &lt;code&gt;Environment Variables&lt;/code&gt; 进入环境变量配置页，并配置三个环境变量 &lt;code&gt;LEAN_ID&lt;/code&gt;, &lt;code&gt;LEAN_KEY&lt;/code&gt; 和 &lt;code&gt;LEAN_MASTER_KEY&lt;/code&gt; 。它们的值分别对应上一步在 LeanCloud 中获得的 &lt;code&gt;APP ID&lt;/code&gt;, &lt;code&gt;APP KEY&lt;/code&gt;, &lt;code&gt;Master Key&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/vercel-5-CIj2EZQq.png&#34;
-	width=&#34;1188&#34;
-	height=&#34;967&#34;
+	width=&#34;1000&#34;
+	height=&#34;813&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3098,14 +3098,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;122&#34;
-		data-flex-basis=&#34;294px&#34;
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;295px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;、环境变量配置完成之后点击顶部的 &lt;code&gt;Deployments&lt;/code&gt; 点击顶部最新的一次部署右侧的 &lt;code&gt;Redeploy&lt;/code&gt; 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/vercel-6-CQnJ4Agt.png&#34;
-	width=&#34;1424&#34;
-	height=&#34;791&#34;
+	width=&#34;1000&#34;
+	height=&#34;555&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3119,8 +3119,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;此时会跳转到 &lt;code&gt;Overview&lt;/code&gt; 界面开始部署，等待片刻后 &lt;code&gt;STATUS&lt;/code&gt; 会变成 &lt;code&gt;Ready&lt;/code&gt;。此时请点击 &lt;code&gt;Visit&lt;/code&gt; ，即可跳转到部署好的网站地址，此地址即为你的服务端地址。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/vercel-7-DbSum90d.png&#34;
-	width=&#34;2446&#34;
-	height=&#34;2138&#34;
+	width=&#34;1000&#34;
+	height=&#34;874&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3134,8 +3134,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;7、往后不再是官方文档内容，之后可以在Domains设置部分添加上自己的子域名&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/image-20240414134013161.png&#34;
-	width=&#34;2548&#34;
-	height=&#34;1254&#34;
+	width=&#34;1000&#34;
+	height=&#34;492&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3169,8 +3169,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;至此，评论区部署完成&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation2/assets/image-20240414134204736.png&#34;
-	width=&#34;1690&#34;
-	height=&#34;1104&#34;
+	width=&#34;1000&#34;
+	height=&#34;653&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3205,8 +3205,8 @@
         <description>&lt;img src="https://www.blain.top/p/cissp-classnote04/title.png" alt="Featured image of post 第04节：安全工程实施（下）" /&gt;&lt;h1 id=&#34;系统评测&#34;&gt;系统评测&lt;/h1&gt;
 &lt;h2 id=&#34;评估标准间的比较&#34;&gt;评估标准间的比较&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408152820733.png&#34;
-	width=&#34;1304&#34;
-	height=&#34;594&#34;
+	width=&#34;1000&#34;
+	height=&#34;455&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3215,7 +3215,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;219&#34;
-		data-flex-basis=&#34;526px&#34;
+		data-flex-basis=&#34;527px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;不需要记各个标准间的对应关系&lt;/p&gt;
@@ -3236,8 +3236,8 @@
 &lt;h1 id=&#34;密码学概述&#34;&gt;密码学概述&lt;/h1&gt;
 &lt;h2 id=&#34;密码学概念&#34;&gt;密码学概念&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408155444679.png&#34;
-	width=&#34;880&#34;
-	height=&#34;416&#34;
+	width=&#34;1000&#34;
+	height=&#34;472&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3246,12 +3246,12 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;211&#34;
-		data-flex-basis=&#34;507px&#34;
+		data-flex-basis=&#34;508px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408155816561.png&#34;
-	width=&#34;976&#34;
-	height=&#34;412&#34;
+	width=&#34;999&#34;
+	height=&#34;422&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3270,8 +3270,8 @@
 &lt;p&gt;现代密码术&lt;/p&gt;
 &lt;h2 id=&#34;基本密码方法概述&#34;&gt;基本密码方法概述&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408160633994.png&#34;
-	width=&#34;960&#34;
-	height=&#34;504&#34;
+	width=&#34;1000&#34;
+	height=&#34;525&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3287,8 +3287,8 @@
 &lt;h1 id=&#34;对称密钥算法&#34;&gt;对称密钥算法&lt;/h1&gt;
 &lt;p&gt;加密和解密用一样的密钥&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408161721592.png&#34;
-	width=&#34;1080&#34;
-	height=&#34;656&#34;
+	width=&#34;1000&#34;
+	height=&#34;607&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3303,8 +3303,8 @@
 &lt;p&gt;1、对称密码分为流密码和分组密码两种&lt;/p&gt;
 &lt;p&gt;流密码：每次加密一个比特或者字节的密码方法（RC4算法）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408162444444.png&#34;
-	width=&#34;1288&#34;
-	height=&#34;604&#34;
+	width=&#34;1000&#34;
+	height=&#34;468&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3313,13 +3313,13 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;213&#34;
-		data-flex-basis=&#34;511px&#34;
+		data-flex-basis=&#34;512px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;分组密码：每次加密固定大小的数据分组的密码方法（操作模式几乎不考）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408162616742.png&#34;
-	width=&#34;1058&#34;
-	height=&#34;454&#34;
+	width=&#34;1000&#34;
+	height=&#34;429&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3378,8 +3378,8 @@
 &lt;p&gt;2、目前主要采用SHA-2算法进行签名&lt;/p&gt;
 &lt;h2 id=&#34;生日攻击简单了解&#34;&gt;生日攻击（简单了解）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408175115129.png&#34;
-	width=&#34;916&#34;
-	height=&#34;210&#34;
+	width=&#34;1000&#34;
+	height=&#34;229&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3388,7 +3388,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;436&#34;
-		data-flex-basis=&#34;1046px&#34;
+		data-flex-basis=&#34;1048px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;消息验证码mac&#34;&gt;消息验证码（MAC）&lt;/h2&gt;
@@ -3402,8 +3402,8 @@
 &lt;h1 id=&#34;公钥基础设施&#34;&gt;公钥基础设施&lt;/h1&gt;
 &lt;h2 id=&#34;pki的构成&#34;&gt;PKI的构成&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408182958175-2572199.png&#34;
-	width=&#34;966&#34;
-	height=&#34;578&#34;
+	width=&#34;1000&#34;
+	height=&#34;598&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3417,8 +3417,8 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;数字证书&#34;&gt;数字证书&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408183315598.png&#34;
-	width=&#34;974&#34;
-	height=&#34;506&#34;
+	width=&#34;999&#34;
+	height=&#34;519&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3431,8 +3431,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408183422498.png&#34;
-	width=&#34;1278&#34;
-	height=&#34;584&#34;
+	width=&#34;1000&#34;
+	height=&#34;456&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3440,8 +3440,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;218&#34;
-		data-flex-basis=&#34;525px&#34;
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;密钥管理&#34;&gt;密钥管理&lt;/h2&gt;
@@ -3453,8 +3453,8 @@
 &lt;p&gt;1、加密在通讯的链路中间设备上进行（路由器，无线AP等）&lt;/p&gt;
 &lt;p&gt;2、特点&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408184455474.png&#34;
-	width=&#34;1118&#34;
-	height=&#34;258&#34;
+	width=&#34;1000&#34;
+	height=&#34;230&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3462,8 +3462,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;433&#34;
-		data-flex-basis=&#34;1040px&#34;
+		data-flex-grow=&#34;434&#34;
+		data-flex-basis=&#34;1043px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;若运营商不可信，则会产生虚假的安全感&lt;/p&gt;
@@ -3472,8 +3472,8 @@
 &lt;p&gt;网关到网关、终端到终端都算端到端加密&lt;/p&gt;
 &lt;p&gt;2、特点&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240408184614101.png&#34;
-	width=&#34;1082&#34;
-	height=&#34;150&#34;
+	width=&#34;1000&#34;
+	height=&#34;138&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3481,15 +3481,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;721&#34;
-		data-flex-basis=&#34;1731px&#34;
+		data-flex-grow=&#34;724&#34;
+		data-flex-basis=&#34;1739px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;vpn&#34;&gt;VPN&lt;/h2&gt;
 &lt;h3 id=&#34;ipsec协议网络层安全协议&#34;&gt;IPSec协议（网络层安全协议）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409094033000.png&#34;
-	width=&#34;1084&#34;
-	height=&#34;300&#34;
+	width=&#34;1000&#34;
+	height=&#34;276&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3497,8 +3497,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;361&#34;
-		data-flex-basis=&#34;867px&#34;
+		data-flex-grow=&#34;362&#34;
+		data-flex-basis=&#34;869px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、鉴别抱头基本已经不用了&lt;/p&gt;
@@ -3512,8 +3512,8 @@
 &lt;p&gt;1、TLS是SSL演化而来，SSL存在很多安全问题&lt;/p&gt;
 &lt;p&gt;2、SSL/TSL握手&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409100844409.png&#34;
-	width=&#34;1274&#34;
-	height=&#34;508&#34;
+	width=&#34;1000&#34;
+	height=&#34;398&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3521,14 +3521,14 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;250&#34;
-		data-flex-basis=&#34;601px&#34;
+		data-flex-grow=&#34;251&#34;
+		data-flex-basis=&#34;603px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注1：TLS握手中认证身份默认是单向的，即客户端要求认证服务器的身份（也可配置双向认证），服务器要给客户端发送有效证书&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409101054222.png&#34;
-	width=&#34;1256&#34;
-	height=&#34;540&#34;
+	width=&#34;1000&#34;
+	height=&#34;429&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3536,15 +3536,15 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;232&#34;
-		data-flex-basis=&#34;558px&#34;
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;注2：是客户端产生预备秘密，然后用服务器的公钥进行加密&lt;/p&gt;
 &lt;h2 id=&#34;密码分析学&#34;&gt;密码分析学&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409101710523.png&#34;
-	width=&#34;1072&#34;
-	height=&#34;320&#34;
+	width=&#34;1000&#34;
+	height=&#34;298&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3553,14 +3553,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;335&#34;
-		data-flex-basis=&#34;804px&#34;
+		data-flex-basis=&#34;805px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、仅知密文攻击是最难的&lt;/p&gt;
 &lt;p&gt;2、可选明文-密文攻击不是最终目标，最终目标是找到密钥&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409102126438.png&#34;
-	width=&#34;1098&#34;
-	height=&#34;470&#34;
+	width=&#34;1000&#34;
+	height=&#34;428&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3576,8 +3576,8 @@
 &lt;h1 id=&#34;物理安全概述&#34;&gt;物理安全概述&lt;/h1&gt;
 &lt;h2 id=&#34;物理安全威胁和风险&#34;&gt;物理安全威胁和风险&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409102410774.png&#34;
-	width=&#34;1044&#34;
-	height=&#34;490&#34;
+	width=&#34;1000&#34;
+	height=&#34;469&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3592,8 +3592,8 @@
 &lt;p&gt;物理安全威胁会对人身安全造成威胁，信息安全在人身安全面前不值一提，所以保护人身安全是物理安全保护的第一目标&lt;/p&gt;
 &lt;h2 id=&#34;物理安全控制&#34;&gt;物理安全控制&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409102658068.png&#34;
-	width=&#34;892&#34;
-	height=&#34;326&#34;
+	width=&#34;999&#34;
+	height=&#34;365&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3613,8 +3613,8 @@
 &lt;p&gt;1、对数据流经的路径及其支撑系统所遭受的威胁进行分析&lt;/p&gt;
 &lt;h2 id=&#34;站点选址&#34;&gt;站点选址&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote04/assets/image-20240409103412475.png&#34;
-	width=&#34;686&#34;
-	height=&#34;286&#34;
+	width=&#34;999&#34;
+	height=&#34;416&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3622,8 +3622,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;239&#34;
-		data-flex-basis=&#34;575px&#34;
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;576px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、Fire rating：耐火性&lt;/p&gt;
@@ -3640,8 +3640,8 @@
         <guid>https://www.blain.top/p/cissp-classnote03/</guid>
         <description>&lt;img src="https://www.blain.top/p/cissp-classnote03/title.jpg" alt="Featured image of post 第03节：安全工程实施（上）" /&gt;&lt;h1 id=&#34;本章大纲&#34;&gt;本章大纲&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240305110530675.png&#34;
-	width=&#34;1236&#34;
-	height=&#34;740&#34;
+	width=&#34;1000&#34;
+	height=&#34;598&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3650,7 +3650,7 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;167&#34;
-		data-flex-basis=&#34;400px&#34;
+		data-flex-basis=&#34;401px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;计算机体系结构&#34;&gt;计算机体系结构&lt;/h1&gt;
@@ -3658,8 +3658,8 @@
 &lt;p&gt;答：一个复杂的系统，我们将其拆解为若干个子系统，然后再将子系统划分为若干个组件，研究这些组件、子系统在这个系统中的作用以及其中的关系，从而对复杂系统的特点有更深入的理解。所以体系架构是指的一种研究方法，而不是结果。&lt;/p&gt;
 &lt;p&gt;2、不存在什么都能解决的系统架构&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240305113033092.png&#34;
-	width=&#34;1366&#34;
-	height=&#34;820&#34;
+	width=&#34;1000&#34;
+	height=&#34;600&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3668,14 +3668,14 @@
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;166&#34;
-		data-flex-basis=&#34;399px&#34;
+		data-flex-basis=&#34;400px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;计算机硬件的组成对信息安全有什么影响&#34;&gt;计算机硬件的组成对信息安全有什么影响&lt;/h1&gt;
 &lt;h2 id=&#34;cpu&#34;&gt;CPU&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306085535263.png&#34;
-	width=&#34;1190&#34;
-	height=&#34;554&#34;
+	width=&#34;1000&#34;
+	height=&#34;465&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3683,8 +3683,8 @@
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;214&#34;
-		data-flex-basis=&#34;515px&#34;
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;516px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;cpu的安全问题&#34;&gt;CPU的安全问题&lt;/h3&gt;
@@ -3699,8 +3699,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;内部使用一种程序来控制内存资源的消耗，外部在写入信息时会时快时慢，快代表“1”，慢代表“0”，这就是一种基于时间调制的隐蔽信道&lt;/p&gt;
 &lt;h3 id=&#34;cpu的运行状态&#34;&gt;CPU的运行状态&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306091726069.png&#34;
-	width=&#34;1190&#34;
-	height=&#34;544&#34;
+	width=&#34;1000&#34;
+	height=&#34;457&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3715,8 +3715,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;解题状态和管理程序状态是运行状态的两种子状态，解题就是正常情况下的非特权状态，管理程序状态可以理解为超级管理员状态。通过内核中的控制单元来确定系统处于什么状态。&lt;/p&gt;
 &lt;h3 id=&#34;cpu指令执行类型&#34;&gt;CPU指令执行类型&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306092103708.png&#34;
-	width=&#34;1138&#34;
-	height=&#34;544&#34;
+	width=&#34;1000&#34;
+	height=&#34;478&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3732,8 +3732,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;1、进程的隔离，不允许不同应用进程之间随意通讯&lt;/p&gt;
 &lt;p&gt;2、虚拟化可能导致恶意代码的问题更难发现（黑客通过污染虚拟化程序，导致运行在虚拟化之上的重装系统的防病毒软件无法察觉）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306092815011.png&#34;
-	width=&#34;1128&#34;
-	height=&#34;552&#34;
+	width=&#34;999&#34;
+	height=&#34;489&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3751,8 +3751,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;安全问题：这就相当于绕开了CPU的&lt;strong&gt;访问控制&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;存储系统的层次结构&#34;&gt;存储系统的层次结构&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094351207.png&#34;
-	width=&#34;1156&#34;
-	height=&#34;552&#34;
+	width=&#34;1000&#34;
+	height=&#34;477&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3761,13 +3761,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;209&#34;
-		data-flex-basis=&#34;502px&#34;
+		data-flex-basis=&#34;503px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;cache缓存&#34;&gt;Cache（缓存）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094521838.png&#34;
-	width=&#34;1164&#34;
-	height=&#34;502&#34;
+	width=&#34;999&#34;
+	height=&#34;431&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3781,8 +3781,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;ram内存易失存储器&#34;&gt;RAM（内存）（易失存储器）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094553831.png&#34;
-	width=&#34;1030&#34;
-	height=&#34;438&#34;
+	width=&#34;1000&#34;
+	height=&#34;425&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3797,8 +3797,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;&lt;strong&gt;静态随机存储SRAM 比 动态随机存储DRAM 要快&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;rom只读存储器非易失存储器&#34;&gt;ROM（只读存储器）（非易失存储器）&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240306094842880.png&#34;
-	width=&#34;1018&#34;
-	height=&#34;528&#34;
+	width=&#34;1000&#34;
+	height=&#34;518&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3806,8 +3806,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;192&#34;
-		data-flex-basis=&#34;462px&#34;
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;463px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;TPM：可信平台模块，很难被篡改，含有CPU的ROM，用于保护密钥的保密性和完整性&lt;/p&gt;
@@ -3819,8 +3819,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;io技术&#34;&gt;I/O技术&lt;/h2&gt;
 &lt;p&gt;内部操作系统管理输入输出的技术&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309092657147.png&#34;
-	width=&#34;1030&#34;
-	height=&#34;608&#34;
+	width=&#34;1000&#34;
+	height=&#34;590&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3835,8 +3835,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;1、编程I/O：外部硬件对内存、磁盘的使用就属于编程I/O，优先级很低&lt;/p&gt;
 &lt;p&gt;2、中断处理：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309093051355.png&#34;
-	width=&#34;1170&#34;
-	height=&#34;588&#34;
+	width=&#34;1000&#34;
+	height=&#34;502&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3844,15 +3844,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;198&#34;
-		data-flex-basis=&#34;477px&#34;
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;3、中断向量表：用于存储不同应用程序中断的入口地址，是需要操作系统严格保护的一个资源，黑客可以通过篡改中断向量表来实现提权。&lt;/p&gt;
 &lt;h2 id=&#34;固件firmware&#34;&gt;固件，Firmware&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309093648211.png&#34;
-	width=&#34;1168&#34;
-	height=&#34;536&#34;
+	width=&#34;1000&#34;
+	height=&#34;458&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3860,15 +3860,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;217&#34;
-		data-flex-basis=&#34;522px&#34;
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;524px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;保护机制&#34;&gt;保护机制&lt;/h1&gt;
 &lt;h2 id=&#34;保护机制的基本概念&#34;&gt;保护机制的基本概念&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309094928040.png&#34;
-	width=&#34;1036&#34;
-	height=&#34;522&#34;
+	width=&#34;1000&#34;
+	height=&#34;503&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3877,7 +3877,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;198&#34;
-		data-flex-basis=&#34;476px&#34;
+		data-flex-basis=&#34;477px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、主体和客体之间的交互就是访问，安全工作最主要的形式就是进行&lt;strong&gt;访问控制&lt;/strong&gt;来实现一系列的安全策略（系统级）&lt;/p&gt;
@@ -3886,8 +3886,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;TCB（可信计算基）是桔皮书里的一个概念&lt;/p&gt;
 &lt;p&gt;注：桔皮书的标准已经过时了，现在使用“共同准则”来评估系统安全性&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309095844535.png&#34;
-	width=&#34;1020&#34;
-	height=&#34;534&#34;
+	width=&#34;1000&#34;
+	height=&#34;523&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3901,8 +3901,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;保护机制2reference-monitor参照监视&#34;&gt;保护机制2：Reference Monitor（参照监视）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309100833687.png&#34;
-	width=&#34;1212&#34;
-	height=&#34;490&#34;
+	width=&#34;1000&#34;
+	height=&#34;404&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3911,15 +3911,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;247&#34;
-		data-flex-basis=&#34;593px&#34;
+		data-flex-basis=&#34;594px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、最核心的机制是访问控制，&lt;strong&gt;参照监视可以理解为访问控制的另一种说法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2、要求：必须能监视所有主体和客体的访问，不能有任何的例外&lt;/p&gt;
 &lt;h2 id=&#34;保护机制3security-kernel安全内核&#34;&gt;保护机制3：Security Kernel（安全内核）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309101144583.png&#34;
-	width=&#34;1112&#34;
-	height=&#34;582&#34;
+	width=&#34;1000&#34;
+	height=&#34;523&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3936,8 +3936,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、可验证性：安全内核要尽量的&lt;strong&gt;简单&lt;/strong&gt;，方便验证&lt;/p&gt;
 &lt;h2 id=&#34;保护机制4protection-ring保护环&#34;&gt;保护机制4：Protection Ring（保护环）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309101957732.png&#34;
-	width=&#34;1264&#34;
-	height=&#34;534&#34;
+	width=&#34;1000&#34;
+	height=&#34;422&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3954,8 +3954,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、保护环是深度防御安全控制原则的具体实现&lt;/p&gt;
 &lt;h2 id=&#34;保护机制5security-labels安全标记&#34;&gt;保护机制5：Security Labels（安全标记）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309103405369.png&#34;
-	width=&#34;978&#34;
-	height=&#34;292&#34;
+	width=&#34;1000&#34;
+	height=&#34;298&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3963,16 +3963,16 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;334&#34;
-		data-flex-basis=&#34;803px&#34;
+		data-flex-grow=&#34;335&#34;
+		data-flex-basis=&#34;805px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、BLP出现之前用自主访问控制（由某个人的自主意志来决定），BLP出现以后用&lt;strong&gt;强制访问控制&lt;/strong&gt;（由&lt;strong&gt;标签&lt;/strong&gt;的比对来决定）&lt;/p&gt;
 &lt;p&gt;2、出现安全标记就要想到强制访问控制&lt;/p&gt;
 &lt;h2 id=&#34;保护机制6security-domain安全域&#34;&gt;保护机制6：Security Domain（安全域）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309104754653.png&#34;
-	width=&#34;1062&#34;
-	height=&#34;314&#34;
+	width=&#34;999&#34;
+	height=&#34;295&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3981,15 +3981,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;338&#34;
-		data-flex-basis=&#34;811px&#34;
+		data-flex-basis=&#34;812px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、将安全需求类似的资源放到一起（这就是安全域）对其进行统一保护。&lt;/p&gt;
 &lt;p&gt;2、安全域是简化安全工作的常用方法&lt;/p&gt;
 &lt;h2 id=&#34;保护机制7进程隔离硬件分离最小特权&#34;&gt;保护机制7：进程隔离，硬件分离，最小特权&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309111238134.png&#34;
-	width=&#34;1126&#34;
-	height=&#34;488&#34;
+	width=&#34;1000&#34;
+	height=&#34;433&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -3998,13 +3998,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;230&#34;
-		data-flex-basis=&#34;553px&#34;
+		data-flex-basis=&#34;554px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;保护机制8hardening加固&#34;&gt;保护机制8：Hardening（加固）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309111343434.png&#34;
-	width=&#34;1106&#34;
-	height=&#34;468&#34;
+	width=&#34;1000&#34;
+	height=&#34;423&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4031,8 +4031,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;2、目的：为设计和实现安全机制提供了一种理论框架&lt;/p&gt;
 &lt;h2 id=&#34;信息安全模型分类&#34;&gt;信息安全模型分类&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309114103719.png&#34;
-	width=&#34;710&#34;
-	height=&#34;486&#34;
+	width=&#34;999&#34;
+	height=&#34;684&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4047,8 +4047,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;安全模型分为访问控制模型（保密型模型）和完整性模型&lt;/p&gt;
 &lt;h2 id=&#34;1状态机模型&#34;&gt;1、状态机模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309142625609.png&#34;
-	width=&#34;1166&#34;
-	height=&#34;508&#34;
+	width=&#34;1000&#34;
+	height=&#34;435&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4057,7 +4057,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;229&#34;
-		data-flex-basis=&#34;550px&#34;
+		data-flex-basis=&#34;551px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、状态机模型是研究自动化系统的数学工具&lt;/p&gt;
@@ -4065,8 +4065,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;假设系统一共有n+1个状态，并且都是安全的；假设一共有n个状态转换过程，并且也都是安全的。则这个系统就是安全的&lt;/p&gt;
 &lt;h2 id=&#34;2信息流模型&#34;&gt;2、信息流模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309142935587.png&#34;
-	width=&#34;1110&#34;
-	height=&#34;474&#34;
+	width=&#34;1000&#34;
+	height=&#34;427&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4083,8 +4083,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、基于状态机模型的假设，如果信息流动是安全的，则这个系统是安全的&lt;/p&gt;
 &lt;h2 id=&#34;3blp模型bell-lapadula模型&#34;&gt;3、*BLP模型（Bell-LaPadula模型）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309143311366.png&#34;
-	width=&#34;1156&#34;
-	height=&#34;584&#34;
+	width=&#34;1000&#34;
+	height=&#34;505&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4092,15 +4092,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;197&#34;
+		data-flex-grow=&#34;198&#34;
 		data-flex-basis=&#34;475px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;BLP模型是一个为了解决保密型问题的模型，在涉密领域用的广泛&lt;/p&gt;
 &lt;h3 id=&#34;blp模型的安全规则&#34;&gt;BLP模型的安全规则&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309144027177.png&#34;
-	width=&#34;936&#34;
-	height=&#34;430&#34;
+	width=&#34;1000&#34;
+	height=&#34;459&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4116,8 +4116,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;2、BLP模型中既有强制访问控制又有自助访问控制，属于&lt;strong&gt;格子模型&lt;/strong&gt;。而格子模型属于信息流模型的扩充，所以BLP也属于信息流模型。而信息流模型又是状态机模型的扩充，而BLP也属于状态机模型。&lt;/p&gt;
 &lt;h3 id=&#34;blp模型的缺陷&#34;&gt;BLP模型的缺陷&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309144610126.png&#34;
-	width=&#34;952&#34;
-	height=&#34;356&#34;
+	width=&#34;1000&#34;
+	height=&#34;373&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4125,15 +4125,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;267&#34;
-		data-flex-basis=&#34;641px&#34;
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;643px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、BLP模型不能解决所有问题，因为假设不一定成立&lt;/p&gt;
 &lt;h2 id=&#34;4biba模型&#34;&gt;4、Biba模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309145009194.png&#34;
-	width=&#34;952&#34;
-	height=&#34;574&#34;
+	width=&#34;1000&#34;
+	height=&#34;602&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4141,7 +4141,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;165&#34;
+		data-flex-grow=&#34;166&#34;
 		data-flex-basis=&#34;398px&#34;
 	
 &gt;&lt;/p&gt;
@@ -4149,8 +4149,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;2、是格子模型、是信息流模型、是状态机模型&lt;/p&gt;
 &lt;h3 id=&#34;完整性公理&#34;&gt;完整性公理&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309145150009.png&#34;
-	width=&#34;964&#34;
-	height=&#34;418&#34;
+	width=&#34;1000&#34;
+	height=&#34;433&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4159,7 +4159,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;230&#34;
-		data-flex-basis=&#34;553px&#34;
+		data-flex-basis=&#34;554px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、Biba模型高不能读低，低不能写高，如何理解？&lt;/p&gt;
@@ -4168,8 +4168,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;电力系统使用Biba模型，其二次系统和三次系统之间通过网闸隔离&lt;/p&gt;
 &lt;h2 id=&#34;5lattice模型&#34;&gt;5、Lattice模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309151700329.png&#34;
-	width=&#34;1132&#34;
-	height=&#34;508&#34;
+	width=&#34;999&#34;
+	height=&#34;448&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4178,7 +4178,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;222&#34;
-		data-flex-basis=&#34;534px&#34;
+		data-flex-basis=&#34;535px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、基于BLP模型的扩充&lt;/p&gt;
@@ -4186,8 +4186,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、补充：强制访问控制当中，安全标签不仅要有级别的标注，还要有类别的标注&lt;/p&gt;
 &lt;h2 id=&#34;6clark-wilson模型&#34;&gt;6、Clark-Wilson模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309152825702.png&#34;
-	width=&#34;1116&#34;
-	height=&#34;520&#34;
+	width=&#34;1000&#34;
+	height=&#34;465&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4195,13 +4195,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;214&#34;
-		data-flex-basis=&#34;515px&#34;
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;516px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309155501647.png&#34;
-	width=&#34;1118&#34;
-	height=&#34;556&#34;
+	width=&#34;1000&#34;
+	height=&#34;497&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4223,8 +4223,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、模型的另一个名字：受限界面模型（restricted interface model）&lt;/p&gt;
 &lt;h2 id=&#34;7中国墙模型&#34;&gt;7、中国墙模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309161404104.png&#34;
-	width=&#34;1166&#34;
-	height=&#34;640&#34;
+	width=&#34;1000&#34;
+	height=&#34;548&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4244,8 +4244,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;将存在利益冲突的单位放在一个冲突域里面，一个“咨询顾问”只能访问一个冲突域里面的一个客户信息&lt;/p&gt;
 &lt;h2 id=&#34;8非干涉模型&#34;&gt;8、非干涉模型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309162420073.png&#34;
-	width=&#34;1120&#34;
-	height=&#34;516&#34;
+	width=&#34;1000&#34;
+	height=&#34;460&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4254,7 +4254,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;217&#34;
-		data-flex-basis=&#34;520px&#34;
+		data-flex-basis=&#34;521px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、该模型为了解决隐蔽信道问题&lt;/p&gt;
@@ -4262,8 +4262,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;在前面隐蔽信道例子中，相当于加了个中间C，当内部的A无论怎么插拔网线。外界的B都无法观察到其变化。这就阻止了隐蔽信道的问题&lt;/p&gt;
 &lt;h2 id=&#34;9取-予模型take-grant&#34;&gt;9、取-予模型（Take-Grant）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309162701264.png&#34;
-	width=&#34;964&#34;
-	height=&#34;388&#34;
+	width=&#34;1000&#34;
+	height=&#34;402&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4272,7 +4272,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;248&#34;
-		data-flex-basis=&#34;596px&#34;
+		data-flex-basis=&#34;597px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、该模型为了解决授权问题&lt;/p&gt;
@@ -4283,8 +4283,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;③D将权限授予了C，C就相当于同时拥有了A与D的权限	D→C&lt;/p&gt;
 &lt;p&gt;④若A和D的权限是需要职责分离的，则C这种情况就不应该发生	C=A+D&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309163459353.png&#34;
-	width=&#34;620&#34;
-	height=&#34;650&#34;
+	width=&#34;953&#34;
+	height=&#34;1000&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4300,8 +4300,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;该模型就是利用这种指向图的方式来研究授权过程中的风险，从而提出授权过程的禁止性要求&lt;/p&gt;
 &lt;h2 id=&#34;10访问矩阵模型最常用最直接&#34;&gt;10、访问矩阵模型（最常用、最直接）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309163650970.png&#34;
-	width=&#34;1208&#34;
-	height=&#34;572&#34;
+	width=&#34;1000&#34;
+	height=&#34;473&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4310,7 +4310,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;211&#34;
-		data-flex-basis=&#34;506px&#34;
+		data-flex-basis=&#34;507px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、被称为最直接的模型的原因&lt;/p&gt;
@@ -4324,8 +4324,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h1 id=&#34;系统评测&#34;&gt;系统评测&lt;/h1&gt;
 &lt;p&gt;目的：让别人相信我们的系统能实现什么安全目标&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165054657.png&#34;
-	width=&#34;1104&#34;
-	height=&#34;320&#34;
+	width=&#34;1000&#34;
+	height=&#34;289&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4333,14 +4333,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;345&#34;
-		data-flex-basis=&#34;828px&#34;
+		data-flex-grow=&#34;346&#34;
+		data-flex-basis=&#34;830px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;信息系统评估标准&#34;&gt;信息系统评估标准&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165356023.png&#34;
-	width=&#34;1144&#34;
-	height=&#34;590&#34;
+	width=&#34;1000&#34;
+	height=&#34;515&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4348,8 +4348,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;193&#34;
-		data-flex-basis=&#34;465px&#34;
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、桔皮书TCSEC是最早的信息安全标准，但仅限于操作系统&lt;/p&gt;
@@ -4357,8 +4357,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、&lt;strong&gt;CC国际通用准则后续发展为ISO 15408&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;tcsec桔皮书不重要&#34;&gt;TCSEC，桔皮书（不重要）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165920640.png&#34;
-	width=&#34;1088&#34;
-	height=&#34;318&#34;
+	width=&#34;1000&#34;
+	height=&#34;292&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4371,8 +4371,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309165949669.png&#34;
-	width=&#34;848&#34;
-	height=&#34;458&#34;
+	width=&#34;1000&#34;
+	height=&#34;540&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4387,8 +4387,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;校验保护：内核设计需要被证明为是正确的，除了足够简单以外，还要采取形式化设计（需求和设计过程要用数学语言来表达），通过数学证明来证明能实现改目标&lt;/p&gt;
 &lt;h2 id=&#34;itsec&#34;&gt;ITSEC&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309170442819.png&#34;
-	width=&#34;1016&#34;
-	height=&#34;402&#34;
+	width=&#34;1000&#34;
+	height=&#34;395&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4396,14 +4396,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;252&#34;
-		data-flex-basis=&#34;606px&#34;
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;607px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;cc共同准则&#34;&gt;CC（共同准则）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309170618351.png&#34;
-	width=&#34;1208&#34;
-	height=&#34;578&#34;
+	width=&#34;1000&#34;
+	height=&#34;478&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4411,14 +4411,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;208&#34;
-		data-flex-basis=&#34;501px&#34;
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;502px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;关键概念&#34;&gt;关键概念&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309170804975.png&#34;
-	width=&#34;834&#34;
-	height=&#34;432&#34;
+	width=&#34;1000&#34;
+	height=&#34;517&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4427,14 +4427,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;193&#34;
-		data-flex-basis=&#34;463px&#34;
+		data-flex-basis=&#34;464px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;保护轮廓pp&#34;&gt;*保护轮廓PP&lt;/h3&gt;
 &lt;p&gt;从用户的角度分层来提出各种安全要求的一种系统化的方法&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote03/assets/image-20240309171240661.png&#34;
-	width=&#34;1154&#34;
-	height=&#34;588&#34;
+	width=&#34;1000&#34;
+	height=&#34;509&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4489,8 +4489,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h1 id=&#34;风险管理&#34;&gt;风险管理★&lt;/h1&gt;
 &lt;h2 id=&#34;确定风险消减策略&#34;&gt;确定风险消减策略&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303140245244.png&#34;
-	width=&#34;1464&#34;
-	height=&#34;780&#34;
+	width=&#34;1000&#34;
+	height=&#34;532&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4499,7 +4499,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;187&#34;
-		data-flex-basis=&#34;450px&#34;
+		data-flex-basis=&#34;451px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;降低风险是主要的工作内容，转嫁风险可以理解为买保险&lt;/p&gt;
@@ -4509,8 +4509,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;2、风险承受能力：风险容忍度&lt;/p&gt;
 &lt;p&gt;3、很多企业内部都有一个风险标杆，一旦评价超过这个风险阈值就绝不开展这个业务。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303141111193.png&#34;
-	width=&#34;1488&#34;
-	height=&#34;686&#34;
+	width=&#34;999&#34;
+	height=&#34;461&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4526,8 +4526,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;信息安全必须人尽其事&lt;/p&gt;
 &lt;h2 id=&#34;信息安全管理中的道德&#34;&gt;信息安全管理中的道德&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303141826135.png&#34;
-	width=&#34;1154&#34;
-	height=&#34;386&#34;
+	width=&#34;1000&#34;
+	height=&#34;334&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4535,13 +4535,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;298&#34;
-		data-flex-basis=&#34;717px&#34;
+		data-flex-grow=&#34;299&#34;
+		data-flex-basis=&#34;718px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303142303728.png&#34;
-	width=&#34;1108&#34;
-	height=&#34;356&#34;
+	width=&#34;999&#34;
+	height=&#34;321&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4562,8 +4562,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;信息系统用户的误区&#34;&gt;信息系统用户的误区&lt;/h2&gt;
 &lt;p&gt;不正当行为辩护常见的借口&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303144851873.png&#34;
-	width=&#34;1066&#34;
-	height=&#34;458&#34;
+	width=&#34;1000&#34;
+	height=&#34;429&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4571,13 +4571,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;232&#34;
-		data-flex-basis=&#34;558px&#34;
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303145037457.png&#34;
-	width=&#34;966&#34;
-	height=&#34;370&#34;
+	width=&#34;1000&#34;
+	height=&#34;383&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4592,8 +4592,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;轻而易举谬论：在网上其实轻而易举就能犯大错误&lt;/p&gt;
 &lt;h2 id=&#34;isc2的道德规范&#34;&gt;ISC2的道德规范&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303145406799.png&#34;
-	width=&#34;1204&#34;
-	height=&#34;528&#34;
+	width=&#34;1000&#34;
+	height=&#34;438&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4606,8 +4606,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303145533048.png&#34;
-	width=&#34;1080&#34;
-	height=&#34;426&#34;
+	width=&#34;1000&#34;
+	height=&#34;394&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4616,14 +4616,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;253&#34;
-		data-flex-basis=&#34;608px&#34;
+		data-flex-basis=&#34;609px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、在ISC2规范中，社会利益＞雇主利益&lt;/p&gt;
 &lt;h2 id=&#34;设计合理的信息安全组织架构&#34;&gt;设计合理的信息安全组织架构&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303150038637.png&#34;
-	width=&#34;1298&#34;
-	height=&#34;576&#34;
+	width=&#34;1000&#34;
+	height=&#34;443&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4632,7 +4632,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;225&#34;
-		data-flex-basis=&#34;540px&#34;
+		data-flex-basis=&#34;541px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、第一道防线：IT部门、业务部门&lt;/p&gt;
@@ -4640,8 +4640,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、第三道防线：审计部门&lt;/p&gt;
 &lt;h2 id=&#34;重要的角色和责任&#34;&gt;重要的角色和责任&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303150407367.png&#34;
-	width=&#34;1248&#34;
-	height=&#34;520&#34;
+	width=&#34;1000&#34;
+	height=&#34;416&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4656,8 +4656,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;1、最终负责人在不同场景中可能指的人不一样，例如对于企业来说最终负责人是一把手，但对于某些数据来说，可能是数据管理部门的负责人。要注意考题中是否涉及到具体的事务性话题&lt;/p&gt;
 &lt;p&gt;2、安全管理员有多种定义，有些是管防火墙这种的，有的是管账号的，还有的是非IT部门中作为“安全接口”（负责上传下达）的人员&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303151241583.png&#34;
-	width=&#34;1462&#34;
-	height=&#34;568&#34;
+	width=&#34;1000&#34;
+	height=&#34;388&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4666,13 +4666,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;257&#34;
-		data-flex-basis=&#34;617px&#34;
+		data-flex-basis=&#34;618px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;安全建设应按计划行事top-down&#34;&gt;安全建设应按计划行事（top-down）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303151423922.png&#34;
-	width=&#34;1496&#34;
-	height=&#34;754&#34;
+	width=&#34;1000&#34;
+	height=&#34;504&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4692,8 +4692,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h3 id=&#34;第二阶段在职后续再讲&#34;&gt;第二阶段：在职（后续再讲）&lt;/h3&gt;
 &lt;h3 id=&#34;第三阶段离职&#34;&gt;第三阶段：离职&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303152546514.png&#34;
-	width=&#34;1140&#34;
-	height=&#34;590&#34;
+	width=&#34;1000&#34;
+	height=&#34;517&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4702,14 +4702,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;193&#34;
-		data-flex-basis=&#34;463px&#34;
+		data-flex-basis=&#34;464px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;信息安全培训&#34;&gt;信息安全培训&lt;/h3&gt;
 &lt;p&gt;安全意识培训：对于全员进行培训（最难做的工作）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303153532790.png&#34;
-	width=&#34;1494&#34;
-	height=&#34;640&#34;
+	width=&#34;1000&#34;
+	height=&#34;428&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4724,8 +4724,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;安全技能培训：安全相关技能培训（如何使用相关安全设备）&lt;/p&gt;
 &lt;p&gt;安全教育培训：专业的技术培训，往往需要了解底层逻辑等。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303153758443.png&#34;
-	width=&#34;1498&#34;
-	height=&#34;580&#34;
+	width=&#34;1000&#34;
+	height=&#34;387&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4734,7 +4734,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;258&#34;
-		data-flex-basis=&#34;619px&#34;
+		data-flex-basis=&#34;620px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;计算机犯罪&#34;&gt;计算机犯罪&lt;/h1&gt;
@@ -4751,8 +4751,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;计算机犯罪类型&#34;&gt;计算机犯罪类型&lt;/h2&gt;
 &lt;p&gt;包含不常见类型&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303160756786.png&#34;
-	width=&#34;1038&#34;
-	height=&#34;566&#34;
+	width=&#34;1000&#34;
+	height=&#34;545&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4767,8 +4767,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;1、萨米拉香肠：积少成多的犯罪&lt;/p&gt;
 &lt;p&gt;2、数据篡改：会计欺诈做假账，使得股票升值&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303161159856.png&#34;
-	width=&#34;990&#34;
-	height=&#34;504&#34;
+	width=&#34;1000&#34;
+	height=&#34;509&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4789,8 +4789,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h1 id=&#34;计算机犯罪相关法律&#34;&gt;计算机犯罪相关法律&lt;/h1&gt;
 &lt;h2 id=&#34;法律体系&#34;&gt;法律体系&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303162722406.png&#34;
-	width=&#34;1234&#34;
-	height=&#34;478&#34;
+	width=&#34;1000&#34;
+	height=&#34;387&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4799,13 +4799,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;258&#34;
-		data-flex-basis=&#34;619px&#34;
+		data-flex-basis=&#34;620px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;法律类型&#34;&gt;法律类型&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303163051933.png&#34;
-	width=&#34;1066&#34;
-	height=&#34;536&#34;
+	width=&#34;1000&#34;
+	height=&#34;502&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4813,14 +4813,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;198&#34;
-		data-flex-basis=&#34;477px&#34;
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;知识产权相关法律&#34;&gt;知识产权相关法律&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303163254272.png&#34;
-	width=&#34;1044&#34;
-	height=&#34;448&#34;
+	width=&#34;1000&#34;
+	height=&#34;429&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4838,8 +4838,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;知识产权的保护应当适度，不然容易造成富人更富、穷人更穷的情况&lt;/p&gt;
 &lt;h2 id=&#34;个人隐私的定义&#34;&gt;个人隐私的定义&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240303170803367.png&#34;
-	width=&#34;1182&#34;
-	height=&#34;552&#34;
+	width=&#34;1000&#34;
+	height=&#34;467&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4855,8 +4855,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h1 id=&#34;bcp概述业务持续计划&#34;&gt;BCP概述（业务持续计划）&lt;/h1&gt;
 &lt;h2 id=&#34;灾难的定义&#34;&gt;灾难的定义&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304084150261.png&#34;
-	width=&#34;1376&#34;
-	height=&#34;610&#34;
+	width=&#34;1000&#34;
+	height=&#34;443&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4869,8 +4869,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304084604354.png&#34;
-	width=&#34;1190&#34;
-	height=&#34;578&#34;
+	width=&#34;1000&#34;
+	height=&#34;485&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4878,7 +4878,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;205&#34;
+		data-flex-grow=&#34;206&#34;
 		data-flex-basis=&#34;494px&#34;
 	
 &gt;&lt;/p&gt;
@@ -4886,8 +4886,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;bcp相关计划之间的关系&#34;&gt;BCP相关计划之间的关系&lt;/h2&gt;
 &lt;p&gt;考试需要明确BCP与BRP的区别&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304085406390.png&#34;
-	width=&#34;1416&#34;
-	height=&#34;690&#34;
+	width=&#34;1000&#34;
+	height=&#34;487&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4904,8 +4904,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;2、BCP的二八原则，将80%的财力用到20%的关键业务当中，BCP的最核心工作就是业务影响分析&lt;/p&gt;
 &lt;p&gt;3、BCP是DRP的延伸&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304095910265.png&#34;
-	width=&#34;1022&#34;
-	height=&#34;586&#34;
+	width=&#34;1000&#34;
+	height=&#34;573&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4918,8 +4918,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304100156754.png&#34;
-	width=&#34;1112&#34;
-	height=&#34;524&#34;
+	width=&#34;1000&#34;
+	height=&#34;471&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4934,8 +4934,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;communications通常指的是公共关系（记者提问），需要专业人员去发言&lt;/p&gt;
 &lt;p&gt;应急响应在运维部分讨论&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304100347982.png&#34;
-	width=&#34;1090&#34;
-	height=&#34;482&#34;
+	width=&#34;1000&#34;
+	height=&#34;442&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4949,8 +4949,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;bcp项目规划&#34;&gt;BCP项目规划&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304100820146.png&#34;
-	width=&#34;1004&#34;
-	height=&#34;630&#34;
+	width=&#34;1000&#34;
+	height=&#34;627&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4967,8 +4967,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;bcp项目负责人&#34;&gt;BCP项目负责人&lt;/h2&gt;
 &lt;p&gt;一定是个高管，至少是CIO（首席信息官）、或者CEO的副手&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304101028958.png&#34;
-	width=&#34;990&#34;
-	height=&#34;506&#34;
+	width=&#34;1000&#34;
+	height=&#34;511&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4982,8 +4982,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;bcp策略条款&#34;&gt;BCP策略条款&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304101430957.png&#34;
-	width=&#34;944&#34;
-	height=&#34;598&#34;
+	width=&#34;1000&#34;
+	height=&#34;633&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -4992,7 +4992,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;157&#34;
-		data-flex-basis=&#34;378px&#34;
+		data-flex-basis=&#34;379px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;业务连续性话题已经远远超出IT范畴，是一种特殊的安全手段，投入非常大，需要IT部门配合&lt;/p&gt;
@@ -5001,8 +5001,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;1、针对重大可用性风险的专项评估&lt;/p&gt;
 &lt;p&gt;2、特殊性&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304102129699.png&#34;
-	width=&#34;1128&#34;
-	height=&#34;544&#34;
+	width=&#34;999&#34;
+	height=&#34;482&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5019,8 +5019,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;bia的过程&#34;&gt;BIA的过程&lt;/h2&gt;
 &lt;p&gt;与定性风险评估的流程基本一样&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304102219892.png&#34;
-	width=&#34;1118&#34;
-	height=&#34;564&#34;
+	width=&#34;1000&#34;
+	height=&#34;504&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5029,7 +5029,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;198&#34;
-		data-flex-basis=&#34;475px&#34;
+		data-flex-basis=&#34;476px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、时间关键：中断后立刻就会产生影响的业务&lt;/p&gt;
@@ -5037,8 +5037,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、MTD判断标准是造成&lt;strong&gt;难以挽回的损失的大小&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;支持资源的种类&#34;&gt;支持资源的种类&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304102626058.png&#34;
-	width=&#34;1086&#34;
-	height=&#34;578&#34;
+	width=&#34;1000&#34;
+	height=&#34;532&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5047,7 +5047,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;187&#34;
-		data-flex-basis=&#34;450px&#34;
+		data-flex-basis=&#34;451px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、人力资源最难恢复&lt;/p&gt;
@@ -5055,8 +5055,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;3、最花钱的是物理基础设施资源&lt;/p&gt;
 &lt;h2 id=&#34;预期潜在紧急情况&#34;&gt;预期潜在紧急情况&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304102759806.png&#34;
-	width=&#34;1194&#34;
-	height=&#34;508&#34;
+	width=&#34;1000&#34;
+	height=&#34;425&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5072,8 +5072,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;确定防御性控制&#34;&gt;确定防御性控制&lt;/h2&gt;
 &lt;p&gt;发现单点问题，设计改造方案&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304103249881.png&#34;
-	width=&#34;1102&#34;
-	height=&#34;500&#34;
+	width=&#34;1000&#34;
+	height=&#34;453&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5082,13 +5082,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;220&#34;
-		data-flex-basis=&#34;528px&#34;
+		data-flex-basis=&#34;529px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;不同阶段的应急计划策略&#34;&gt;不同阶段的应急计划策略&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304103330536.png&#34;
-	width=&#34;934&#34;
-	height=&#34;378&#34;
+	width=&#34;1000&#34;
+	height=&#34;404&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5097,15 +5097,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;247&#34;
-		data-flex-basis=&#34;593px&#34;
+		data-flex-basis=&#34;594px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、迁移关键业务是恢复阶段&lt;/p&gt;
 &lt;p&gt;2、保护人员安全属于紧急响应阶段&lt;/p&gt;
 &lt;p&gt;3、恢复业务正常秩序，由灾备方案切换回正常方案是复原阶段&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304103513119.png&#34;
-	width=&#34;1178&#34;
-	height=&#34;700&#34;
+	width=&#34;1000&#34;
+	height=&#34;594&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5114,13 +5114,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;168&#34;
-		data-flex-basis=&#34;403px&#34;
+		data-flex-basis=&#34;404px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;bcp策略关键技术指标考点&#34;&gt;BCP策略关键技术指标（考点）&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/cissp-classnote02/assets/image-20240304103607879.png&#34;
-	width=&#34;1004&#34;
-	height=&#34;302&#34;
+	width=&#34;1000&#34;
+	height=&#34;300&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5128,8 +5128,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;332&#34;
-		data-flex-basis=&#34;797px&#34;
+		data-flex-grow=&#34;333&#34;
+		data-flex-basis=&#34;800px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;1、恢复时间目标是恢复的快慢&lt;/p&gt;
@@ -5276,8 +5276,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
         <description>&lt;img src="https://www.blain.top/p/macs-icon/title.jpeg" alt="Featured image of post MAC顽固图标删除技巧" /&gt;&lt;h1 id=&#34;起因&#34;&gt;起因&lt;/h1&gt;
 &lt;p&gt;电脑有时安装的第三方软件在删除后，启动台里的图标始终不消失，重启也不行（如下图所示）。但由于我是强迫症，不删除难受。之前安装网络上的重置启动台的方式确实能删除，但是原先的启动台布局及分类也都消失了，属实难受，故有此文章。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/macs-icon/trash.jpg&#34;
-	width=&#34;324&#34;
-	height=&#34;246&#34;
+	width=&#34;1000&#34;
+	height=&#34;759&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5293,8 +5293,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;第一步-前往&#34;&gt;第一步 前往&lt;/h2&gt;
 &lt;p&gt;打开访达，点击最顶部菜单栏的“前往”→“前往文件夹”；或者在访达图标右击，选择“前往文件夹”。接着输入&lt;code&gt;/private/var/folders&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/macs-icon/forward.png&#34;
-	width=&#34;1006&#34;
-	height=&#34;432&#34;
+	width=&#34;1000&#34;
+	height=&#34;429&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5302,15 +5302,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;232&#34;
-		data-flex-basis=&#34;558px&#34;
+		data-flex-grow=&#34;233&#34;
+		data-flex-basis=&#34;559px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;第二步-搜索&#34;&gt;第二步 搜索&lt;/h2&gt;
 &lt;p&gt;使用搜索功能在&lt;code&gt;folders&lt;/code&gt;文件夹下搜索&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/macs-icon/find.png&#34;
-	width=&#34;1870&#34;
-	height=&#34;568&#34;
+	width=&#34;1000&#34;
+	height=&#34;303&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5318,14 +5318,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;329&#34;
-		data-flex-basis=&#34;790px&#34;
+		data-flex-grow=&#34;330&#34;
+		data-flex-basis=&#34;792px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;接着进入&lt;code&gt;com.apple.dock.launchpad&lt;/code&gt;文件夹里，可以看到&lt;code&gt;db&lt;/code&gt;文件夹，双击进入db目录。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/macs-icon/db.png&#34;
-	width=&#34;754&#34;
-	height=&#34;338&#34;
+	width=&#34;1000&#34;
+	height=&#34;448&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -5395,8 +5395,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── theme.toml
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;二者有很多相似之处（比如都有assets、layouts等目录），通过前端定位等测试发现，主目录下如果和hugo-theme-stack目录有相同的配置文件，则&lt;strong&gt;优先生效&lt;/strong&gt;主目录下的文件（但似乎也有特殊情况，不过通常是这样的）。所以这里建议在assets创建一个名为scss的文件夹,然后在scss文件夹里创建一个名为custom.scss的文件，用于存放魔改代码。引用下面是页面概览：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation/example.png&#34;
-	width=&#34;3022&#34;
-	height=&#34;1714&#34;
+	width=&#34;1000&#34;
+	height=&#34;567&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -6232,8 +6232,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;蛛网特效在 /layouts/_default/baseof.html中间插入以下代码&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://demo.hellozwh.com/source/canvas-nest.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation/%E8%9B%9B%E7%BD%91.png&#34;
-	width=&#34;2208&#34;
-	height=&#34;624&#34;
+	width=&#34;1000&#34;
+	height=&#34;282&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -6241,8 +6241,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;353&#34;
-		data-flex-basis=&#34;849px&#34;
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;851px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;花瓣特效只需要将src的地址换为&lt;code&gt;https://cdn.jsdelivr.net/gh/Ukenn2112/UkennWeb@3.0/index/web.js&lt;/code&gt;即可&lt;/p&gt;
@@ -6274,8 +6274,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;icon存储目录同上，但要修改栏目名称则需要前往&lt;code&gt;/content/page&lt;/code&gt;目录&lt;/p&gt;
 &lt;p&gt;打开对应栏目文件夹，修改index.md文件&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation/%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE.png&#34;
-	width=&#34;2040&#34;
-	height=&#34;588&#34;
+	width=&#34;1000&#34;
+	height=&#34;288&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -6283,8 +6283,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;346&#34;
-		data-flex-basis=&#34;832px&#34;
+		data-flex-grow=&#34;347&#34;
+		data-flex-basis=&#34;833px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;头像旋转&#34;&gt;头像旋转😵‍💫&lt;/h1&gt;
@@ -6751,8 +6751,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h1 id=&#34;添加右下角联系小气泡按钮&#34;&gt;添加右下角联系小气泡按钮&lt;/h1&gt;
 &lt;p&gt;效果图为：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/renovation/%E6%B0%94%E6%B3%A1.png&#34;
-	width=&#34;908&#34;
-	height=&#34;1576&#34;
+	width=&#34;576&#34;
+	height=&#34;1000&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -6911,15 +6911,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;/a&gt;提供的接口：https://m.weibo.cn/。经测试，现在访问已经不需要登陆，省去模拟登陆步骤。&lt;/p&gt;
 &lt;p&gt;来看访问用户主页的请求&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/2.png&#34;
-	width=&#34;1825&#34;
-	height=&#34;574&#34;
+	width=&#34;1000&#34;
+	height=&#34;314&#34;
 	
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;317&#34;
-		data-flex-basis=&#34;763px&#34;
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;最关键的为图中标红框的xhr&lt;/p&gt;
@@ -6947,8 +6947,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;经测试，请求一中&lt;strong&gt;uid&lt;/strong&gt;参数为各用户专有且固定不变，&lt;strong&gt;containerid&lt;/strong&gt;参数可不加，返回结果包含的&lt;strong&gt;containerid&lt;/strong&gt;参数提供给请求二，其余参数可舍。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/3.png&#34;
-	width=&#34;1830&#34;
-	height=&#34;998&#34;
+	width=&#34;1000&#34;
+	height=&#34;545&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -6960,15 +6960,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;p&gt;请求二带上&lt;strong&gt;containerid&lt;/strong&gt;参数即可返回微博内容，微博信息都在mblog数组内&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/4.png&#34;
-	width=&#34;1766&#34;
-	height=&#34;927&#34;
+	width=&#34;1000&#34;
+	height=&#34;524&#34;
 	
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;190&#34;
-		data-flex-basis=&#34;457px&#34;
+		data-flex-basis=&#34;458px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;思路：&lt;/p&gt;
@@ -7001,15 +7001,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
     
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/5.png&#34;
-	width=&#34;1069&#34;
-	height=&#34;614&#34;
+	width=&#34;1000&#34;
+	height=&#34;574&#34;
 	
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;174&#34;
-		data-flex-basis=&#34;417px&#34;
+		data-flex-basis=&#34;418px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如图所示，B站已经统计好当前用户视频数了，那么我只要关注这个数字不就行了吗？&lt;/p&gt;
@@ -7026,15 +7026,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
     
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/6.png&#34;
-	width=&#34;1834&#34;
-	height=&#34;571&#34;
+	width=&#34;1000&#34;
+	height=&#34;311&#34;
 	
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;321&#34;
-		data-flex-basis=&#34;770px&#34;
+		data-flex-basis=&#34;771px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;思路：&lt;/p&gt;
@@ -7067,8 +7067,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
     
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/7.jpeg&#34;
-	width=&#34;768&#34;
-	height=&#34;806&#34;
+	width=&#34;952&#34;
+	height=&#34;1000&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7091,8 +7091,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
     
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/8.png&#34;
-	width=&#34;1806&#34;
-	height=&#34;896&#34;
+	width=&#34;1000&#34;
+	height=&#34;496&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7120,14 +7120,14 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;这里用到https://sre24.com/&lt;/p&gt;
 &lt;p&gt;使用也很简单，微信扫描登陆获取token，根据文档的介绍写一个notify函数就可以用了&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/9.png&#34;
-	width=&#34;1066&#34;
-	height=&#34;369&#34;
+	width=&#34;1000&#34;
+	height=&#34;346&#34;
 	
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;288&#34;
+		data-flex-grow=&#34;289&#34;
 		data-flex-basis=&#34;693px&#34;
 	
 &gt;&lt;/p&gt;
@@ -7148,8 +7148,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;奶权师傅文章里采用心跳包的方式，我这种不愿意挂后台的人就用的定时任务，&lt;/p&gt;
 &lt;p&gt;如果服务器搭了宝塔可在后台直接设定，没有的用crontab设效果也是一样的&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/10.png&#34;
-	width=&#34;1106&#34;
-	height=&#34;603&#34;
+	width=&#34;1000&#34;
+	height=&#34;545&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7161,8 +7161,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;0x07-使用效果&#34;&gt;0x07 使用效果&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/wbdmonitor/11.png&#34;
-	width=&#34;1010&#34;
-	height=&#34;925&#34;
+	width=&#34;1000&#34;
+	height=&#34;915&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7251,8 +7251,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;h2 id=&#34;创建github-token&#34;&gt;创建github token&lt;/h2&gt;
 &lt;p&gt;在 GitHub 账户下 &lt;code&gt;Setting - Developer setting - Personal access tokens(classic)&lt;/code&gt; 下创建一个不过期(no expiration)的 Token，权限需要开启 &lt;code&gt;repo&lt;/code&gt; 与 &lt;code&gt;workflow&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/token1.png&#34;
-	width=&#34;1962&#34;
-	height=&#34;1048&#34;
+	width=&#34;999&#34;
+	height=&#34;534&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7261,13 +7261,13 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;187&#34;
-		data-flex-basis=&#34;449px&#34;
+		data-flex-basis=&#34;448px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（注意：token只会显示一次，请及时保存）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/token.png&#34;
-	width=&#34;2242&#34;
-	height=&#34;366&#34;
+	width=&#34;1000&#34;
+	height=&#34;163&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7275,15 +7275,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;612&#34;
-		data-flex-basis=&#34;1470px&#34;
+		data-flex-grow=&#34;613&#34;
+		data-flex-basis=&#34;1472px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;私密源仓库设置token&#34;&gt;私密源仓库设置token&lt;/h2&gt;
 &lt;p&gt;在博客源仓库（blog-file）的 &lt;code&gt;Settings - Secrets - Actions&lt;/code&gt; 中添加 &lt;code&gt;PERSONAL_TOKEN&lt;/code&gt; 环境变量为刚才的 Token，这样 GitHub Action 就可以获取到 Token 了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/personal-token.png&#34;
-	width=&#34;2534&#34;
-	height=&#34;904&#34;
+	width=&#34;999&#34;
+	height=&#34;356&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7292,7 +7292,7 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;280&#34;
-		data-flex-basis=&#34;672px&#34;
+		data-flex-basis=&#34;673px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;创建workflows发布文件&#34;&gt;创建workflows发布文件&lt;/h2&gt;
@@ -7354,8 +7354,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置自己的域名&#34;&gt;配置自己的域名&lt;/h2&gt;
 &lt;p&gt;等待&lt;code&gt;Github Action&lt;/code&gt;完成后,我们需要开启&lt;code&gt;GitHub page&lt;/code&gt;，首先进入公开博客仓库，然后打开设置，在如图示位置进行设置（不会的可以自行搜索）&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/domain.png&#34;
-	width=&#34;2400&#34;
-	height=&#34;1000&#34;
+	width=&#34;1000&#34;
+	height=&#34;416&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7369,8 +7369,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;生效结果&#34;&gt;生效结果&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/action.png&#34;
-	width=&#34;2870&#34;
-	height=&#34;940&#34;
+	width=&#34;1000&#34;
+	height=&#34;327&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7379,15 +7379,15 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;305&#34;
-		data-flex-basis=&#34;732px&#34;
+		data-flex-basis=&#34;733px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;push仓库会重置域名问题&#34;&gt;push仓库会重置域名问题&lt;/h1&gt;
 &lt;p&gt;每次push后会发现公开博客仓库设置的自己的域名会被重置为默认域名&lt;/p&gt;
 &lt;p&gt;解决方法：在content目录下创建一个名为CNAME的文件，内容填入自己的域名即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/cname.png&#34;
-	width=&#34;918&#34;
-	height=&#34;240&#34;
+	width=&#34;1000&#34;
+	height=&#34;261&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7395,8 +7395,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;382&#34;
-		data-flex-basis=&#34;918px&#34;
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;919px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h1 id=&#34;本地push失败彻底解决办法&#34;&gt;本地push失败彻底解决办法&lt;/h1&gt;
@@ -7417,8 +7417,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: error building site: TOCSS: failed to transform &lt;span class=&#34;s2&#34;&gt;&amp;#34;/scss/style.scss&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;text/x-scss&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. Check your Hugo installation&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; you need the extended version to build SCSS/SASS with transpiler &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; to &lt;span class=&#34;s1&#34;&gt;&amp;#39;libsass&amp;#39;&lt;/span&gt;.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; more information
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Error: Process completed with &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; code 1.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;../p/hugo-problems/error.png&#34;
-	width=&#34;2108&#34;
-	height=&#34;318&#34;
+	width=&#34;1000&#34;
+	height=&#34;150&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7426,8 +7426,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;662&#34;
-		data-flex-basis=&#34;1590px&#34;
+		data-flex-grow=&#34;666&#34;
+		data-flex-basis=&#34;1600px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;按照报错信息把网上的教程都试了一遍，都不行，然后仔细看了一眼报错，说我没使用扩展版本的hugo，但是我本地是用的扩展版本，于是检查配置文件。发现wordflows的配置文件关于hugo版本是这样写的：&lt;/p&gt;
@@ -7437,8 +7437,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;lastest&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日志上的hugo版本果然不对：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/hugo-problems/vision.png&#34;
-	width=&#34;1776&#34;
-	height=&#34;116&#34;
+	width=&#34;1000&#34;
+	height=&#34;65&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7446,8 +7446,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1531&#34;
-		data-flex-basis=&#34;3674px&#34;
+		data-flex-grow=&#34;1538&#34;
+		data-flex-basis=&#34;3692px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;随即查看hugo action官方使用指南，正确写法应该如下：&lt;/p&gt;
@@ -7503,8 +7503,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 &lt;p&gt;4.每月至少一本书，写读书笔记&lt;/p&gt;
 &lt;h1 id=&#34;图片印象&#34;&gt;图片印象&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;../p/2023summary/23%E6%99%AF.jpg&#34;
-	width=&#34;2160&#34;
-	height=&#34;2880&#34;
+	width=&#34;750&#34;
+	height=&#34;1000&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7517,8 +7517,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/2023summary/23%E6%99%9A%E9%9C%9E.jpg&#34;
-	width=&#34;2160&#34;
-	height=&#34;6519&#34;
+	width=&#34;331&#34;
+	height=&#34;999&#34;
 	
 	loading=&#34;lazy&#34;
 	
@@ -7531,8 +7531,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../p/2023summary/23%E5%A4%9C%E8%89%B2.jpg&#34;
-	width=&#34;2160&#34;
-	height=&#34;2880&#34;
+	width=&#34;750&#34;
+	height=&#34;1000&#34;
 	
 	loading=&#34;lazy&#34;
 	
