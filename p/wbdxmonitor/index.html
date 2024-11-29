@@ -377,9 +377,19 @@
     <section class="article-content">
     
     
-    <p>本文代码已上传github，自取链接：https://github.com/Bla1n/WBDXmonitor</p>
+    <p>本文代码已上传github，自取链接：<a class="link" href="https://github.com/Bla1n/WBDXmonitor"  target="_blank" rel="noopener"
+    >https://github.com/Bla1n/WBDXmonitor
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a></p>
 <h1 id="简而言之">简而言之</h1>
-<p>好久没关注这个监控脚本了，因为wb接口一直可以用，所以以为一切正常。前几天发现bz和dy的接口都已经无法直接调用了，就想办法解决一下。</p>
+<p>好久没关注这个监控脚本了，因为wb接口一直可以用，所以以为一切正常。前几天发现bz和dy的接口都无法达到实时监控的目的了，就想办法解决一下。</p>
 <h1 id="问题">问题</h1>
 <p>1.bz接口直接访问结果如下</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129140743935.png"
@@ -396,7 +406,7 @@
 		data-flex-basis="1087px"
 	
 ></p>
-<p>2.dy接口虽然还能访问，但是显示的视频数量与实际并不相符，无法达到实时监控的目的</p>
+<p>2.dy接口虽然还能访问，但是显示的视频数量与实际并不相符（挺奇怪的，不知道现在这个接口的具体用途是什么），无法达到实时监控的目的。</p>
 <h1 id="研究一下">研究一下</h1>
 <h2 id="dy怎么了">dy怎么了？</h2>
 <p>首先是dy，先是在网上搜集了一下现成的监控工具及脚本。大多数工具都是基于登录后的凭证来实现监控的，但是dy在陌生设备上登录认证流程又很繁琐（比如网页版，我选择密码登录要求使用常用设备进行扫码认证，那我为啥不直接扫码登录呢？😅），反爬机制也针对脚本做了很多阻碍，现有的脚本也多是采取Selenium来模拟浏览器达到绕过前端混淆的。</p>
@@ -419,8 +429,18 @@
 <p>第二，<code>__ac_nonce</code>与<code>__ac_signature</code>存活时间非常久，至少有一年存活期（我去随意搜了一个半年前的依然能通过验证）。</p>
 <p>所以我选择手动添加一个现成的凭证。</p>
 <p>如果仔细研究的同学可能会发现，dy实际使用的身份认证凭证并不是<code>__ac_nonce</code>与<code>__ac_signature</code>，而是后面生成的<code>ttwid</code>。但为什么我还是选择使用他俩呢？咱们往下看。</p>
-<p>比如我想关注”犬来八荒w“的更新动态个人空间的URL为：https://www.douyin.com/user/MS4wLjABAAAAnCz_s5xyosgWTo5lTxKCmoYX1-uiytDsAKBye1LbfDE。</p>
-<p>可以发现在不登录状态下，网页是返回了当前坐着的作品数量的。虽然有验证码，不输入直接x掉会网页跳转，禁止访问。但是到这里其实就足够了。</p>
+<p>比如我想关注”犬来八荒w“的更新动态个人空间的URL为：<a class="link" href="https://www.douyin.com/user/MS4wLjABAAAAnCz_s5xyosgWTo5lTxKCmoYX1-uiytDsAKBye1LbfDE"  target="_blank" rel="noopener"
+    >https://www.douyin.com/user/MS4wLjABAAAAnCz_s5xyosgWTo5lTxKCmoYX1-uiytDsAKBye1LbfDE
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a></p>
+<p>可以发现在不登录状态下，网页是返回了当前作者的作品数量的。虽然有验证码，不输入直接关掉会网页跳转，禁止访问。但是到这里其实就足够了。</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129220819557.png"
 	width="2316"
 	height="1334"
@@ -484,7 +504,7 @@
 		data-flex-basis="680px"
 	
 ></p>
-<p>鉴于最近比较忙，原本打算暂时放弃研究，日后再慢慢分析里面的参数。随后我又随便点点点，发现bz的搜索界面返回结果并没有做csp之类的策略。这不又有了嘛，笑。（反正我要的只是一个提醒的目的，这对我来说已经足够了）</p>
+<p>鉴于最近比较忙，原本打算暂时放弃研究，日后再慢慢分析里面的参数。随后我又随便点点点，发现bz的搜索界面返回结果并没有做csp之类的策略。这不又有了嘛😁。（反正我要的只是一个提醒的目的，这对我来说已经足够了）</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129222516612.png"
 	width="2968"
 	height="1466"
@@ -499,10 +519,10 @@
 		data-flex-basis="485px"
 	
 ></p>
-<p>正则匹配也很简单（脚本返回的数据包内容就是”稿件“而不是”视频“，我也挺奇怪）</p>
+<p>正则匹配也很简单（脚本返回的数据包内容就是“稿件”而不是“视频”，我也挺奇怪）</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;稿件：(\d*)&lt;/span&gt;&lt;a target=&#34;_blank&#34;&#39;</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </span></span></code></pre></div><h2 id="xhs顺手也研究一下">xhs顺手也研究一下</h2>
-<p>xhs相对来说比较简单了，未登录状态访问只返回最新的32条笔记，那我只需要把这32条笔记的标记记录下来，如果有新笔记更新就会改变着32条笔记的内容，这就是判断更新的依据了。</p>
+<p>xhs相对来说比较简单了，未登录状态访问只返回最新的32条笔记，那我只需要把这32条笔记的特有标记记录下来（看了一下js代码，还是题目最好记），如果有新笔记加入就会改变返回的32条记录，这就是判断更新的依据了。</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129223128204.png"
 	width="1584"
 	height="446"
@@ -519,7 +539,7 @@
 ></p>
 <h1 id="脚本如何使用">脚本如何使用</h1>
 <p><code>start.py</code>里面自行修改一下<code>WxPusher微信消息推送服务</code>的私人用户凭证</p>
-<p>同级目录下有4个monitor文件，分别把其中的uid或者url修改成自己想要关注的人对应的就好（自行去找，相信看到这的同学没有不会定位的）</p>
+<p>同级目录下有4个monitor结尾的py文件，分别把其中的uid或者url修改成自己想要关注的人对应的就好（自行去找，相信看到这的同学没有不会定位的）</p>
 <p>一切修改完毕后，在自己的服务器上部署个定时任务，每分钟提醒一次即可</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129134229907.png"
 	width="2180"
@@ -563,7 +583,7 @@
 		data-flex-basis="849px"
 	
 ></p>
-<p>脚本的其他内容也进行了细枝末节的”优化“，并不是标准化编程，我这人主打一个能用就行。</p>
+<p>脚本的其他内容也进行了细枝末节的”优化“，并不是标准化编程，其他部分（微信提示内容等）自行修改，我这人主打一个能用就行。</p>
 <p>写到这里就结束啦，我们下次再见👋</p>
 
 </section>
@@ -710,7 +730,7 @@
             
         
         发表了18篇文章 · 
-        总计38.45k字
+        总计38.51k字
     </section>
 
     <section class="powerby">
