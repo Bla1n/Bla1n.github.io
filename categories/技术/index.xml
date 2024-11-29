@@ -7,7 +7,203 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>B1ain | 行者</copyright>
-        <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.blain.top/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>微博、B站、抖音、小红书（新）实时关注脚本</title>
+        <link>https://www.blain.top/p/wbdxmonitor/</link>
+        <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.blain.top/p/wbdxmonitor/</guid>
+        <description>&lt;img src="https://www.blain.top/p/wbdxmonitor/123.jpg" alt="Featured image of post 微博、B站、抖音、小红书（新）实时关注脚本" /&gt;&lt;p&gt;本文代码已上传github，自取链接：https://github.com/Bla1n/WBDXmonitor&lt;/p&gt;
+&lt;h1 id=&#34;简而言之&#34;&gt;简而言之&lt;/h1&gt;
+&lt;p&gt;好久没关注这个监控脚本了，因为wb接口一直可以用，所以以为一切正常。前几天发现bz和dy的接口都已经无法直接调用了，就想办法解决一下。&lt;/p&gt;
+&lt;h1 id=&#34;问题&#34;&gt;问题&lt;/h1&gt;
+&lt;p&gt;1.bz接口直接访问结果如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129140743935.png&#34;
+	width=&#34;1514&#34;
+	height=&#34;334&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129140743935&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;453&#34;
+		data-flex-basis=&#34;1087px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;2.dy接口虽然还能访问，但是显示的视频数量与实际并不相符，无法达到实时监控的目的&lt;/p&gt;
+&lt;h1 id=&#34;研究一下&#34;&gt;研究一下&lt;/h1&gt;
+&lt;h2 id=&#34;dy怎么了&#34;&gt;dy怎么了？&lt;/h2&gt;
+&lt;p&gt;首先是dy，先是在网上搜集了一下现成的监控工具及脚本。大多数工具都是基于登录后的凭证来实现监控的，但是dy在陌生设备上登录认证流程又很繁琐（比如网页版，我选择密码登录要求使用常用设备进行扫码认证，那我为啥不直接扫码登录呢？😅），反爬机制也针对脚本做了很多阻碍，现有的脚本也多是采取Selenium来模拟浏览器达到绕过前端混淆的。&lt;/p&gt;
+&lt;p&gt;就首次登录返回的&lt;code&gt;__ac_nonce&lt;/code&gt;，进而前端混淆加密生成的&lt;code&gt;__ac_signature&lt;/code&gt;，我就研究了一天。但由于两点原因我选择放弃去主动请求生成&lt;code&gt;\__ac_signature&lt;/code&gt;。（关于逆象混淆函数的同学可以自行搜索“&lt;code&gt;__ac_signature&lt;/code&gt;”关键字进行学习）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129215230959.png&#34;
+	width=&#34;1274&#34;
+	height=&#34;272&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129215230959&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;468&#34;
+		data-flex-basis=&#34;1124px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第一，可能是因为脚本原因，不带任何cookie去访问dy主页，响应包的返回会非常慢，经常超时。&lt;/p&gt;
+&lt;p&gt;第二，&lt;code&gt;__ac_nonce&lt;/code&gt;与&lt;code&gt;__ac_signature&lt;/code&gt;存活时间非常久，至少有一年存活期（我去随意搜了一个半年前的依然能通过验证）。&lt;/p&gt;
+&lt;p&gt;所以我选择手动添加一个现成的凭证。&lt;/p&gt;
+&lt;p&gt;如果仔细研究的同学可能会发现，dy实际使用的身份认证凭证并不是&lt;code&gt;__ac_nonce&lt;/code&gt;与&lt;code&gt;__ac_signature&lt;/code&gt;，而是后面生成的&lt;code&gt;ttwid&lt;/code&gt;。但为什么我还是选择使用他俩呢？咱们往下看。&lt;/p&gt;
+&lt;p&gt;比如我想关注”犬来八荒w“的更新动态个人空间的URL为：https://www.douyin.com/user/MS4wLjABAAAAnCz_s5xyosgWTo5lTxKCmoYX1-uiytDsAKBye1LbfDE。&lt;/p&gt;
+&lt;p&gt;可以发现在不登录状态下，网页是返回了当前坐着的作品数量的。虽然有验证码，不输入直接x掉会网页跳转，禁止访问。但是到这里其实就足够了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129220819557.png&#34;
+	width=&#34;2316&#34;
+	height=&#34;1334&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129220819557&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;416px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;只要实时监控这个作品数量，就可以知道作者是否更新（前提是作者不删掉以往的视频造成数量的变化，但其实这种情况比较少见）。&lt;/p&gt;
+&lt;p&gt;思路有了就直接进行一个get请求，然后通过re正则匹配就能获取到作品数量了，这里不过多解释了，可以自行看代码。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;num&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;data-e2e=&amp;#34;user-tab-count&amp;#34;&amp;gt;(\d*)&amp;lt;/span&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bz怎么了&#34;&gt;bz怎么了？&lt;/h2&gt;
+&lt;p&gt;以前的bz可以直接访问api接口获取视频数量的，如下图所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129221527296.png&#34;
+	width=&#34;1596&#34;
+	height=&#34;618&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129221527296&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;619px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;但现在不行了，直接访问会被风控拦掉。并且我第一反应也是延续dy的思路进行爬取，但是bz现在引入了csp内容安全策略，如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129221931728.png&#34;
+	width=&#34;2392&#34;
+	height=&#34;626&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129221931728&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;382&#34;
+		data-flex-basis=&#34;917px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;你会发现哪怕未登录状态下直接访问作者的用户空间也会经过一系列的复杂前端混淆才能获取到数据&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129222239331.png&#34;
+	width=&#34;3022&#34;
+	height=&#34;1066&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129222239331&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;283&#34;
+		data-flex-basis=&#34;680px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;鉴于最近比较忙，原本打算暂时放弃研究，日后再慢慢分析里面的参数。随后我又随便点点点，发现bz的搜索界面返回结果并没有做csp之类的策略。这不又有了嘛，笑。（反正我要的只是一个提醒的目的，这对我来说已经足够了）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129222516612.png&#34;
+	width=&#34;2968&#34;
+	height=&#34;1466&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129222516612&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;正则匹配也很简单（脚本返回的数据包内容就是”稿件“而不是”视频“，我也挺奇怪）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;num&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;稿件：(\d*)&amp;lt;/span&amp;gt;&amp;lt;a target=&amp;#34;_blank&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xhs顺手也研究一下&#34;&gt;xhs顺手也研究一下&lt;/h2&gt;
+&lt;p&gt;xhs相对来说比较简单了，未登录状态访问只返回最新的32条笔记，那我只需要把这32条笔记的标记记录下来，如果有新笔记更新就会改变着32条笔记的内容，这就是判断更新的依据了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129223128204.png&#34;
+	width=&#34;1584&#34;
+	height=&#34;446&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129223128204&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;355&#34;
+		data-flex-basis=&#34;852px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;脚本如何使用&#34;&gt;脚本如何使用&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;start.py&lt;/code&gt;里面自行修改一下&lt;code&gt;WxPusher微信消息推送服务&lt;/code&gt;的私人用户凭证&lt;/p&gt;
+&lt;p&gt;同级目录下有4个monitor文件，分别把其中的uid或者url修改成自己想要关注的人对应的就好（自行去找，相信看到这的同学没有不会定位的）&lt;/p&gt;
+&lt;p&gt;一切修改完毕后，在自己的服务器上部署个定时任务，每分钟提醒一次即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129134229907.png&#34;
+	width=&#34;2180&#34;
+	height=&#34;1362&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129134229907&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129134259965.png&#34;
+	width=&#34;1714&#34;
+	height=&#34;1462&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129134259965&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;117&#34;
+		data-flex-basis=&#34;281px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../p/wbdxmonitor/assets/image-20241129134645936.png&#34;
+	width=&#34;1706&#34;
+	height=&#34;482&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20241129134645936&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;353&#34;
+		data-flex-basis=&#34;849px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;脚本的其他内容也进行了细枝末节的”优化“，并不是标准化编程，我这人主打一个能用就行。&lt;/p&gt;
+&lt;p&gt;写到这里就结束啦，我们下次再见👋&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>微博、B站、抖音实时关注脚本</title>
         <link>https://www.blain.top/p/wbdmonitor/</link>
         <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
