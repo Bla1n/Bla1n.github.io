@@ -6883,9 +6883,8 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
         <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
         
         <guid>https://www.blain.top/p/wbdmonitor/</guid>
-        <description>&lt;img src="https://www.blain.top/p/wbdmonitor/12.jpeg" alt="Featured image of post 微博、B站、抖音实时关注脚本" /&gt;&lt;p&gt;本文代码已上传github，自取&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bla1n/WBDmonitor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/Bla1n/WBDmonitor
+        <description>&lt;img src="https://www.blain.top/p/wbdmonitor/12.jpeg" alt="Featured image of post 微博、B站、抖音实时关注脚本" /&gt;&lt;p&gt;代码已更新，详见&lt;a class=&#34;link&#34; href=&#34;https://www.blain.top/p/wbdxmonitor/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.blain.top/p/wbdxmonitor/
     
     &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
         height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
@@ -6895,6 +6894,29 @@ BLP模型是一种模拟军事安全策略的计算机访问控制模型，它�
     &lt;/svg&gt;&lt;/span&gt;
     
 &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;新代码链接：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bla1n/WBDXmonitor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Bla1n/WBDXmonitor
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;本文代码已上传github，自取&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bla1n/WBDmonitor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Bla1n/WBDmonitor
+    
+    &lt;span style=&#34;white-space: nowrap;&#34;&gt;&lt;svg width=&#34;.7em&#34;
+        height=&#34;.7em&#34; viewBox=&#34;0 0 21 21&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+        &lt;path d=&#34;m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z&#34; fill=&#34;currentColor&#34; /&gt;
+        &lt;path d=&#34;M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z&#34;
+            fill=&#34;currentColor&#34;&gt;
+    &lt;/svg&gt;&lt;/span&gt;
+    
+&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;h1 id=&#34;0x00-起因&#34;&gt;0x00 起因&lt;/h1&gt;
 &lt;p&gt;对于我这样一个假粉，想及时地收到喜欢明星的动态真的是太难了，靠APP的特别关注提醒也基本无济于事，除非我每天都打开微博，B站，抖音。但作为一名“热爱学习”的当代青年，以上这些APP能少看还是少看的好。这就是矛盾所在，也就产生了本文。（本文提供两种监控思路）&lt;/p&gt;
 &lt;h1 id=&#34;0x01-第一种微博获取文章id&#34;&gt;0x01 第一种：微博获取文章id&lt;/h1&gt;
