@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://www.blain.top/p/renovation2/'>
 
-<link rel="stylesheet" href="../../scss/style.min.2fd9ebcedd4ca10cd84f38c910b67db37987d4246efb324cb5558fd54e7168e6.css"><meta property='og:title' content='小白hugo博客装修笔记（2）'>
+<link rel="stylesheet" href="../../scss/style.min.81dd07e13505b3f5441c7453444cf038941437225fd17f930112cf78a9e00538.css"><meta property='og:title' content='小白hugo博客装修笔记（2）'>
 <meta property='og:description' content='买不起房子就自己做一个互联网小屋了'>
 <meta property='og:url' content='https://www.blain.top/p/renovation2/'>
 <meta property='og:site_name' content='B1ain&#39;s Blog'>
@@ -274,6 +274,9 @@
   <ol>
     <li><a href="#侧边栏添加新的模块">侧边栏添加新的模块</a></li>
     <li><a href="#添加waline评论区">添加waline评论区</a></li>
+    <li><a href="#给代码块添加行号">给代码块添加行号</a></li>
+    <li><a href="#添加行号后复制代码会复制行号的问题">添加行号后复制代码会复制行号的问题</a></li>
+    <li><a href="#archive页面中对categories图片的颜色修正">Archive页面中对Categories图片的颜色修正</a></li>
     <li><a href="#参考文章">参考文章</a></li>
   </ol>
 </nav>
@@ -355,7 +358,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -562,6 +565,111 @@
 		data-flex-basis="367px"
 	
 ></p>
+<h1 id="给代码块添加行号">给代码块添加行号</h1>
+<p>只需要将根目录下config.yaml文件中的lineNos修改为true，同时lineNumbersInTable的值修改为false即可。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">markup</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w">    </span><span class="nt">goldmark</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w">        </span><span class="nt">renderer</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w">            </span><span class="c">## Set to true if you have HTML content inside Markdown</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">            </span><span class="nt">unsafe</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">    </span><span class="nt">tableOfContents</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">        </span><span class="nt">endLevel</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w">        </span><span class="nt">ordered</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="w">        </span><span class="nt">startLevel</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w">    </span><span class="nt">highlight</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="w">        </span><span class="nt">noClasses</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w">        </span><span class="nt">codeFences</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="w">        </span><span class="nt">guessSyntax</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w">        </span><span class="nt">lineNoStart</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="w">        </span><span class="nt">lineNos</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w">        </span><span class="nt">lineNumbersInTable</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="w">        </span><span class="nt">tabWidth</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="w">
+</span></span></span></code></pre></div><p>注：lineNumbersInTable代表是否将行号独立成一列，如果为true，代码与行号不会同步滚动。</p>
+<h1 id="添加行号后复制代码会复制行号的问题">添加行号后复制代码会复制行号的问题</h1>
+<p>1.首先解决手动选中内容复制带行号的问题</p>
+<p>在<code>~/blog/assets/scss/custom.scss</code> 文件中添加如下内容，将行号设定为不可选中</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="ln">1</span><span class="cl">	<span class="c1">// 禁止复制行号
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span>  <span class="nc">.highlight</span> <span class="nc">.ln</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="na">user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div><p>2.解决copy按钮复制带行号的问题</p>
+<p>修改<code>~/blog/themes/hugo-theme-stack/assets/ts/main.ts</code>文件中的复制按钮逻辑</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="ln"> 1</span><span class="cl">        <span class="nx">highlights</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">highlight</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">            <span class="kr">const</span> <span class="nx">copyButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">            <span class="nx">copyButton</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">copyText</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">            <span class="nx">copyButton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;copyCodeButton&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">            <span class="nx">highlight</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">copyButton</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">            <span class="kr">const</span> <span class="nx">codeBlock</span> <span class="o">=</span> <span class="nx">highlight</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;code[data-lang]&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">codeBlock</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
+</span></span><span class="line"><span class="ln">10</span><span class="cl">            <span class="nx">copyButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">                <span class="c1">// 创建一个临时容器来克隆代码块的内容
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">tempCodeBlock</span> <span class="o">=</span> <span class="nx">codeBlock</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="nx">as</span> <span class="nx">HTMLElement</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">
+</span></span><span class="line"><span class="ln">14</span><span class="cl">                <span class="c1">// 删除行号，行号的元素是 &lt;span class=&#34;ln&#34;&gt;
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">lineNumbers</span> <span class="o">=</span> <span class="nx">tempCodeBlock</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.ln&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">                <span class="nx">lineNumbers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">lineNumber</span> <span class="p">=&gt;</span> <span class="nx">lineNumber</span><span class="p">.</span><span class="nx">remove</span><span class="p">());</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">
+</span></span><span class="line"><span class="ln">18</span><span class="cl">                <span class="c1">// 获取没有行号的纯文本内容
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="c1"></span>                <span class="kr">const</span> <span class="nx">codeText</span> <span class="o">=</span> <span class="nx">tempCodeBlock</span><span class="p">.</span><span class="nx">textContent</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
+</span></span><span class="line"><span class="ln">21</span><span class="cl">                <span class="nx">navigator</span><span class="p">.</span><span class="nx">clipboard</span><span class="p">.</span><span class="nx">writeText</span><span class="p">(</span><span class="nx">codeText</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">                <span class="c1">// navigator.clipboard.writeText(codeBlock.textContent)
+</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="c1"></span>                    <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">                        <span class="nx">copyButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">copiedText</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">
+</span></span><span class="line"><span class="ln">26</span><span class="cl">                        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">                            <span class="nx">copyButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">copyText</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">                        <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">                    <span class="p">})</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">                    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">                        <span class="nx">alert</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Something went wrong&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">                    <span class="p">});</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="ln">35</span><span class="cl">        <span class="p">});</span>
+</span></span></code></pre></div><h1 id="archive页面中对categories图片的颜色修正">Archive页面中对Categories图片的颜色修正</h1>
+<p><img src="../../p/renovation2/assets/image-20250117235951084.png"
+	width="1618"
+	height="306"
+	
+	loading="lazy"
+	
+		alt="image-20250117235951084"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="528"
+		data-flex-basis="1269px"
+	
+></p>
+<p>hugo默认会对这些图片加上暖色滤镜，要去除这些滤镜可以注释以下代码</p>
+<p><img src="../../p/renovation2/assets/image-20250118000056340.png"
+	width="1868"
+	height="1372"
+	
+	loading="lazy"
+	
+		alt="image-20250118000056340"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="326px"
+	
+></p>
+<p>issue原链接<a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack/issues/364"  target="_blank" rel="noopener"
+    >在这里
+    
+    <span style="white-space: nowrap;"><svg width=".7em"
+        height=".7em" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+        <path d="m13 3l3.293 3.293l-7 7l1.414 1.414l7-7L21 11V3z" fill="currentColor" />
+        <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"
+            fill="currentColor">
+    </svg></span>
+    
+</a></p>
 <h1 id="参考文章">参考文章</h1>
 <p><a class="link" href="https://waline.js.org/guide/deploy/vercel.html#%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2"  target="_blank" rel="noopener"
     >vercel部署waline
@@ -745,7 +853,7 @@
             
         
         发表了18篇文章 · 
-        总计39.80k字
+        总计40.39k字
     </section>
 
     <section class="powerby">
