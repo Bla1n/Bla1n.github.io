@@ -566,7 +566,7 @@
 	
 ></p>
 <h1 id="给代码块添加行号">给代码块添加行号</h1>
-<p>只需要将根目录下config.yaml文件中的lineNos修改为true，同时lineNumbersInTable的值修改为false即可。</p>
+<p>只需要将<code>~/blog/config.yaml</code>文件中的lineNos修改为true，同时lineNumbersInTable的值修改为false即可。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">markup</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w">    </span><span class="nt">goldmark</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w">        </span><span class="nt">renderer</span><span class="p">:</span><span class="w">
@@ -588,9 +588,9 @@
 <h1 id="添加行号后复制代码会复制行号的问题">添加行号后复制代码会复制行号的问题</h1>
 <p>1.首先解决手动选中内容复制带行号的问题</p>
 <p>在<code>~/blog/assets/scss/custom.scss</code> 文件中添加如下内容，将行号设定为不可选中</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="ln">1</span><span class="cl">	<span class="c1">// 禁止复制行号
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span>  <span class="nc">.highlight</span> <span class="nc">.ln</span> <span class="p">{</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="na">user-select</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="ln">1</span><span class="cl">	<span class="o">//</span> <span class="nt">禁止复制行号</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">.</span><span class="nc">highlight</span> <span class="p">.</span><span class="nc">ln</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="k">user-select</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">}</span>
 </span></span></code></pre></div><p>2.解决copy按钮复制带行号的问题</p>
 <p>修改<code>~/blog/themes/hugo-theme-stack/assets/ts/main.ts</code>文件中的复制按钮逻辑</p>
@@ -853,7 +853,7 @@
             
         
         发表了18篇文章 · 
-        总计40.39k字
+        总计40.40k字
     </section>
 
     <section class="powerby">
