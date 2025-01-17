@@ -457,7 +457,7 @@
 ></p>
 <p>只要实时监控这个作品数量，就可以知道作者是否更新（前提是作者不删掉以往的视频造成数量的变化，但其实这种情况比较少见）。</p>
 <p>思路有了就直接进行一个get请求，然后通过re正则匹配就能获取到作品数量了，这里不过多解释了，可以自行看代码。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;data-e2e=&#34;user-tab-count&#34;&gt;(\d*)&lt;/span&gt;&#39;</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;data-e2e=&#34;user-tab-count&#34;&gt;(\d*)&lt;/span&gt;&#39;</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </span></span></code></pre></div><h2 id="bz怎么了">bz怎么了？</h2>
 <p>以前的bz可以直接访问api接口获取视频数量的，如下图所示</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129221527296.png"
@@ -520,7 +520,7 @@
 	
 ></p>
 <p>正则匹配也很简单（脚本返回的数据包内容就是“稿件”而不是“视频”，我也挺奇怪）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;稿件：(\d*)&lt;/span&gt;&lt;a target=&#34;_blank&#34;&#39;</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">num</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;稿件：(\d*)&lt;/span&gt;&lt;a target=&#34;_blank&#34;&#39;</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </span></span></code></pre></div><h2 id="xhs顺手也研究一下">xhs顺手也研究一下</h2>
 <p>xhs相对来说比较简单了，未登录状态访问只返回最新的32条笔记，那我只需要把这32条笔记的特有标记记录下来（看了一下js代码，还是题目最好记），如果有新笔记加入就会改变返回的32条记录，这就是判断更新的依据了。</p>
 <p><img src="../../p/wbdxmonitor/assets/image-20241129223128204.png"
@@ -669,7 +669,9 @@
     <section class="copyright">
         &copy; 
         
-        2024 B1ain | 行者
+            2024 - 
+        
+        2025 B1ain | 行者
     </section>
 
     
@@ -730,7 +732,7 @@
             
         
         发表了18篇文章 · 
-        总计38.60k字
+        总计39.80k字
     </section>
 
     <section class="powerby">

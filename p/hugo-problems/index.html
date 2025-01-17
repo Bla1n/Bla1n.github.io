@@ -403,10 +403,10 @@
 ></p>
 <h2 id="本地获取ssh密钥">本地获取ssh密钥</h2>
 <p>终端输入命令：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;you@example.com&#34;</span>   <span class="c1">#you@example.com替换为你的邮箱并回车</span>
-</span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;Your Name&#34;</span>          <span class="c1">#Your Name替换为你的名字并回车</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">git config --global user.email <span class="s2">&#34;you@example.com&#34;</span>   <span class="c1">#you@example.com替换为你的邮箱并回车</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git config --global user.name <span class="s2">&#34;Your Name&#34;</span>          <span class="c1">#Your Name替换为你的名字并回车</span>
 </span></span></code></pre></div><p>生成ssh key,在git bash中输入以下命令:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -t rsa
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ssh-keygen -t rsa
 </span></span></code></pre></div><p>mac生成的密钥将存储在<code>~/.ssh</code>路径下</p>
 <p>打开公钥文件 <code>id_rsa.pub/id_rsa_work.pub</code>，
 复制所有内容，在GitHub上打开<code>Setting -&gt; SSH and GPG keys -&gt; add SSH key</code>，将复制的内容粘贴在里边，保存。</p>
@@ -459,60 +459,60 @@
 ></p>
 <h2 id="创建workflows发布文件">创建workflows发布文件</h2>
 <p>在本地博客主目录下创建 <code>.github/workflows</code>目录，然后创建<code>deploy.yml</code>文件。我的 GitHub Action 配置为，自动发布示例配置如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">deploy</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">push</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">workflow_dispatch</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># schedule:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># Runs everyday at 8:00 AM</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># - cron: &#34;0 0 * * *&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="c"># 这里最好与本机hugo版本一致，例如：hugo-version: &#34;0.121.2&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="c"># 有时github部署会自动更新hugo版本导致部署失败</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="c"># extended来控制是否为扩展版本</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build Web</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Web</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">              </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">personal_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.PERSONAL_TOKEN }}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">external_repository</span><span class="p">:</span><span class="w"> </span><span class="l">Bla1n/Bla1n.github.io</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.event.head_commit.message }}</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">deploy</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w">    </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">    </span><span class="nt">workflow_dispatch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">    </span><span class="c"># schedule:</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">        </span><span class="c"># Runs everyday at 8:00 AM</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w">        </span><span class="c"># - cron: &#34;0 0 * * *&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w">        </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="w">        </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="w">              </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w">              </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="w">                  </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="w">                  </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="w">              </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="w">              </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="w">                  </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;latest&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="w">                  </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="w">                  </span><span class="c"># 这里最好与本机hugo版本一致，例如：hugo-version: &#34;0.121.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="w">                  </span><span class="c"># 有时github部署会自动更新hugo版本导致部署失败</span><span class="w">
+</span></span></span><span class="line"><span class="ln">27</span><span class="cl"><span class="w">                  </span><span class="c"># extended来控制是否为扩展版本</span><span class="w">
+</span></span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build Web</span><span class="w">
+</span></span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="w">              </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Web</span><span class="w">
+</span></span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="w">              </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3</span><span class="w">
+</span></span></span><span class="line"><span class="ln">34</span><span class="cl"><span class="w">              </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="w">                  </span><span class="nt">personal_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.PERSONAL_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="w">                  </span><span class="nt">external_repository</span><span class="p">:</span><span class="w"> </span><span class="l">Bla1n/Bla1n.github.io</span><span class="w">
+</span></span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="w">                  </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
+</span></span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="w">                  </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
+</span></span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="w">                  </span><span class="nt">commit_message</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.event.head_commit.message }}</span><span class="w">
 </span></span></span></code></pre></div><p><code>external_repository</code>替换为自己的公开博客git</p>
 <h2 id="本地快捷push文件">本地快捷push文件</h2>
 <p>在本地博客根目录文件夹下新建一个名为<code>deploy.sh</code>的文件用于一键部署博客,在<code>deploy.sh</code>中填入如下内容,其中最后一行代码里的<code>git@github.com:Bla1n/blog-file.git</code>需要更改为你自己仓库的地址：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo <span class="c1">#构造你的blog</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git init <span class="c1">#初始化git</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git add -A
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;deploy&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">git push -f git@github.com:Bla1n/blog-file.git main <span class="c1">#向存储库推送</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">hugo <span class="c1">#构造你的blog</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl">git init <span class="c1">#初始化git</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl">git add -A
+</span></span><span class="line"><span class="ln">6</span><span class="cl">
+</span></span><span class="line"><span class="ln">7</span><span class="cl">git commit -m <span class="s1">&#39;deploy&#39;</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">
+</span></span><span class="line"><span class="ln">9</span><span class="cl">git push -f git@github.com:Bla1n/blog-file.git main <span class="c1">#向存储库推送</span>
 </span></span></code></pre></div><h2 id="初次使用">初次使用</h2>
 <p>之后再本地调试完博客后，即可在终端运行如下命令则可以一键部署到github</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bash deploy.sh
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">bash deploy.sh
 </span></span></code></pre></div><h2 id="配置自己的域名">配置自己的域名</h2>
 <p>等待<code>Github Action</code>完成后,我们需要开启<code>GitHub page</code>，首先进入公开博客仓库，然后打开设置，在如图示位置进行设置（不会的可以自行搜索）</p>
 <p><img src="../../p/hugo-problems/domain.png"
@@ -563,21 +563,21 @@
 ></p>
 <h1 id="本地push失败彻底解决办法">本地push失败彻底解决办法</h1>
 <p>在本地push几次后，突然有一天push不成功了，报错类似如下（忘记截图了）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh: connect to host github.com port 22: Connection timed out fatal: Could not <span class="nb">read</span> from remote repo
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ssh: connect to host github.com port 22: Connection timed out fatal: Could not <span class="nb">read</span> from remote repo
 </span></span></code></pre></div><p>解决办法：在<code>~/.ssh</code>路径下，创建一个名为config的文件，内容如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Host github.com
-</span></span><span class="line"><span class="cl">User xxxxqq.com<span class="o">(</span>这里换成自己的邮箱<span class="o">)</span>
-</span></span><span class="line"><span class="cl">Hostname ssh.github.com
-</span></span><span class="line"><span class="cl">PreferredAuthentications publickey
-</span></span><span class="line"><span class="cl">IdentityFile ~/.ssh/id_rsa
-</span></span><span class="line"><span class="cl">Port <span class="m">443</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">Host github.com
+</span></span><span class="line"><span class="ln">2</span><span class="cl">User xxxxqq.com<span class="o">(</span>这里换成自己的邮箱<span class="o">)</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">Hostname ssh.github.com
+</span></span><span class="line"><span class="ln">4</span><span class="cl">PreferredAuthentications publickey
+</span></span><span class="line"><span class="ln">5</span><span class="cl">IdentityFile ~/.ssh/id_rsa
+</span></span><span class="line"><span class="ln">6</span><span class="cl">Port <span class="m">443</span>
 </span></span></code></pre></div><p>这样默认push使用https协议，即可成功。</p>
 <h1 id="deploy突然失败">deploy突然失败</h1>
 <p>平常更新都能deploy成功，但有一次上传文章突然就失败了。起初以为是文章的原因，结果回退commit版本依然是部署失败，报错如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ERROR TOCSS: failed to transform <span class="s2">&#34;/scss/style.scss&#34;</span> <span class="o">(</span>text/x-scss<span class="o">)</span>. Check your Hugo installation<span class="p">;</span> you need the extended version to build SCSS/SASS with transpiler <span class="nb">set</span> to <span class="s1">&#39;libsass&#39;</span>.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn <span class="k">for</span> more information
-</span></span><span class="line"><span class="cl">Total in <span class="m">539</span> ms
-</span></span><span class="line"><span class="cl">Error: error building site: TOCSS: failed to transform <span class="s2">&#34;/scss/style.scss&#34;</span> <span class="o">(</span>text/x-scss<span class="o">)</span>. Check your Hugo installation<span class="p">;</span> you need the extended version to build SCSS/SASS with transpiler <span class="nb">set</span> to <span class="s1">&#39;libsass&#39;</span>.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn <span class="k">for</span> more information
-</span></span><span class="line"><span class="cl">Error: Process completed with <span class="nb">exit</span> code 1.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ERROR TOCSS: failed to transform <span class="s2">&#34;/scss/style.scss&#34;</span> <span class="o">(</span>text/x-scss<span class="o">)</span>. Check your Hugo installation<span class="p">;</span> you need the extended version to build SCSS/SASS with transpiler <span class="nb">set</span> to <span class="s1">&#39;libsass&#39;</span>.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn <span class="k">for</span> more information
+</span></span><span class="line"><span class="ln">2</span><span class="cl">Total in <span class="m">539</span> ms
+</span></span><span class="line"><span class="ln">3</span><span class="cl">Error: error building site: TOCSS: failed to transform <span class="s2">&#34;/scss/style.scss&#34;</span> <span class="o">(</span>text/x-scss<span class="o">)</span>. Check your Hugo installation<span class="p">;</span> you need the extended version to build SCSS/SASS with transpiler <span class="nb">set</span> to <span class="s1">&#39;libsass&#39;</span>.: this feature is not available in your current Hugo version, see https://goo.gl/YMrWcn <span class="k">for</span> more information
+</span></span><span class="line"><span class="ln">4</span><span class="cl">Error: Process completed with <span class="nb">exit</span> code 1.
 </span></span></code></pre></div><p><img src="../../p/hugo-problems/error.png"
 	width="1000"
 	height="150"
@@ -593,10 +593,10 @@
 	
 ></p>
 <p>按照报错信息把网上的教程都试了一遍，都不行，然后仔细看了一眼报错，说我没使用扩展版本的hugo，但是我本地是用的扩展版本，于是检查配置文件。发现wordflows的配置文件关于hugo版本是这样写的：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;lastest&#34;</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="ln">1</span><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">    </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">      </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;lastest&#34;</span><span class="w">
 </span></span></span></code></pre></div><p>日志上的hugo版本果然不对：</p>
 <p><img src="../../p/hugo-problems/vision.png"
 	width="1000"
@@ -613,14 +613,14 @@
 	
 ></p>
 <p>随即查看hugo action官方使用指南，正确写法应该如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.121.2&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 这里最好与本机hugo版本一致，例如：hugo-version: &#34;0.121.2&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 有时github部署会自动更新hugo版本导致部署失败</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># extended来控制是否为扩展版本</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="ln">1</span><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v2</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">  </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">    </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.121.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">    </span><span class="c"># 这里最好与本机hugo版本一致，例如：hugo-version: &#34;0.121.2&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w">    </span><span class="c"># 有时github部署会自动更新hugo版本导致部署失败</span><span class="w">
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="w">    </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="w">    </span><span class="c"># extended来控制是否为扩展版本</span><span class="w">
 </span></span></span></code></pre></div>
 </section>
 
@@ -729,7 +729,9 @@
     <section class="copyright">
         &copy; 
         
-        2024 B1ain | 行者
+            2024 - 
+        
+        2025 B1ain | 行者
     </section>
 
     
@@ -790,7 +792,7 @@
             
         
         发表了18篇文章 · 
-        总计38.60k字
+        总计39.80k字
     </section>
 
     <section class="powerby">

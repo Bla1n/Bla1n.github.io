@@ -79,7 +79,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;第三步-终端命令&#34;&gt;第三步 终端命令&lt;/h2&gt;
 &lt;p&gt;右击进入终端，输入如下命令：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sqlite3 db &lt;span class=&#34;s2&#34;&gt;&amp;#34;delete from apps where title=&amp;#39;appName&amp;#39;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;killall Dock
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sqlite3 db &lt;span class=&#34;s2&#34;&gt;&amp;#34;delete from apps where title=&amp;#39;appName&amp;#39;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;killall Dock
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;appName自行替换为启动台显示的图标名称，回车即可删除&lt;/p&gt;
 &lt;h1 id=&#34;非常好用&#34;&gt;非常好用&lt;/h1&gt;
 &lt;p&gt;强迫症得到了治愈&lt;/p&gt;
